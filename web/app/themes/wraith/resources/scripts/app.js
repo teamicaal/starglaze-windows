@@ -47,7 +47,8 @@ const observer = lozad();
 observer.observe();
 
 import 'slick-carousel/slick/slick.min';
-import '@fancyapps/fancybox/dist/jquery.fancybox';
+import { Fancybox } from "@fancyapps/ui";
+Fancybox.bind()
 
 import './custom';
 import './forms';
