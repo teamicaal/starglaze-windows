@@ -3,23 +3,30 @@
   array (
     0 => 'Illuminate\\Bus\\BusServiceProvider',
     1 => 'Illuminate\\Cache\\CacheServiceProvider',
-    2 => 'Roots\\Acorn\\Assets\\AssetsServiceProvider',
-    3 => 'Roots\\Acorn\\Filesystem\\FilesystemServiceProvider',
-    4 => 'Roots\\Acorn\\Providers\\AcornServiceProvider',
-    5 => 'Roots\\Acorn\\View\\ViewServiceProvider',
-    6 => 'Carbon\\Laravel\\ServiceProvider',
-    7 => 'Log1x\\SageSvg\\SageSvgServiceProvider',
-    8 => 'App\\Providers\\ThemeServiceProvider',
+    2 => 'Illuminate\\Pipeline\\PipelineServiceProvider',
+    3 => 'Illuminate\\Routing\\RoutingServiceProvider',
+    4 => 'Illuminate\\Session\\SessionServiceProvider',
+    5 => 'Roots\\Acorn\\Assets\\AssetsServiceProvider',
+    6 => 'Roots\\Acorn\\Filesystem\\FilesystemServiceProvider',
+    7 => 'Roots\\Acorn\\Providers\\AcornServiceProvider',
+    8 => 'Roots\\Acorn\\Providers\\RouteServiceProvider',
+    9 => 'Roots\\Acorn\\View\\ViewServiceProvider',
+    10 => 'Carbon\\Laravel\\ServiceProvider',
+    11 => 'Log1x\\SageSvg\\SageSvgServiceProvider',
+    12 => 'App\\Providers\\ThemeServiceProvider',
   ),
   'eager' => 
   array (
-    0 => 'Roots\\Acorn\\Assets\\AssetsServiceProvider',
-    1 => 'Roots\\Acorn\\Filesystem\\FilesystemServiceProvider',
-    2 => 'Roots\\Acorn\\Providers\\AcornServiceProvider',
-    3 => 'Roots\\Acorn\\View\\ViewServiceProvider',
-    4 => 'Carbon\\Laravel\\ServiceProvider',
-    5 => 'Log1x\\SageSvg\\SageSvgServiceProvider',
-    6 => 'App\\Providers\\ThemeServiceProvider',
+    0 => 'Illuminate\\Routing\\RoutingServiceProvider',
+    1 => 'Illuminate\\Session\\SessionServiceProvider',
+    2 => 'Roots\\Acorn\\Assets\\AssetsServiceProvider',
+    3 => 'Roots\\Acorn\\Filesystem\\FilesystemServiceProvider',
+    4 => 'Roots\\Acorn\\Providers\\AcornServiceProvider',
+    5 => 'Roots\\Acorn\\Providers\\RouteServiceProvider',
+    6 => 'Roots\\Acorn\\View\\ViewServiceProvider',
+    7 => 'Carbon\\Laravel\\ServiceProvider',
+    8 => 'Log1x\\SageSvg\\SageSvgServiceProvider',
+    9 => 'App\\Providers\\ThemeServiceProvider',
   ),
   'deferred' => 
   array (
@@ -27,11 +34,13 @@
     'Illuminate\\Contracts\\Bus\\Dispatcher' => 'Illuminate\\Bus\\BusServiceProvider',
     'Illuminate\\Contracts\\Bus\\QueueingDispatcher' => 'Illuminate\\Bus\\BusServiceProvider',
     'Illuminate\\Bus\\BatchRepository' => 'Illuminate\\Bus\\BusServiceProvider',
+    'Illuminate\\Bus\\DatabaseBatchRepository' => 'Illuminate\\Bus\\BusServiceProvider',
     'cache' => 'Illuminate\\Cache\\CacheServiceProvider',
     'cache.store' => 'Illuminate\\Cache\\CacheServiceProvider',
     'cache.psr6' => 'Illuminate\\Cache\\CacheServiceProvider',
     'memcached.connector' => 'Illuminate\\Cache\\CacheServiceProvider',
     'Illuminate\\Cache\\RateLimiter' => 'Illuminate\\Cache\\CacheServiceProvider',
+    'Illuminate\\Contracts\\Pipeline\\Hub' => 'Illuminate\\Pipeline\\PipelineServiceProvider',
   ),
   'when' => 
   array (
@@ -39,6 +48,9 @@
     array (
     ),
     'Illuminate\\Cache\\CacheServiceProvider' => 
+    array (
+    ),
+    'Illuminate\\Pipeline\\PipelineServiceProvider' => 
     array (
     ),
   ),
