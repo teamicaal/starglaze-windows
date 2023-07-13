@@ -53,6 +53,11 @@ Order Allow,Deny
 Deny from all
 </Files>
 
+<Files "xmlrpc.php">
+Order Allow,Deny
+Deny from all
+</Files>
+
 <Files "readme.html">
 Order Allow,Deny
 Deny from all
