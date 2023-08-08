@@ -70,16 +70,16 @@
         },
         {
             "name": "log1x/sage-svg",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Log1x/sage-svg.git",
-                "reference": "a97cc38f455542c7fd5ac3fe8718f407ddd28731"
+                "reference": "9b6660d3890ddf238385a900045cd2549c77ad51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Log1x/sage-svg/zipball/a97cc38f455542c7fd5ac3fe8718f407ddd28731",
-                "reference": "a97cc38f455542c7fd5ac3fe8718f407ddd28731",
+                "url": "https://api.github.com/repos/Log1x/sage-svg/zipball/9b6660d3890ddf238385a900045cd2549c77ad51",
+                "reference": "9b6660d3890ddf238385a900045cd2549c77ad51",
                 "shasum": ""
             },
             "require": {
@@ -122,7 +122,7 @@
             ],
             "support": {
                 "issues": "https://github.com/log1x/sage-svg/issues",
-                "source": "https://github.com/Log1x/sage-svg/tree/v1.1.0"
+                "source": "https://github.com/Log1x/sage-svg/tree/v1.1.1"
             },
             "funding": [
                 {
@@ -130,7 +130,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-11T05:38:12+00:00"
+            "time": "2023-07-29T08:27:38+00:00"
         }
     ],
     "packages-dev": [
