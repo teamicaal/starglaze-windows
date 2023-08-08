@@ -273,4 +273,54 @@ import mixitup from 'mixitup';
     }
   });
 
+  // Custom chatbot.com triggers
+  // If chat has already been started, the load the chatbot.com script - saves loading it if it's not needed
+  $(document).on('ready', function() {
+    if (localStorage.getItem('chat-initialised') == 'true') {
+      var be = document.createElement('script'); be.type = 'text/javascript'; be.async = true;
+      be.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.chatbot.com/widget/plugin.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(be, s);
+
+      window.BE_API = window.BE_API || {};
+      window.BE_API.onBeforeLoad = function () {
+        return false
+      };
+    }
+  });
+
+  window.__be = window.__be || {};
+  window.__be.id = "YOUR STORY ID";
+  // Open chat window
+  $('.cta-chat-fixed .chat-method-chat').on('click', function () {
+    if( localStorage.getItem('chat-initialised') == 'true' ) {
+      window.BE_API = window.BE_API || {};
+
+      if( window.BE_API.isInitialized() ) {
+        console.log('is initialized');
+        window.BE_API.openChatWindow();
+      } else {
+        window.BE_API.create();
+        window.BE_API.onLoad = function () {
+          window.BE_API.openChatWindow();
+        };
+      }
+    } else {
+      localStorage.setItem('chat-initialised', 'true')
+      var be = document.createElement('script'); be.type = 'text/javascript'; be.async = true;
+      be.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.chatbot.com/widget/plugin.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(be, s);
+
+      window.BE_API = window.BE_API || {};
+      window.BE_API.openChatWindow();
+    }
+    $(this).closest('.cta-chat-fixed').addClass('chat-open');
+  });
+
+  // Close chat window
+  window.BE_API = window.BE_API || {};
+  window.BE_API.onChatWindowClose = function () {
+    window.BE_API.hideChatWindow();
+    $('.cta-chat-fixed').removeClass('chat-open');
+  };
+
 })(jQuery);

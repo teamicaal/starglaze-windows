@@ -63,3 +63,22 @@
   </div>
   @include('partials.components.sticky_cta')
 </section>
+
+@php
+  $chat_whatsapp = get_field('chat_whatsapp', 'option');
+  $chat_chatbot = get_field('chat_chatbot', 'option');
+@endphp
+@if( $chat_whatsapp || $chat_chatbot )
+  <div class="cta-chat-fixed">
+    @if( $chat_whatsapp )
+      <a href="https://api.whatsapp.com/send/?phone={{ $chat_whatsapp }}&text=&type=phone_number&app_absent=0" class="chat-method bg-[#25d366] hover:bg-black">
+        <i class="fab fa-whatsapp text-xl text-white"></i>
+      </a>
+    @endif
+    @if( $chat_chatbot )
+      <div class="chat-method chat-method-chat bg-primary hover:bg-primary-dark">
+        <i class="fa fa-message-lines text-xl text-white"></i>
+      </div>
+    @endif
+  </div>
+@endif
