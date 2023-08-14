@@ -4,8 +4,10 @@
   $logo_retina = get_field('logo_retina', 'option');
   $icon = get_field('icon', 'option');
   $icon_retina = get_field('icon_retina', 'option');
-  $brand_phone = get_field('brand_phone', 'option');
-  $brand_phone_alt = get_field('brand_phone_alt', 'option');
+  $brand_phone_link = get_field('brand_phone_link', 'option');
+  $brand_phone_label = get_field('brand_phone_label', 'option');
+  $brand_phone_alt_link = get_field('brand_phone_alt_link', 'option');
+  $brand_phone_alt_label = get_field('brand_phone_alt_label', 'option');
   $brand_fax = get_field('brand_fax', 'option');
   $brand_email = get_field('brand_email', 'option');
   $social_facebook = get_field('social_facebook', 'option');
@@ -21,11 +23,11 @@
     <div class="container mx-auto">
       <div class="flex justify-between items-center">
         <ul class="list-reset">
-          @if( $brand_phone )
+          @if( $brand_phone_link )
           <li class="inline-block text-sm mr-8">
-            <a href="tel:{{ $brand_phone }}">
+            <a href="tel:{{ $brand_phone_link }}">
               <i class="text-primary fa fa-phone inline-block float-left mr-2 mt-0.5"></i>
-              <span class="table-cell text-gray-800 font-body">{{ $brand_phone }}</span>
+              <span class="table-cell text-gray-800 font-body">{{ $brand_phone_label ? $brand_phone_label : $brand_phone_link }}</span>
             </a>
           </li>
           @endif
@@ -49,7 +51,7 @@
   <div id="header">
     <div class="bg-white">
       <div class="container mx-auto flex items-center justify-between py-2 lg:py-0">
-        {!! $brand_phone ? '<a href="tel:' . $brand_phone . '" class="lg:hidden px-4 py-2 -ml-2"><i class="fa fa-phone"></i></a>' : null; !!}
+        {!! $brand_phone_link ? '<a href="tel:' . $brand_phone_link . '" class="lg:hidden px-4 py-2 -ml-2"><i class="fa fa-phone"></i></a>' : null; !!}
         <a class="brand border-0" href="{{ home_url('/') }}">
           @if( $logo )
           <img src="{!! $logo['url'] !!}" alt="{!! get_bloginfo('name', 'display') !!} Logo"{!! $logo_retina ? ' srcset="' . $logo['url'] . ' 1x, ' . $logo_retina['url'] . ' 2x"' : null !!} width="auto" height="50" class="hidden lg:inline-block">

@@ -1,6 +1,8 @@
 @php
-$brand_phone = get_field('brand_phone', 'option');
-$brand_phone_alt = get_field('brand_phone_alt', 'option');
+$brand_phone_link = get_field('brand_phone_link', 'option');
+$brand_phone_label = get_field('brand_phone_label', 'option');
+$brand_phone_alt_link = get_field('brand_phone_alt_link', 'option');
+$brand_phone_alt_label = get_field('brand_phone_alt_label', 'option');
 $brand_fax = get_field('brand_fax', 'option');
 $brand_email = get_field('brand_email', 'option');
 $locations = get_field('locations', 'option');
@@ -13,19 +15,19 @@ $social_pinterest = get_field('social_pinterest', 'option');
 @endphp
 
 <ul class="list-reset">
-  @if( $brand_phone )
+  @if( $brand_phone_link )
   <li class="text-sm mb-4">
-    <a href="tel:{{ $brand_phone }}" class="{!! $colour == 'light' ? 'text-white' : 'text-primary' !!}">
+    <a href="tel:{{ $brand_phone_link }}" class="{!! $colour == 'light' ? 'text-white' : 'text-primary' !!}">
       <i class="fa fa-phone float-left mr-3"></i>
-      <span class="table-cell font-body">{{ $brand_phone }}</span>
+      <span class="table-cell font-body">{{ $brand_phone_label ? $brand_phone_label : $brand_phone_link }}</span>
     </a>
   </li>
   @endif
-  @if( $brand_phone_alt )
+  @if( $brand_phone_alt_link )
   <li class="text-sm mb-4">
-    <a href="tel:{{ $brand_phone_alt }}" class="{!! $colour == 'light' ? 'text-white' : 'text-primary' !!}">
+    <a href="tel:{{ $brand_phone_alt_link }}" class="{!! $colour == 'light' ? 'text-white' : 'text-primary' !!}">
       <i class="fa fa-phone-square float-left mr-3"></i>
-      <span class="table-cell font-body">{{ $brand_phone_alt }}</span>
+      <span class="table-cell font-body">{{ $brand_phone_alt_label ? $brand_phone_alt_label : $brand_phone_alt_link }}</span>
     </a>
   </li>
   @endif
