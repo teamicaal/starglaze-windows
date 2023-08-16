@@ -5,42 +5,36 @@
  */
 module.exports = async (app) => {
   app
-    /**
-     * Application entrypoints
-     *
-     * Paths are relative to your resources directory
-     */
-    .entry({
-      app: ['@scripts/app', '@styles/app'],
-      editor: ['@scripts/editor', '@styles/editor'],
-    })
+  /**
+   * Application assets & entrypoints
+   *
+   * @see {@link https://bud.js.org/docs/bud.entry}
+   * @see {@link https://bud.js.org/docs/bud.assets}
+   */
+  .entry('app', ['@scripts/app', '@styles/app'])
+  .entry('editor', ['@scripts/editor', '@styles/editor'])
+  .assets(['images'])
 
-    /**
-     * These files should be processed as part of the build
-     * even if they are not explicitly imported in application assets.
-     */
-    .assets('images')
+  /**
+   * Set public path
+   *
+   * @see {@link https://bud.js.org/docs/bud.setPublicPath}
+   */
+  .setPublicPath('/app/themes/wraith/public/')
 
-    /**
-     * These files will trigger a full page reload
-     * when modified.
-     */
-    .watch('resources/views/**/*', 'app/**/*')
+  /**
+   * Development server settings
+   *
+   * @see {@link https://bud.js.org/docs/bud.setUrl}
+   * @see {@link https://bud.js.org/docs/bud.setProxyUrl}
+   * @see {@link https://bud.js.org/docs/bud.watch}
+   */
+  .setUrl('http://wraith.test:3000')
+  .setProxyUrl('https://wraith.test')
+  .watch(['resources/views', 'app'])
 
-    /**
-     * Target URL to be proxied by the dev server.
-     *
-     * This is your local dev server.
-     */
-    .proxy('https://wraith.test')
-
-    /**
-     * Development URL
-     */
-    // .serve('https://wraith.test:3000')
-
-   /**
-    * Vue config
-    */
-    // .template({template: app.path('@resources/views/page-vue.blade.php')})
+  /**
+   * Vue config
+   */
+  // .template({template: app.path('@resources/views/page-vue.blade.php')})
 };
