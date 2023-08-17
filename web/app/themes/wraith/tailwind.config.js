@@ -25,19 +25,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        colors: {
-          'primary': '#AC885E',
-          'primary-light': '#1C93FF',
-          'primary-dark': '#0076D0',
-  
-          'secondary': '#002F67',
-          'secondary-light': '#C3A342',
-          'secondary-dark': '#B8B8B8',
-  
-          'tertiary': '#3F7E57',
-          'tertiary-light': '#a4df92',
-          'tertiary-dark': '#C9DEBF',
-        },
+        'primary': '#AC885E',
+        'primary-light': '#1C93FF',
+        'primary-dark': '#0076D0',
+
+        'secondary': '#002F67',
+        'secondary-light': '#C3A342',
+        'secondary-dark': '#B8B8B8',
+
+        'tertiary': '#3F7E57',
+        'tertiary-light': '#a4df92',
+        'tertiary-dark': '#C9DEBF',
       },
 
       container: {

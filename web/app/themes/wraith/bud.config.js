@@ -29,8 +29,8 @@ module.exports = async (app) => {
      * @see {@link https://bud.js.org/docs/bud.setProxyUrl}
      * @see {@link https://bud.js.org/docs/bud.watch}
      */
-    .setUrl('http://statglaze-new.test:3000')
-    .setProxyUrl('https://statglaze-new.test')
+    .setUrl('http://starglaze-new.test:3000')
+    .setProxyUrl('https://starglaze-new.test')
     .watch(['resources/views', 'app'])
 
    /**
