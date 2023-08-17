@@ -25,11 +25,35 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary': '#0076FF',
-        'primary-light': '#1C93FF',
-        'primary-dark': '#0076D0',
-        'secondary': '#9F0A15'
+        colors: {
+          'primary': '#AC885E',
+          'primary-light': '#1C93FF',
+          'primary-dark': '#0076D0',
+  
+          'secondary': '#002F67',
+          'secondary-light': '#C3A342',
+          'secondary-dark': '#B8B8B8',
+  
+          'tertiary': '#3F7E57',
+          'tertiary-light': '#a4df92',
+          'tertiary-dark': '#C9DEBF',
+        },
       },
+
+      container: {
+        // center: true,
+        padding: 0,
+        // default breakpoints but with 40px removed
+        screens: {
+          sm: '640px',
+          md: '768px',
+          lg: '1024px',
+          xl: '1280px',
+          '2xl': '1392px',
+          
+        },
+      },
+
       fontFamily: {
         'sans': ['Roboto', ...defaultTheme.fontFamily.sans],
         'serif': ['Oswald', ...defaultTheme.fontFamily.sans],

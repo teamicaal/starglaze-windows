@@ -18,8 +18,8 @@
   $social_pinterest = get_field('social_pinterest', 'option');
   @endphp
 @endif
-<header class="banner fixed z-20 top-0 left-0 right-0 w-full">
-  <div id="toolbar" class="bg-gray-100 hidden lg:block">
+<header id="header-main" class="banner fixed z-20 top-0 left-0 right-0 w-full">
+  <div id="toolbar" class="header-bg hidden lg:block">
     <div class="container mx-auto">
       <div class="flex justify-between items-center">
         <ul class="list-reset">
@@ -49,12 +49,12 @@
     </div>
   </div>
   <div id="header">
-    <div class="bg-white">
+    <div class="header-bg">
       <div class="container mx-auto flex items-center justify-between py-2 lg:py-0">
         {!! $brand_phone_link ? '<a href="tel:' . $brand_phone_link . '" class="lg:hidden px-4 py-2 -ml-2"><i class="fa fa-phone"></i></a>' : null; !!}
         <a class="brand border-0" href="{{ home_url('/') }}">
           @if( $logo )
-          <img src="{!! $logo['url'] !!}" alt="{!! get_bloginfo('name', 'display') !!} Logo"{!! $logo_retina ? ' srcset="' . $logo['url'] . ' 1x, ' . $logo_retina['url'] . ' 2x"' : null !!} width="auto" height="50" class="hidden lg:inline-block">
+          <img src="{!! $logo['url'] !!}" alt="{!! get_bloginfo('name', 'display') !!} Logo"{!! $logo_retina ? ' srcset="' . $logo['url'] . ' 1x, ' . $logo_retina['url'] . ' 2x"' : null !!} width="auto" height="50" class="hidden lg:inline-block w-auto h-[6rem]">
           @else
           {{ get_bloginfo('name', 'display') }}
           @endif

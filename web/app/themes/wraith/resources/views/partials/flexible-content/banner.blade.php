@@ -14,14 +14,14 @@ $paragraph = get_sub_field('paragraph');
 
 <section class="section_page-banner">
   @if( $banner_type )
-  <div class="full-width sm:flex sm:items-center relative lg:!min-h-[80vh] sm:!min-h-[60vh] !min-h-[40vh]">
+  <div class="full-width sm:flex sm:items-center relative lg:!min-h-[100vh] sm:!min-h-[60vh] !min-h-[40vh]">
     @if( $images )
       <div class="sm:absolute relative sm:top-0 sm:left-0 h-[40vh] w-full sm:h-full z-10">
         @if( count($images) > 1 )
         <div class="slick-banner">
         @endif
         @foreach($images as $key=>$image )
-          <div class="relative {!! $key != 0 ? 'hidden' : null !!} lg:!min-h-[80vh] sm:!min-h-[60vh] !min-h-[40vh]">
+          <div class="relative {!! $key != 0 ? 'hidden' : null !!} lg:!min-h-[100vh] sm:!min-h-[60vh] !min-h-[40vh]">
             <picture data-iesrc="{!! $image['url'] !!}">
               @if( $images_webp )
                 @php
@@ -61,7 +61,7 @@ $paragraph = get_sub_field('paragraph');
               $label = get_sub_field('label');
               $anchor = get_sub_field('anchor');
               @endphp
-              <a href="{{ $link }}" class="btn block md:inline-block {{ $i == 1 ? null : 'primary' }}{{ $anchor ? ' btn-scroll' : null }}">{!! $label !!}</a>
+              <a href="{{ $link }}" class="btn block md:inline-block {{ $i == 1 ? 'bg-primary text-white hover:bg-secondary' : 'bg-white text-[#343338] border border-primary hover:bg-primary hover:text-white' }}{{ $anchor ? ' btn-scroll' : null }}">{!! $label !!}</a>
             @endwhile
           </div>
         @endif
