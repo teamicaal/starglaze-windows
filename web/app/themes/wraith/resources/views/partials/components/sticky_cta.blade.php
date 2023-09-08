@@ -8,7 +8,7 @@
     $label = get_sub_field('label');
     $link = get_sub_field('link');
   @endphp
-  <a class="one-cta" href="{!! $link !!}">
+  <a class="one-cta buttonWrapper " href="{!! $link !!}">
     <div class="one-side bg-cta">
       <div class="side-content">
         <div class="icon-box">

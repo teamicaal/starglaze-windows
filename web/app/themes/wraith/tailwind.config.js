@@ -53,13 +53,14 @@ module.exports = {
       },
 
       fontFamily: {
-        'sans': ['Roboto', ...defaultTheme.fontFamily.sans],
-        'serif': ['Oswald', ...defaultTheme.fontFamily.sans],
+        'sans': ['Myriad Pro', ...defaultTheme.fontFamily.sans],
+        'serif': ['Neue Aachen Pro', ...defaultTheme.fontFamily.sans],
       },
       aspectRatio: {
         '21/9': '21 / 9',
         '16/9': '16 / 9',
-        '3/2': '3/ 2',
+        '3/2': '3 / 2',
+        '2/3': '2 / 3',
         '4/3': '4 / 3',
         '3/4': '3 / 4',
         '7/10': '7 /10',

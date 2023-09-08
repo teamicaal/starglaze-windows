@@ -1,35 +1,53 @@
 @font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/roboto/Roboto-Regular.woff2') format('woff2'),
-         url('../fonts/roboto/Roboto-Regular.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Neue Aachen Pro';
+    src: url('../fonts/neue aachen pro/NeueAachenPro-Regular.woff2') format('woff2'),
+         url('../fonts/neue aachen pro/NeueAachenPro-Regular.woff') format('woff');
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/roboto/Roboto-Bold.woff2') format('woff2'),
-         url('../fonts/roboto/Roboto-Bold.woff') format('woff');
-    font-weight: bold;
+    font-family: 'Neue Aachen Pro';
+    src: url('../fonts/neue aachen pro/NeueAachenPro-Medium.woff2') format('woff2'),
+         url('../fonts/neue aachen pro/NeueAachenPro-Medium.woff') format('woff');
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/roboto/Roboto-Italic.woff2') format('woff2'),
-         url('../fonts/roboto/Roboto-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
+    font-family: 'Neue Aachen Pro';
+    src: url('../fonts/neue aachen pro/NeueAachenPro-Bold.woff2') format('woff2'),
+         url('../fonts/neue aachen pro/NeueAachenPro-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Oswald';
-    src: url('../fonts/oswald/Oswald-Regular.woff2') format('woff2'),
-        url('../fonts/oswald/Oswald-Regular.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Myriad Pro';
+    src: url('../fonts/myriad pro/MyriadPro-Regular.woff2') format('woff2'),
+        url('../fonts/myriad pro/MyriadPro-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('../fonts/myriad pro/MyriadPro-Semibold.woff2') format('woff2'),
+        url('../fonts/myriad pro/MyriadPro-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('../fonts/myriad pro/MyriadPro-Bold.woff2') format('woff2'),
+        url('../fonts/myriad pro/MyriadPro-Bold.woff') format('woff');
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }

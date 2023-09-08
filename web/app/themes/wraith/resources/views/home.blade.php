@@ -13,12 +13,6 @@
   @else
     @include('partials.page-header')
   @endif 
-  <p class="mb-0 font-medium">
-    {!! $body ?
-      $body :
-      'The latest news from '. get_bloginfo('name')
-    !!}
-  </p>
   @noposts
     <div class="alert alert-warning">
       {{ __('Sorry, no results were found.', 'sage') }}
@@ -29,22 +23,22 @@
   <div class="container mx-auto">
     <div class="flex flex-wrap md:-mx-4">
       @posts
-        <article class="w-full lg:w-1/2 p-4">
-          <div class="w-full flex flex-col sm:flex-row py-6 relative h-full">
-            <div class="w-full sm:w-2/3 pr-4 py-4 h-full items-start flex-col flex">
+        <article class="w-full lg:w-1/3 p-4">
+            <a href="@permalink">
+              <div class="w-full md:mr-4 relative overflow-hidden" style="min-height: 251px;">
+                <img data-src="@thumbnail('4by3-md', false)" src="@thumbnail('lozad', false)" width="100%" height="auto" alt="@title" class="lozad object-cover inset-0 w-full h-full absolute">
+              </div>
+            </a>
+            <div class="bg-primary p-4">
               <div class="relative">
-                <a href="@permalink"><h2 class="text-2xl">@title</h2></a>
+                <a href="@permalink"><h2 class="entry-title font-medium  text-white font-serif text-lg mb-4">@title</h2></a>
               </div>
-              <div class="text-sm">@excerpt</div>
-              <a href="@permalink" class="uppercase font-display text-sm tracking-widest text-primary hover:text-black">View Post</a>
-            </div>
-            <div class="w-full sm:w-1/3 md:mr-4">
-              <div class="embed-4by3 rounded-sm overflow-hidden">
-                <img data-src="@thumbnail('4by3-md', false)" src="@thumbnail('lozad', false)" width="100%" height="auto" alt="@title" class="lozad object-fit-cover">
+              <div class="w-full flex flex-wrap justify-between">
+                <div class="text-white font-serif relative  z-30 tracking-wide	mb-2"> {!! get_the_date() !!}</div>
+                <a href="@permalink" class=" text-secondary font-bold tracking-wide border-b-2 border-secondary hover:border-white inline-block max-w-full md:w-auto sec-inverted">READ POST</a>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
       @endposts
     </div>
   </div>

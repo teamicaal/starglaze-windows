@@ -1,5 +1,9 @@
-<section class="py-8 lg:py-12">
-	<div class="container mx-auto">
+@php
+$custom_class = get_sub_field('custom_class');
+@endphp
+
+<section class="{!! $custom_class ? ' ' . $custom_class : 'pt-8 lg:pt-12' !!} ">
+	<div class="">
 		@php $i = 0; @endphp
 		@while(have_rows('rows'))
 		@php
@@ -9,21 +13,43 @@
 			$image = get_sub_field('image');
 			$image_alt = get_sub_field('image_alt');
 			$paragraph = get_sub_field('paragraph');
+			$dot_image = get_sub_field('dot_image');
 		@endphp
-			<div class="flex py-4 lg:py-8 flex-col {{ $i % 2 == 0 ? 'lg:flex-row-reverse flex-col' : 'lg:flex-row flex-col' }}">
+			<div class="flex flex-col relative {{ $i % 2 == 0 ? 'lg:flex-row-reverse flex-col mb-8' : 'lg:flex-row flex-col mb-8' }}">
 				@if( $image )
-					<div class="w-full lg:w-1/2">
-						<div class="embed-4by3 rounded-sm overflow-hidden">
-							<img data-src="{{ $image['url'] }}" alt="{{ $image_alt ? $image_alt : $image['alt'] }}" class="lozad object-fit-cover w-full h-full inset-0">
+					<div class="w-full lg:w-3/5">
+						<div class="embed-16by9  overflow-hidden">
+							<img data-src="{{ $image['url'] }}" alt="{{ $image_alt ? $image_alt : $image['alt'] }}" class="lozad object-fit-cover w-full h-full inset-0 {{ $i % 2 == 0 ? 'rounded-tl-xl rounded-bl-xl' : 'rounded-tr-xl rounded-br-xl' }}">
 						</div>
 					</div>
 				@endif
-				<div class="w-full lg:w-1/2 px-4 lg:px-16">
-					<div class="flex flex-col items-start justify-center h-full">
-						{!! $title ? '<h2 class="mb-4 lg:mb-8 text-gray-900 text-3xl">' . $title . '</h2>' : null !!}
-						{!! $paragraph ? '<p class="mb-0">' . $paragraph . '</p>' : null !!}
+				<div class="w-full lg:w-1/3 mx-auto lg:mt-0 mt-8 px-4 lg:px-0 relative">
+					<div class="flex flex-col items-start justify-center h-full lg:w-[90%] w-full {{ $i % 2 == 0 ? 'ml-auto' : ' ' }}">
+						@if (is_page( array( '1070' ) ) )
+						{!! $title ? '<h2 class="mb-4 lg:mb-8 text-[#3F7E57] font-serif font-medium text-4xl">' . $title . '</h2>' : null !!}
+						@else
+						{!! $title ? '<h2 class="mb-4 lg:mb-8 text-primary font-serif font-medium text-4xl">' . $title . '</h2>' : null !!}
+						@endif
+						{!! $paragraph ? '<div class="mb-0 child-p:font-normal child-p:text-[#3A3A3A]">' . $paragraph . '</div>' : null !!}
+						@if( have_rows('buttons') )
+							<div class="block sm:flex sm:flex-wrap mt-8">
+								@php $j = 0; @endphp
+								@while( have_rows('buttons') )
+								@php
+								the_row();
+								$j++;
+								$link = get_sub_field('link');
+								$label = get_sub_field('label');
+								@endphp
+								<a href="{{ $link }}"
+								class="btn {{ $j == 1 ? 'bg-transparent text-[#343338] hover:bg-primary text-medium border border-primary hover:text-white text-center block md:inline-block mb-4 md:mr-4 md:mb-0' : 'bg-white text-secondary hover:bg-secondary hover:text-white border-0 text-center block md:inline-block' }}">{!!
+								$label !!}</a>
+								@endwhile
+							</div>
+        				@endif
 					</div>
 				</div>
+				<img src="{{ $dot_image['url'] }}" alt="{{ $dot_image['alt'] }}" class="absolute -z-1 {{ $i % 2 == 0 ? 'bottom-0 left-0' : 'bottom-0 right-0' }}">
 			</div>
 		@endwhile
 	</div>

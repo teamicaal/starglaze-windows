@@ -17,6 +17,72 @@
         @if (get_row_layout() == 'banner')
             @include('partials.flexible-content.banner')
         @endif
+        @if (get_row_layout() == 'product_banner')
+            @include('partials.flexible-content.product-banner')
+        @endif
+        @if (get_row_layout() == 'offer_strip')
+            @include('partials.flexible-content.offer-strip')
+        @endif
+        @if (get_row_layout() == 'why_choose_us')
+            @include('partials.flexible-content.why-choose-us')
+        @endif
+        @if (get_row_layout() == 'sustainability_info')
+            @include('partials.flexible-content.sustainability-info')
+        @endif
+        @if (get_row_layout() == 'showroom_accessibility')
+            @include('partials.flexible-content.showroom-accessibility')
+        @endif
+        @if (get_row_layout() == 'energy_calculator_content')
+            @include('partials.flexible-content.energy-calculator-content')
+        @endif
+        @if (get_row_layout() == 'showroom_info_block')
+            @include('partials.flexible-content.showroom-info-block')
+        @endif
+        @if (get_row_layout() == 'virtual_showroom')
+            @include('partials.flexible-content.virtual-showroom')
+        @endif
+        @if( get_row_layout() == 'new_testimonial' )
+            @include('partials.flexible-content.new-testimonial')
+        @endif
+        @if (get_row_layout() == 'video_page')
+            @include('partials.flexible-content.video-page')
+        @endif
+        @if (get_row_layout() == 'online_quote_cta')
+            @include('partials.flexible-content.online-quote-cta')
+        @endif
+        @if( get_row_layout() == 'online_quote' )
+            @include('partials.flexible-content.online-quote')
+        @endif
+        @if (get_row_layout() == 'blue_online_quote_cta')
+            @include('partials.flexible-content.blue-online-quote-cta')
+        @endif
+        @if (get_row_layout() == 'blue_quote_cta')
+            @include('partials.flexible-content.blue-quote-cta')
+        @endif
+        @if (get_row_layout() == 'two_image_cta')
+            @include('partials.flexible-content.two-image-cta')
+        @endif
+        @if (get_row_layout() == 'benefits_block')
+            @include('partials.flexible-content.benefits-block')
+        @endif
+        @if (get_row_layout() == 'hardware_options')
+            @include('partials.flexible-content.hardware-options')
+        @endif
+        @if (get_row_layout() == 'color_options')
+            @include('partials.flexible-content.color-options')
+        @endif
+        @if (get_row_layout() == 'video_content_block')
+            @include('partials.flexible-content.video-content-block')
+        @endif
+        @if (get_row_layout() == 'product_key_features')
+            @include('partials.flexible-content.product-key-features')
+        @endif
+        @if (get_row_layout() == 'gallery_slider_with_thumbnail')
+            @include('partials.flexible-content.gallery-slider-with-thumbnail')
+        @endif
+        @if (get_row_layout() == 'showroom_video')
+            @include('partials.flexible-content.showroom-video')
+        @endif
         @if (get_row_layout() == 'cta')
             @include('partials.flexible-content.cta-block')
         @endif
@@ -46,6 +112,9 @@
         @endif
         @if (get_row_layout() == 'latest_news')
             @include('partials.flexible-content.latest-news')
+        @endif
+        @if (get_row_layout() == 'case_studies')
+            @include('partials.flexible-content.case-studies')
         @endif
         @if (get_row_layout() == 'latest_products')
             @include('partials.flexible-content.latest-products')

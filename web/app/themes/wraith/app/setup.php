@@ -187,6 +187,12 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title'	=> 'SEO',
 		'parent_slug'	=> 'theme',
 	));
+    acf_add_options_page(array(
+        'page_title' 	=> 'Mega Menus',
+        'menu_title'	=> 'Mega Menus',
+        'menu_slug' 	=> 'mega-menus',
+        'redirect'		=> false
+      ));
 }
 
 # Remove Default Admin Bar Margins

@@ -12,16 +12,17 @@ $paragraph = get_sub_field('paragraph');
   @php $h = 'h2' @endphp
 @endif
 
-<section class="section_page-banner">
+<section id="hero-banner" class="section_page-banner">
   @if( $banner_type )
-  <div class="full-width sm:flex sm:items-center relative lg:!min-h-[100vh] sm:!min-h-[60vh] !min-h-[40vh]">
+  <div class="full-width sm:flex sm:items-center relative lg:!min-h-[100vh] sm:!min-h-[60vh] !min-h-[100vh]">
+    <div class="leftBannerBox"></div>
     @if( $images )
       <div class="sm:absolute relative sm:top-0 sm:left-0 h-[40vh] w-full sm:h-full z-10">
         @if( count($images) > 1 )
         <div class="slick-banner">
         @endif
         @foreach($images as $key=>$image )
-          <div class="relative {!! $key != 0 ? 'hidden' : null !!} lg:!min-h-[100vh] sm:!min-h-[60vh] !min-h-[40vh]">
+          <div class="relative {!! $key != 0 ? 'hidden' : null !!} lg:!min-h-[100vh] sm:!min-h-[60vh] !min-h-[100vh]">
             <picture data-iesrc="{!! $image['url'] !!}">
               @if( $images_webp )
                 @php
@@ -45,13 +46,13 @@ $paragraph = get_sub_field('paragraph');
         @endif
       </div>
     @endif
-    <div class="container mx-auto border-b sm:border-none border-primary">
-      <div class="sm:w-[650px] w-full bg-white p-8 sm:p-12 relative z-20 mx-auto lg:ml-0 lg:mr-auto">
+    <div class="container banner-content mx-auto border-b sm:border-none border-primary">
+      <div class="sm:w-[650px] w-full relative z-20 mx-auto lg:ml-0 lg:mr-auto">
         {!! $subtitle ? '<h4 class="title-display title-display-left text-primary mb-4 ">' . $subtitle . '</h4>' : null !!}
-        {!! $title ? '<' . $h . ' class="text-3xl md:text-4xl mb-4">' . $title . '</' . $h . '>' : null !!}
-        {!! $paragraph ? '<p class="mb-1 text-sm sm:block hidden">' . $paragraph . '</p>' : null !!}
+        {!! $title ? '<' . $h . ' class="text-3xl text-white md:text-4xl lg:text-[66px] banner-title mb-8 font-serif font-bold">' . $title . '</' . $h . '>' : null !!}
+        {!! $paragraph ? '<div class="child-p:mb-12 child-p:text-white child-p:leading-loose sm:block hidden">' . $paragraph . '</div>' : null !!}
         @if( have_rows('buttons') )
-          <div class="flex flex-wrap gap-4">
+          <div class="block mt-8">
             @php $i = 0; @endphp
             @while( have_rows('buttons') )
               @php
@@ -61,7 +62,7 @@ $paragraph = get_sub_field('paragraph');
               $label = get_sub_field('label');
               $anchor = get_sub_field('anchor');
               @endphp
-              <a href="{{ $link }}" class="btn block md:inline-block {{ $i == 1 ? 'bg-primary text-white hover:bg-secondary' : 'bg-white text-[#343338] border border-primary hover:bg-primary hover:text-white' }}{{ $anchor ? ' btn-scroll' : null }}">{!! $label !!}</a>
+              <a href="{{ $link }}" class="btn block md:inline-block md:mr-4 mb-4 {{ $i == 1 ? 'bg-primary text-white hover:bg-secondary font-bold hover:border-none' : 'bg-white text-[#343338] font-bold border border-primary hover:bg-primary hover:text-white' }}{{ $anchor ? ' btn-scroll' : null }}">{!! $label !!}</a>
             @endwhile
           </div>
         @endif
@@ -132,3 +133,9 @@ $paragraph = get_sub_field('paragraph');
   </div>
   @endif
 </section>
+
+<style>
+   body main#primary {
+    margin-top: 0px !important;
+  }
+</style>

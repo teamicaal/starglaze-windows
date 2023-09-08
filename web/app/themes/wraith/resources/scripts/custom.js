@@ -86,6 +86,103 @@ import mixitup from 'mixitup';
     infinite: true,
   });
 
+  $('.acc-slick').slick({
+    slidesToShow: 5,
+    infinite:true,
+    swipeToSlide: true,
+    arrows: false,
+    autoplay: false,
+    autoplaySpeed: 3000,
+
+    responsive: [
+      {
+        breakpoint: 770,
+        settings: {
+          slidesToShow: 3,
+          infinite:true,
+          swipeToSlide: true,
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 3000,        
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          infinite:true,
+          swipeToSlide: true,
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 3000,        
+        }
+      }
+    ]
+  });
+
+  // Product Slider
+  $('.slick-products').slick({
+    slidesToShow: 4,
+    infinite:true,
+    swipeToSlide: true,
+    arrows: false,
+    centerMode:false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1380,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          centerMode:false,
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          centerMode:false,
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode:false,
+        }
+      }
+    ]
+  });
+
+  // latest news Slider
+  $('.slick-news').slick({
+    slidesToShow: 1,
+    infinite:true,
+    swipeToSlide: true,
+    arrows: true,
+    centerMode:false,
+    autoplay: false,
+    autoplaySpeed: 3000,
+    
+  });
+
+  // Accordion case study Slider
+  $('.accordion-case-study-slick').slick({
+    slidesToShow: 2,
+    infinite:true,
+    swipeToSlide: true,
+    arrows: true,
+    centerMode:false,
+    autoplay: false,
+    autoplaySpeed: 3000,
+    prevArrow:$('.case-study-arrow-p'),
+    nextArrow:$('.case-study-arrow-n'),
+    
+  });
+
   // Testimonials 
   $('.testimonials-carousel').slick({
     dots: true,
@@ -100,6 +197,39 @@ import mixitup from 'mixitup';
     infinite: true,
   });
 
+  // Benefits Block
+  $(".left-column").children(":odd").appendTo(".right-column");
+
+  $(".left-column")
+    .children()
+    .first()
+    .find(".benefit-answer")
+    .css("display", "block");
+  $(".left-column")
+    .children()
+    .first()
+    .find(".fa-minus")
+    .css("display", "block");
+  $(".left-column").children().first().find(".fa-plus").css("display", "none");
+
+  $(".right-column")
+    .children()
+    .last()
+    .find(".benefit-answer")
+    .css("display", "block");
+  $(".right-column")
+    .children()
+    .last()
+    .find(".fa-minus")
+    .css("display", "block");
+  $(".right-column").children().last().find(".fa-plus").css("display", "none");
+
+  $(".benefit").on("click", function () {
+    $(".benefit-answer", this).slideToggle();
+    $(".fa-plus", this).toggle();
+    $(".fa-minus", this).toggle();
+  });
+
   // Gallery Slider
   $('.slick-gallery-slider').slick({
     dots: false,
@@ -112,6 +242,35 @@ import mixitup from 'mixitup';
     draggable: true,
     centerMode: false,
   });
+
+  //gallery slider with thumbnail
+  $('.image_slider_main').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    centerMode: true,
+    fade: true,
+    asNavFor: '.image_slider_thmb'
+  });
+  $('.image_slider_thmb').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.image_slider_main',
+    arrows: false,
+    focusOnSelect: true,
+    initialSlide: 3
+  });
+
+  //why choose us slider
+  $('.why-choose-us-slick').slick({
+    slidesToShow: 3,
+    autoplay:true,
+    autoplaySpeed:5000,
+    dots:true,
+    infinite:true,
+    arrows:false,
+   });
+  
 
   $('.slick-p').on('click', function () {
     $(this).parent().prev().slick('slickPrev');
@@ -140,14 +299,13 @@ import mixitup from 'mixitup';
   }
 
   // Accordion
-  $('.accordionTitle').on('click', function () {
-    var $this = $(this);
-    $('.accordionBody').slideUp(300);
-    $this.next().slideDown(300, function () {
-      $('.accordion').removeClass('active');
-      $this.parent().toggleClass('active');
-    })
-  });
+$('.accordion-item-header').on('click', function(){
+  $('.accordion-item').removeClass('active');
+  $('.accordion-item-content').slideUp();
+
+  $(this).parent().toggleClass('active');
+  $(this).next().slideToggle();
+});
 
   // Smooth Scroll 
   $('.btn-scroll').on('click', function (e) {
@@ -322,5 +480,43 @@ import mixitup from 'mixitup';
     window.BE_API.hideChatWindow();
     $('.cta-chat-fixed').removeClass('chat-open');
   };
+
+  if ($(window).width() > 1024) {
+    // Mega Menu
+
+    // Check all mega menu's and add to array
+    var megaMenuArr = [];
+    $('.mega-menu').each(function() {
+      var megaMenuName = $(this).data('mega-menu');
+      megaMenuArr.push(megaMenuName);
+    });
+
+    // Check if menu item has a mega menu linked & show / hide
+    $('#header .menu-item').hover(
+      function(){
+        for ( var i = 0; i < megaMenuArr.length; i++ ) {
+          if ( $(this).hasClass(megaMenuArr[i]) ) {
+            $('[data-mega-menu="' + megaMenuArr[i] + '"]').show();
+            $('.mega-menu-background').show();
+            break;
+          }
+        }
+      },
+      function(){
+        $('.mega-menu').hide();
+        $('.mega-menu-background').hide();
+      }
+    );
+    $('.mega-menu').hover(
+      function(){
+        $(this).show();
+        $('.mega-menu-background').show();
+      },
+      function(){
+        $(this).hide();
+        $('.mega-menu-background').hide();
+      }
+    );
+  }
 
 })(jQuery);
