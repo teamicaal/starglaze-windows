@@ -37,16 +37,14 @@ $button_label = get_sub_field('button_label');
             <div class="xl:w-1/4 sm:w-1/2 w-full">
                 <a href="{{ $permalink }}" class="border-0">
                     <div class="product-grid-card shadow-lg mx-3 mb-6">
-                        <div class="p-2 bg-white border border-[#6d6e6a33]">
-                            <div class="embed embed-3by2">
-                                @if ($custom_title)
-                                <h6>{!! $custom_title !!}</h6>
-                                @else
-                                <h6>{!! get_the_title( $page_id ) !!}</h6>
-                                @endif
-                                <img class="mx-auto transform lozad object-cover-absolute" data-src="{{ $img_url }}"
-                                    alt="{{ $img_alt }}">
-                            </div>
+                        <div class="embed embed-3by2 rounded-lg">
+                            @if ($custom_title)
+                            <h6>{!! $custom_title !!}</h6>
+                            @else
+                            <h6>{!! get_the_title( $page_id ) !!}</h6>
+                            @endif
+                            <img class="mx-auto transform lozad object-cover-absolute" data-src="{{ $img_url }}"
+                                alt="{{ $img_alt }}">
                         </div>
                         @if ($excerpt)
                         <p class="mt-0-75 mb-0 p-1-5 bg-grey-lightest">{!! $excerpt !!}</p>
