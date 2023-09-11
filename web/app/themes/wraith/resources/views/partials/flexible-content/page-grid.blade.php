@@ -36,7 +36,7 @@ $button_label = get_sub_field('button_label');
             @endphp
             <div class="xl:w-1/4 sm:w-1/2 w-full">
                 <a href="{{ $permalink }}" class="border-0">
-                    <div class="product-grid-card shadow-lg mx-3 mb-6">
+                    <div class="product-grid-card shadow-lg mx-3 rounded-lg mb-6">
                         <div class="embed embed-3by2 rounded-lg">
                             @if ($custom_title)
                             <h6>{!! $custom_title !!}</h6>
