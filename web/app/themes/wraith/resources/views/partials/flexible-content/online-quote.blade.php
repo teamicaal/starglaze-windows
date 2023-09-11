@@ -5,7 +5,7 @@ $path = get_sub_field('path');
 @endphp
 
 
-<section id="online-quote" class="section_quoting-engine flex-row justify-end items-center pt-[12rem]">
+<section id="online-quote" class="section_quoting-engine flex-row justify-end items-center pt-8">
   <div class="mx-auto container ">
     <div class="lg:w-10/12 relative">
       <h2 class="text-primary uppercase font-bold font-serif tracking-wide text-3xl lg:text-4xl mb-6">
