@@ -7,8 +7,8 @@ $path = get_sub_field('path');
 
 <section id="online-quote" class="section_quoting-engine flex-row justify-end items-center lg:pt-20 pt-12 pb-12">
   <div class="mx-auto container ">
-    <div class="lg:w-10/12 relative">
-      <h2 class="text-primary uppercase font-bold font-serif tracking-wide text-3xl lg:text-4xl mb-12">
+    <div class="lg:w-10/12 relative mb-12">
+      <h2 class="text-primary uppercase font-bold font-serif tracking-wide text-3xl lg:text-4xl mb-6">
       {!! $title !!}
       </h2>
     {!! $paragraph ? '<div class=" child-p:leading-relaxed child-p:max-w-screen-md mb-6 child-p:mb-0">' . $paragraph . '</div>' : null !!}
