@@ -7,7 +7,7 @@ $button_label = get_sub_field('button_label');
 @endphp
 
 <section id="page-grid" class="lg:py-12 py-8{{ $custom_class ? $custom_class : '' }}">
-    <div class="container mx-auto">
+    <div class="">
         <div class="px-1">
             @if ($title)
             <h1 class="text-center text-[#1C2530] font-semibold w-full  pb-8 mb-8">{{ $title }}</h1>
@@ -34,7 +34,7 @@ $button_label = get_sub_field('button_label');
             $excerpt = get_sub_field('excerpt');
             $permalink = get_the_permalink( $page_id );
             @endphp
-            <div class="xl:w-1/3 sm:w-1/2 w-full">
+            <div class="xl:w-1/4 sm:w-1/2 w-full">
                 <a href="{{ $permalink }}" class="border-0">
                     <div class="product-grid-card shadow-lg mx-3 mb-6">
                         <div class="p-2 bg-white border border-[#6d6e6a33]">
