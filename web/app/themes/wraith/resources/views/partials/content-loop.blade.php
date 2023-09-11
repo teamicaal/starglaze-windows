@@ -32,6 +32,9 @@
         @if (get_row_layout() == 'showroom_accessibility')
             @include('partials.flexible-content.showroom-accessibility')
         @endif
+        @if (get_row_layout() == 'page_grid')
+            @include('partials.flexible-content.page-grid')
+        @endif
         @if (get_row_layout() == 'energy_calculator_content')
             @include('partials.flexible-content.energy-calculator-content')
         @endif
