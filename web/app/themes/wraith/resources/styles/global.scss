@@ -237,7 +237,7 @@ a {
   @apply text-gray-800 transition;
 
   &.mixitup-control-active {
-    @apply text-primary;
+    @apply text-white bg-primary;
   }
 }
 
