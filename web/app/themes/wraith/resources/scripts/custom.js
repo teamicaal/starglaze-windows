@@ -307,13 +307,13 @@ $('.accordion-item-header').on('click', function(){
   $(this).next().slideToggle();
 });
 
-  // Smooth Scroll 
-  $('.btn-scroll').on('click', function (e) {
-    e.preventDefault()
-    $('html, body').animate(
-      { scrollTop: $($(this).attr('href')).offset().top - 150 }, 400
-    );
-  })
+  // smooth scroll
+   
+$(document).on('click', 'a[href^="#"]', function (event) {
+  event.preventDefault();
+  $('html, body').animate({
+      scrollTop: $($.attr(this, 'href')).offset().top -130 }, 700);
+});
 
   // Cookie Policy
   $.fn.CookieNotice = function () {
