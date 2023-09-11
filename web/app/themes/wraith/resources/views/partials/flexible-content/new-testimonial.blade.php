@@ -2,7 +2,7 @@
 $title = get_sub_field('title');
 $custom_class = get_sub_field('custom_class');
 @endphp
-<section class="{{ $custom_class }} pt-8">
+<section class="{{ $custom_class }} lg:py-20 py-12">
   <div class="container mx-auto mb-8 lg:w-[70%] w-full">
     <h2 class="text-primary uppercase font-bold font-serif tracking-wide text-3xl lg:text-4xl mb-6 ">{!! $title !!}</h2>
     <div class="relative flex flex-wrap justify-between">
