@@ -2,8 +2,8 @@
 $custom_class = get_sub_field('custom_class');
 @endphp
 
-<section class="{!! $custom_class ? ' ' . $custom_class : 'pt-8 lg:pt-12' !!} ">
-	<div class="">
+<section id="alternating" class="{!! $custom_class ? ' ' . $custom_class : 'pt-8 lg:pt-12' !!} ">
+	<div class="container-fluid">
 		@php $i = 0; @endphp
 		@while(have_rows('rows'))
 		@php
