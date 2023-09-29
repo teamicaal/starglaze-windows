@@ -9,7 +9,7 @@ $i = 0;
     <div class="relative lg:pt-[10rem] lg:pb-[3rem]">
         <img src="{{ $background_image['url'] }}" alt="dot background" class="h-full w-full absolute object-cover opacity-30 inset-0">
         <div class="container mx-auto relative">
-            <div class="flex flex-wrap items-baseline justify-center mt-6 content">
+            <div class="flex flex-wrap justify-center mt-6 content">
     
                 @if (have_rows('energy_content'))
                 @while (have_rows('energy_content'))
