@@ -269,6 +269,24 @@ import mixitup from 'mixitup';
     dots:true,
     infinite:true,
     arrows:false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          centerMode:false,
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode:false,
+        }
+      }
+    ]
    });
   
 
