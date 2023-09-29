@@ -13,7 +13,7 @@
                 $button_label = get_sub_field('button_label');
                 $button_link = get_sub_field('button_link');
                 @endphp
-                <div class=" flex justify-center items-center relative m-4 {{ $i == 1 ? 'mr-2' : 'ml-2'}} rounded-lg overflow-hidden h-[80vh] md:py-24 md:px-16">
+                <div class=" flex justify-center items-center relative m-4 {{ $i == 1 ? 'md:mr-2' : 'md:ml-2'}} rounded-lg overflow-hidden h-[80vh] md:py-24 md:px-16">
                     <img src="{{ $image['url'] }}" alt="{{ $image_alt ? $image_alt : $image['alt'] }}" class=" w-full h-full bg-no-repeat bg-center bg-cover absolute">
                     <div class="absolute darkTint w-full h-full"></div>
                     <div class="relative md:p-8 flex flex-col justify-center items-center max-w-[1000px] rounded-lg border border-white h-full">
