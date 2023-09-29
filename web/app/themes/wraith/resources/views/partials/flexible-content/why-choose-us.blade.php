@@ -5,7 +5,7 @@ $paragraph = get_sub_field('paragraph');
 $i = 0;
 @endphp
 
-<section id="why-choose-us" class="blue-bg-gradient relative mt-[-8rem] pt-[12rem] {!! $custom_class ? ' ' . $custom_class : 'lg:pb-16 pb-12' !!}">
+<section id="why-choose-us" class="blue-bg-gradient px-2 relative mt-[-8rem] pt-[12rem] {!! $custom_class ? ' ' . $custom_class : 'lg:pb-16 pb-12' !!}">
     <img src="/app/uploads/2023/09/Dots-Left.png" alt="dot background" class="h-auto md:block hidden left-0 opacity-[0.02] absolute">
     <img src="/app/uploads/2023/09/Dots-right.png" alt="dot background" class="h-auto md:block hidden right-0 opacity-[0.02] absolute">
     <div class="container mx-auto">

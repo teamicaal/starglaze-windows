@@ -8,8 +8,8 @@ $button_link = get_sub_field('button_link');
 
 @endphp
 
-<section id="showroom-info-block" class="relative flex justify-center items-center">
-    <div class="grow flex justify-center items-center relative m-4 rounded-lg overflow-hidden h-[80vh] py-0 md:py-24 px-0 md:px-16">
+<section id="showroom-info-block" class="relative py-4 lg:py-0 flex justify-center items-center">
+    <div class="grow inner-wrapper flex justify-center items-center relative md:m-4 rounded-lg overflow-hidden py-8 md:py-24 px-2 md:px-16">
         <img src="{{ $image['url'] }}" alt="{{ $image_alt ? $image_alt : $image['alt'] }}" class=" w-full bg-no-repeat bg-center bg-cover absolute">
         <div class="absolute darkTint w-full h-full"></div>
         <div class="relative md:p-8 flex flex-col justify-center items-center max-w-[1000px] rounded-lg border border-white h-auto">

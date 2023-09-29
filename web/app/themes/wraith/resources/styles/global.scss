@@ -827,3 +827,28 @@ a {
     }
   }
 }
+
+
+// showroom-info-block
+
+#showroom-info-block{
+  .inner-wrapper {
+
+    @screen lg {
+      height: 80vh;
+    }
+  }
+}
+
+// blue-quote-cta
+
+#blue-quote-cta{
+  .inner-wrapper {
+
+    @screen lg {
+      height: 80vh;
+    }
+  }
+}
+
+

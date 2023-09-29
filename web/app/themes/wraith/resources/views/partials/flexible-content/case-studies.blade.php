@@ -9,15 +9,14 @@ $paragraph = get_sub_field('paragraph');
 ])
 
 <section class="relative lg:pt-20 pt-12">
-  <div class="container-fluid">
     <div class="relative">
    
-      <h2 class="text-center lg:text-4xl font-serif font-bold text-3xl lg:mb-6 mb-4 text-primary relative capitalize">{{ $title }}</h2>
-      {!! $paragraph ? '<div class="mb-1 latest-news child-p:relative child-p:mx-auto child-p:text-[#3A3A3A] child-p:font-normal child-p:max-w-screen-md child-p:leading-7 child-p:text-center child-p:text-sm">' . $paragraph . '</div>' : null !!}
+      <h2 class="text-center px-2 lg:text-4xl font-serif font-bold text-3xl lg:mb-6 mb-4 text-primary relative capitalize">{{ $title }}</h2>
+      {!! $paragraph ? '<div class="mb-1 px-2 latest-news child-p:relative child-p:mx-auto child-p:text-[#3A3A3A] child-p:font-normal child-p:max-w-screen-md child-p:leading-7 child-p:text-center child-p:text-sm">' . $paragraph . '</div>' : null !!}
       @hasposts($query)
         <div class="lg:flex justify-center items-center relative">
           @posts($query)
-          <article class="w-full mx-2 lg:first-of-type:ml-0 lg:last-of-type:mr-0 lg:mb-0 mb-4 ">
+          <article class="w-full px-2 md:mx-2 lg:first-of-type:ml-0 lg:last-of-type:mr-0 lg:mb-0 mb-4 ">
             <div class=" flex aspect-3/4 justify-center items-center relative rounded-lg overflow-hidden h-fit p-[60px]">
               <img data-src="@thumbnail('url', false)" src="@thumbnail('url', false)" width="100%" height="auto" alt="@title" class="w-full h-full object-cover bg-no-repeat bg-center bg-cover absolute">
               <div class="absolute darkTint w-full h-full"></div>
@@ -37,7 +36,7 @@ $paragraph = get_sub_field('paragraph');
         </p>
       @endnoposts
     </div>
-  </div>
+
 
 </section>
   
