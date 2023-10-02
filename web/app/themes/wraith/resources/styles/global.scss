@@ -550,12 +550,16 @@ a {
 
 .leftBannerBox{
   position: absolute;
-    top: 0;
-    left: 0;
-    width: 32%;
-    height: 100%;
-    z-index: 20;
-    background: #343338ad;
+  top: 0;
+  left: 0;
+  width: 32%;
+  height: 100%;
+  z-index: 20;
+  background: #343338ad;
+
+  @screen lg {
+    width: 42%;
+  }
 }
 
 .banner-title{
