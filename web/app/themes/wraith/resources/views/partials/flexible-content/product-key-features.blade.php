@@ -18,6 +18,7 @@
           @php
             the_row();
             $icon = get_sub_field('icon');
+            $freeIcon = get_sub_field('free_icon');
             $title = get_sub_field('title');
             $paragraph= get_sub_field('paragraph');
           @endphp
@@ -27,6 +28,10 @@
                 @if( $icon )
                   <span class="block mx-auto bg-white rounded-full w-16 h-16 flex justify-center items-center">
                     <i class="fa fa-{{ $icon }} text-primary text-2xl"></i>
+                  </span>
+                @elseif( $freeIcon )
+                  <span class="block mx-auto bg-white rounded-full w-16 h-16 flex justify-center items-center">
+                    {!! $freeIcon !!}
                   </span>
                 @endif
               </div>
