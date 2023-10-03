@@ -30,7 +30,7 @@
                     <i class="fa fa-{{ $icon }} text-primary text-2xl"></i>
                   </span>
                 @elseif( $freeIcon )
-                  <span class="block mx-auto bg-white rounded-full w-16 h-16 flex justify-center items-center">
+                  <span class="block mx-auto bg-white rounded-full w-16 h-16 flex justify-center items-center free-icon-style">
                     {!! $freeIcon !!}
                   </span>
                 @endif
