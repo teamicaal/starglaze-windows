@@ -18,7 +18,7 @@ $i = 0;
       @hasposts($query)
         <div class="flex flex-wrap md:-mx-4 mx-0 mb-4">
           @posts($query)
-          <article class="w-full md:w-1/2 px-4 pb-6">
+          <article class="w-full md:w-1/2 md:px-4 px-0 pb-6">
             <a href="@permalink">
               <div class="w-full md:mr-4 relative overflow-hidden" style="min-height: 251px;">
                 <img data-src="@thumbnail('4by3-md', false)" src="@thumbnail('lozad', false)" width="100%" height="auto" alt="@title" class="lozad object-cover rounded-lg inset-0 w-full h-full absolute">
@@ -38,7 +38,7 @@ $i = 0;
         </p>
       @endnoposts
     </div>
-    <div class="lg:w-1/2 w-full relative mt-16 slick-news aspect-square h-full">
+    <div class="lg:w-1/2 w-full relative md:mt-16 my-8 slick-news aspect-square h-full">
       @if (have_rows('right_side_image'))
         @while (have_rows('right_side_image'))
           @php
