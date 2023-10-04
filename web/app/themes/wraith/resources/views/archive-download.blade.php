@@ -28,9 +28,9 @@
       $categories = get_terms('download_category');
       @endphp
       <div class="flex lg:flex-wrap scroll-x-proximity overflow-x-scroll lg:overflow-hidden -mx-4 md:mx-0 pl-4 md:pl-0 mb-4">
-        <button type="button" data-filter="all" class="mixitup-control mixitup-control-active scroll-align-start mb-1 title-display px-4 py-8 focus:outline-none">All</button>
+        <button type="button" data-filter="all" class="mixitup-control mixitup-control-active whitespace-nowrap bg-[#E8EeE8] text-[#303947] scroll-align-start mb-4 capitalize font-medium mr-3 px-4 py-3 focus:outline-none">All</button>
         @foreach( $categories as $category )
-          <button type="button" data-filter=".{{ $category->slug }}" class="mixitup-control scroll-align-start mb-1 title-display px-4 py-8 focus:outline-none">{{ $category->name }}</button>
+          <button type="button" data-filter=".{{ $category->slug }}" class="mixitup-control whitespace-nowrap bg-[#E8EeE8] text-[#303947] scroll-align-start mb-4 capitalize font-medium mr-3 px-4 py-3 focus:outline-none">{{ $category->name }}</button>
         @endforeach
       </div>
       <div class="flex flex-wrap md:-mx-4 mix-container">
