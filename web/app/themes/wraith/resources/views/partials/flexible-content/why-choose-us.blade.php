@@ -39,7 +39,7 @@ $i = 0;
                     <div class="md:p-6 p-0 md:mt-0 mt-6 text-center">
                         @if($icon)
                         <div class="mb-4">
-                            <i class="text-4xl text-primary bg-white rounded-full p-4 fas fa-{!! $icon !!}"></i>
+                            <i class="text-4xl text-primary h-[35px] w-[35px] bg-white rounded-full p-4 fas fa-{!! $icon !!}"></i>
                         </div>
                         @endif
                         {!! $title ? '<h3 class="mb-4 z-50 text-2xl font-serif font-medium text-white">' . $title . '</h3>' : null !!}
