@@ -12,11 +12,11 @@ $i = 0;
 ])
 <div id="latest-news" class="{!! $custom_class ? ' ' . $custom_class : ' ' !!}">
   <div class="container mx-auto lg:flex">
-    <div class="lg:w-1/2 w-full mr-8">
+    <div class="lg:w-1/2 w-full lg:mr-8 mr-0">
       <h2 class="text-primary md:text-4xl text-3xl font-serif font-bold max-w-[350px] mb-8 ">{{ $title }}</h2>
       {!! $paragraph ? '<div class="child-p:mb-4 child-p:font-normal child-p:text-[#7C7C7C]">' . $paragraph . '</div>' : null !!}
       @hasposts($query)
-        <div class="flex flex-wrap md:-mx-4 mb-4">
+        <div class="flex flex-wrap md:-mx-4 mx-0 mb-4">
           @posts($query)
           <article class="w-full md:w-1/2 px-4 pb-6">
             <a href="@permalink">
