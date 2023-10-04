@@ -87,7 +87,7 @@ import mixitup from 'mixitup';
   });
 
   $('.acc-slick').slick({
-    slidesToShow: 5,
+    slidesToShow: 6,
     infinite:true,
     swipeToSlide: true,
     arrows: false,
@@ -98,7 +98,7 @@ import mixitup from 'mixitup';
       {
         breakpoint: 770,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4,
           infinite:true,
           swipeToSlide: true,
           arrows: false,
