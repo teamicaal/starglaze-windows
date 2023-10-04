@@ -166,7 +166,8 @@ import mixitup from 'mixitup';
     centerMode:false,
     autoplay: false,
     autoplaySpeed: 3000,
-    
+    prevArrow:$('.offer-arrow-p'),
+    nextArrow:$('.offer-arrow-n'),
   });
 
   // Accordion case study Slider

@@ -50,15 +50,25 @@ $i = 0;
            $bottom_text_line = get_sub_field('bottom_text_line');
            $i++;
           @endphp
-          <a href="{{ $button_link }}" class="hover:border-none">
             <div class="w-full h-full relative">
               <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" class="lozad object-fit-cover w-full h-full inset-0 rounded-lg">
-              <div class="red-strip absolute text-center">
-                <h2 class="text-white md:text-7xl text-5xl font-bold tracking-wide">{{ $top_text_line }}</h2>
-                <h3 class="text-white md:text-4xl text-3xl font-bold tracking-wide">{{ $bottom_text_line }}</h3>
+              <div class="red-strip absolute text-center flex flex-wrap justify-between">
+                <button class="offer-arrow-p flex items-center justify-center">
+                  <i class="fa fa-chevron-left text-white text-xl"></i>
+                </button>
+                <div class="flex flex-col w-4/5">
+                  <a href="{{ $button_link }}" class="hover:border-none">
+                    <h2 class="text-white md:text-6xl text-5xl font-bold tracking-wide">{{ $top_text_line }}</h2>
+                    <h3 class="text-white md:text-3xl text-3xl font-bold tracking-wide">{{ $bottom_text_line }}</h3>
+                  </a>
+                </div>
+               
+                <button class="offer-arrow-n flex items-center justify-center">
+                    <i class="fa fa-chevron-right text-white text-xl"></i>
+                </button>
+                
               </div>
             </div>
-          </a>
         @endwhile
       @endif
     </div>
