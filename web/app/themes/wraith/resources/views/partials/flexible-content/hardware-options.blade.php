@@ -15,7 +15,9 @@
                         $name = get_sub_field('name');
                     @endphp
                     <div class="text-center snap-start">
+                        @if ($name)
                         <span class="inline-block font-semibold text-[#3D3B3B] border border-primary rounded-full py-2 px-6 uppercase min-w-max">{{ $name }}</span>
+                        @endif
 
                         <img class="max-w-[220px] mx-auto" src="{{ $image['url'] }}" alt="{{ $image['alt'] }}">
                     </div>
