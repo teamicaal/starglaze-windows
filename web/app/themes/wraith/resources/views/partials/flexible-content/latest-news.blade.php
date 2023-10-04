@@ -54,8 +54,8 @@ $i = 0;
             <div class="w-full h-full relative">
               <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" class="lozad object-fit-cover w-full h-full inset-0 rounded-lg">
               <div class="red-strip absolute text-center">
-                <h2 class="text-white text-7xl font-bold tracking-wide">{{ $top_text_line }}</h2>
-                <h3 class="text-white text-4xl font-bold tracking-wide">{{ $bottom_text_line }}</h3>
+                <h2 class="text-white md:text-7xl text-5xl font-bold tracking-wide">{{ $top_text_line }}</h2>
+                <h3 class="text-white md:text-4xl text-3xl font-bold tracking-wide">{{ $bottom_text_line }}</h3>
               </div>
             </div>
           </a>
