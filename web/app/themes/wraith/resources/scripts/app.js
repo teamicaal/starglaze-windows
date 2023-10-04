@@ -56,14 +56,14 @@ import './forms';
 import { config, library, dom } from '@fortawesome/fontawesome-svg-core';
 import { faPhone, faPhoneSquare, faPrint, faEnvelope, faEnvelopeOpen, faMapMarkerAlt, faBars, faCaretLeft, faCaretRight,
 faArrowRight, faTimes, faShare, faChevronUp, faChevronRight, faChevronDown, faChevronLeft, faPoundSign, faUser, faKey,
-faCheck, faStar, faQuoteRight, faExpand, faHouse, faMessageLines, faShield, faWindowFrame, faHammer, faCalendar, faMinus, faPlus, faLockKeyhole, faScrewdriverWrench, faChartLineUp, faWheelchair, faDogLeashed, faSquareParking } from '@fortawesome/pro-solid-svg-icons';
+faCheck, faStar, faQuoteRight, faExpand, faHouse, faMessageLines, faShield, faWindowFrame, faHammer, faCalendar, faMinus, faPlus, faLockKeyhole, faScrewdriverWrench, faChartLineUp, faWheelchair, faDogLeashed, faSquareParking, faLeafOak } from '@fortawesome/pro-solid-svg-icons';
 import { faFacebook, faFacebookF, faTwitter, faInstagram, faYoutube, faPinterest, faLinkedin, faLinkedinIn, faWhatsapp }
 from '@fortawesome/free-brands-svg-icons';
 config.searchPseudoElements=true;
 library.add(faPhone, faPhoneSquare, faPrint, faEnvelope, faEnvelopeOpen, faMapMarkerAlt, faBars, faFacebook,
 faFacebookF, faTwitter, faInstagram, faYoutube, faPinterest, faLinkedin, faLinkedinIn, faCaretLeft, faCaretRight,
 faArrowRight, faTimes, faShare, faChevronUp, faChevronRight, faChevronDown, faChevronLeft, faPoundSign, faUser, faKey,
-faCheck, faStar, faQuoteRight, faExpand, faHouse, faMessageLines, faWhatsapp, faShield, faWindowFrame, faHammer, faCalendar, faMinus, faPlus, faLockKeyhole, faScrewdriverWrench, faChartLineUp, faWheelchair, faDogLeashed, faSquareParking);
+faCheck, faStar, faQuoteRight, faExpand, faHouse, faMessageLines, faWhatsapp, faShield, faWindowFrame, faHammer, faCalendar, faMinus, faPlus, faLockKeyhole, faScrewdriverWrench, faChartLineUp, faWheelchair, faDogLeashed, faSquareParking, faLeafOak);
 dom.i2svg();
 
 /**
