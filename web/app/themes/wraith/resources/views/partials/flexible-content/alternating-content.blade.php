@@ -42,7 +42,7 @@ $custom_class = get_sub_field('custom_class');
 								$label = get_sub_field('label');
 								@endphp
 								<a href="{{ $link }}"
-								class="btn {{ $j == 1 ? 'bg-transparent text-[#343338] text-medium border border-primary hover:scale-110 transition-all ease-in-out duration-500 text-center block md:inline-block mb-4 md:mr-4 md:mb-0' : 'bg-primary hover:scale-110 transition-all ease-in-out duration-500 text-white border-0 text-center block md:inline-block' }}">{!!
+								class="btn {{ $j == 1 ? 'bg-transparent text-[#343338] text-medium border border-primary hover:scale-110 transition-all ease-in-out duration-500 text-center block md:inline-block mb-4 md:mr-8 md:mb-0' : 'bg-primary hover:scale-110 transition-all ease-in-out duration-500 text-white border-0 text-center block md:inline-block' }}">{!!
 								$label !!}</a>
 								@endwhile
 							</div>
