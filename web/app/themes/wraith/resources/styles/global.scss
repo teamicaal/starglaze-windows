@@ -856,3 +856,11 @@ a {
 //pasted svg rules
 .free-icon-style svg { height:auto; width:2rem; }
 .free-icon-style svg > path { fill:#ac885e; }
+
+#energy-calculator-content{
+  .icon-color{
+   svg{
+      color: #3F7E57 !important;
+    }
+  }
+}
