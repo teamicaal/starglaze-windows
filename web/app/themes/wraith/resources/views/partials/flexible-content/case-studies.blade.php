@@ -21,7 +21,7 @@ $paragraph = get_sub_field('paragraph');
               <img data-src="@thumbnail('url', false)" src="@thumbnail('url', false)" width="100%" height="auto" alt="@title" class="w-full h-full object-cover bg-no-repeat bg-center bg-cover absolute">
               <div class="absolute darkTint w-full h-full"></div>
               <div class="relative p-8 flex flex-col justify-center items-center max-w-[1000px] rounded-lg border border-white h-full">
-                <h2 class="font-serif text-center text-2xl md:text-3xl text-white tracking-wide ">@title</h2>
+                <h2 class="font-serif font-bold text-center text-2xl md:text-3xl text-white tracking-wide ">@title</h2>
                 {{-- <div class="child-p:text-white p-4 text-center px-20 pt-0 pb-8 text-lg">{!! the_excerpt() !!}</div> --}}
                 <a href="@permalink" class="bg-white text-primary font-bold text-center darkTint-button absolute">Learn More</a>
               </div>
