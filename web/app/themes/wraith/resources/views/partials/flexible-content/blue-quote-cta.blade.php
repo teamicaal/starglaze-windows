@@ -1,3 +1,7 @@
+@php
+ $index = 0 ;
+@endphp
+
 <section id="blue-quote-cta" class="relative px-4 md:px-0 flex justify-center items-center">
     @if( have_rows('usp') )
         <div class="lg:flex">
@@ -6,12 +10,14 @@
                 @php
                 the_row();
                 $i++;
+                $index++ ;
                 $image = get_sub_field('image');
                 $image_alt = get_sub_field('image_alt');
                 $title = get_sub_field('title');
                 $paragraph = get_sub_field('paragraph');
                 $button_label = get_sub_field('button_label');
                 $button_link = get_sub_field('button_link');
+                $youtube_video_link = get_sub_field('youtube_video_link');
                 @endphp
                 <div class=" flex justify-center items-center relative md:m-4 {{ $i == 1 ? 'md:mr-2 mb-12 lg:mb-0' : 'md:ml-2'}} rounded-lg overflow-hidden py-8 md:py-24 px-3 md:px-16 inner-wrapper">
                     <img src="{{ $image['url'] }}" alt="{{ $image_alt ? $image_alt : $image['alt'] }}" class=" w-full h-full bg-no-repeat bg-center bg-cover absolute">
@@ -24,6 +30,7 @@
                 </div>
             @endwhile
         </div>
+       
     @endif
 	
 </section>
