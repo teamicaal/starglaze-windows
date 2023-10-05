@@ -54,7 +54,7 @@ module.exports = {
 
       fontFamily: {
         'sans': ['Myriad Pro', ...defaultTheme.fontFamily.sans],
-        'serif': ['Neue Aachen Pro', ...defaultTheme.fontFamily.sans],
+        'serif': ['Oswald', ...defaultTheme.fontFamily.sans],
       },
       aspectRatio: {
         '21/9': '21 / 9',
