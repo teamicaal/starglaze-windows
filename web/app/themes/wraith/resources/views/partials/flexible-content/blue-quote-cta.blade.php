@@ -19,7 +19,7 @@
                     <div class="relative p-2 md:p-8 flex flex-col justify-center items-center max-w-[1000px] rounded-lg border border-white h-full">
                         <h2 class="font-serif font-bold text-center text-3xl md:text-4xl mb-6 text-white tracking-wide ">{{ $title }}</h2>
                         <div class="child-p:text-white p-4 text-center md:px-20 pt-0 pb-8 text-lg">{!! $paragraph !!}</div>
-                        <a href="{{ $button_link }}" class="bg-white text-primary font-bold text-center darkTint-button absolute">{{ $button_label }}</a>
+                        <a href="{{ $button_link }}" class="bg-white text-primary font-bold text-center darkTint-button absolute">{!! $button_label !!}</a>
                     </div>
                 </div>
             @endwhile
