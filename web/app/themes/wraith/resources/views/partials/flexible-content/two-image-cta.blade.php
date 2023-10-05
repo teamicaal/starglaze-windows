@@ -3,9 +3,9 @@
 @endphp
 
 <section class="">
-    @if (have_rows('cta_cards'))
+    @if (have_rows('cta_cards' , 'option'))
         <div class="flex flex-wrap md:flex-nowrap mx-4 md:mx-0 gap-4">
-            @while (have_rows('cta_cards'))
+            @while (have_rows('cta_cards' , 'option'))
                 @php
                     the_row();
                     $title = get_sub_field('title');
