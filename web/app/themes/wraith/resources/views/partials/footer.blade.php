@@ -24,7 +24,7 @@
     <div class="w-full md:w-1/2 lg:w-1/4 px-4">
       <section class="widget">
         <h3>Contact Us</h3>
-        @include('partials.contact-details', ['colour'=>'400'])
+        @include('partials.contact-details', ['colour'=>'white'])
       </section>
     </div>
   </div>

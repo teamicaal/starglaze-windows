@@ -46,7 +46,7 @@ $social_pinterest = get_field('social_pinterest', 'option');
     </li>
     @endif
     @if( have_rows('locations', 'option') )
-    <div class="">
+    <div class="flex">
       @while( have_rows('locations', 'option') )
       @php
       the_row();
@@ -59,7 +59,7 @@ $social_pinterest = get_field('social_pinterest', 'option');
       $address_country = get_sub_field('address_country');
       $address_link = get_sub_field('address_link');
       @endphp
-      {!! $address_link ? '<a class="flex mb-6" href="' . $address_link . '" target="_blank">' : null !!}
+      {!! $address_link ? '<a class="flex mr-6" href="' . $address_link . '" target="_blank">' : null !!}
         <i class="fa fa-map-marker-alt mr-3 {!! $colour == 'white' ? 'text-' . $colour   : 'text-primary' !!}"></i>
         <ul class="list-reset font-font-normal">
           {!! $address_name ? '<li class="mb-2"><h4 class="text-' . $colour . ' font-display uppercase tracking-widest font-base mb-2">' . $address_name . '</h4></li>' : null !!}
@@ -83,4 +83,3 @@ $social_pinterest = get_field('social_pinterest', 'option');
     </ul>
   </ul>
 </div>
-
