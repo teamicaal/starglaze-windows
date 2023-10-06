@@ -164,7 +164,7 @@ import mixitup from 'mixitup';
     swipeToSlide: true,
     arrows: true,
     centerMode:false,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 3000,
     prevArrow:$('.offer-arrow-p'),
     nextArrow:$('.offer-arrow-n'),
