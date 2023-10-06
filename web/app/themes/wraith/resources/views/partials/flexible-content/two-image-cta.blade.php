@@ -17,7 +17,7 @@
                     
                 @endphp
                 <div class="w-full lg:w-1/2 overflow-hidden lg:flex lg:max-h-[400px]">
-                    <div class="lg:w-3/5 w-full px-4 py-8 xl:px-8 lg:py-6 lg:order-1 order-2 blue-bg-gradient relative overflow-hidden">
+                    <div class="lg:w-3/5 flex flex-col justify-between w-full px-4 py-8 xl:px-8 lg:py-6 lg:order-1 order-2 blue-bg-gradient relative overflow-hidden">
                         <h3 class="lg:text-3xl text-2xl font-bold font-serif lg:mb-6 text-white ">{{ $title }}</h3>
                         <div class="child-p:text-white child-p:font-normal lg:mb-6">{!! $paragraph !!}</div>
                         <a href="{{ $button_link }}" class="btn inline-block relative bg-white hover:border-none font-bold hover:bg-primary hover:text-white text-primary" >{{ $button_label }}</a>
