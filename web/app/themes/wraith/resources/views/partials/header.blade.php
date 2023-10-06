@@ -209,7 +209,7 @@
               <a href="/blog/">
                 <div class="embed embed-21by9 mb-4 mega-menu-cta-card rounded-xl shadow-xl">
                   <img class="object-cover-absolute z-0" src="/app/uploads/2023/09/star-home-blog.jpg" alt="Blog">
-                  <h6>Start Home Blog</h6>
+                  <h6>Star Home Blog</h6>
                 </div>
               </a>
               <a href="/contact/">
