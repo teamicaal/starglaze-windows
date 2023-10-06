@@ -46,6 +46,16 @@ $details = get_sub_field('details');
                   <div class="text-sm text-gray-700 pb-2">Message</div>
                   <textarea name="message" placeholder="" rows="4"></textarea>
                 </div>
+                <div class="w-full md:w-1/2 mb-2 md:pr-4">
+                  <div class="text-sm text-gray-700 pb-2">Select Day</div>
+                  <input name="phone" type="date">
+                  <div class="invalid-feedback text-red"></div>
+                </div>
+                <div class="w-full md:w-1/2 mb-2 md:pl-4">
+                  <div class="text-sm text-gray-700 pb-2">Choose Time</div>
+                  <input name="postcode" type="text">
+                  <div class="invalid-feedback text-red"></div>
+                </div>
                 <div class="w-full text-center">
                   <p class="mb-2">
                     * indicates required fields
