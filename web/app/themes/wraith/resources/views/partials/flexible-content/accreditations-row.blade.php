@@ -3,7 +3,7 @@ $title = get_sub_field('title');
 $custom_class = get_sub_field('custom_class');
 @endphp
 
-<section class="pt-12 overflow-hidden{!! $custom_class ? ' ' . $custom_class : null; !!}">
+<section class="overflow-hidden{!! $custom_class ? ' ' . $custom_class : 'pt-12'; !!}">
   <div class="container mx-auto">
     {!! $title ? '<h3 class="text-[#5B5B5B] lg:text-3xl text-2xl uppercase font-serif text-center mb-8">' . $title . '</h3>' : null; !!}
   </div>
