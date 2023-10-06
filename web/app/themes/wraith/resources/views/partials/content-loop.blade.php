@@ -143,6 +143,9 @@
         @if (get_row_layout() == 'text_block')
             @include('partials.flexible-content.text-block')
         @endif
+        @if (get_row_layout() == 'privacy_text_block')
+            @include('partials.flexible-content.privacy-text-block')
+        @endif
         @if (get_row_layout() == 'text_cta')
             @include('partials.flexible-content.text-cta')
         @endif
