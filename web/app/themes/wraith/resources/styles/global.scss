@@ -860,7 +860,9 @@ a {
 #energy-calculator-content{
   .icon-color{
    svg{
-      color: #3F7E57 !important;
+    path{
+      fill: #3F7E57 !important;
+    }
     }
   }
 }
