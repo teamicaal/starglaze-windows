@@ -51,16 +51,31 @@ $details = get_sub_field('details');
                   <input name="phone" type="date">
                   <div class="invalid-feedback text-red"></div>
                 </div>
-                <div class="w-full md:w-1/2 mb-2 md:pl-4">
-                  <div class="text-sm text-gray-700 pb-2">Choose Time</div>
-                  <input name="postcode" type="text">
+                  <div class="w-full md:w-1/2 mb-2 md:pl-4">
+                    <div class="text-sm text-gray-700 pb-2">Choose Time</div>
+                    <select class="formField selection relative" name="time" placeholder="Time*">
+                        <option disabled="" selected="" value="">Time*</option>
+                        <option value="09:30">09:00</option>
+                        <option value="09:30">09:30</option>
+                        <option value="10:00">10:00</option>
+                        <option value="10:30">10:30</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:30">11:30</option>
+                        <option value="12:00">12:00</option>
+                        <option value="12:30">12:30</option>
+                        <option value="13:00">13:00</option>
+                        <option value="13:30">13:30</option>
+                        <option value="14:00">14:00</option>
+                        <option value="14:30">14:30</option>
+                        <option value="15:00">15:00</option>
+                        <option value="15:30">15:30</option>
+                        <option value="16:00">16:00</option>
+                        <option value="16:30">16:30</option>
+                    </select>
                   <div class="invalid-feedback text-red"></div>
                 </div>
                 <div class="w-full text-center">
-                  <p class="mb-2">
-                    * indicates required fields
-                  </p>
-                  <input class="submit is-valid btn bg-primary hover:bg-secondary text-white cursor-pointer text-center block lg:inline-block w-full lg:w-auto mb-4" type="submit" value="Send Message"><br />
+                  <input class="submit is-valid btn bg-primary hover:bg-secondary text-white cursor-pointer text-center block lg:inline-block w-full lg:w-auto mb-4" type="submit" value="Book An Appointment"><br />
                   <a href="/privacy-policy/" target="_blank">Privacy Policy</a>
                 </div>
               </div>
