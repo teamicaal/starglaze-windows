@@ -43,7 +43,8 @@ a {
 }
 
 .btn {
-  @apply text-sm font-sans uppercase tracking-widest rounded-full px-12 py-4 leading-none text-center;
+  @apply text-sm font-sans uppercase tracking-widest rounded-full leading-none text-center;
+  padding: 1.25rem 3rem 1rem 3rem;
   transition: 0.2s ease;
 }
 
