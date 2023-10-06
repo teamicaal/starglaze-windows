@@ -198,6 +198,20 @@ import mixitup from 'mixitup';
     infinite: true,
   });
 
+  //video-modal
+  $(".video-modal-play").on("click", function(){
+    var thisContainer = $(this).parent();
+    var videoModal = thisContainer.find(".video-modal");
+    videoModal.css( 'display', 'flex');
+    
+  })
+
+  //close Video Modal
+  $(".closevideo-modal").on("click", function(){
+    var thisContainer = $(this).parent().parent();
+    thisContainer.hide();
+  })
+
   // Benefits Block
   $(".left-column").children(":odd").appendTo(".right-column");
 
