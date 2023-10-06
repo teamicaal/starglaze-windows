@@ -50,7 +50,7 @@ $paragraph = get_sub_field('paragraph');
       <div class="sm:w-[650px] lg:w-[800px] w-full relative z-20 mx-auto lg:ml-0 lg:mr-auto">
         {!! $subtitle ? '<h4 class="title-display title-display-left text-primary mb-4 ">' . $subtitle . '</h4>' : null !!}
         {!! $title ? '<' . $h . ' class="text-3xl text-white title-shadow md:text-4xl lg:text-[66px] banner-title mb-8 font-serif font-bold">' . $title . '</' . $h . '>' : null !!}
-        {!! $paragraph ? '<div class="child-p:mb-8 child-p:text-white child-p:leading-loose sm:block hidden">' . $paragraph . '</div>' : null !!}
+        {!! $paragraph ? '<div class="child-p:mb-4 child-p:text-white child-p:leading-loose sm:block hidden">' . $paragraph . '</div>' : null !!}
         @if( have_rows('buttons') )
           <div class="flex flex-wrap gap-4">
             @php $i = 0; @endphp
