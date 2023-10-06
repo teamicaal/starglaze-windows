@@ -92,6 +92,9 @@
         @if (get_row_layout() == 'form_contact')
             @include('partials.flexible-content.form-contact')
         @endif
+        @if (get_row_layout() == 'form_visit_showroom')
+            @include('partials.flexible-content.form-visit-showroom')
+        @endif
         @if (get_row_layout() == 'form_conversion')
             @include('partials.flexible-content.form-conversion')
         @endif
