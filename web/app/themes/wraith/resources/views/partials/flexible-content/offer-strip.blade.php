@@ -4,7 +4,7 @@ $i = 0 ;
 
 <section id="offer-strip" class="w-full h-full">
   <div class="flex flex-wrap lg:flex-nowrap lg:justify-center">
-    @while( have_rows('offer') )
+    @while( have_rows('offer' , 'option') )
       @php
       the_row();
       $i++;
