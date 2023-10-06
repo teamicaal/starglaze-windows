@@ -9,7 +9,7 @@ $paragraph = get_sub_field('paragraph');
         <div class="flex flex-wrap justify-between items-center">
             <div>
                 <h2 class="text-white font-bold font-serif md:text-4xl text-3xl">{{ $title }}</h2>
-                {!! $paragraph ? '<div class="mb-6 child-p:mx-auto child-p:tracking-wider child-p:text-white">' . $paragraph . '</div>' : null !!}
+                {!! $paragraph ? '<div class="mb-6 child-p:tracking-wider child-p:text-white">' . $paragraph . '</div>' : null !!}
             </div>
             @if( have_rows('buttons') )
                 <div class="flex flex-wrap gap-4">
