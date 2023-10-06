@@ -53,7 +53,6 @@ $details = get_sub_field('details');
                 </div>
                   <div class="w-full md:w-1/2 mb-2 md:pl-4">
                     <div class="text-sm text-gray-700 pb-2">Choose Time</div>
-                    <input name="time" type="time">
                     <select class="formField selection relative" name="time" placeholder="Time*">
                         <option disabled="" selected="" value="">Time*</option>
                         <option value="09:30">09:00</option>
