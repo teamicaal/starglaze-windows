@@ -1,6 +1,7 @@
 @php
 $banner_type = get_sub_field('banner_type');
 $images = get_sub_field('images');
+$video = get_sub_field('video');
 $images_webp = get_sub_field('images_webp');
 $title = get_sub_field('title');
 $subtitle = get_sub_field('subtitle');
@@ -18,32 +19,42 @@ $paragraph = get_sub_field('paragraph');
     <div class="leftBannerBox"></div>
     @if( $images )
       <div class="sm:absolute relative sm:top-0 sm:left-0 h-[40vh] w-full sm:h-full z-10">
-        @if( count($images) > 1 )
-        <div class="slick-banner">
-        @endif
-        @foreach($images as $key=>$image )
-          <div class="relative {!! $key != 0 ? 'hidden' : null !!} lg:!min-h-[90vh] sm:!min-h-[60vh] !min-h-[40vh]">
-            <picture data-iesrc="{!! $image['url'] !!}">
-              @if( $images_webp )
-                @php
-                  $img_webp = get_bloginfo('url') . str_replace(array('jpg', 'jpeg', 'png'), 'webp', $image['url']);
-                  $img_webp_sm = str_replace('.webp', '-sm.webp', $img_webp);
-                @endphp
-                <source media="(max-width: 767px)" srcset="{!! $img_webp_sm !!}" type="image/webp" />
-                <source media="(min-width: 768px)" srcset="{!! $img_webp !!}" type="image/webp" />
-                @endif
-                <source media="(min-width: 768px)" srcset="{!! wp_get_attachment_image_srcset($image['id']) !!}" type="image/jpg" />
-              <img src="{{ $image['sizes']['lozad'] }}" data-src="{{ $image['sizes']['4by3-xl'] }}" class="lozad object-fit-cover w-full h-full inset-0" alt="{!! $image['alt'] !!}" width="100%" height="100%">
-            </picture>
-          </div>
-        @endforeach
-        @if( count($images) > 1 ) 
-        </div>
-        <div class="absolute sm:hidden z-20 bottom-0 right-0 flex">
-          <button type="button" class="slick-p block w-12 h-12 text-center rounded-l-sm bg-white border-r border-grey-lighter text-grey hover:bg-grey-lightest hover:text-primary focus:bg-grey-lighter focus:text-black focus:outline-none transition inline-block"><i class="fa fa-caret-left align-middle"></i></button>
-          <button type="button" class="slick-n block w-12 h-12 text-center rounded-tr-sm bg-white text-grey hover:bg-grey-lightest hover:text-primary focus:bg-grey-lighter focus:text-black focus:outline-none transition inline-block"><i class="fa fa-caret-right align-middle"></i></button>
-        </div>
-        @endif
+            @if ($video)
+            <div class="hero relative h-full w-full">
+              <video class="w-full h-full object-cover absolute" autoplay muted loop>
+                  <source data-src="{!! $video['url'] !!}" src="{!! $video['url'] !!}" type="video/mp4">
+              </video>
+            </div>
+            @else
+            @if( count($images) > 1 )
+            <div class="slick-banner">
+            @endif
+            @foreach($images as $key=>$image )
+              <div class="relative {!! $key != 0 ? 'hidden' : null !!} lg:!min-h-[90vh] sm:!min-h-[60vh] !min-h-[40vh]">
+                <picture data-iesrc="{!! $image['url'] !!}">
+                  @if( $images_webp )
+                    @php
+                      $img_webp = get_bloginfo('url') . str_replace(array('jpg', 'jpeg', 'png'), 'webp', $image['url']);
+                      $img_webp_sm = str_replace('.webp', '-sm.webp', $img_webp);
+                    @endphp
+                    <source media="(max-width: 767px)" srcset="{!! $img_webp_sm !!}" type="image/webp" />
+                    <source media="(min-width: 768px)" srcset="{!! $img_webp !!}" type="image/webp" />
+                    @endif
+                    <source media="(min-width: 768px)" srcset="{!! wp_get_attachment_image_srcset($image['id']) !!}" type="image/jpg" />
+                  <img src="{{ $image['sizes']['lozad'] }}" data-src="{{ $image['sizes']['4by3-xl'] }}" class="lozad object-fit-cover w-full h-full inset-0" alt="{!! $image['alt'] !!}" width="100%" height="100%">
+                </picture>
+              </div>
+            @endforeach
+            @if( count($images) > 1 ) 
+            </div>
+            <div class="absolute sm:hidden z-20 bottom-0 right-0 flex">
+              <button type="button" class="slick-p block w-12 h-12 text-center rounded-l-sm bg-white border-r border-grey-lighter text-grey hover:bg-grey-lightest hover:text-primary focus:bg-grey-lighter focus:text-black focus:outline-none transition inline-block"><i class="fa fa-caret-left align-middle"></i></button>
+              <button type="button" class="slick-n block w-12 h-12 text-center rounded-tr-sm bg-white text-grey hover:bg-grey-lightest hover:text-primary focus:bg-grey-lighter focus:text-black focus:outline-none transition inline-block"><i class="fa fa-caret-right align-middle"></i></button>
+            </div>
+            @endif
+            @endif
+
+        
       </div>
     @endif
     <div class="container banner-content mx-auto border-b sm:border-none border-primary">
