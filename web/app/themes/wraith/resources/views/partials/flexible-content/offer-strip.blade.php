@@ -3,7 +3,7 @@ $i = 0 ;
 @endphp
 
 <section id="offer-strip" class="w-full h-full">
-  <div class="flex flex-wrap lg:flex-nowrap lg:justify-center items-center ">
+  <div class="flex flex-wrap lg:flex-nowrap lg:justify-center">
     @while( have_rows('offer') )
       @php
       the_row();
@@ -13,7 +13,7 @@ $i = 0 ;
       $link = get_sub_field('link');
       
       @endphp
-      <div class="w-full py-4 px-8 text-center  {{ $i % 2 == 0 ? 'bg-primary offer-skew' : 'bg-secondary'  }}">
+      <div class="w-full py-4 px-8 text-center items-center justify-center flex  {{ $i % 2 == 0 ? 'bg-primary offer-skew' : 'bg-secondary'  }}">
         <div class="{{ $i % 2 == 0 ? 'offer-skew-opp' : null }}">
           <h2 class="font-serif font-medium text-[25px] mx-auto text-white ">{{ $title }}</h2>
           <a href="{{ $link }}" class="hover:border-none text-[35px] font-bold font-serif text-white ">{{ $label }}</a>
