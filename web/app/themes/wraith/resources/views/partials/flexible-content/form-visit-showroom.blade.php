@@ -4,7 +4,7 @@ $subtitle = get_sub_field('subtitle');
 $details = get_sub_field('details');
 @endphp
 <section class="md:px-8 md:my-8">
-  <div class="bg-gray-100 pt-16 pb-8 md:pt-24 md:pb-16 lg:pt-32 lg:pb-24">
+  <div class="bg-[#eeeeee] pt-16 pb-8 md:pt-24 md:pb-16 lg:pt-32 lg:pb-24">
     <div class="container mx-auto">
       <div class="lg:w-3/4 xl:w-2/3 mx-auto">
         @if( $subtitle )
@@ -51,7 +51,7 @@ $details = get_sub_field('details');
             </form>
           </div>
           @if( $details )
-            <div class="w-full md:w-1/3 lg:w-1/4">
+            <div class="w-full md:w-1/3">
               @include('partials.contact-details', ['colour'=>'dark'])
             </div>
           @endif
