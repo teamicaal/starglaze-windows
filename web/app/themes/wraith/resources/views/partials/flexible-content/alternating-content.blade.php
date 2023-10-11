@@ -11,17 +11,24 @@ $custom_class = get_sub_field('custom_class');
 			$i++;
 			$title = get_sub_field('title');
 			$image = get_sub_field('image');
+			$video_iframe_url = get_sub_field('video_iframe_url');
 			$image_alt = get_sub_field('image_alt');
 			$paragraph = get_sub_field('paragraph');
 			$dot_image = get_sub_field('dot_image');
 		@endphp
 			<div class="flex flex-col relative {{ $i % 2 == 0 ? 'lg:flex-row-reverse flex-col mb-8' : 'lg:flex-row flex-col mb-8' }}">
 				@if( $image )
-					<div class="w-full lg:w-3/5">
-						<div class="embed-16by9  overflow-hidden">
-							<img data-src="{{ $image['url'] }}" alt="{{ $image_alt ? $image_alt : $image['alt'] }}" class="lozad object-fit-cover w-full h-full inset-0 {{ $i % 2 == 0 ? 'rounded-tl-xl rounded-bl-xl' : 'rounded-tr-xl rounded-br-xl' }}">
-						</div>
+				<div class="w-full lg:w-3/5">
+					<div class="embed-16by9  overflow-hidden">
+						<img data-src="{{ $image['url'] }}" alt="{{ $image_alt ? $image_alt : $image['alt'] }}" class="lozad object-fit-cover w-full h-full inset-0 {{ $i % 2 == 0 ? 'rounded-tl-xl rounded-bl-xl' : 'rounded-tr-xl rounded-br-xl' }}">
 					</div>
+				</div>
+				@else
+				<div class="w-full lg:w-3/5">
+					<div class="embed embed-16by9 ">
+						<iframe src="{!! $video_iframe_url !!}" class="object-cover-absolute w-full h-full rounded-tl-xl rounded-bl-xl"></iframe>
+					</div>
+				</div>
 				@endif
 				<div class="w-full lg:w-1/3 mx-auto lg:mt-0 mt-8 px-4 lg:px-0 relative">
 					<div class="flex flex-col items-start justify-center h-full lg:w-[90%] w-full {{ $i % 2 == 0 ? 'ml-auto' : ' ' }}">
