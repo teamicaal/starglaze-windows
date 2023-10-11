@@ -6,6 +6,7 @@ $images_webp = get_sub_field('images_webp');
 $title = get_sub_field('title');
 $subtitle = get_sub_field('subtitle');
 $paragraph = get_sub_field('paragraph');
+$vr_cta = get_sub_field('vr_cta');
 @endphp
 @if( get_sub_field('title_h1') )
   @php $h = 'h1' @endphp
@@ -14,6 +15,14 @@ $paragraph = get_sub_field('paragraph');
 @endif
 
 <section id="hero-banner" class="section_page-banner">
+  @if ($vr_cta)
+    <a href="">
+      <div class="main-banner__product-types-vr">
+        <img class="main-banner__product-types-vr-image" src="/app/uploads/2023/10/vr_image.png" alt="">
+        <div class="main-banner__product-types-vr-title">EXPLORE VIRTUALLY</div>
+      </div>
+    </a>
+  @endif
   @if( $banner_type )
   <div class="full-width sm:flex sm:items-center relative lg:!min-h-[90vh] sm:!min-h-[60vh] !min-h-[40vh]">
     <div class="leftBannerBox"></div>
