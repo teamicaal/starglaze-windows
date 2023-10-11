@@ -881,3 +881,21 @@ a {
    max-width: 101ch !important;
  }
 }
+
+.main-banner__product-types-vr {
+  @apply absolute bottom-32 right-12 z-10 cursor-pointer hidden xl:block;
+  .main-banner__product-types-vr-image {
+    @apply h-[200px] ease-in-out duration-500;
+  }
+  .main-banner__product-types-vr-title {
+    @apply text-white text-center border-b border-white max-w-max mx-auto font-semibold ease-in-out duration-500;
+  }
+  &:hover {
+    .main-banner__product-types-vr-title {
+      @apply mt-6;
+    }
+    .main-banner__product-types-vr-image {
+      @apply scale-125;
+    }
+  }
+}
