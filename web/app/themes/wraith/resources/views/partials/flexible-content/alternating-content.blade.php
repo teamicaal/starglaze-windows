@@ -26,7 +26,7 @@ $custom_class = get_sub_field('custom_class');
 				@else
 				<div class="w-full lg:w-3/5">
 					<div class="embed embed-16by9 ">
-						<iframe src="{!! $video_iframe_url !!}" class="object-cover-absolute w-full h-full {{ $i % 2 == 0 ? 'rounded-tl-xl rounded-bl-xl' : 'rounded-tr-xl rounded-br-xl' }}"></iframe>
+						<iframe src="{!! $video_iframe_url !!}" class="object-cover-absolute w-full h-full {{ $i % 1 == 0 ? 'rounded-tl-xl rounded-bl-xl' : 'rounded-tr-xl rounded-br-xl' }}"></iframe>
 					</div>
 				</div>
 				@endif
