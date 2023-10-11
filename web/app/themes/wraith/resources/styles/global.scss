@@ -544,22 +544,30 @@ a {
 }
 
 #header-main{
-  .header-bg{
-    background: linear-gradient(90deg, #0a0a0ba4, #343338b2 15%, transparent 25%,transparent 35%, #343338b2 55%, #0a0a0bb2 90%);
+.header-bg{
+  background: #231f2080;
+}
+
+  @screen lg{
+    .header-bg{
+      background: linear-gradient(90deg, #0a0a0ba4, #343338b2 15%, transparent 25%,transparent 35%, #343338b2 55%, #0a0a0bb2 90%);
+    }
   }
+  
 }
 
 .leftBannerBox{
   position: absolute;
   top: 0;
   left: 0;
-  width: 32%;
+  width: 100%;
   height: 100%;
   z-index: 20;
-  background: #343338ad;
+  background: #34333873;
 
-  @screen lg {
+  @screen md {
     width: 42%;
+    background: #343338ad;
   }
 }
 

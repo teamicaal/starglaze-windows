@@ -1,5 +1,5 @@
 header{
-  @apply h-[161px] transition-all duration-700 ease-in-out;
+  @apply h-[80px] transition-all duration-700 ease-in-out;
   &.is-scrolled {
     @apply h-[112px] transition-all duration-700 ease-in-out ;
     #toolbar{
@@ -30,26 +30,25 @@ header{
 }
 
 
-#header {
-  @apply z-20;
+// #header {
+//   @apply z-20;
 
-  .brand {
-    @media (max-width: 991px) {
-      @apply h-8;
+//   .brand {
+//     @media (max-width: 991px) {
 
-      > img {
-        @apply h-8 w-auto;
-      }
-    }
-  }
-}
+//       > img {
+//         @apply h-8 w-auto;
+//       }
+//     }
+//   }
+// }
 
 @media (max-width: 1023px) {
   .nav-primary {
     @apply invisible absolute right-0 w-full transition z-10;
 
-    top: 57px;
-    height: calc(100vh - 57px);
+    top: 80px;
+    height: calc(100vh - 80px);
     transform: translateX(100%);
 
     > ul {
@@ -131,8 +130,8 @@ header{
 
   .nav-backdrop {
     background-color: rgba(0, 0, 0, 0.5);
-    top: 57px;
-    height: calc(100vh - 57px);
+    top: 80px;
+    height: calc(100vh - 80px);
 
     &.show {
       @apply visible opacity-100;

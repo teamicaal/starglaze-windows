@@ -23,8 +23,8 @@
 @endif
 <header id="header-main" class="banner fixed z-40 top-0 left-0 right-0 {{ $header_background ? 'is-scrolled' : null}} w-full">
   <div class="header-bg ">
-    <div class="flex items-center header-padding justify-between py-4 2xl:px-24 lg:px-16">
-      <div>
+    <div class="flex items-center header-padding justify-between md:py-4 py-0 2xl:px-24 lg:px-16">
+      <div class="hidden lg:block">
         <a class="brand border-0" href="{{ home_url('/') }}">
           @if( $logo )
           <img src="{!! $logo['url'] !!}" alt="{!! get_bloginfo('name', 'display') !!} Logo"{!! $logo_retina ? ' srcset="' . $logo['url'] . ' 1x, ' . $logo_retina['url'] . ' 2x"' : null !!} width="auto" height="50" class="hidden logo-scroll lg:inline-block w-auto h-[7rem]">
@@ -39,8 +39,8 @@
         </a>
       </div>
   
-      <div>
-        <div id="toolbar" class=" hidden lg:block">
+      <div class="w-full">
+        <div id="toolbar" class="hidden lg:block">
             <div class="container mx-auto">
               <div class="flex justify-end items-center">
                 <a href="https://www.feefo.com/en-GB/reviews/starglaze-windows?displayFeedbackType=SERVICE&timeFrame=YEAR" class="hover:border-none">
@@ -81,6 +81,7 @@
                     </svg>
                   </div>
                 </a>
+
                 <div class="nav-toolbar nav-has-dropdowns">
                   @if( has_nav_menu('toolbar') )
                     {!! wp_nav_menu(['theme_location' => 'toolbar', 'menu_class' => 'nav nav-has-dropdowns list-reset']) !!}
@@ -109,9 +110,23 @@
           </div>
           <div id="header">
             <div class="">
-              <div class="container mx-auto flex items-center justify-end py-2 lg:py-0">
-                {!! $brand_phone_link ? '<a href="tel:' . $brand_phone_link . '" class="lg:hidden px-4 py-2 -ml-2"><i class="fa fa-phone"></i></a>' : null; !!}
-                <button id="nav-primary-toggle" type="button" class="lg:hidden outline-none px-4 py-2 -mr-2"><i class="fa fa-bars"></i></button>
+              <div class="container mx-auto flex items-center justify-between lg:justify-end py-2 lg:py-0">
+                {!! $brand_phone_link ? '<a href="tel:' . $brand_phone_link . '" class="lg:hidden px-4 text-white py-2 -ml-2"><i class="fa fa-phone"></i></a>' : null; !!}
+
+                <a class="brand border-0 lg:hidden block" href="{{ home_url('/') }}">
+                  @if( $logo )
+                  <img src="{!! $logo['url'] !!}" alt="{!! get_bloginfo('name', 'display') !!} Logo"{!! $logo_retina ? ' srcset="' . $logo['url'] . ' 1x, ' . $logo_retina['url'] . ' 2x"' : null !!} width="auto" height="50" class="hidden logo-scroll lg:inline-block w-auto h-[7rem]">
+                  @else
+                  {{ get_bloginfo('name', 'display') }}
+                  @endif
+                  @if( $icon )
+                  <img src="{!! $icon['url'] !!}" alt="{!! get_bloginfo('name', 'display') !!} Logo"{!! $icon_retina ? ' srcset="' . $icon['url'] . ' 1x, ' . $icon_retina['url'] . ' 2x"' : null !!} width="32" height="32" class="lg:hidden w-auto h-[4rem]">
+                  @else
+                  {{ get_bloginfo('name', 'display') }}
+                  @endif
+                </a>
+
+                <button id="nav-primary-toggle" type="button" class="lg:hidden outline-none px-4 py-2 text-white -mr-2"><i class="fa fa-bars"></i></button>
                 <div class="nav-backdrop lg:hidden fixed w-full right-0 z-10 transition invisible opacity-0"></div>
                 <nav class="nav-primary nav-has-dropdowns">
                   @if( has_nav_menu('primary_navigation') )
