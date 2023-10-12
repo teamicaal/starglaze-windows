@@ -144,4 +144,4 @@ $args    = array(
 	'query_var'           => true,
 	'capability_type'     => 'post',
 );
-register_post_type( 'home blog', $args );
+register_post_type( 'home-blog', $args );

@@ -5,7 +5,7 @@
     $title = get_field('news_title', 'option');
     $body = get_field('news_body', 'option');
     $args = array(
-             'post_type' => array('home blog', 'post'), 
+             'post_type' => array('home-blog', 'post'), 
                'posts_per_page' => -1, 
             );
 
