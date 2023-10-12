@@ -13,13 +13,13 @@ $video = get_sub_field('video');
   <div class="container mx-auto">
     <div class="w-full px-4 mb-4">
       @if($iframe)
-        <div class="embed embed-16by9 rounded-xl">
+        <div class="embed embed-21by9 rounded-xl">
           <iframe src="{!! $iframe !!}" class="object-cover-absolute w-full h-full"></iframe>
         </div>
       @endif
       @if ($video)
           <div class="hero relative h-full w-full">
-            <video class="embed embed-16by9 rounded-xl" controls muted loop>
+            <video class="embed embed-21by9 rounded-xl" controls muted loop>
                 <source src="{!! $video['url'] !!}" type="video/mp4">
             </video>
           </div>
