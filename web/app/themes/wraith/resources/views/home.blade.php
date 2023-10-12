@@ -45,9 +45,14 @@
     @endposts
   </div>
   <div>
-    @foreach($types as $type)
+    <div class="flex lg:flex-wrap scroll-x-proximity overflow-x-scroll lg:overflow-hidden -mx-4 md:mx-0 pl-4 md:pl-0 mb-4">
+      <button type="button" data-filter="all" class="mixitup-control mixitup-control-active whitespace-nowrap bg-[#E8EeE8] text-[#303947] scroll-align-start mb-4 capitalize font-medium mr-3 px-4 py-3 focus:outline-none">All</button>
+      <button type="button" data-filter=".post" class="mixitup-control whitespace-nowrap bg-[#E8EeE8] text-[#303947] scroll-align-start mb-4 capitalize font-medium mr-3 px-4 py-3 focus:outline-none">News</button>
+      <button type="button" data-filter=".home-blog" class="mixitup-control whitespace-nowrap bg-[#E8EeE8] text-[#303947] scroll-align-start mb-4 capitalize font-medium mr-3 px-4 py-3 focus:outline-none">Home Star Blog</button>
+    </div>
+    {{-- @foreach($types as $type)
      <button type="button" data-filter=".{{ str_replace(',-', ' ', str_replace(' ', '-', $type)) }}" class="mixitup-control whitespace-nowrap bg-[#E8EeE8] text-[#303947] scroll-align-start mb-4 capitalize font-medium mr-3 px-4 py-3 focus:outline-none">{{ $type }}</button>
-   @endforeach
+   @endforeach --}}
   </div>
     <div class="flex flex-wrap md:-mx-4 mix-container">
       @posts($query)
