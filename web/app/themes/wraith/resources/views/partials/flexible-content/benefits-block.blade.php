@@ -35,7 +35,7 @@
         @endif
     </div>
     @if( have_rows('buttons') )
-    <div class="block mt-8">
+    <div class="block mt-8 flex-items-center justify-center">
       @php $i = 0; @endphp
       @while( have_rows('buttons') )
         @php
@@ -44,7 +44,7 @@
         $file = get_field('file');
         $label = get_sub_field('label');
         @endphp
-        <a href="{{ $file }}" download class="inline-block px-4 py-3 text-sm text-primary hover:text-primary-dark"> {{$label}}</a>
+        <a href="{{ $file }}" download class="btn bg-primary hover:scale-105 transition-all ease-in-out duration-500 text-white border-0 text-center block md:inline-block"> {{$label}}</a>
       @endwhile
     </div>
   @endif
