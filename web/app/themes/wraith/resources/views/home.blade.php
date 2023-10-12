@@ -5,7 +5,7 @@
     $title = get_field('news_title', 'option');
     $body = get_field('news_body', 'option');
     $args = array(
-             'post_type' => array('home-blog', 'post'), 
+             'post_type' => array('home blog', 'post'), 
                'posts_per_page' => -1, 
             );
 
@@ -31,19 +31,16 @@
 
     @php
         $types = array();
-
     @endphp 
-
 
     @posts($query)
       @php
-           $type = get_post_type();
-
-  foreach (explode(', ',$type) as $type){
-    if( !in_array($type, $types) && $type != '' ) {
-      array_push($types, $type);
-    }
-  }
+        $type = get_post_type();
+        foreach (explode(', ',$type) as $type){
+          if( !in_array($type, $types) && $type != '' ) {
+            array_push($types, $type);
+          }
+        }
       @endphp
     @endposts
   </div>
@@ -55,7 +52,7 @@
     <div class="flex flex-wrap md:-mx-4 mix-container">
       @posts($query)
       @php
-                $type = get_post_type();
+        $type = get_post_type();
       @endphp
         <article class="w-full lg:w-1/3 p-4 mix {{ str_replace(' ', '-', strtolower($type)) }}">
             <a href="@permalink">
