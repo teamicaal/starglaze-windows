@@ -313,12 +313,12 @@ import mixitup from 'mixitup';
   });
 
   // Mixitup
-  if ($('.mix-container').length) {
-    var mixer = mixitup('.mix-container');
-    if (mixer) {
-      console.log('mix');
-    }
-  }
+  // if ($('.mix-container').length) {
+  //   var mixer = mixitup('.mix-container');
+  //   if (mixer) {
+  //     console.log('mix');
+  //   }
+  // }
 
   if ($('.mix-container-products').length) {
     var mixer = mixitup('.mix-container-products', {
@@ -328,6 +328,25 @@ import mixitup from 'mixitup';
     });
     if (mixer) {
       console.log('mix');
+    }
+  }
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const filter = urlParams.get("filter");
+  var containerEl = $(".mix-container");
+  // Activate the filter based on the value of 'filter'
+  if (filter) {
+    var mixer = mixitup(containerEl, {
+      load: {
+        filter: "." + filter,
+      },
+    });
+  } else {
+    if ($(".mix-container").length) {
+      var mixer = mixitup(".mix-container");
+      if (mixer) {
+        console.log("mix");
+      }
     }
   }
 
