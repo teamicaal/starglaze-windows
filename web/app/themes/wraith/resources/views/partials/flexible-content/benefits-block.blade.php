@@ -41,14 +41,10 @@
         @php
         the_row();
         $i++;
-        $file = get_field('file');
-        $file_id = $file['ID'];
-        $file_size = filesize( get_attached_file( $file_id ) );
-        $file_size = size_format($file_size, 2);
-        $file_type = pathinfo( get_attached_file( $file_id ) );
+        $file = get_sub_field('file');
         $label = get_sub_field('label');
         @endphp
-        <a href="{{ $file['url'] }}" download class="btn bg-primary hover:scale-105 transition-all ease-in-out duration-500 text-white border-0 text-center block md:inline-block"> {{$label}}</a>
+        <a href="{{$file['url']}}" download class="btn bg-primary hover:scale-105 transition-all ease-in-out duration-500 text-white border-0 text-center block md:inline-block"> {{$label}}</a>
       @endwhile
     </div>
   @endif
