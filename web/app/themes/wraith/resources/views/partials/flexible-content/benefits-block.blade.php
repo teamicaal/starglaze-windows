@@ -3,6 +3,7 @@
     $benefits = get_sub_field('benefits');
     $i = 0;
     $benefits_counter = count($benefits);
+    $file = get_field('file');
 @endphp
 <section class="lg:mt-16 mt-10 py-24 blue-bg-gradient">
     <h2 class="text-center font-bold font-serif text-white text-3xl lg:text-4xl mb-8">{{ $title }}</h2>
@@ -34,4 +35,19 @@
             <div class="right-column w-full md:w-1/2"></div>
         @endif
     </div>
+    @if( have_rows('buttons') )
+    <div class="block mt-8">
+      @php $i = 0; @endphp
+      @while( have_rows('buttons') )
+        @php
+        the_row();
+        $i++;
+        $link = get_sub_field('link');
+        $label = get_sub_field('label');
+        $anchor = get_sub_field('anchor');
+        @endphp
+        <a href="{{ $file['url'] }}" download class="inline-block px-4 py-3 text-sm text-primary hover:text-primary-dark"> {{$label}}</a>
+      @endwhile
+    </div>
+  @endif
 </section>
