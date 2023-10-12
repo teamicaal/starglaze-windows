@@ -4,6 +4,12 @@
 @php
     $title = get_field('news_title', 'option');
     $body = get_field('news_body', 'option');
+    $args = array(
+             'post_type' => array('home-blog', 'post'), 
+               'posts_per_page' => -1, 
+            );
+
+              $query = new WP_Query($args);
 @endphp
 <div class="container mx-auto py-8 sm:py-12 lg:pt-20 mt-16 lg:mt-32">
   @if( $title )
@@ -21,21 +27,37 @@
   @endnoposts
 </div>
   <div class="container mx-auto">
-    <div class="flex flex-wrap md:-mx-4">
-          @php
-            $args = array(
-             'post_type' => array('home-blog', 'posts'), 
-               'posts_per_page' => -1, 
-            );
+  <div class="flex">
 
-              $query = new WP_Query($args);
-          @endphp
-        @posts($query)
-        @php
-          $postType = get_post_type();
-          @dump($postType)
-        @endphp
-        <article class="w-full lg:w-1/3 p-4">
+    @php
+        $types = array();
+
+    @endphp 
+
+
+    @posts($query)
+      @php
+           $type = get_post_type();
+
+  foreach (explode(', ',$type) as $type){
+    if( !in_array($type, $types) && $type != '' ) {
+      array_push($types, $type);
+    }
+  }
+      @endphp
+    @endposts
+  </div>
+  <div>
+    @foreach($types as $type)
+     <button type="button" data-filter=".{{ str_replace(',-', ' ', str_replace(' ', '-', $type)) }}" class="mixitup-control whitespace-nowrap bg-[#E8EeE8] text-[#303947] scroll-align-start mb-4 capitalize font-medium mr-3 px-4 py-3 focus:outline-none">{{ $type }}</button>
+   @endforeach
+  </div>
+    <div class="flex flex-wrap md:-mx-4 mix-container">
+      @posts($query)
+      @php
+                $type = get_post_type();
+      @endphp
+        <article class="w-full lg:w-1/3 p-4 mix {{ str_replace(' ', '-', strtolower($type)) }}">
             <a href="@permalink">
               <div class="w-full md:mr-4 relative overflow-hidden" style="min-height: 251px;">
                 <img data-src="@thumbnail('4by3-md', false)" src="@thumbnail('lozad', false)" width="100%" height="auto" alt="@title" class="lozad object-cover inset-0 w-full h-full absolute">
