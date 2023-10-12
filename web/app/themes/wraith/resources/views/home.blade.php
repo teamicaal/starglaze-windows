@@ -22,6 +22,9 @@
 </div>
   <div class="container mx-auto">
     <div class="flex flex-wrap md:-mx-4">
+      @query([
+        'post_type' => array('posts', 'home-blog'),
+      ])
       @posts
         <article class="w-full lg:w-1/3 p-4">
             <a href="@permalink">
@@ -42,5 +45,22 @@
       @endposts
     </div>
   </div>
+  
   {!! get_the_posts_navigation() !!}
+
+  <div class="w-full home-blog-pagination py-1 bg-grey-lightest">
+    <div class="container mx-auto text-center">
+      <div class="pagination flex items-center justify-center px-1 py-1">
+        @php
+          echo paginate_links( array(
+            'prev_text'          => __('<span class="page-link">«</span>'),
+            'next_text'          => __('<span class="page-link">»</span>'),
+            'before_page_number' => '<span class="page-link">',
+            'after_page_number'  => '</span>'
+          ) );
+        @endphp
+      </div>
+    </div>
+  </div>
+
 @endsection
