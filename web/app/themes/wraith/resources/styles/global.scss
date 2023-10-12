@@ -899,3 +899,47 @@ a {
     }
   }
 }
+
+// Comparison Slider
+
+.comparison .item {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  margin: 20px;
+  position: relative;
+
+  @media (min-width: 768px) {
+    aspect-ratio: 2 / 1;
+    width: 100%;
+  }
+}
+
+.comparison .item > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-top {
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+#slider {
+  position: relative;
+  -webkit-appearance: none;
+  width: calc(100% + 20px);
+  height: 100%;
+  margin-left: -10px;
+  background: transparent;
+  outline: none;
+}
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  cursor: pointer;
+  @apply bg-primary;
+}

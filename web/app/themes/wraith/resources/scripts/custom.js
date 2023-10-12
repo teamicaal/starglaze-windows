@@ -571,4 +571,26 @@ $(document).on('click', 'a[href^="#"]', function (event) {
     );
   }
 
+  // Comparsion Image Slider
+  $("#slider").on("input change", (e) => {
+    const sliderPos = e.target.value;
+    $(".foreground-img").css("width", `${sliderPos}%`);
+    $(".slider-button").css("left", `calc(${sliderPos}%)`);
+  });
+
+  $(".slider").on("input", function () {
+    var sliderValue = $(this).val();
+    $(this)
+      .parent()
+      .find(".img-top")
+      .css({
+        "clip-path":
+          "polygon(0 0," +
+          sliderValue +
+          "% 0," +
+          sliderValue +
+          "% 100%, 0 100%)",
+      });
+  });
+
 })(jQuery);

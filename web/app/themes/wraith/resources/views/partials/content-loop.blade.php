@@ -131,6 +131,9 @@
         @if (get_row_layout() == 'page_links_simple')
             @include('partials.flexible-content.page-links-simple')
         @endif
+        @if (get_row_layout() == 'comparison_block')
+            @include('partials.flexible-content.comparison-block')
+        @endif
         @if (get_row_layout() == 'products')
             @include('partials.flexible-content.products')
         @endif
