@@ -22,10 +22,15 @@
 </div>
   <div class="container mx-auto">
     <div class="flex flex-wrap md:-mx-4">
-      @query([
-        'post_type' => array('posts', 'home-blog'),
-      ])
-      @posts
+          @php
+            $args = array(
+             'post_type' => array('home-blog', 'posts'), 
+               'posts_per_page' => -1, 
+            );
+
+              $query = new WP_Query($args);
+          @endphp
+        @posts($query)
         <article class="w-full lg:w-1/3 p-4">
             <a href="@permalink">
               <div class="w-full md:mr-4 relative overflow-hidden" style="min-height: 251px;">
