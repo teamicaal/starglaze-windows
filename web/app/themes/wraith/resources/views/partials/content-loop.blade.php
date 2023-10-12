@@ -134,6 +134,9 @@
         @if (get_row_layout() == 'comparison_block')
             @include('partials.flexible-content.comparison-block')
         @endif
+        @if (get_row_layout() == 'ultraframe_cgi_block')
+            @include('partials.flexible-content.ultraframe-cgi-block')
+        @endif
         @if (get_row_layout() == 'products')
             @include('partials.flexible-content.products')
         @endif
