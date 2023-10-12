@@ -35,7 +35,7 @@
         @endif
     </div>
     @if( have_rows('buttons') )
-    <div class="block mt-8 flex-items-center justify-center">
+    <div class="mt-8 flex items-center justify-center">
       @php $i = 0; @endphp
       @while( have_rows('buttons') )
         @php
