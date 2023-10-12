@@ -31,6 +31,10 @@
               $query = new WP_Query($args);
           @endphp
         @posts($query)
+        @php
+          $postType = get_post_type();
+          @dump($postType)
+        @endphp
         <article class="w-full lg:w-1/3 p-4">
             <a href="@permalink">
               <div class="w-full md:mr-4 relative overflow-hidden" style="min-height: 251px;">
