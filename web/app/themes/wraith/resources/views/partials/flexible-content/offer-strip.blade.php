@@ -15,7 +15,7 @@ $i = 0 ;
       @endphp
       <div class="w-full py-4 px-8 text-center items-center justify-center flex  {{ $i % 2 == 0 ? 'bg-primary offer-skew' : 'bg-secondary'  }}">
         <div class="{{ $i % 2 == 0 ? 'offer-skew-opp' : null }}">
-          <h2 class="font-serif font-medium text-[25px] mx-auto text-white ">{{ $title }}</h2>
+          <h2 class="font-serif font-medium text-[25px] mx-auto text-white w-[70%] ">{{ $title }}</h2>
           <a href="{{ $link }}" class="hover:border-none text-[35px] font-bold font-serif text-white ">{{ $label }}</a>
         </div>
       </div>
