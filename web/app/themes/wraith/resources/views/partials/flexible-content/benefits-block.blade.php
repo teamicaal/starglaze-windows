@@ -44,7 +44,7 @@
         $file = get_field('file');
         $label = get_sub_field('label');
         @endphp
-        <a href="{{ $file['url'] }}" download class="inline-block px-4 py-3 text-sm text-primary hover:text-primary-dark"> {{$label}}</a>
+        <a href="{{ $file }}" download class="inline-block px-4 py-3 text-sm text-primary hover:text-primary-dark"> {{$label}}</a>
       @endwhile
     </div>
   @endif
