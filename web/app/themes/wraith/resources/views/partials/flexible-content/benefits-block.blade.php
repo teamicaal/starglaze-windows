@@ -35,7 +35,7 @@
         @endif
     </div>
     @if( have_rows('buttons') )
-    <div class="mt-8 flex items-center justify-center">
+    <div class="mt-8 block lg:flex items-center justify-center">
       @php $i = 0; @endphp
       @while( have_rows('buttons') )
         @php
@@ -48,7 +48,7 @@
         $file_type = pathinfo( get_attached_file( $file_id ) );
         $label = get_sub_field('label');
         @endphp
-        <a href="/app/uploads/2023/10/B09-GRiPCORE-composite-door-brochure-June-22.pdf" download class="btn bg-primary hover:scale-105 transition-all ease-in-out duration-500 text-white border-0 text-center block md:inline-block"> {{$label}}</a>
+        <a href="{{ $file['url'] }}" download class="btn bg-primary hover:scale-105 transition-all ease-in-out duration-500 text-white border-0 text-center block md:inline-block"> {{$label}}</a>
       @endwhile
     </div>
   @endif
