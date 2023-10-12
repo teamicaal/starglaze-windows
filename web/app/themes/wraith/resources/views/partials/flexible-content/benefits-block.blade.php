@@ -48,7 +48,7 @@
         $file_type = pathinfo( get_attached_file( $file_id ) );
         $label = get_sub_field('label');
         @endphp
-        <a href="{{ $file }}" download class="btn bg-primary hover:scale-105 transition-all ease-in-out duration-500 text-white border-0 text-center block md:inline-block"> {{$label}}</a>
+        <a href="/app/uploads/2023/10/B09-GRiPCORE-composite-door-brochure-June-22.pdf" download class="btn bg-primary hover:scale-105 transition-all ease-in-out duration-500 text-white border-0 text-center block md:inline-block"> {{$label}}</a>
       @endwhile
     </div>
   @endif
