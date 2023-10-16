@@ -68,7 +68,7 @@ $vr_cta = get_sub_field('vr_cta');
     @endif
     <div class="container banner-content mx-auto border-b sm:border-none border-primary">
       <div class="sm:w-[650px] lg:w-[800px] w-full relative z-20 mx-auto lg:ml-0 lg:mr-auto">
-        {!! $subtitle ? '<h4 class="title-display title-display-left text-primary mb-4 ">' . $subtitle . '</h4>' : null !!}
+        {!! $subtitle ? '<h4 class=" text-white mb-4 ">' . $subtitle . '</h4>' : null !!}
         {!! $title ? '<' . $h . ' class="text-3xl text-white title-shadow md:text-4xl lg:text-[66px] banner-title mb-8 font-serif font-bold">' . $title . '</' . $h . '>' : null !!}
         {!! $paragraph ? '<div class="child-p:mb-4 child-p:text-white child-p:leading-loose sm:block hidden">' . $paragraph . '</div>' : null !!}
         @if( have_rows('buttons') )
