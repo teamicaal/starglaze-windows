@@ -2,7 +2,7 @@
 $i = 0 ;
 @endphp
 
-<section id="offer-strip" class="w-full h-full">
+<section id="offer-strip" class="w-full h-full overflow-hidden">
   <div class="flex flex-wrap lg:flex-nowrap lg:justify-center">
     @while( have_rows('offer' , 'option') )
       @php
