@@ -30,8 +30,8 @@ $custom_class = get_sub_field('custom_class');
 					</div>
 				</div>
 				@endif
-				<div class="w-full lg:w-1/3 mx-auto lg:mt-0 mt-8 px-4 lg:px-0 relative">
-					<div class="flex flex-col items-start justify-center h-full lg:w-[90%] w-full {{ $i % 2 == 0 ? 'ml-auto' : ' ' }}">
+				<div class="w-full lg:w-2/5 mx-auto lg:mt-0 mt-8 px-4 lg:px-0 relative">
+					<div class="flex flex-col items-start justify-center h-full  lg:w-[80%] w-full mx-auto {{ $i % 2 == 0 ? 'ml-auto' : ' ' }}">
 						@if (is_page( array( '1070' ) ) )
 						{!! $title ? '<h2 class="mb-4 lg:mb-8 text-[#3F7E57] font-serif font-medium text-4xl">' . $title . '</h2>' : null !!}
 						@else
