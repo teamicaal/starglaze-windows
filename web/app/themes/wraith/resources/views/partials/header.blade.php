@@ -41,7 +41,7 @@
   
       <div class="w-full">
         <div id="toolbar" class="hidden lg:block">
-            <div class="container mx-auto">
+            <div class="container ml-auto">
               <div class="flex justify-end items-center">
                 <a href="https://www.feefo.com/en-GB/reviews/starglaze-windows?displayFeedbackType=SERVICE&timeFrame=YEAR" class="hover:border-none">
                   <div class="flex flex-wrap justify-center items-center mr-4">
@@ -118,7 +118,7 @@
           </div>
           <div id="header">
             <div class="">
-              <div class="container mx-auto flex items-center justify-between lg:justify-end py-2 lg:py-0">
+              <div class="container ml-auto flex items-center justify-between lg:justify-end py-2 lg:py-0">
                 {!! $brand_phone_link ? '<a href="tel:' . $brand_phone_link . '" class="lg:hidden px-4 text-white py-2 -ml-2"><i class="fa fa-phone"></i></a>' : null; !!}
 
                 <a class="brand border-0 lg:hidden block" href="{{ home_url('/') }}">
