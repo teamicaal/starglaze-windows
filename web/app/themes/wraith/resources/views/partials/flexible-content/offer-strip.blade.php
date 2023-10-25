@@ -3,7 +3,7 @@ $i = 0 ;
 @endphp
 
 <section id="offer-strip" class="w-full h-full overflow-hidden">
-  <div class="flex flex-wrap lg:flex-nowrap lg:justify-center">
+  <div class="flex flex-wrap lg:flex-nowrap lg:justify-center ">
     @while( have_rows('offer' , 'option') )
       @php
       the_row();
@@ -13,10 +13,12 @@ $i = 0 ;
       $link = get_sub_field('link');
       
       @endphp
-      <div class="w-full py-4 px-8 text-center items-center justify-center flex  {{ $i % 2 == 0 ? 'bg-primary offer-skew' : 'bg-secondary'  }}">
-        <div class="{{ $i % 2 == 0 ? 'offer-skew-opp' : null }}">
-          <h2 class="font-serif font-medium text-[20px] mx-auto text-white w-[70%] ">{{ $title }}</h2>
-          <a href="{{ $link }}" class="hover:border-none text-[25px] font-bold font-serif text-white ">{{ $label }}</a>
+      <div class="w-full lg:w-1/4 text-center items-center justify-center flex  ">
+        <div class="offer-skew w-full h-full px-8 py-4  {{$i === 1 ? 'offer-before-cover' : null }} {{$i === 4 ? 'offer-after-cover' : null }}  {{ $i % 2 == 0 ? 'bg-primary ' : 'bg-secondary'  }}">
+          <div class="offer-skew-opp">
+            <h2 class="font-serif font-medium text-[20px] mx-auto text-white w-[70%] ">{{ $title }}</h2>
+            <a href="{{ $link }}" class="hover:border-none text-[25px] font-bold font-serif text-white ">{{ $label }}</a>
+          </div>
         </div>
       </div>
     @endwhile

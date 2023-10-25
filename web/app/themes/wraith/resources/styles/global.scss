@@ -591,7 +591,24 @@ a {
     .offer-skew{
       transform: skewX(-25deg);
       margin: 0 -3rem;
+      position: relative;
     }
+
+    .offer-before-cover{
+      &::before{
+        content:"";
+        position: absolute;
+        @apply h-full w-[20%] bg-secondary top-0 left-[-10%] bottom-0;
+      }
+    }
+    .offer-after-cover{
+      &::after{
+        content:"";
+        position: absolute;
+        @apply h-full w-[20%] bg-primary top-0 right-[-10%] bottom-0;
+      }
+    }
+
     .offer-skew-opp{
       transform: skewX(25deg);
       margin: 0 -3rem;

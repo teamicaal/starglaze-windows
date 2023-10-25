@@ -23,7 +23,7 @@ $vr_cta = get_sub_field('vr_cta');
     </a>
   @endif
   @if( $banner_type )
-  <div class="full-width sm:flex sm:items-center relative lg:!min-h-[100vh] sm:!min-h-[60vh] !min-h-[100vh]">
+  <div class="full-width sm:flex sm:items-center relative lg:!min-h-[89vh] sm:!min-h-[60vh] !min-h-[100vh]">
     <div class="leftBannerBox"></div>
     @if( $images )
       <div class="sm:absolute relative sm:top-0 sm:left-0 h-[40vh] w-full sm:h-full z-10">
@@ -31,7 +31,7 @@ $vr_cta = get_sub_field('vr_cta');
         <div class="slick-banner">
         @endif
         @foreach($images as $key=>$image )
-          <div class="relative {!! $key != 0 ? 'hidden' : null !!} lg:!min-h-[100vh] sm:!min-h-[60vh] !min-h-[100vh]">
+          <div class="relative {!! $key != 0 ? 'hidden' : null !!} lg:!min-h-[89vh] sm:!min-h-[60vh] !min-h-[100vh]">
             <picture data-iesrc="{!! $image['url'] !!}">
               @if( $images_webp )
                 @php
