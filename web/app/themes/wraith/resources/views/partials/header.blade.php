@@ -27,7 +27,7 @@
       <div class="hidden lg:block">
         <a class="brand border-0" href="{{ home_url('/') }}">
           @if( $logo )
-          <img src="{!! $logo['url'] !!}" alt="{!! get_bloginfo('name', 'display') !!} Logo"{!! $logo_retina ? ' srcset="' . $logo['url'] . ' 1x, ' . $logo_retina['url'] . ' 2x"' : null !!} width="auto" height="50" class="hidden logo-scroll lg:inline-block w-auto h-[7rem]">
+          <img src="{!! $logo['url'] !!}" alt="{!! get_bloginfo('name', 'display') !!} Logo"{!! $logo_retina ? ' srcset="' . $logo['url'] . ' 1x, ' . $logo_retina['url'] . ' 2x"' : null !!} width="auto" height="50" class="hidden logo-scroll lg:inline-block w-[200px] h-[102px]">
           @else
           {{ get_bloginfo('name', 'display') }}
           @endif
