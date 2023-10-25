@@ -13,7 +13,7 @@ $button_link = get_sub_field('button_link');
         <img src="{{ $image['url'] }}" alt="{{ $image_alt ? $image_alt : $image['alt'] }}" class=" w-full bg-no-repeat bg-center bg-cover absolute">
         <div class="absolute darkTint w-full h-full"></div>
         <div class="relative md:p-8 flex flex-col justify-center items-center max-w-[1000px] rounded-lg border border-white h-auto">
-            <h2 class="font-serif font-bold text-3xl md:text-4xl mb-6 text-white tracking-wide ">{{ $title }}</h2>
+            <h2 class="font-serif text-center font-bold text-3xl md:text-4xl mb-6 text-white tracking-wide ">{{ $title }}</h2>
             <div class="child-p:text-white p-4 text-center px-1  md:px-20 pt-0 pb-8 text-lg">{!! $paragraph !!}</div>
             <a href="{{ $button_link }}" class="bg-white text-primary font-bold text-center darkTint-button absolute">{{ $button_label }}</a>
         </div>
