@@ -18,7 +18,7 @@ $custom_class = get_sub_field('custom_class');
 		@endphp
 			<div class="flex flex-col relative {{ $i % 2 == 0 ? 'lg:flex-row-reverse flex-col mb-8' : 'lg:flex-row flex-col mb-8' }}">
 				@if( $image )
-				<div class="w-full lg:w-3/5">
+				<div class="w-full lg:w-[45%]">
 					<div class="embed-16by9  overflow-hidden">
 						<img data-src="{{ $image['url'] }}" alt="{{ $image_alt ? $image_alt : $image['alt'] }}" class="lozad object-fit-cover w-full h-full inset-0 {{ $i % 2 == 0 ? 'rounded-tl-xl rounded-bl-xl' : 'rounded-tr-xl rounded-br-xl' }}">
 					</div>
