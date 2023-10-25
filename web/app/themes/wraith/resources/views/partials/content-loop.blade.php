@@ -26,6 +26,9 @@
         @if (get_row_layout() == 'why_choose_us')
             @include('partials.flexible-content.why-choose-us')
         @endif
+        @if (get_row_layout() == 'new_key_features_block')
+            @include('partials.flexible-content.new-key-features-block')
+        @endif
         @if (get_row_layout() == 'sustainability_info')
             @include('partials.flexible-content.sustainability-info')
         @endif
