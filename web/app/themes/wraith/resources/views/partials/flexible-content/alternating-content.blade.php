@@ -39,7 +39,7 @@ $custom_class = get_sub_field('custom_class');
 						@endif
 						{!! $paragraph ? '<div class="mb-0 child-p:font-normal child-p:text-[#3A3A3A]">' . $paragraph . '</div>' : null !!}
 						@if( have_rows('buttons') )
-							<div class="block w-full sm:flex sm:flex-wrap mt-8">
+							<div class="flex items-center justify-center gap-4">
 								@php $j = 0; @endphp
 								@while( have_rows('buttons') )
 								@php
