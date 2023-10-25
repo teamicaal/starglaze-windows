@@ -43,7 +43,7 @@
         <div id="toolbar" class="hidden lg:block">
             <div class="container ml-auto">
               <div class="flex justify-end items-center">
-                <a href="https://www.feefo.com/en-GB/reviews/starglaze-windows?displayFeedbackType=SERVICE&timeFrame=YEAR" class="hover:border-none">
+                <a href="https://www.feefo.com/en-GB/reviews/starglaze-windows?displayFeedbackType=SERVICE&timeFrame=YEAR" target="_blank" class="hover:border-none">
                   <div class="flex flex-wrap justify-center items-center mr-4">
                     <img src="/app/uploads/2023/08/fefo.png" alt="" class="w-auto h-[1rem] mr-1">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="74" height="22" viewBox="0 0 74 22">
