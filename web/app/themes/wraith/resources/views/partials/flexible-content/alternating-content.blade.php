@@ -39,7 +39,7 @@ $custom_class = get_sub_field('custom_class');
 						@endif
 						{!! $paragraph ? '<div class="mb-0 child-p:font-normal child-p:text-[#3A3A3A]">' . $paragraph . '</div>' : null !!}
 						@if( have_rows('buttons') )
-							<div class="flex items-center justify-center gap-4">
+							<div class="block w-full xxl:flex flex-wrap mt-8">
 								@php $j = 0; @endphp
 								@while( have_rows('buttons') )
 								@php
@@ -49,7 +49,7 @@ $custom_class = get_sub_field('custom_class');
 								$label = get_sub_field('label');
 								@endphp
 								<a href="{{ $link }}"
-								class="btn {{ $j == 1 ? 'bg-transparent text-[#343338] text-medium border border-primary hover:scale-105 transition-all ease-in-out duration-500 text-center block md:inline-block mb-4 md:mr-6 xl:mb-0' : 'bg-primary hover:scale-105 transition-all ease-in-out duration-500 text-white border-0 text-center block md:inline-block' }}">{!!
+								class="btn {{ $j == 1 ? 'bg-transparent text-[#343338] text-medium border border-primary hover:scale-105 transition-all ease-in-out duration-500 text-center block md:inline-block mb-4 md:mr-6 xxl:mb-0' : 'bg-primary hover:scale-105 transition-all ease-in-out duration-500 text-white border-0 text-center block md:inline-block' }}">{!!
 								$label !!}</a>
 								@endwhile
 							</div>
