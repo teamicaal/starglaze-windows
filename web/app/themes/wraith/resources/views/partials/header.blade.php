@@ -97,6 +97,14 @@
                     </a>
                   </li>
                   @endif
+                  @if( $brand_phone_alt_link )
+                  <li class="inline-block text-sm mr-8">
+                    <a href="tel:{{ $brand_phone_alt_link }}">
+                      <i class="text-primary fa fa-phone inline-block float-left mr-2 mt-0.5"></i>
+                      <span class="table-cell text-white font-semibold">{{ $brand_phone_alt_label ? $brand_phone_alt_label : $brand_phone_alt_link }}</span>
+                    </a>
+                  </li>
+                  @endif
                   @if( $brand_email )
                   <li class="inline-block text-sm">
                     <a href="mailto:{{ $brand_email }}">
