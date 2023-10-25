@@ -91,8 +91,8 @@
                   @include('partials.components.social_icons')
                   @if( $brand_phone_link )
                   <li class="inline-block text-sm mr-8">
-                    <a href="tel:{{ $brand_phone_link }}">Sales:
-                      
+                    <a href="tel:{{ $brand_phone_link }}">
+                      <span class="table-cell text-white font-semibold">Sales: </span>
                       <i class="text-primary fa fa-phone inline-block float-left mr-2 mt-0.5"></i>
                       <span class="table-cell text-white font-semibold">{{ $brand_phone_label ? $brand_phone_label : $brand_phone_link }}</span>
                     </a>
