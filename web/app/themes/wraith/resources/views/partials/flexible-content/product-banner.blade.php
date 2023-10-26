@@ -24,7 +24,7 @@ $vr_cta = get_sub_field('vr_cta');
     </a>
   @endif
   @if( $banner_type )
-  <div class="full-width sm:flex sm:items-center relative lg:!min-h-[90vh] sm:!min-h-[60vh] !min-h-[40vh]">
+  <div class="full-width sm:flex sm:items-center relative lg:!min-h-[90vh] sm:!min-h-[60vh] !min-h-[100vh]">
     <div class="leftBannerBox"></div>
     @if( $images )
       <div class="sm:absolute relative sm:top-0 sm:left-0 h-[40vh] w-full sm:h-full z-10">
@@ -39,7 +39,7 @@ $vr_cta = get_sub_field('vr_cta');
             <div class="slick-banner">
             @endif
             @foreach($images as $key=>$image )
-              <div class="relative {!! $key != 0 ? 'hidden' : null !!} lg:!min-h-[90vh] sm:!min-h-[60vh] !min-h-[40vh]">
+              <div class="relative {!! $key != 0 ? 'hidden' : null !!} lg:!min-h-[90vh] sm:!min-h-[60vh] !min-h-[100vh]">
                 <picture data-iesrc="{!! $image['url'] !!}">
                   @if( $images_webp )
                     @php
@@ -66,13 +66,13 @@ $vr_cta = get_sub_field('vr_cta');
         
       </div>
     @endif
-    <div class="container banner-content mx-auto border-b sm:border-none border-primary">
+    <div class="container banner-content mx-auto border-b sm:border-none border-primary pt-[147px]">
       <div class="sm:w-[650px] lg:w-[800px] w-full relative z-20 mx-auto lg:ml-0 lg:mr-auto">
-        {!! $subtitle ? '<h4 class=" text-white lg:text-2xl text-lg uppercase tracking-wider mb-4 ">' . $subtitle . '</h4>' : null !!}
-        {!! $title ? '<' . $h . ' class="text-3xl text-white title-shadow md:text-4xl lg:text-[66px] banner-title mb-8 font-serif font-bold">' . $title . '</' . $h . '>' : null !!}
+        {!! $subtitle ? '<h4 class=" text-white lg:text-2xl text-lg uppercase tracking-wider lg:mb-4 mb-2">' . $subtitle . '</h4>' : null !!}
+        {!! $title ? '<' . $h . ' class="text-3xl text-white title-shadow md:text-4xl lg:text-[66px] banner-title lg:mb-8 mb-4 font-serif font-bold">' . $title . '</' . $h . '>' : null !!}
         {!! $paragraph ? '<div class="child-p:mb-4 child-p:text-white child-p:leading-loose sm:block hidden">' . $paragraph . '</div>' : null !!}
         @if( have_rows('buttons') )
-          <div class="flex flex-wrap gap-4">
+          <div class="lg:flex block ">
             @php $i = 0; @endphp
             @while( have_rows('buttons') )
               @php
@@ -82,7 +82,7 @@ $vr_cta = get_sub_field('vr_cta');
               $label = get_sub_field('label');
               $anchor = get_sub_field('anchor');
               @endphp
-              <a href="{{ $link }}" class="btn block md:inline-block {{ $i == 1 ? 'bg-primary text-white hover:bg-secondary font-bold hover:border-none' : 'bg-white text-[#343338] font-bold border border-primary hover:bg-primary hover:text-white' }}{{ $anchor ? ' btn-scroll' : null }}">{!! $label !!}</a>
+              <a href="{{ $link }}" class="btn block md:inline-block {{ $i == 1 ? 'bg-primary text-white hover:bg-secondary font-bold hover:border-none lg:mb-0 mb-4 lg:mr-4 mr-0' : 'bg-white text-[#343338] font-bold border border-primary hover:bg-primary hover:text-white' }}{{ $anchor ? ' btn-scroll' : null }}">{!! $label !!}</a>
             @endwhile
           </div>
         @endif

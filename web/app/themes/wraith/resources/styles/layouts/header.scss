@@ -8,9 +8,9 @@ header{
     .header-padding{
       @apply py-2;
     }
-    .logo-scroll{
-      height: 6rem;
-    }
+    // .logo-scroll{
+    //   height: 6rem;
+    // }
     ul > li:not(.btn-navigation) > a, ul , .navigation-mobile {
       @apply text-white hover:text-primary transition-all;
     }
@@ -202,7 +202,7 @@ header{
 
   .nav-has-dropdowns {
     > ul {
-      @apply list-none pl-0 flex flex-wrap items-center;
+      @apply list-none pl-0 flex flex-nowrap items-center;
 
       > li {
         @apply relative;
@@ -413,6 +413,37 @@ header{
   z-index: 20;
 }
 
+@media (max-width: 1411px) {
+
+.nav-toolbar {
+    > ul {
+      > li {
+        &:not(.btn-toolbar) {
+          a {
+            @apply px-2 py-4 text-white font-semibold text-[0.80rem] border-none;
+
+            &:hover {
+              @apply text-primary border-none;
+            }
+          }
+        }
+
+        > .sub-menu {
+          @apply bg-white z-50;
+
+          top: 12px;
+        }
+
+        &:hover {
+          > .sub-menu {
+            top: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1213px) {
   .nav-primary {
     > ul {
@@ -458,3 +489,4 @@ header{
   }
   
 }
+
