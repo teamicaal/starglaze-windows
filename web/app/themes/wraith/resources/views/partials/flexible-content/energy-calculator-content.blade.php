@@ -27,7 +27,7 @@ $i = 0;
                             @if ($icon)
                               <div class="child-svg:w-[60px] child-svg:h-[60px] child-svg:mx-auto icon-color">{!! $icon !!}</div>
                             @endif
-                            {!! $title ? '<h3 class="my-4 z-50 text-4xl font-serif font-bold text-[#3F7E57]">' . $title . '</h3>' : null !!}
+                            {!! $title ? '<h3 class="my-4 z-50 w-[80%] mx-auto text-4xl font-serif font-bold text-[#3F7E57]">' . $title . '</h3>' : null !!}
                             {!! $paragraph ? '<div class="child-p:text-[#3A3A3A] tracking-wide mb-0 child-p:mx-auto">' . $paragraph . '</div>' : null !!}
                         </div>
                     </div>

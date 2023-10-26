@@ -118,7 +118,7 @@
               </div>
             </div>
           </div>
-          <div id="header">
+          <div id="header" class="py-4">
             <div class="">
               <div class="container ml-auto flex items-center justify-between lg:justify-end py-2 lg:py-0">
                 {!! $brand_phone_link ? '<a href="tel:' . $brand_phone_link . '" class="lg:hidden px-4 text-white py-2 -ml-2"><i class="fa fa-phone"></i></a>' : null; !!}

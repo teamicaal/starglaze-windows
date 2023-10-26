@@ -10,7 +10,7 @@ $i = 0;
   'post_type'      => 'post',
   'posts_per_page' => '4'
 ])
-<div id="latest-news" class="overflow-hidden {!! $custom_class ? ' ' . $custom_class : ' ' !!}">
+<div id="latest-news" class="overflow-hidden {!! $custom_class ? ' ' . $custom_class : ' lg:mb-0 mb-12' !!}">
   <div class="container mx-auto lg:flex">
     <div class="lg:w-1/2 w-full lg:mr-8 mr-0">
       <h2 class="text-primary md:text-4xl text-3xl font-serif font-bold max-w-[350px] mb-8 ">{{ $title }}</h2>
@@ -20,7 +20,7 @@ $i = 0;
           @posts($query)
           <article class="w-full md:w-1/2 md:px-4 px-0 pb-6">
             <a href="@permalink">
-              <div class="w-full md:mr-4 relative overflow-hidden" style="min-height: 251px;">
+              <div class="w-full md:mr-4 relative overflow-hidden" style="min-height: 178px;">
                 <img data-src="@thumbnail('4by3-md', false)" src="@thumbnail('lozad', false)" width="100%" height="auto" alt="@title" class="lozad object-cover rounded-lg inset-0 w-full h-full absolute">
               </div>
             </a>
@@ -38,7 +38,7 @@ $i = 0;
         </p>
       @endnoposts
     </div>
-    <div class="lg:w-1/2 w-full relative md:mt-16 my-8 slick-news aspect-square h-full">
+    <div class="lg:w-1/2 w-full relative slick-news lg:mt-[110px] aspect-video lg:aspect-square h-full">
       @if (have_rows('right_side_image'))
         @while (have_rows('right_side_image'))
           @php
@@ -50,7 +50,7 @@ $i = 0;
            $bottom_text_line = get_sub_field('bottom_text_line');
            $i++;
           @endphp
-            <div class="w-full h-full relative">
+            <div class="w-full h-full relative inline-block lg:h-[485px]">
               <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" class="lozad object-fit-cover w-full h-full inset-0 rounded-lg">
               <div class="red-strip absolute text-center flex flex-wrap justify-between">
                 <button class="offer-arrow-p flex items-center justify-center">

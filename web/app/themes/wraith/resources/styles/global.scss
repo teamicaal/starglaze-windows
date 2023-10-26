@@ -545,12 +545,12 @@ a {
 
 #header-main{
 .header-bg{
-  background: #231f2080;
+  background: #0a0a0b99;
 }
 
   @screen lg{
     .header-bg{
-      background: rgb(10 10 11 / 39%);
+      background: #0a0a0b99;
     }
   }
   
@@ -959,4 +959,7 @@ a {
   border-radius: 100%;
   cursor: pointer;
   @apply bg-primary;
+}
+.text-shadow{
+ text-shadow: 1px 2px 3px #343338;
 }

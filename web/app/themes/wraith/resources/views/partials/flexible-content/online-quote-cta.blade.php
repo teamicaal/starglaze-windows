@@ -4,12 +4,12 @@ $title = get_sub_field('title');
 $paragraph = get_sub_field('paragraph');
 @endphp
 
-<section id="online-quote-cta" class="gold-gradient {!! $custom_class ? ' ' . $custom_class : 'lg:py-20 py-16' !!} mt-10 mb-8">
+<section id="online-quote-cta" class="gold-gradient {!! $custom_class ? ' ' . $custom_class : 'py-12' !!} mt-10 mb-8">
     <div class="container mx-auto">
         <div class="flex flex-wrap justify-between items-center">
             <div>
-                <h2 class="text-white font-bold font-serif md:text-4xl text-3xl">{{ $title }}</h2>
-                {!! $paragraph ? '<div class="mb-6 child-p:tracking-wider child-p:text-white">' . $paragraph . '</div>' : null !!}
+                <h2 class="text-white font-bold font-serif md:text-4xl text-3xl text-shadow">{{ $title }}</h2>
+                {!! $paragraph ? '<div class="child-p:mb-0 child-p:tracking-wider child-p:text-white">' . $paragraph . '</div>' : null !!}
             </div>
             @if( have_rows('buttons') )
                 <div class="flex flex-wrap gap-4">
