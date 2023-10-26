@@ -6,7 +6,7 @@ header{
       display: none;
     }
     .header-padding{
-      @apply py-2;
+      @apply lg:py-2 py-0;
     }
     // .logo-scroll{
     //   height: 6rem;
@@ -449,7 +449,7 @@ header{
     > ul {
       > li {
         > a {
-          @apply text-sm text-white font-semibold border-none capitalize tracking-wide inline-block px-[0.65rem] py-4;
+          @apply text-sm text-white font-semibold capitalize tracking-wide inline-block px-[0.65rem] py-4;
 
           &:hover {
             @apply text-primary border-none;
@@ -488,5 +488,53 @@ header{
     }
   }
   
+}
+
+@media (max-width: 1023px) {
+  .nav-primary {
+    > ul {
+      > li {
+        > a {
+          @apply text-sm text-secondary border-b border-neutral-200 font-semibold capitalize tracking-wide inline-block px-8 py-4 w-full;
+
+          &:hover {
+            @apply text-primary;
+          }
+        }
+
+        > .sub-menu {
+          @apply bg-gray-100;
+
+          top: 54px;
+
+          > li {
+            > .sub-menu {
+              @apply bg-white;
+            }
+          }
+        }
+
+        &:hover {
+          > .sub-menu {
+            top: 70px;
+          }
+        }
+      }
+    }
+  }
+
+  .btn-toolbar {
+
+    @apply mx-4 mt-4;
+    a {
+      @apply inline-block text-[14px] bg-primary text-white hover:bg-primary font-sans font-semibold tracking-wide rounded-full text-center leading-none mb-3 ;
+      @apply text-white p-3 ml-0 #{!important};
+    }
+    &:hover {
+      a {
+        @apply bg-secondary;
+      }
+    }
+  }
 }
 

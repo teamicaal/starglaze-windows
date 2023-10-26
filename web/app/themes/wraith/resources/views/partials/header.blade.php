@@ -23,7 +23,7 @@
 @endif
 <header id="header-main" class="banner fixed z-40 top-0 left-0 right-0 {{ $header_background ? 'is-scrolled' : null}} w-full">
   <div class="header-bg ">
-    <div class="flex items-center header-padding justify-between md:py-4 py-0 2xl:px-20 lg:px-4">
+    <div class="flex items-center header-padding justify-between lg:py-4 py-0 2xl:px-20 lg:px-4">
       <div class="hidden lg:block">
         <a class="brand border-0" href="{{ home_url('/') }}">
           @if( $logo )
@@ -118,7 +118,7 @@
               </div>
             </div>
           </div>
-          <div id="header" class="py-4">
+          <div id="header" class="lg:py-4 py-0">
             <div class="">
               <div class="container lg:ml-auto mx-auto flex items-center justify-between lg:justify-end py-2 lg:py-0">
                 {!! $brand_phone_link ? '<a href="tel:' . $brand_phone_link . '" class="lg:hidden px-4 text-white py-2 -ml-2"><i class="fa fa-phone"></i></a>' : null; !!}
