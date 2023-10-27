@@ -50,10 +50,10 @@
       <div class="widget">
         <h3>Quick links</h3>
         <div class="flex flex-wrap justify-stretch">
-            <div class="flex-grow pr-4 md:px-1 md:mb-4 lg:mb-0">
+            <div class="flex-grow md:px-1 md:mb-4 lg:mb-0">
                 @php dynamic_sidebar('sidebar-footer-2') @endphp
             </div>
-            <div class="flex-grow pl-4 md:px-4">
+            <div class="flex-grow">
                 @php dynamic_sidebar('sidebar-footer-3') @endphp
             </div>
         </div>

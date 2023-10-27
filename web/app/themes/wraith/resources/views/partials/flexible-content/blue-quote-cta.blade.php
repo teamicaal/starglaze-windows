@@ -29,7 +29,7 @@
                             <div class="bg-white text-primary font-bold text-center darkTint-button absolute video-modal-play cursor-pointer">Play Video <i class="fa fa-play ml-2"></i></div>
                             <div class="hidden fixed inset-0 bg-black/80 z-50 items-center video-modal">
                                 <div class="flex items-center container mx-auto relative">
-                                    <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" src="{{$youtube_video_link}}" allow=" autoplay;" class="aspect-21/9 w-full" frameborder="0" allowfullscreen></iframe>
+                                    <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" src="{{$youtube_video_link}}?rel=0&autoplay=1" class="aspect-21/9 w-full" frameborder="0" allowfullscreen></iframe>
                                     <div class="absolute top-[-50px] right-0 cursor-pointer closevideo-modal"><i class="fa fa-circle-xmark w-[40px] h-[40px]"></i></div>
                                 </div>
 

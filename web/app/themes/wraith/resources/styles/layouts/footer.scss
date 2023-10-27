@@ -2,9 +2,15 @@ footer {
   .widget {
     p,
     ul,
-    li,
     a {
       @apply text-white text-lg;
+    }
+
+    .widget {
+      
+      li {
+        @apply text-white text-base;
+      }
     }
 
     .textwidget {
