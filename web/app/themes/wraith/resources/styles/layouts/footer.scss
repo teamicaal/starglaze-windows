@@ -4,19 +4,20 @@ footer {
     ul,
     li,
     a {
-      @apply text-white;
+      @apply text-white text-lg;
     }
 
     .textwidget {
       p {
+        @apply text-lg tracking-wide;
         a {
-          @apply text-primary font-semibold ; 
+          @apply text-primary text-lg font-semibold ; 
         }
       }
     }
 
     h3 {
-      @apply text-2xl font-serif text-white capitalize tracking-widest border-b border-white pb-8 mb-8;
+      @apply text-3xl font-serif text-white capitalize font-bold tracking-wide border-b border-white pb-8 mb-8;
     }
 
     .menu {

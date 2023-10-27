@@ -16,29 +16,29 @@ $social_pinterest = get_field('social_pinterest', 'option');
 <div class="{!! $colour == 'dark' ? ' bg-white border border-[#D0D0D0] py-5 px-7' : null !!}">
   <ul class="list-reset">
     @if( $brand_phone_link )
-    <li class="text-sm mb-4">
+    <li class="text-lg mb-4">
       <a href="tel:{!!$brand_phone_link !!}" class="{!! $colour == 'light' ? 'text-primary' : 'text-[#242D36]' !!}">
         <i class="fa fa-phone float-left mr-3 {!! $colour == 'white' ? 'text-' . $colour   : 'text-primary' !!}"></i>
         <span class="table-cell font-normal font-body">{!! $brand_phone_label ? $brand_phone_label : $brand_phone_link !!}</span>
       </a>
     </li>
     @endif
-    @if( $brand_phone_alt_link )
-    <li class="text-sm mb-4">
+    {{-- @if( $brand_phone_alt_link )
+    <li class="text-lg mb-4">
       <a href="tel:{!! $brand_phone_alt_link !!}" class="{!! $colour == 'light' ? 'text-primary' : 'text-[#242D36]' !!}">
         <i class="fa fa-phone-plus float-left mr-3 {!! $colour == 'white' ? 'text-' . $colour   : 'text-primary' !!}"></i>
         <span class="table-cell font-normal font-body">{!! $brand_phone_alt_label ? $brand_phone_alt_label : $brand_phone_alt_link !!}</span>
       </a>
     </li>
-    @endif
+    @endif --}}
     @if( $brand_fax )
-    <li class="text-sm {!! $colour == 'light' ? 'text-primary' : 'text-[#242D36]' !!} mb-4">
+    <li class="text-lg {!! $colour == 'light' ? 'text-primary' : 'text-[#242D36]' !!} mb-4">
       <i class="fa fa-print float-left mr-3 {!! $colour == 'white' ? 'text-' . $colour   : 'text-primary' !!}"></i>
       <span class="table-cell font-normal font-body">{!! $brand_fax !!}</span>
     </li>
     @endif
     @if( $brand_email )
-    <li class="text-sm mb-4">
+    <li class="text-lg mb-4">
       <a href="mailto:{!! $brand_email !!}" class="{!! $colour == 'light' ? 'text-primary' : 'text-[#242D36]' !!}">
         <i class="fa fa-envelope-open float-left mr-3 {!! $colour == 'white' ? 'text-' . $colour   : 'text-primary' !!}"></i>
         <span class="table-cell font-normal font-body">{!! $brand_email !!}</span>
@@ -61,24 +61,24 @@ $social_pinterest = get_field('social_pinterest', 'option');
       @endphp
       {!! $address_link ? '<a class="flex mr-6" href="' . $address_link . '" target="_blank">' : null !!}
         <i class="fa fa-map-marker-alt mr-3 {!! $colour == 'white' ? 'text-' . $colour   : 'text-primary' !!}"></i>
-        <ul class="list-reset font-font-normal">
-          {!! $address_name ? '<li class="mb-2"><h4 class="text-' . $colour . ' font-display uppercase tracking-widest font-base mb-2">' . $address_name . '</h4></li>' : null !!}
-          {!! $address_line_1 ? '<li class="font-normal text-[#242D36]">' . $address_line_1 .  ' </li>' : null !!}
-          {!! $address_line_2 ? '<li class="font-normal text-[#242D36]">' . $address_line_2 . '</li>' : null !!}
-          {!! $address_county ? '<li class="font-normal text-[#242D36]">' . $address_county . '</li>' : null !!}
-          {!! $address_city ? '<li class="font-normal text-[#242D36]">' . $address_city . '</li>' : null !!}
-          {!! $address_post_code ? '<li class="font-normal text-[#242D36]">' . $address_post_code . '</li>' : null !!}
-          {!! $address_country ? '<li class="font-normal text-[#242D36]">' . $address_country . '</li>' : null !!}
+        <ul class="list-reset font-bold">
+          {!! $address_name ? '<li class="mb-2"><h4 class="text-' . $colour . ' font-bold uppercase tracking-widest mb-2">' . $address_name . '</h4></li>' : null !!}
+          {!! $address_line_1 ? '<li class="font-bold text-[#242D36]">' . $address_line_1 .  ' </li>' : null !!}
+          {!! $address_line_2 ? '<li class="font-bold text-[#242D36]">' . $address_line_2 . '</li>' : null !!}
+          {!! $address_county ? '<li class="font-bold text-[#242D36]">' . $address_county . '</li>' : null !!}
+          {!! $address_city ? '<li class="font-bold text-[#242D36]">' . $address_city . '</li>' : null !!}
+          {!! $address_post_code ? '<li class="font-bold text-[#242D36]">' . $address_post_code . '</li>' : null !!}
+          {!! $address_country ? '<li class="font-bold text-[#242D36]">' . $address_country . '</li>' : null !!}
         </ul>
       {!! $address_link ? '</a>' : null !!}
       @endwhile
     </div>
     @endif
-    <ul class="list-reset text-sm flex flex-wrap">
-      @if ($colour == 'primary' )
-      @include('partials.components.social_icons' , ['colour' => 'primary'])
+    <ul class="list-reset text-sm flex flex-wrap py-8">
+      @if ($colour == 'dark')
+      @include('partials.components.social_icons' , ['location'=>'form'])
       @else
-      @include('partials.components.social_icons' , ['colour' => 'white'])
+      @include('partials.components.social_icons' , ['location'=>'footer'])
       @endif
     </ul>
   </ul>

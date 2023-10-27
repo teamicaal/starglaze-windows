@@ -59,7 +59,7 @@ $details = get_sub_field('details');
           </div>
           @if( $details )
             <div class="w-full md:w-2/5">
-              @include('partials.contact-details', ['colour'=>'primary'])
+              @include('partials.contact-details', ['colour'=>'dark'])
             </div>
           @endif
         </div>

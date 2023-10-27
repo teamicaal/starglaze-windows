@@ -6,22 +6,60 @@
   @endphp
 @endif
 
-<footer class="content-info blue-bg-gradient py-8 lg:pt-24">
+<footer class="content-info blue-bg-gradient py-8 lg:pt-20">
   <div class="container mx-auto flex flex-wrap px-0 mb-4">
     <div class="w-full md:w-2/3 lg:w-1/3 px-4 md:pr-8 mb-8 md:mb-0">
       @php dynamic_sidebar('sidebar-footer-1') @endphp
-    </div>
-    <div class="w-full md:w-1/3 lg:w-2/5 px-4 mb-8 md:mb-0">
-      <div class="flex flex-wrap justify-stretch">
-        <div class="flex-grow pr-4 md:px-1 md:mb-4 lg:mb-0">
-          @php dynamic_sidebar('sidebar-footer-2') @endphp
+      <h3 class="text-primary font-bold font-serif text-2xl ">Join Our Newsletter</h3>
+        <div class="mb-4">
+          <div id="mc_embed_shell" class=" ">
+            <style type="text/css">
+              #mc_embed_signup{background:#fff; false;clear:left; font:20px Helvetica,Arial,sans-serif;}
+              /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                 We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+            </style>
+            <div id="mc_embed_signup" class="p-2 rounded-lg">
+              <form action="https://bluemanorwindows.us21.list-manage.com/subscribe/post?u=7a386904ce2416b0cece37f7a&amp;id=dbee80775b&amp;f_id=001264e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate flex justify-between items-center" target="_blank">
+                  <div id="mc_embed_signup_scroll">
+                      <div class="mc-field-group"><input type="email" name="EMAIL" placeholder="Email Address" class="required email md:p-0-75 p-0-75 w-full" id="mce-EMAIL" required="" value=""><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span></div>
+                    <div id="mce-responses" class="clear foot">
+                        <div class="response" id="mce-error-response" style="display: none;"></div>
+                        <div class="response" id="mce-success-response" style="display: none;"></div>
+                    </div>
+                    <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                        /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                        <input type="text" class="md:p-0-75 p-0-75 w-full" name="b_7a386904ce2416b0cece37f7a_dbee80775b" tabindex="-1" value="" inputmode="email" placeholder="Email Address" >
+                    </div>
+                  </div>
+                  <button class="bg-primary py-2 px-6 rounded-lg text-white flex justify-center items-center"> 
+                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="">
+                    Subscribe
+                  </button>
+                  {{-- <div class="flex justify-center items-center bg-primary w-[43px]">
+                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value=""><i class="fa fa-arrow-right text-white"></i>
+                  </div> --}}
+              </form>
+              <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+            </div>
+          </div>
+        
+          {{-- <button class="bg-primary w-[43px]"> <i class="fa fa-arrow-right text-white"></i></button> --}}
         </div>
-        <div class="flex-grow pl-4 md:px-4">
-          @php dynamic_sidebar('sidebar-footer-3') @endphp
+    </div>
+    <div class="w-full md:w-1/3 px-4 mb-8 md:mb-0">
+      <div class="widget">
+        <h3>Quick links</h3>
+        <div class="flex flex-wrap justify-stretch">
+            <div class="flex-grow pr-4 md:px-1 md:mb-4 lg:mb-0">
+                @php dynamic_sidebar('sidebar-footer-2') @endphp
+            </div>
+            <div class="flex-grow pl-4 md:px-4">
+                @php dynamic_sidebar('sidebar-footer-3') @endphp
+            </div>
         </div>
       </div>
     </div>
-    <div class="w-full md:w-1/2 lg:w-1/4 px-4">
+    <div class="w-full md:w-1/2 lg:w-1/3 px-4">
       <section class="widget">
         <h3>Contact Us</h3>
         @include('partials.contact-details', ['colour'=>'white'])
@@ -49,7 +87,7 @@
         </button>
       </div>
     </div>
-    <button type="button" class="page-share btn bg-white text-gray-900 hover:bg-gray-200 hover:text-primary focus:outline-none">Share <i class="fa fa-share"></i></button>
+    {{-- <button type="button" class="page-share btn bg-white text-gray-900 hover:bg-gray-200 hover:text-primary focus:outline-none">Share <i class="fa fa-share"></i></button> --}}
   </div>
 </footer>
 <section class="bg-primary py-4 pb-16 lg:pb-4">

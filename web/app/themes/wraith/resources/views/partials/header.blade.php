@@ -90,7 +90,7 @@
                   @endif
                 </div>
                 <ul class="list-reset xxl:mr-8 mr-4 flex">
-                  @include('partials.components.social_icons', ['colour' => 'primary'])
+                  @include('partials.components.social_icons', ['location'=>'header'])
                   @if( $brand_phone_link )
                   <li class="flex flex-nowrap 2xl:text-sm text-[0.80rem] 2xl:mr-8 mr-4">
                     <a href="tel:{!! $brand_phone_link !!}" class="flex items-center">
