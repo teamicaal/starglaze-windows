@@ -20,7 +20,7 @@
                 $youtube_video_link = get_sub_field('youtube_video_link');
                 @endphp
                 <div class=" flex justify-center items-center relative md:m-4 {{ $i == 1 ? 'md:mr-2 mb-12 lg:mb-0' : 'md:ml-2'}} rounded-lg overflow-hidden py-8 md:py-24 px-3 md:px-16 inner-wrapper">
-                    <img src="{{ $image['url'] }}" alt="{{ $image_alt ? $image_alt : $image['alt'] }}" class=" w-full h-full bg-no-repeat bg-center bg-cover absolute">
+                    <img src="{{ $image['url'] }}" alt="{{ $image_alt ? $image_alt : $image['alt'] }}" class=" w-full h-full bg-no-repeat bg-center bg-cover object-cover absolute">
                     <div class="absolute darkTint w-full h-full"></div>
                     <div class="relative px-2 md:px-8 flex flex-col justify-center items-center max-w-[1000px] rounded-lg border border-white h-full">
                         <h2 class="font-serif font-bold text-center text-3xl md:text-4xl mb-6 text-white tracking-wide ">{{ $title }}</h2>
