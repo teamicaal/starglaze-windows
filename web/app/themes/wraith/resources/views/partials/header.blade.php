@@ -93,25 +93,25 @@
                   @include('partials.components.social_icons')
                   @if( $brand_phone_link )
                   <li class="flex flex-nowrap 2xl:text-sm text-[0.80rem] 2xl:mr-8 mr-4">
-                    <a href="tel:{{ $brand_phone_link }}" class="flex items-center">
+                    <a href="tel:{!! $brand_phone_link !!}" class="flex items-center">
                       <div class="text-white font-semibold whitespace-nowrap">Sales:<i class="text-primary fa fa-phone inline-block mx-1 mt-0.5"></i> </div>
-                      <span class="text-white font-semibold whitespace-nowrap">{{ $brand_phone_label ? $brand_phone_label : $brand_phone_link }}</span>
+                      <span class="text-white font-semibold whitespace-nowrap">{!! $brand_phone_label ? $brand_phone_label : $brand_phone_link !!}</span>
                     </a>
                   </li>
                   @endif
                   @if( $brand_phone_alt_link )
                   <li class="flex flex-nowrap 2xl:text-sm text-[0.80rem] 2xl:mr-8 mr-4">
-                    <a href="tel:{{ $brand_phone_alt_link }}" class="flex items-center">
+                    <a href="tel:{!! $brand_phone_alt_link !!}" class="flex items-center">
                       <div class="text-white font-semibold whitespace-nowrap">Queries:<i class="text-primary fa fa-phone inline-block mx-1 mt-0.5"></i> </div>
-                      <span class="text-white font-semibold whitespace-nowrap">{{ $brand_phone_alt_label ? $brand_phone_alt_label : $brand_phone_alt_link }}</span>
+                      <span class="text-white font-semibold whitespace-nowrap">{!! $brand_phone_alt_label ? $brand_phone_alt_label : $brand_phone_alt_link !!}</span>
                     </a>
                   </li>
                   @endif
                   @if( $brand_email )
                   <li class="flex flex-nowrap 2xl:text-sm text-[0.80rem]">
-                    <a href="mailto:{{ $brand_email }}" class="flex items-center">
+                    <a href="mailto:{!! $brand_email !!}" class="flex items-center">
                       <i class="text-primary fa fa-envelope-open inline-block float-left whitespace-nowrap mr-2 mt-0.5"></i>
-                      <span class="text-white font-semibold whitespace-nowrap">{{ $brand_email }}</span>
+                      <span class="text-white font-semibold whitespace-nowrap">{!! $brand_email !!}</span>
                     </a>
                   </li>
                   @endif
