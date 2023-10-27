@@ -75,10 +75,10 @@ $social_pinterest = get_field('social_pinterest', 'option');
     </div>
     @endif
     <ul class="list-reset text-sm flex flex-wrap">
-      @if ($colour == 'dark')
-      @include('partials.components.social_icons' , ['location'=>'form'])
+      @if ($colour == 'primary' )
+      @include('partials.components.social_icons' , ['colour' => 'primary'])
       @else
-      @include('partials.components.social_icons' , ['location'=>'footer'])
+      @include('partials.components.social_icons' , ['colour' => 'white'])
       @endif
     </ul>
   </ul>
