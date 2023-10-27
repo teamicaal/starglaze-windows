@@ -16,17 +16,16 @@ $paragraph = get_sub_field('paragraph');
       @hasposts($query)
         <div class=" container mx-auto lg:flex justify-center items-center relative">
           @posts($query)
-          <article class="w-full lg:w-1/3 px-2 md:mx-2 lg:first-of-type:ml-0 lg:last-of-type:mr-0 lg:mb-0 mb-4 ">
-            <div class=" flex h-[465px] justify-center items-center relative rounded-xl overflow-hidden p-[35px]">
-              <img data-src="@thumbnail('url', false)" src="@thumbnail('url', false)" width="100%" height="auto" alt="@title" class="w-full h-full object-cover bg-no-repeat bg-center bg-cover absolute">
-              <div class="absolute darkTint w-full h-full"></div>
-              <div class="relative px-4 flex flex-col justify-center items-center max-w-[1000px] rounded-xl border border-white h-full">
-                <h2 class="font-serif font-bold text-center text-2xl text-white tracking-wide ">@title</h2>
-                {{-- <div class="child-p:text-white p-4 text-center px-20 pt-0 pb-8 text-lg">{!! the_excerpt() !!}</div> --}}
-                <a href="@permalink" class="bg-white text-primary font-bold text-center darkTint-button absolute">Learn More</a>
-              </div>
-            </div>
-          </article>
+            <article class="w-full lg:w-[30%] px-2 md:mx-2 lg:first-of-type:ml-0 lg:last-of-type:mr-0 lg:mb-0 mb-4">
+              <a href="@permalink" class="flex h-[465px] justify-center items-center relative rounded-xl overflow-hidden p-[35px] case-study-wraper">
+                <img data-src="@thumbnail('url', false)" src="@thumbnail('url', false)" width="100%" height="auto" alt="@title" class="w-full h-full object-cover bg-no-repeat bg-center bg-cover absolute">
+                <div class="absolute dark-CaseStudies-Tint w-full h-full"></div>
+                <div class="relative px-4 flex flex-col justify-center items-center max-w-[1000px] rounded-xl border border-white h-full">
+                  <h2 class="font-serif font-bold text-center text-2xl text-white tracking-wide ">@title</h2>
+                  <span class="bg-white text-primary font-bold text-center darkTint-button absolute">Learn More</span>
+                </div>
+              </a>
+            </article>
           @endposts
         </div>
       @endhasposts

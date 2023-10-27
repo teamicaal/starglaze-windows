@@ -19,12 +19,12 @@
                 $button_link = get_sub_field('button_link');
                 $youtube_video_link = get_sub_field('youtube_video_link');
                 @endphp
-                <div class=" flex justify-center items-center relative md:m-4 {{ $i == 1 ? 'md:mr-2 mb-12 lg:mb-0' : 'md:ml-2'}} rounded-lg overflow-hidden py-8 md:py-24 px-3 md:px-16 inner-wrapper">
+                <div class=" flex justify-center items-center relative md:m-4 {{ $i == 1 ? 'md:mr-2 mb-12 lg:mb-0' : 'md:ml-2'}} rounded-lg overflow-hidden py-8 2xl:py-24 lg:py-8 lg:px-6 px-3 2xl:px-16 inner-wrapper">
                     <img src="{{ $image['url'] }}" alt="{{ $image_alt ? $image_alt : $image['alt'] }}" class=" w-full h-full bg-no-repeat bg-center bg-cover object-cover absolute">
                     <div class="absolute darkTint w-full h-full"></div>
-                    <div class="relative px-2 md:px-8 flex flex-col justify-center items-center max-w-[1000px] rounded-lg border border-white h-full">
+                    <div class="relative p-4 md:p-8 flex flex-col justify-center items-center max-w-[1000px] rounded-lg border border-white h-auto">
                         <h2 class="font-serif font-bold text-center text-3xl md:text-4xl mb-6 text-white tracking-wide ">{{ $title }}</h2>
-                        <div class="child-p:text-white p-4 text-center md:px-20 pt-0 pb-8 text-lg">{!! $paragraph !!}</div>
+                        <div class="child-p:text-white text-center 2xl:px-20 md:px-4 pt-0 2xl:pb-8 pb-4 text-lg">{!! $paragraph !!}</div>
                         @if ($youtube_video_link)
                             <div class="bg-white text-primary font-bold text-center darkTint-button absolute video-modal-play cursor-pointer">Play Video <i class="fa fa-play ml-2"></i></div>
                             <div class="hidden fixed inset-0 bg-black/80 z-50 items-center video-modal">

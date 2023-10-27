@@ -681,6 +681,22 @@ a {
   }
 }
 
+
+.dark-CaseStudies-Tint{
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(-45deg, #0157c0dd, #2c76d0df 40%, #406ba2d2 60%, #023d85e9);
+  mix-blend-mode: multiply;
+  transition: all .3s;
+}
+.case-study-wraper:hover{
+  .dark-CaseStudies-Tint{
+    top: -150%;
+  }
+
+}
 .darkTint{
   top: 0;
   left: 0;
