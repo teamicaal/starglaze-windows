@@ -17,31 +17,31 @@ $social_pinterest = get_field('social_pinterest', 'option');
   <ul class="list-reset">
     @if( $brand_phone_link )
     <li class="text-sm mb-4">
-      <a href="tel:{{ $brand_phone_link }}" class="{!! $colour == 'light' ? 'text-primary' : 'text-[#242D36]' !!}">
+      <a href="tel:{!!$brand_phone_link !!}" class="{!! $colour == 'light' ? 'text-primary' : 'text-[#242D36]' !!}">
         <i class="fa fa-phone float-left mr-3 {!! $colour == 'white' ? 'text-' . $colour   : 'text-primary' !!}"></i>
-        <span class="table-cell font-normal font-body">{{ $brand_phone_label ? $brand_phone_label : $brand_phone_link }}</span>
+        <span class="table-cell font-normal font-body">{!! $brand_phone_label ? $brand_phone_label : $brand_phone_link !!}</span>
       </a>
     </li>
     @endif
     @if( $brand_phone_alt_link )
     <li class="text-sm mb-4">
-      <a href="tel:{{ $brand_phone_alt_link }}" class="{!! $colour == 'light' ? 'text-primary' : 'text-[#242D36]' !!}">
+      <a href="tel:{!! $brand_phone_alt_link !!}" class="{!! $colour == 'light' ? 'text-primary' : 'text-[#242D36]' !!}">
         <i class="fa fa-phone-square float-left mr-3 {!! $colour == 'white' ? 'text-' . $colour   : 'text-primary' !!}"></i>
-        <span class="table-cell font-normal font-body">{{ $brand_phone_alt_label ? $brand_phone_alt_label : $brand_phone_alt_link }}</span>
+        <span class="table-cell font-normal font-body">{!! $brand_phone_alt_label ? $brand_phone_alt_label : $brand_phone_alt_link !!}</span>
       </a>
     </li>
     @endif
     @if( $brand_fax )
     <li class="text-sm {!! $colour == 'light' ? 'text-primary' : 'text-[#242D36]' !!} mb-4">
       <i class="fa fa-print float-left mr-3 {!! $colour == 'white' ? 'text-' . $colour   : 'text-primary' !!}"></i>
-      <span class="table-cell font-normal font-body">{{ $brand_fax }}</span>
+      <span class="table-cell font-normal font-body">{!! $brand_fax !!}</span>
     </li>
     @endif
     @if( $brand_email )
     <li class="text-sm mb-4">
-      <a href="mailto:{{ $brand_email }}" class="{!! $colour == 'light' ? 'text-primary' : 'text-[#242D36]' !!}">
+      <a href="mailto:{!! $brand_email !!}" class="{!! $colour == 'light' ? 'text-primary' : 'text-[#242D36]' !!}">
         <i class="fa fa-envelope-open float-left mr-3 {!! $colour == 'white' ? 'text-' . $colour   : 'text-primary' !!}"></i>
-        <span class="table-cell font-normal font-body">{{ $brand_email }}</span>
+        <span class="table-cell font-normal font-body">{!! $brand_email !!}</span>
       </a>
     </li>
     @endif
