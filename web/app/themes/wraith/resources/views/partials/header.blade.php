@@ -102,7 +102,7 @@
                   @if( $brand_phone_alt_link )
                   <li class="flex flex-nowrap 2xl:text-sm text-[0.80rem] 2xl:mr-8 mr-4">
                     <a href="tel:{!! $brand_phone_alt_link !!}" class="flex items-center">
-                      <div class="text-white font-semibold whitespace-nowrap">Queries:<i class="text-primary fa fa-phone inline-block mx-1 mt-0.5"></i> </div>
+                      <div class="text-white font-semibold whitespace-nowrap">Queries:<i class="text-primary fa fa-phone-plus inline-block mx-1 mt-0.5"></i> </div>
                       <span class="text-white font-semibold whitespace-nowrap">{!! $brand_phone_alt_label ? $brand_phone_alt_label : $brand_phone_alt_link !!}</span>
                     </a>
                   </li>

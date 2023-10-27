@@ -26,7 +26,7 @@ $social_pinterest = get_field('social_pinterest', 'option');
     @if( $brand_phone_alt_link )
     <li class="text-sm mb-4">
       <a href="tel:{!! $brand_phone_alt_link !!}" class="{!! $colour == 'light' ? 'text-primary' : 'text-[#242D36]' !!}">
-        <i class="fa fa-phone-square float-left mr-3 {!! $colour == 'white' ? 'text-' . $colour   : 'text-primary' !!}"></i>
+        <i class="fa fa-phone-plus float-left mr-3 {!! $colour == 'white' ? 'text-' . $colour   : 'text-primary' !!}"></i>
         <span class="table-cell font-normal font-body">{!! $brand_phone_alt_label ? $brand_phone_alt_label : $brand_phone_alt_link !!}</span>
       </a>
     </li>
