@@ -77,6 +77,9 @@
         @if (get_row_layout() == 'color_options')
             @include('partials.flexible-content.color-options')
         @endif
+        @if (get_row_layout() == 'profile_options')
+            @include('partials.flexible-content.profile-options')
+        @endif
         @if (get_row_layout() == 'video_content_block')
             @include('partials.flexible-content.video-content-block')
         @endif
