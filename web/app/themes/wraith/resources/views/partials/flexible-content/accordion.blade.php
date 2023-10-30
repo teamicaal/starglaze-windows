@@ -50,9 +50,9 @@
                 @endwhile
             </div>
         </div>
-        <div class="w-1/2">
+        <div class="lg:w-1/2 w-full lg:mt-0 mt-4">
             @hasposts($query)
-          <div class="flex  justify-center items-center relative accordion-case-study-slick">
+          <div class="lg:flex  justify-center items-center relative accordion-case-study-slick">
             @posts($query)
             <article class="w-full mx-2 first-of-type:ml-0 last-of-type:mr-0  ">
               <div class=" flex aspect-3/4 justify-center items-center relative rounded-lg  overflow-hidden h-fit p-[40px]">

@@ -181,7 +181,17 @@ import mixitup from 'mixitup';
     autoplaySpeed: 3000,
     prevArrow:$('.case-study-arrow-p'),
     nextArrow:$('.case-study-arrow-n'),
-    
+
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode:false,
+        }
+      }
+    ]
   });
 
   // Testimonials 

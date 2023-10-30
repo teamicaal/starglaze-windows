@@ -1,12 +1,16 @@
 @php
 $custom_class = get_sub_field('custom_class');
 $background_image = get_sub_field('background_image');
+$title = get_sub_field('title');
 $bottom_content = get_sub_field('bottom_content');
 $i = 0;
 @endphp
 
 <section id="energy-calculator-content" class="relative {!! $custom_class ? ' ' . $custom_class : '' !!}">
     <div class="relative lg:pt-[10rem] lg:pb-[3rem]">
+        @if ($title)
+        <h2 class="text-center font-bold font-serif text-[#3F7E57] text-3xl lg:text-4xl my-8">{{ $title }}</h2>
+        @endif
         <img src="{{ $background_image['url'] }}" alt="dot background" class="h-full w-full absolute object-cover opacity-30 inset-0">
         <div class="container mx-auto relative">
             <div class="flex flex-wrap justify-center mt-6 content">
