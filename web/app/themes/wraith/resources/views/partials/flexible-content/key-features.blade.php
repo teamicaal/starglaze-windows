@@ -5,7 +5,7 @@
 
 <section class="py-12 bg-gray-100">
   <div class="container mx-auto">
-      {!! $title ? '<h2 class="mb-4 lg:mb-8 text-primary font-serif font-medium text-4xl">' . $title . '</h2>' : null !!}
+      {!! $title ? '<h2 class="mb-4 lg:mb-8 text-primary text-center font-serif font-medium text-4xl">' . $title . '</h2>' : null !!}
       <div class="flex flex-wrap justify-center">
         @if( get_sub_field('features') )
           @php $count = count(get_sub_field('features')); @endphp
