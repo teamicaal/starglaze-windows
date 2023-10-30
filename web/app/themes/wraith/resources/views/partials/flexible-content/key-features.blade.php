@@ -26,7 +26,7 @@
                     <i class="fa fa-{{ $icon }} text-white text-xl"></i>
                   </span>
                 @endif
-                {!! $title ? '<h3 class="font-bold font-serif text-lg text-white mt-4 mb-4">' . $title . '</h3>' : null !!}
+                {!! $title ? '<h3 class="font-bold font-serif text-xl tracking wide text-white mt-4 mb-4">' . $title . '</h3>' : null !!}
                 {!! $subtitle ? '<p class="text-white font-serif mb-0">' . $subtitle . '</p>' : null !!}
               </div>
             </div>
