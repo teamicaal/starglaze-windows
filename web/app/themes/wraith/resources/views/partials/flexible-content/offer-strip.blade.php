@@ -14,7 +14,7 @@ $i = 0 ;
       
       @endphp
       <div class="w-full lg:w-1/4 text-center items-center justify-center flex  ">
-        <div class="offer-skew w-full h-full px-8 py-4  {{$i === 1 ? 'offer-before-cover' : null }} {{$i === 4 ? 'offer-after-cover' : null }}  {{ $i % 2 == 0 ? 'bg-primary ' : 'bg-secondary'  }}">
+        <div class="offer-skew w-full h-full px-8 py-6  {{$i === 1 ? 'offer-before-cover' : null }} {{$i === 4 ? 'offer-after-cover' : null }}  {{ $i % 2 == 0 ? 'bg-primary ' : 'bg-secondary'  }}">
           <div class="offer-skew-opp">
             <h2 class="font-serif font-medium text-[18px] mx-auto text-white w-[70%] ">{{ $title }}</h2>
             <a href="{{ $link }}" class="hover:border-none text-[23px] font-bold font-serif text-white ">{{ $label }}</a>
