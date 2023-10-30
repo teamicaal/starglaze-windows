@@ -4,7 +4,7 @@
 @endphp
 <section class="container mx-auto">
     <h2 class="text-center text-3xl font-bold font-serif text-primary lg:text-4xl mb-8 uppercase"> {{ $title }}</h2>
-    <div class="child-p:mb-0 child-p:mx-auto child-p:font-normal child-p:text-[#3A3A3A]"> {!! $paragraph !!} </div>
+    <div class="child-p:mb-0 child-p:mx-auto child-p:text-center child-p:font-normal child-p:text-[#3A3A3A]"> {!! $paragraph !!} </div>
     @if (have_rows('profile_options'))
         <div class="flex justify-center gap-10 mt-10">
             @while (have_rows('profile_options'))
