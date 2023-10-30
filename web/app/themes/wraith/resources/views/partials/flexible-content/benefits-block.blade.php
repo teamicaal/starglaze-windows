@@ -4,7 +4,7 @@
     $i = 0;
     $benefits_counter = count($benefits);
 @endphp
-<section class="lg:mt-16 mt-10 py-24 blue-bg-gradient">
+<section class="lg:mt-16 mt-10 py-16 blue-bg-gradient">
     <h2 class="text-center font-bold font-serif text-white text-3xl lg:text-4xl mb-8">{{ $title }}</h2>
     <div class="container mx-auto flex flex-wrap md:flex-nowrap gap-0 md:gap-40 {{ $benefits_counter <= 3 ? 'justify-center' : null }}">
         <div class="{{ $benefits_counter > 3 ? 'left-column w-full md:w-1/2' : 'w-full flex flex-col lg:max-w-[50%] items-start' }}">
