@@ -289,7 +289,7 @@ import mixitup from 'mixitup';
   //why choose us slider
   $('.why-choose-us-slick').slick({
     slidesToShow: 3,
-    autoplay:false,
+    autoplay:true,
     autoplaySpeed:5000,
     dots:true,
     infinite:true,
