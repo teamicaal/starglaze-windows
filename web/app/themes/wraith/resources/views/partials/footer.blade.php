@@ -19,7 +19,7 @@
                  We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
             </style>
             <div id="mc_embed_signup" class="p-2 rounded-lg">
-              <form action="https://bluemanorwindows.us21.list-manage.com/subscribe/post?u=7a386904ce2416b0cece37f7a&amp;id=dbee80775b&amp;f_id=001264e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate flex justify-between items-center" target="_blank">
+              <form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate flex justify-between items-center" target="_blank">
                   <div id="mc_embed_signup_scroll">
                       <div class="mc-field-group"><input type="email" name="EMAIL" placeholder="Email Address" class="required email md:p-0-75 p-0-75 w-full" id="mce-EMAIL" required="" value=""><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span></div>
                     <div id="mce-responses" class="clear foot">
@@ -35,15 +35,10 @@
                     <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="">
                     Subscribe
                   </button>
-                  {{-- <div class="flex justify-center items-center bg-primary w-[43px]">
-                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value=""><i class="fa fa-arrow-right text-white"></i>
-                  </div> --}}
               </form>
               <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
             </div>
           </div>
-        
-          {{-- <button class="bg-primary w-[43px]"> <i class="fa fa-arrow-right text-white"></i></button> --}}
         </div>
     </div>
     <div class="w-full md:w-1/3 px-4 mb-8 md:mb-0">
