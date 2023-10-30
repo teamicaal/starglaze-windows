@@ -89,7 +89,11 @@
   <div class="container mx-auto flex justify-between items-center">
     <p class="text-[#201F22] text-sm my-4">
       © {!! date('Y') !!} {!! $footer_copyright ? $footer_copyright : get_bloginfo('name') !!}
-      <span class="mx-2 text-2xl text-[#201F22]">|</span> <a href="/privacy-policy/" class="text-[#201F22] font-normal" target="_blank">Privacy Policy</a> <span class="mx-2 text-2xl text-[#201F22]">|</span> <a href="/cookie-policy/" class="text-[#201F22] font-normal" target="_blank">Cookie Policy </a>
+      <span class="mx-2 text-2xl text-[#201F22]">|</span>
+       <a href="/cookie-policy/" class="text-[#201F22] font-normal">Cookie Policy </a> <span class="mx-2 text-2xl text-[#201F22]">|</span>
+       <button id="icaal-cookie-preferences-widget-new" class="text-[#201F22] font-normal" >Update Cookie Preferences </button> <span class="mx-2 text-2xl text-[#201F22]">|</span>
+       <a href="/privacy-policy/" class="text-[#201F22] font-normal" >Privacy Policy</a> <span class="mx-2 text-2xl text-[#201F22]">|</span> 
+       <a href="/complaints-policy/" class="text-[#201F22] font-normal" >Complaints Policy</a>
     </p>
     
     <a href="https://www.internetconsultancy.pro" target="_blank" title="Made with ♥ by ICAAL - www.icaal.co.uk" class="border-0 text-[#201F22] hover:text-gray-200">
