@@ -277,6 +277,25 @@ import mixitup from 'mixitup';
     fade: true,
     asNavFor: '.image_slider_thmb'
   });
+
+// Gripcore Key Features Slider
+
+var gripcoreKeyFeaturesSliderOption = {
+  slidesToShow: 4,
+  autoplay: true,
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 640,
+      settings: {
+        slidesToShow: 1,
+        autoplay: true,
+      },
+    },
+  ],
+};
+$(".gripcore-key-features-slider").slick(gripcoreKeyFeaturesSliderOption);
+
   $('.image_slider_thmb').slick({
     slidesToShow: 3,
     slidesToScroll: 1,

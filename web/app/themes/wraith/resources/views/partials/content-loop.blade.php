@@ -29,6 +29,12 @@
         @if (get_row_layout() == 'new_key_features_block')
             @include('partials.flexible-content.new-key-features-block')
         @endif
+        @if (get_row_layout() == 'gripcore_key_features')
+            @include('partials.flexible-content.gripcore-key-features')
+        @endif
+        @if (get_row_layout() == 'gripcore_exploded_view')
+            @include('partials.flexible-content.gripcore-exploded-view')
+        @endif
         @if (get_row_layout() == 'sustainability_info')
             @include('partials.flexible-content.sustainability-info')
         @endif
