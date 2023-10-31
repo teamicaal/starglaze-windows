@@ -43,10 +43,10 @@
         <div id="toolbar" class="hidden lg:block">
             <div class="container ml-auto">
               <div class="flex justify-end items-center">
-                <a href="https://www.feefo.com/en-GB/reviews/starglaze-windows?displayFeedbackType=SERVICE&timeFrame=YEAR" target="_blank" class="hover:border-none 2xl:block hidden">
+                <a href="https://www.feefo.com/en-GB/reviews/starglaze-windows?displayFeedbackType=SERVICE&timeFrame=YEAR" target="_blank" class="hover:border-none xl:block hidden">
                   <div class="flex justify-center items-center mr-4">
                     <img src="/app/uploads/2023/08/fefo.png" alt="" class="w-auto h-[1rem] mr-1">
-                    <div class="2xl:block hidden">
+                    <div class="xl:block hidden">
                       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="74" height="22" viewBox="0 0 74 22">
                         <defs>
                           <clipPath id="clip-path">
