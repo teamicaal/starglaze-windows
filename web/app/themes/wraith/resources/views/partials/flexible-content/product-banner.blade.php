@@ -27,7 +27,7 @@ $vr_cta = get_sub_field('vr_cta');
   <div class="full-width sm:flex sm:items-center relative lg:!min-h-[90vh] sm:!min-h-[60vh] !min-h-[100vh]">
     <div class="leftBannerBox"></div>
     @if( $images )
-      <div class="sm:absolute relative sm:top-0 sm:left-0 h-[100vh] w-full sm:h-full z-10">
+      <div class="sm:absolute relative sm:top-0 sm:left-0 h-[40vh] w-full sm:h-full z-10">
             @if ($video)
             <div class="hero relative h-full w-full">
               <video class="w-full h-full object-cover absolute" autoplay muted loop>
