@@ -7,8 +7,8 @@
 
 <div class="exploded-view-bg py-16">
     <div class=" container mx-auto text-center mb-8">
-        <h2 class="font-semibold text-2xl lg:text-[46px] lg:leading-[3.5rem] text-balance">{{ $title }}</h2>
-        <div class="child-p:mx-auto">{!! $paragraph !!}</div>
+        <h2 class="mb-4 lg:mb-8 text-primary font-serif font-medium text-4xl">{{ $title }}</h2>
+        <div class="child-p:mx-auto mb-0 child-p:text-center child-p:font-normal child-p:text-[#3A3A3A]">{!! $paragraph !!}</div>
     </div>
 
     <div class="relative max-w-max mx-auto px-8">
