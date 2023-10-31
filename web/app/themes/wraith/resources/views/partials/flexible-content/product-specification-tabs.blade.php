@@ -70,7 +70,7 @@
                 @if ($content_type == 'slider')
                     <div class="relative">
                         @if ($grip_core_page)
-                            <div class="absolute w-full h-1/2 bottom-0 bg-[#172128]"></div>
+                            {{-- <div class="absolute w-full h-1/2 bottom-0 bg-[#172128]"></div> --}}
                         @endif
                         <div class="container mx-auto relative bg-white pb-8">
                             <div class="product-specification-tabs-slider ">
