@@ -996,6 +996,17 @@ a {
   }
 }
 
+@keyframes blurAnimation {
+  0%,
+  100% {
+    filter: blur(5px);
+  }
+
+  50% {
+    filter: blur(13px);
+  }
+}
+
 .product_group_features-btn {
   @apply w-[46px] h-[46px] bg-transparent border-primary rounded-full border flex justify-center items-center;
   .product_group_features-btn-inner {
