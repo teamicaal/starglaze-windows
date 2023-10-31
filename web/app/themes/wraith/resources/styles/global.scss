@@ -1029,3 +1029,13 @@ a {
 .mega-menu{
   @apply lg:block hidden
 }
+
+.separator {
+  @screen lg {
+    @apply relative;
+    &::before {
+      content: "";
+      @apply bg-[#C7C7C7] absolute -left-24 top-1/2 -translate-y-1/2 w-[2px] h-[110%];
+    }
+  }
+}

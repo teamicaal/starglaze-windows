@@ -35,6 +35,9 @@
         @if (get_row_layout() == 'gripcore_exploded_view')
             @include('partials.flexible-content.gripcore-exploded-view')
         @endif
+        @if (get_row_layout() == 'product_specification_tabs')
+            @include('partials.flexible-content.product-specification-tabs')
+        @endif
         @if (get_row_layout() == 'sustainability_info')
             @include('partials.flexible-content.sustainability-info')
         @endif

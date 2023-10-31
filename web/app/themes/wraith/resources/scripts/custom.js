@@ -600,6 +600,46 @@ $(document).on('click', 'a[href^="#"]', function (event) {
     );
   }
 
+// Product Specification Tabs Slider
+
+var productSpecificationTabsSliderOption = {
+  dots: false,
+  arrows: false,
+  slidesToShow: 5,
+  autoplay: true,
+  responsive: [
+    {
+      breakpoint: 640,
+      settings: {
+        slidesToShow: 1,
+        autoplay: true,
+      },
+    },
+  ],
+};
+
+var productSpecificationTabsBrochureSliderOption = {
+  dots: false,
+  arrows: false,
+  slidesToShow: 2,
+  responsive: [
+    {
+      breakpoint: 640,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+};
+
+$(".product-specification-tabs-slider").slick(
+  productSpecificationTabsSliderOption
+);
+
+$(".product-specification-tabs-brochure-slider").slick(
+  productSpecificationTabsBrochureSliderOption
+);
+
   // Comparsion Image Slider
   $("#slider").on("input change", (e) => {
     const sliderPos = e.target.value;
@@ -637,6 +677,66 @@ $(document).on('click', 'a[href^="#"]', function (event) {
     var modal = $(this).parent().parent();
     modal.toggleClass("hidden");
     modal.toggleClass("flex");
+  });
+
+  function checkOverflow() {
+    var scroll_containers = $(".scroll-container");
+
+    scroll_containers.each(function () {
+      var scroll_container = $(this);
+
+      if (scroll_container[0].scrollWidth > scroll_container[0].clientWidth) {
+        scroll_container
+          .removeClass("overflow-x-hidden")
+          .addClass("overflow-x-scroll");
+      } else {
+        scroll_container
+          .removeClass("overflow-x-scroll")
+          .addClass("overflow-x-hidden");
+      }
+    });
+  }
+
+
+  //Product Spec Tabb Content
+  $("[data-product-spec-btn]").on("click", function () {
+    var thisParent = $(this).parent().parent().parent();
+    var thisBtnData = $(this).data("product-spec-btn");
+    var contentType = $(this).data("content-type");
+
+    if (contentType == "slider") {
+      thisParent.find(".product-specification-tabs-slider").slick("unslick");
+      thisParent
+        .find(".product-specification-tabs-slider")
+        .slick(productSpecificationTabsSliderOption);
+    } else if (contentType == "brochures") {
+      thisParent
+        .find(".product-specification-tabs-brochure-slider")
+        .slick("unslick");
+      thisParent
+        .find(".product-specification-tabs-brochure-slider")
+        .slick(productSpecificationTabsBrochureSliderOption);
+    }
+
+    thisParent.find("[data-product-spec-btn]").removeClass("active");
+    $(this).addClass("active");
+
+    thisParent.find("[data-product-spec-tab]").hide();
+    thisParent.find('[data-product-spec-tab="' + thisBtnData + '"]').show();
+  });
+
+  //Product Spec Tabb - Swatches Tabb
+  $("[data-image-swatch]").on("click", function () {
+    var thisParent = $(this).parent().parent();
+    var thisFeaturedImage = $(this).data("image-swatch");
+    thisParent.find("[data-image-featured]", this).hide();
+    thisParent.find('[data-image-featured="' + thisFeaturedImage + '"]').show();
+  });
+
+  $(".turn-around").on("click", function () {
+    var thisParent = $(this).parent();
+    thisParent.find(".featured_front").toggle();
+    thisParent.find(".featured_back").toggle();
   });
 
 })(jQuery);
