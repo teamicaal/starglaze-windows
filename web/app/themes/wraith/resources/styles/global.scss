@@ -1008,13 +1008,13 @@ a {
 }
 
 .product_group_features-btn {
-  @apply w-[46px] h-[46px] bg-transparent border-primary rounded-full border flex justify-center items-center;
+  @apply w-[46px] h-[46px] bg-transparent border-secondary rounded-full border flex justify-center items-center;
   .product_group_features-btn-inner {
-    @apply w-5 h-5 bg-primary rounded-full relative;
+    @apply w-5 h-5 bg-secondary rounded-full relative;
     &::before {
       content: "";
       animation: blurAnimation 1s ease-in-out infinite;
-      @apply w-7 h-7 rounded-full absolute left-1/2 top-1/2 bg-primary -translate-x-1/2 -translate-y-1/2;
+      @apply w-7 h-7 rounded-full absolute left-1/2 top-1/2 bg-secondary -translate-x-1/2 -translate-y-1/2;
     }
   }
 }
