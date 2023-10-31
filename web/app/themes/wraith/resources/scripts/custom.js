@@ -379,14 +379,22 @@ $(".gripcore-key-features-slider").slick(gripcoreKeyFeaturesSliderOption);
     }
   }
 
-  // Accordion
-$('.accordion-item-header').on('click', function(){
-  $('.accordion-item').removeClass('active');
-  $('.accordion-item-content').slideUp();
+//   // Accordion
 
-  $(this).parent().toggleClass('active');
-  $(this).next().slideToggle();
+$('.accordion-item-header').on("click", function() {
+  var $content = $(this).siblings('.accordion-item-content');
+  $('.accordion-item-content').not($content).slideUp();
+  $content.slideToggle();
+  $(this).find('svg').toggleClass('rotateChevron');
 });
+
+// $('.accordion-item-header').on('click', function(){
+//   $('.accordion-item').removeClass('active');
+//   $('.accordion-item-content').slideUp();
+
+//   $(this).parent().toggleClass('active');
+//   $(this).next().slideToggle();
+// });
 
   // smooth scroll
    

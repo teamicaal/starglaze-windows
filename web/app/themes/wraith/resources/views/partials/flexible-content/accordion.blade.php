@@ -34,14 +34,14 @@
                     $title = get_sub_field('accordion_title');
                     $accordion_paragraph = get_sub_field('accordion_paragraph');
                   @endphp
-                  <div class="accordion-item {!! $i == 1 ? 'active' : null !!}">
+                  <div class="accordion-item">
                       <div class="accordion-item-header flex justify-between border-b border-primary">
 
                           <div class="font-normal text-[#1F1F1F] font-serif text-[18px] px-4">{{ $title }}</div>
                           <i class="fa fa-chevron-up text-sm"></i>
                           <i class="fa fa-chevron-down text-sm"></i>
                       </div>
-                      <div class="accordion-item-content p-6" {!! $i !=1 ? 'style="display: none;"' : null !!}>
+                      <div class="accordion-item-content p-6" style="display: none;">
                           <div class="child-p:font-normal child-p:leading-7 child-p:text-[#3A3A3A] child-p:text-[16px]">
                             {!! $accordion_paragraph !!}
                           </div>
