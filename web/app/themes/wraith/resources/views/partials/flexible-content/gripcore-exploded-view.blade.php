@@ -5,7 +5,7 @@
     $i = 0;
 @endphp
 
-<div class="exploded-view-bg py-16">
+<div class="exploded-view-bg">
     <div class=" container mx-auto text-center mb-8">
         <h2 class="mb-4 lg:mb-8 text-primary font-serif font-medium text-4xl">{{ $title }}</h2>
         <div class="child-p:mx-auto mb-0 child-p:text-center child-p:font-normal child-p:text-[#3A3A3A]">{!! $paragraph !!}</div>
