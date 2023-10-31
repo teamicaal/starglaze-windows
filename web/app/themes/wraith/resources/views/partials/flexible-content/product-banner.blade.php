@@ -16,7 +16,7 @@ $vr_cta = get_sub_field('vr_cta');
 
 <section id="hero-banner" class="section_page-banner">
   @if ($vr_cta)
-    <a href="">
+    <a href="/our-products/">
       <div class="main-banner__product-types-vr">
         <img class="main-banner__product-types-vr-image" src="/app/uploads/2023/10/vr_image.png" alt="">
         <div class="main-banner__product-types-vr-title">EXPLORE VIRTUALLY</div>
