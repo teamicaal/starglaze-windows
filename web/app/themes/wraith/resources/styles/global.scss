@@ -1042,7 +1042,7 @@ a {
 
 #product-specification-tabs {
   button {
-    @apply text-black;
+    @apply text-white;
     &.active {
       @apply bg-primary text-white;
     }

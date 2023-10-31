@@ -6,7 +6,7 @@
 <section id="product-specification-tabs" class="lg:mb-16 md:mb-10 mb-4">
     <div class="relative px-4 mb-4">
         @if (have_rows('tab'))
-            <div class="absolute w-full h-1 bg-[#F0F3F4] left-0 right-0 top-1/2 -translate-y1/2"></div>
+            <div class="absolute w-full h-1 blue-bg-gradient left-0 right-0 top-1/2 -translate-y1/2"></div>
             <div
                 class="container relative mx-auto scroll-container overflow-x-hidden snap-x flex gap-[10px] rounded-full bg-[#F0F3F4] p-[10px] z-10">
                 @while (have_rows('tab'))
@@ -18,7 +18,7 @@
                         $i++;
                     @endphp
                     <button
-                        class="uppercase grow font-bold rounded-full snap-center py-3 px-16 text-lg lg:py-4 lg:px-28 lg:text-xl {{ $i == 1 ? 'active' : null }}"
+                        class="uppercase grow font-bold font-serif rounded-full snap-center py-2 px-16 text-lg lg:px-28 lg:text-xl {{ $i == 1 ? 'active' : null }}"
                         data-product-spec-btn="{{ $tab_name_clean }}" data-content-type={{ $content_type }}>
                         {{ $tab_name }}
                     </button>
@@ -44,10 +44,10 @@
 
                 <div class="container mx-auto flex flex-col lg:flex-row lg:items-center justify-between lg:my-20">
                     <div class="w-full lg:w-1/3">
-                        <h2 class="font-semibold text-2xl lg:text-[46px] lg:leading-[3.5rem] text-balance">
+                        <h2 class="mb-4 lg:mb-8 text-primary font-serif font-medium lg:text-4xl text-2xl lg:leading-[3.5rem] text-balance">
                             {{ $title }}</h2>
                     </div>
-                    <div class="separator md:py-8">{!! $paragraph !!}
+                    <div class="separator md:py-8 child-p:font-normal child-p:text-[#3A3A3A]">{!! $paragraph !!}
                         @if (have_rows('buttons'))
                             <div class="flex">
                                 @while (have_rows('buttons'))
