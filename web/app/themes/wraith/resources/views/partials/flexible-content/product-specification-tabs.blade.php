@@ -82,7 +82,7 @@
                                     @endphp
                                     @if ($product_image)
                                         <div class="mx-2">
-                                            <img class="mx-auto" src="{{ $product_image }}" alt="">
+                                            <img class="mx-auto" src="{{ $product_image['url'] }}" alt="">
                                             @if ($product_name)
                                                 <div class="text-center mt-8">{{ $product_name }}</div>
                                             @endif
