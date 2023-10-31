@@ -1039,3 +1039,12 @@ a {
     }
   }
 }
+
+#product-specification-tabs {
+  button {
+    @apply text-black;
+    &.active {
+      @apply bg-primary text-white;
+    }
+  }
+}

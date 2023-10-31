@@ -334,11 +334,11 @@ $(".gripcore-key-features-slider").slick(gripcoreKeyFeaturesSliderOption);
    });
   
 
-  $('.slick-p').on('click', function () {
-    $(this).parent().prev().slick('slickPrev');
+   $(".slick-p").on("click", function () {
+    $(this).parent().find(".slick-slider").slick("slickPrev");
   });
-  $('.slick-n').on('click', function () {
-    $(this).parent().prev().slick('slickNext');
+  $(".slick-n").on("click", function () {
+    $(this).parent().find(".slick-slider").slick("slickNext");
   });
 
   // Mixitup
