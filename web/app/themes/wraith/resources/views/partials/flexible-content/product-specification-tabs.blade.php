@@ -6,9 +6,9 @@
 <section id="product-specification-tabs" class="lg:mb-16 md:mb-10 mb-4">
     <div class="relative px-4 mb-4">
         @if (have_rows('tab'))
-            <div class="absolute w-full h-1 blue-bg-gradient left-0 right-0 top-1/2 -translate-y1/2"></div>
+            <div class="absolute w-full h-1 bg-secondary left-0 right-0 top-1/2 -translate-y1/2"></div>
             <div
-                class="container relative mx-auto scroll-container overflow-x-hidden snap-x flex gap-[10px] rounded-full bg-[#F0F3F4] p-[10px] z-10">
+                class="container relative mx-auto scroll-container overflow-x-hidden snap-x flex gap-[10px] rounded-full blue-bg-gradient p-[10px] z-10">
                 @while (have_rows('tab'))
                     @php
                         the_row();
@@ -18,7 +18,7 @@
                         $i++;
                     @endphp
                     <button
-                        class="uppercase grow font-bold font-serif rounded-full snap-center py-2 px-16 text-lg lg:px-28 lg:text-xl {{ $i == 1 ? 'active' : null }}"
+                        class="uppercase grow font-bold font-serif rounded-full snap-center py-2 px-16 text-lg lg:px-28 lg:text-lg {{ $i == 1 ? 'active' : null }}"
                         data-product-spec-btn="{{ $tab_name_clean }}" data-content-type={{ $content_type }}>
                         {{ $tab_name }}
                     </button>
