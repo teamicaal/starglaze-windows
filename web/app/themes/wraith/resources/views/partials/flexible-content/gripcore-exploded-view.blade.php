@@ -24,7 +24,7 @@
                     $i++;
                 @endphp
                 <article data-modal="{{ $i }}"
-                    class="absolute z-10 bg-white rounded-tr-[20px] p-4 min-h-[300px] w-1/2 gap-4 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden drop-shadow-custom">
+                    class="absolute z-10 bg-white rounded-tr-[20px] p-4 md:min-h-[300px] min-h-[220px] md:w-1/2 w-full  gap-4 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden drop-shadow-custom">
                     <img class="w-2/5" src="{{ $featured_image['url'] }}" alt="{{ $featured_image['alt'] }}">
                     <div class="w-3/5 flex relative">
                         <button class="absolute top-0 right-0 modal-close cursor-pointer">
