@@ -1,9 +1,9 @@
 body:not(.page-template-template-login) {
   main#primary {
-    margin-top: 57px;
+    margin-top: 80px;
 
     @screen lg {
-      margin-top: 161px;
+      margin-top: 147px;
     }
   }
 }
@@ -1055,5 +1055,5 @@ a {
   color: #eceeef;
 }
 .iframe-content-block{
-  padding: 4rem;
+  @apply lg:p-16 p-4;
 }
