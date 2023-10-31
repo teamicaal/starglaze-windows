@@ -622,4 +622,21 @@ $(document).on('click', 'a[href^="#"]', function (event) {
       });
   });
 
+  $(".product_group_features-btn").on("click", function () {
+    var hotSpotButton = $(this).data("modal-hotspot");
+    var thisContainer = $(this).parent();
+    thisContainer.find("[data-modal]").addClass("hidden");
+    thisContainer.find("[data-modal]").removeClass("flex");
+    thisContainer
+      .find('[data-modal="' + hotSpotButton + '"]')
+      .toggleClass("hidden")
+      .addClass("flex");
+  });
+
+  $(".modal-close").on("click", function () {
+    var modal = $(this).parent().parent();
+    modal.toggleClass("hidden");
+    modal.toggleClass("flex");
+  });
+
 })(jQuery);

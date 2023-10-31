@@ -5,25 +5,10 @@
     $i = 0;
 @endphp
 
-<div class="exploded-view-bg bg-strokes py-16">
+<div class="exploded-view-bg py-16">
     <div class=" container mx-auto text-center mb-8">
         <h2 class="font-semibold text-2xl lg:text-[46px] lg:leading-[3.5rem] text-balance">{{ $title }}</h2>
         <div class="child-p:mx-auto">{!! $paragraph !!}</div>
-        @if (have_rows('buttons'))
-            <div class="flex gap-5 justify-center">
-                @while (have_rows('buttons'))
-                    @php
-                        the_row();
-                        $link = get_sub_field('link');
-                        $label = get_sub_field('label');
-                        $i++;
-                    @endphp
-                    <a class="btn {{ $i == 1 ? 'primary' : 'transparent-primary' }}"
-                        href="{{ $link }}">{{ $label }}</a>
-                @endwhile
-            </div>
-        @endif
-
     </div>
 
     <div class="relative max-w-max mx-auto px-8">

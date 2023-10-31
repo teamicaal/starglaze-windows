@@ -995,3 +995,19 @@ a {
     max-width: 110ch;
   }
 }
+
+.product_group_features-btn {
+  @apply w-[46px] h-[46px] bg-transparent border-primary rounded-full border flex justify-center items-center;
+  .product_group_features-btn-inner {
+    @apply w-5 h-5 bg-primary rounded-full relative;
+    &::before {
+      content: "";
+      animation: blurAnimation 1s ease-in-out infinite;
+      @apply w-7 h-7 rounded-full absolute left-1/2 top-1/2 bg-primary -translate-x-1/2 -translate-y-1/2;
+    }
+  }
+}
+
+.drop-shadow-custom {
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
+}
