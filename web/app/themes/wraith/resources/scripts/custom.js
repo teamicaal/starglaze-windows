@@ -210,6 +210,9 @@ import mixitup from 'mixitup';
 
   //video-modal
   $(".video-modal-play").on("click", function(){
+    var videoLink = $(this).data('src') ;
+    $(this).parent().find('.video-frame').attr('src', videoLink);
+    
     var thisContainer = $(this).parent();
     var videoModal = thisContainer.find(".video-modal");
     videoModal.css( 'display', 'flex');
