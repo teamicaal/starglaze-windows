@@ -13,13 +13,13 @@ $i = 0 ;
       $link = get_sub_field('link');
       
       @endphp
-      <div class="w-full lg:w-1/4 text-center items-center justify-center flex  ">
-        <div class="offer-skew w-full h-full px-8 py-6  {{$i === 1 ? 'offer-before-cover' : null }} {{$i === 4 ? 'offer-after-cover' : null }}  {{ $i % 2 == 0 ? 'bg-primary ' : 'bg-secondary'  }}">
+      <div class="w-full lg:w-1/4 text-center group items-center justify-center flex  ">
+        <a  href="{{ $link }}" class="offer-skew w-full h-full px-8 py-6  {{$i === 1 ? 'offer-before-cover' : null }} {{$i === 4 ? 'offer-after-cover' : null }}  {{ $i % 2 == 0 ? 'bg-primary ' : 'bg-secondary'  }}">
           <div class="offer-skew-opp">
-            <h2 class="font-serif font-medium text-[18px] mx-auto text-white w-[70%] ">{{ $title }}</h2>
-            <a href="{{ $link }}" class="border-none text-[23px] block hover:scale-[1.2] text-hover font-bold font-serif text-white ">{{ $label }}</a>
+            <h2 class="font-serif font-medium text-[18px] block hover:scale-[1] mx-auto text-white w-[70%] ">{{ $title }}</h2>
+            <span  class="border-none text-[23px] block group-hover:scale-[1.2] ease-in-out duration-300 text-hover font-bold font-serif text-white ">{{ $label }}</span>
           </div>
-        </div>
+        </a>
       </div>
     @endwhile
   </div>
