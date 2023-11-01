@@ -50,7 +50,7 @@
  @if( $social_facebook && get_field('social_facebook_display', 'option') )
   <li class="text-sm  flex items-center justify-center mr-4">
     <a href="{{ $social_facebook }}" target="_blank" class="text-primary h-[30px] w-[30px] rounded-sm flex items-center justify-center">
-      <i class="fab fa-facebook-f text-primary text-2xl"></i>
+      <i class="fab fa-facebook-f text-primary text-3xl"></i>
     </a>
   </li>
   @endif
@@ -68,28 +68,28 @@
   @if( $social_instagram && get_field('social_instagram_display', 'option') )
   <li class="text-sm  flex items-center justify-center mr-4">
     <a href="{{ $social_instagram }}" target="_blank" class="text-primary h-[30px] w-[30px] rounded-sm flex items-center justify-center">
-      <i class="fab fa-instagram text-primary text-2xl"></i>
+      <i class="fab fa-instagram text-primary text-3xl"></i>
     </a>
   </li>
   @endif
   @if( $social_youtube && get_field('social_youtube_display', 'option') )
   <li class="text-sm  flex items-center justify-center mr-4">
     <a href="{{ $social_youtube }}" target="_blank" class="text-primary h-[30px] w-[30px] rounded-sm flex items-center justify-center">
-      <i class="fab fa-youtube text-primary text-2xl"></i>
+      <i class="fab fa-youtube text-primary text-3xl"></i>
     </a>
   </li>
   @endif
   @if( $social_pinterest && get_field('social_pinterest_display', 'option') )
   <li class="text-sm  flex items-center justify-center mr-4">
     <a href="{{ $social_pinterest }}" target="_blank" class="text-primary h-[30px] w-[30px] rounded-sm flex items-center justify-center">
-      <i class="fab fa-pinterest text-primary text-2xl"></i>
+      <i class="fab fa-pinterest text-primary text-3xl"></i>
     </a>
   </li>
   @endif
   @if( $social_linkedin && get_field('social_linkedin_display', 'option') )
   <li class="text-sm  flex items-center justify-center mr-4">
     <a href="{{ $social_linkedin }}" target="_blank" class="text-primary h-[30px] w-[30px] rounded-sm flex items-center justify-center">
-      <i class="fab fa-linkedin text-primary text-2xl"></i>
+      <i class="fab fa-linkedin text-primary text-3xl"></i>
     </a>
   </li>
   @endif
