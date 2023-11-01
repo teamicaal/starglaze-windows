@@ -75,7 +75,7 @@ $social_pinterest = get_field('social_pinterest', 'option');
         @endwhile
       </div>
     @endif
-    <div class="mt-3">
+    <div class="my-3">
       <div class="flex">
         <i class="fa fa-clock mr-3 mt-[0.4rem] {!! $colour == 'white' ? 'text-' . $colour   : 'text-primary' !!}"></i>
         <div>
@@ -99,7 +99,7 @@ $social_pinterest = get_field('social_pinterest', 'option');
       </div>
       
     </div>
-    <ul class="list-reset text-sm flex flex-wrap py-8">
+    <ul class="list-reset text-sm flex flex-wrap">
       @if ($colour == 'dark')
       @include('partials.components.social_icons' , ['location'=>'form'])
       @endif
