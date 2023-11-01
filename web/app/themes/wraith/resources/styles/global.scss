@@ -1060,6 +1060,6 @@ a {
 
 #article{
   img{
-    margin: auto;
+   @apply mx-auto mb-4;
   }
 }
