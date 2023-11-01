@@ -208,7 +208,7 @@ header{
         @apply relative;
 
         > .sub-menu {
-          @apply absolute left-0 w-48 pl-0 list-none rounded-sm shadow border-b border-primary transition;
+          @apply absolute left-0 w-48 pl-0 list-none rounded-sm shadow border-none transition;
 
           visibility: hidden;
           opacity: 0;
