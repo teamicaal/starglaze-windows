@@ -75,23 +75,29 @@ $social_pinterest = get_field('social_pinterest', 'option');
         @endwhile
       </div>
     @endif
-    <div>
-      <h2 class="text-2xl sm:text-3xl text-white mb-1-5">{!! $opening_hour_title !!}</h2>
-      @if (have_rows('time', 'option'))
-      @while(have_rows('time', 'option'))
-              @php
-                  the_row();
-                  $time_1 = get_sub_field('time_1');
-                  $time_2 = get_sub_field('time_2');
-                  $time_3 = get_sub_field('time_3');
-              @endphp
-              <ul class="list-reset font-light text-white">
-                  {!! $time_1 ? '<li>' . $time_1 . '</li>' : null !!}
-                  {!! $time_2 ? '<li>' . $time_2 . '</li>' : null !!}
-                  {!! $time_3 ? '<li>' . $time_3 . '</li>' : null !!}
-              </ul>
-          @endwhile
-      @endif
+    <div class="mt-3">
+      <div class="flex">
+        <i class="fa fa-clock mr-3 {!! $colour == 'white' ? 'text-' . $colour   : 'text-primary' !!}"></i>
+        <div>
+          <h2 class="text-2xl font-bold text-white mb-1-5">{!! $opening_hour_title !!}</h2>
+          @if (have_rows('time', 'option'))
+          @while(have_rows('time', 'option'))
+                  @php
+                      the_row();
+                      $time_1 = get_sub_field('time_1');
+                      $time_2 = get_sub_field('time_2');
+                      $time_3 = get_sub_field('time_3');
+                  @endphp
+                  <ul class="list-reset font-light text-white">
+                      {!! $time_1 ? '<li  class="font-bold text-[#242D36]">' . $time_1 . '</li>' : null !!}
+                      {!! $time_2 ? '<li  class="font-bold text-[#242D36]">' . $time_2 . '</li>' : null !!}
+                      {!! $time_3 ? '<li  class="font-bold text-[#242D36]">' . $time_3 . '</li>' : null !!}
+                  </ul>
+              @endwhile
+          @endif
+        </div>
+      </div>
+      
     </div>
     <ul class="list-reset text-sm flex flex-wrap py-8">
       @if ($colour == 'dark')
