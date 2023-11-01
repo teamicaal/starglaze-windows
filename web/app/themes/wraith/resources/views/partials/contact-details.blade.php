@@ -100,7 +100,7 @@ $social_pinterest = get_field('social_pinterest', 'option');
       
     </div>
     <ul class="list-reset text-sm flex flex-wrap py-8">
-      @if ($colour == 'dark',  ['location'=>'form'])
+      @if ($colour == 'dark')
       @include('partials.components.social_icons' , ['location'=>'form'])
       @endif
     </ul>
