@@ -41,9 +41,8 @@ $i = 0;
                 @endwhile
                 @endif
             </div>
-            <div class="">
-
-                <a href="{{ $button_link }}" class="btn bg-[#3F7E57] text-white text-medium hover:scale-105 transition-all ease-in-out duration-500 text-center block md:inline-block mb-0 ">{!! $button_label !!}</a>
+            <div class="flex justify-center items-center">
+                <a href="{{ $button_link }}" class="btn bg-[#3F7E57] text-white text-medium hover:scale-105 transition-all border-none ease-in-out duration-500 text-center block md:inline-block mb-0 ">{!! $button_label !!}</a>
             </div>
         </div>
     </div>
