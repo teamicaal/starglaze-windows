@@ -1,7 +1,7 @@
 <div class="container mx-auto">
 
   <article @php post_class() @endphp>
-      <header class="flex flex-col lg:flex-row justify-center mb-12 shadow-none">
+      <div class="flex flex-col lg:flex-row justify-center mb-12 shadow-none">
           <div class="w-full lg:w-2/5 lg:my-auto mb-2">
               <h1 class="text-3xl md:text-4xl font-medium text-primary mb-8">{!! get_the_title() !!}</h1>
               <div class="flex flex-wrap">
@@ -13,9 +13,9 @@
           </div>
           <div class="w-full lg:w-3/5 embed embed-4by3">
               <img src="{!! get_the_post_thumbnail_url() !!}" alt="{!! the_title(); !!}"
-                  class="object-cover-absolute">
+                  class="object-cover h-full absolute inset-0">
           </div>
-      </header> <!-- end of top section -->
+        </div> <!-- end of top section -->
       <div id="article" class="w-full md:w-4/5 lg:w-1/2 mx-auto text-center order-1 lg:order-2">
         <h2 class="xl:text-4xl text-3xl text-primary py-6">{!! get_the_title() !!}</h2>
         @php the_content() @endphp
