@@ -34,7 +34,7 @@ $custom_class = get_sub_field('custom_class');
           $link = get_sub_field('link');
           @endphp
           <div class="w-40 lg:w-[20%] mb-4 px-4 snap-center" style="flex: 0 0 auto;">
-            <{!! $link ? 'a href="' . $link . '" target="_blank"' : 'div'; !!} class="block bg-white p-4 text-center hover:border-none">
+            <{!! $link ? 'a href="' . $link . '" target="_blank"' : 'div'; !!} class="block bg-white p-4 text-center border-none">
               <img data-src="{{ $logo['url'] }}" src="{{ $logo['sizes']['thumbnail'] }}" width="96" height="96" alt="{{ $logo['alt'] ? $logo['alt'] : null }}" class="lozad noblur w-full h-auto mx-auto" style="max-width: 7rem;" />
             </{!! $link ? 'a' : 'div'; !!}>
           </div>
