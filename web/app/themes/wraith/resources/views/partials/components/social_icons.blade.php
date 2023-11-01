@@ -58,7 +58,7 @@
   <li class="flex items-center text-sm twitter mr-4">
     <a href="{{ $social_twitter }}" target="_blank" class="fill-primary inline-block py-3">
       <div class="flex justify-center items-center fill-primary">
-        <svg class="fill-primary" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000.78 936.689">
+        <svg class="fill-primary" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 1000.78 936.689">
           <path id="Path_20803" data-name="Path 20803" d="M131.13,64.461H267.94l604.13,807.76H735.26ZM867.06,0,553.55,338.7,300.24,0H2.44L388.83,516.641,0,936.69H87.51L427.93,568.931,702.98,936.69h297.8l-408.13-545.7L954.57,0Z"/>
         </svg>
       </div>
