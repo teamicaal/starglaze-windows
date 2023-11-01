@@ -222,6 +222,7 @@ import mixitup from 'mixitup';
   //close Video Modal
   $(".closevideo-modal").on("click", function(){
     var thisContainer = $(this).parent().parent();
+    $(this).parent().find('.video-frame').attr('src', '');
     thisContainer.hide();
   })
 
