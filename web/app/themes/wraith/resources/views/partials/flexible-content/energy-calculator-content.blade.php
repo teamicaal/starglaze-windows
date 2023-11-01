@@ -42,7 +42,9 @@ $i = 0;
                 @endif
             </div>
             <div class="flex justify-center items-center">
-                <a href="{{ $button_link }}" class="btn bg-[#3F7E57] text-white text-medium hover:scale-105 transition-all border-none ease-in-out duration-500 text-center block md:inline-block lg:mb-0 mb-4 ">{!! $button_label !!}</a>
+                @if ($button_label)
+                    <a href="{{ $button_link }}" class="btn bg-[#3F7E57] text-white text-medium hover:scale-105 transition-all border-none ease-in-out duration-500 text-center block md:inline-block lg:mb-0 mb-4 ">{!! $button_label !!}</a>
+                @endif
             </div>
         </div>
     </div>
