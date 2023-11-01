@@ -26,8 +26,7 @@
                         <h2 class="font-serif font-bold text-center text-3xl md:text-4xl mb-6 text-white tracking-wide ">{{ $title }}</h2>
                         <div class="child-p:text-white text-center 2xl:px-20 md:px-4 pt-0 2xl:pb-8 pb-4 text-lg">{!! $paragraph !!}</div>
                         @if ($youtube_video_link)
-                        <div class="video-wrapper">
-                            <div data-src="{{$youtube_video_link}}" class="bg-white text-primary font-bold text-center darkTint-button absolute video-modal-play cursor-pointer">Play Video <i class="fa fa-play ml-2"></i></div>
+                        <div data-src="{{$youtube_video_link}}" class="bg-white text-primary video-wrapper font-bold text-center darkTint-button absolute video-modal-play cursor-pointer">Play Video <i class="fa fa-play ml-2"></i></div>
                             <div class="hidden fixed inset-0 bg-black/80 z-50 items-center video-modal">
                                 <div class="flex items-center container mx-auto relative">
                                     <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" src="" class="aspect-21/9 w-full video-frame" frameborder="0" allowfullscreen></iframe>
@@ -35,7 +34,6 @@
                                 </div>
 
                             </div>
-                        </div>
                         @else
                             <a href="{{ $button_link }}" class="bg-white text-primary font-bold text-center darkTint-button absolute">{!! $button_label !!}</a>    
                         @endif
