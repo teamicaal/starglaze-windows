@@ -16,7 +16,7 @@
                   class="object-cover h-full absolute inset-0">
           </div>
         </div> <!-- end of top section -->
-      <div id="article" class="w-full md:w-[70%] lg:w-1/2 mx-auto text-center order-1 lg:order-2">
+      <div id="article" class="w-full md:w-4/5 lg:w-full mx-auto text-center order-1 lg:order-2">
         <h2 class="xl:text-4xl text-3xl text-primary py-6">{!! get_the_title() !!}</h2>
         @php the_content() @endphp
     </div>
