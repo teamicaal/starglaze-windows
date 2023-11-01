@@ -3,6 +3,12 @@
   $logo = get_field('logo', 'option');
   $logo_retina = get_field('logo_retina', 'option');
   $footer_copyright = get_field('footer_copyright', 'option');
+  $social_facebook = get_field('social_facebook', 'option');
+  $social_twitter = get_field('social_twitter', 'option');
+  $social_instagram = get_field('social_instagram', 'option');
+  $social_youtube = get_field('social_youtube', 'option');
+  $social_linkedin = get_field('social_linkedin', 'option');
+  $social_pinterest = get_field('social_pinterest', 'option');
   @endphp
 @endif
 
@@ -68,6 +74,9 @@
             </div>
         </div> --}}
       </div>
+      <ul class="list-reset text-sm flex flex-wrap py-8">
+        @include('partials.components.social_icons' , ['location'=>'footer'])
+      </ul>
     </div>
     <div class="w-full md:w-1/2 lg:w-1/3 px-4">
       <section class="widget">

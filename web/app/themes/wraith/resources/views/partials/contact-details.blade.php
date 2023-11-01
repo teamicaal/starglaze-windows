@@ -89,9 +89,9 @@ $social_pinterest = get_field('social_pinterest', 'option');
                       $time_3 = get_sub_field('time_3');
                   @endphp
                   <ul class="list-reset font-light text-white">
-                      {!! $time_1 ? '<li  class="font-semibold text-lg text-[#242D36]">' . $time_1 . '</li>' : null !!}
-                      {!! $time_2 ? '<li  class="font-semibold text-lg text-[#242D36]">' . $time_2 . '</li>' : null !!}
-                      {!! $time_3 ? '<li  class="font-semibold text-lg text-[#242D36]">' . $time_3 . '</li>' : null !!}
+                      {!! $time_1 ? '<li  class="text-lg text-[#242D36]">' . $time_1 . '</li>' : null !!}
+                      {!! $time_2 ? '<li  class="text-lg text-[#242D36]">' . $time_2 . '</li>' : null !!}
+                      {!! $time_3 ? '<li  class="text-lg text-[#242D36]">' . $time_3 . '</li>' : null !!}
                   </ul>
               @endwhile
           @endif
@@ -102,8 +102,6 @@ $social_pinterest = get_field('social_pinterest', 'option');
     <ul class="list-reset text-sm flex flex-wrap py-8">
       @if ($colour == 'dark')
       @include('partials.components.social_icons' , ['location'=>'form'])
-      @else
-      @include('partials.components.social_icons' , ['location'=>'footer'])
       @endif
     </ul>
   </ul>
