@@ -1,5 +1,6 @@
 @php
 $brand_phone_link = get_field('brand_phone_link', 'option');
+$opening_hour_title = get_field('opening_hour_title', 'option');
 $brand_phone_label = get_field('brand_phone_label', 'option');
 $brand_phone_alt_link = get_field('brand_phone_alt_link', 'option');
 $brand_phone_alt_label = get_field('brand_phone_alt_label', 'option');
@@ -46,34 +47,50 @@ $social_pinterest = get_field('social_pinterest', 'option');
     </li>
     @endif
     @if( have_rows('locations', 'option') )
-    <div class="flex">
-      @while( have_rows('locations', 'option') )
-      @php
-      the_row();
-      $address_name = get_sub_field('address_name');
-      $address_line_1 = get_sub_field('address_line_1');
-      $address_line_2 = get_sub_field('address_line_2');
-      $address_city = get_sub_field('address_city');
-      $address_county = get_sub_field('address_county');
-      $address_post_code = get_sub_field('address_post_code');
-      $address_country = get_sub_field('address_country');
-      $address_link = get_sub_field('address_link');
-      @endphp
-      {!! $address_link ? '<a class="flex mr-6" href="' . $address_link . '" target="_blank">' : null !!}
-        <i class="fa fa-map-marker-alt mr-3 {!! $colour == 'white' ? 'text-' . $colour   : 'text-primary' !!}"></i>
-        <ul class="list-reset font-bold">
-          {!! $address_name ? '<li class="mb-2"><h4 class="text-' . $colour . ' font-bold uppercase tracking-widest mb-2">' . $address_name . '</h4></li>' : null !!}
-          {!! $address_line_1 ? '<li class="font-bold text-[#242D36]">' . $address_line_1 .  ' </li>' : null !!}
-          {!! $address_line_2 ? '<li class="font-bold text-[#242D36]">' . $address_line_2 . '</li>' : null !!}
-          {!! $address_county ? '<li class="font-bold text-[#242D36]">' . $address_county . '</li>' : null !!}
-          {!! $address_city ? '<li class="font-bold text-[#242D36]">' . $address_city . '</li>' : null !!}
-          {!! $address_post_code ? '<li class="font-bold text-[#242D36]">' . $address_post_code . '</li>' : null !!}
-          {!! $address_country ? '<li class="font-bold text-[#242D36]">' . $address_country . '</li>' : null !!}
-        </ul>
-      {!! $address_link ? '</a>' : null !!}
-      @endwhile
-    </div>
+      <div class="flex">
+        @while( have_rows('locations', 'option') )
+        @php
+        the_row();
+        $address_name = get_sub_field('address_name');
+        $address_line_1 = get_sub_field('address_line_1');
+        $address_line_2 = get_sub_field('address_line_2');
+        $address_city = get_sub_field('address_city');
+        $address_county = get_sub_field('address_county');
+        $address_post_code = get_sub_field('address_post_code');
+        $address_country = get_sub_field('address_country');
+        $address_link = get_sub_field('address_link');
+        @endphp
+        {!! $address_link ? '<a class="flex mr-6" href="' . $address_link . '" target="_blank">' : null !!}
+          <i class="fa fa-map-marker-alt mr-3 {!! $colour == 'white' ? 'text-' . $colour   : 'text-primary' !!}"></i>
+          <ul class="list-reset font-bold">
+            {!! $address_name ? '<li class="mb-2"><h4 class="text-' . $colour . ' font-bold uppercase tracking-widest mb-2">' . $address_name . '</h4></li>' : null !!}
+            {!! $address_line_1 ? '<li class="font-bold text-[#242D36]">' . $address_line_1 .  ' </li>' : null !!}
+            {!! $address_line_2 ? '<li class="font-bold text-[#242D36]">' . $address_line_2 . '</li>' : null !!}
+            {!! $address_county ? '<li class="font-bold text-[#242D36]">' . $address_county . '</li>' : null !!}
+            {!! $address_city ? '<li class="font-bold text-[#242D36]">' . $address_city . '</li>' : null !!}
+            {!! $address_post_code ? '<li class="font-bold text-[#242D36]">' . $address_post_code . '</li>' : null !!}
+            {!! $address_country ? '<li class="font-bold text-[#242D36]">' . $address_country . '</li>' : null !!}
+          </ul>
+        {!! $address_link ? '</a>' : null !!}
+        @endwhile
+      </div>
     @endif
+    <h2 class="text-2xl sm:text-3xl text-white mb-1-5">{!! $opening_hour_title !!}</h2>
+      @if (have_rows('time', 'option'))
+      @while(have_rows('time', 'option'))
+              @php
+                  the_row();
+                  $time_1 = get_sub_field('time_1');
+                  $time_2 = get_sub_field('time_2');
+                  $time_3 = get_sub_field('time_3');
+              @endphp
+              <ul class="list-reset font-light text-white">
+                  {!! $time_1 ? '<li>' . $time_1 . '</li>' : null !!}
+                  {!! $time_2 ? '<li>' . $time_2 . '</li>' : null !!}
+                  {!! $time_3 ? '<li>' . $time_3 . '</li>' : null !!}
+              </ul>
+          @endwhile
+      @endif
     <ul class="list-reset text-sm flex flex-wrap py-8">
       @if ($colour == 'dark')
       @include('partials.components.social_icons' , ['location'=>'form'])
