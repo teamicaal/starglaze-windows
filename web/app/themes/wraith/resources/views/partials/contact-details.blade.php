@@ -79,7 +79,7 @@ $social_pinterest = get_field('social_pinterest', 'option');
       <div class="flex">
         <i class="fa fa-clock mr-3 mt-[0.4rem] {!! $colour == 'white' ? 'text-' . $colour   : 'text-primary' !!}"></i>
         <div>
-          <h2 class="text-2xl font-bold mb-1-5 {!! $colour == 'white' ? 'text-' . $colour   : 'text-[#242D36]' !!}">{!! $opening_hour_title !!}</h2>
+          <h2 class="text-xl font-bold mb-1-5 {!! $colour == 'white' ? 'text-' . $colour   : 'text-[#242D36]' !!}">{!! $opening_hour_title !!}</h2>
           @if (have_rows('time', 'option'))
           @while(have_rows('time', 'option'))
                   @php
@@ -89,9 +89,9 @@ $social_pinterest = get_field('social_pinterest', 'option');
                       $time_3 = get_sub_field('time_3');
                   @endphp
                   <ul class="list-reset font-light text-white">
-                      {!! $time_1 ? '<li  class="font-bold text-[#242D36]">' . $time_1 . '</li>' : null !!}
-                      {!! $time_2 ? '<li  class="font-bold text-[#242D36]">' . $time_2 . '</li>' : null !!}
-                      {!! $time_3 ? '<li  class="font-bold text-[#242D36]">' . $time_3 . '</li>' : null !!}
+                      {!! $time_1 ? '<li  class="font-semibold text-lg text-[#242D36]">' . $time_1 . '</li>' : null !!}
+                      {!! $time_2 ? '<li  class="font-semibold text-lg text-[#242D36]">' . $time_2 . '</li>' : null !!}
+                      {!! $time_3 ? '<li  class="font-semibold text-lg text-[#242D36]">' . $time_3 . '</li>' : null !!}
                   </ul>
               @endwhile
           @endif
