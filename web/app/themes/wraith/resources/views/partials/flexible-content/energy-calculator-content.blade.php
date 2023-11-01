@@ -2,6 +2,8 @@
 $custom_class = get_sub_field('custom_class');
 $background_image = get_sub_field('background_image');
 $title = get_sub_field('title');
+$button_label = get_sub_field('button_label');
+$button_link = get_sub_field('button_link');
 $bottom_content = get_sub_field('bottom_content');
 $i = 0;
 @endphp
@@ -39,6 +41,7 @@ $i = 0;
                 @endwhile
                 @endif
             </div>
+            <a href="{{ $button_link }}" class="btn bg-[#3F7E57] text-white text-medium hover:scale-105 transition-all ease-in-out duration-500 text-center block md:inline-block mb-0 ">{!! $button_label !!}</a>
         </div>
     </div>
     
