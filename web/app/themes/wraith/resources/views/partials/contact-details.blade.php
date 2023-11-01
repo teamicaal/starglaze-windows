@@ -77,9 +77,9 @@ $social_pinterest = get_field('social_pinterest', 'option');
     @endif
     <div class="mt-3">
       <div class="flex">
-        <i class="fa fa-clock mr-3 {!! $colour == 'white' ? 'text-' . $colour   : 'text-primary' !!}"></i>
+        <i class="fa fa-clock mr-3 mt-[0.4rem] {!! $colour == 'white' ? 'text-' . $colour   : 'text-primary' !!}"></i>
         <div>
-          <h2 class="text-' . $colour . ' text-2xl font-bold text-white mb-1-5 tracking-wide mb-2">{!! $opening_hour_title !!}</h2>
+          <h2 class="text-2xl font-bold mb-1-5" {!! $colour == 'white' ? 'text-' . $colour   : 'text-primary' !!}>{!! $opening_hour_title !!}</h2>
           @if (have_rows('time', 'option'))
           @while(have_rows('time', 'option'))
                   @php
