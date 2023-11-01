@@ -54,8 +54,8 @@
             @hasposts($query)
           <div class="lg:flex  justify-center items-center relative accordion-case-study-slick">
             @posts($query)
-            <article class="w-full mx-2 first-of-type:ml-0 last-of-type:mr-0  ">
-              <div class=" flex aspect-3/4 justify-center items-center relative rounded-lg  overflow-hidden h-fit p-[40px]">
+            <article class="w-full aspect-3/4 mx-2 first-of-type:ml-0 last-of-type:mr-0  ">
+              <div class=" flex h-full justify-center items-center relative rounded-lg  overflow-hidden p-[40px]">
                 <img data-src="@thumbnail('url', false)" src="@thumbnail('url', false)" width="100%" height="auto" alt="@title" class="w-full h-full object-cover bg-no-repeat bg-center bg-cover absolute">
                 <div class="absolute darkTint w-full h-full"></div>
                 <div class="relative p-8 flex flex-col justify-center items-center max-w-[1000px] rounded-lg border border-white h-full">
