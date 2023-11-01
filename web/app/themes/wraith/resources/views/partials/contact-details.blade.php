@@ -75,7 +75,8 @@ $social_pinterest = get_field('social_pinterest', 'option');
         @endwhile
       </div>
     @endif
-    <h2 class="text-2xl sm:text-3xl text-white mb-1-5">{!! $opening_hour_title !!}</h2>
+    <div>
+      <h2 class="text-2xl sm:text-3xl text-white mb-1-5">{!! $opening_hour_title !!}</h2>
       @if (have_rows('time', 'option'))
       @while(have_rows('time', 'option'))
               @php
@@ -91,6 +92,7 @@ $social_pinterest = get_field('social_pinterest', 'option');
               </ul>
           @endwhile
       @endif
+    </div>
     <ul class="list-reset text-sm flex flex-wrap py-8">
       @if ($colour == 'dark')
       @include('partials.components.social_icons' , ['location'=>'form'])
