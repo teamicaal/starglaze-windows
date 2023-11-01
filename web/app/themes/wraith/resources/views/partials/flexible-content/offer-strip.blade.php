@@ -17,7 +17,7 @@ $i = 0 ;
         <div class="offer-skew w-full h-full px-8 py-6  {{$i === 1 ? 'offer-before-cover' : null }} {{$i === 4 ? 'offer-after-cover' : null }}  {{ $i % 2 == 0 ? 'bg-primary ' : 'bg-secondary'  }}">
           <div class="offer-skew-opp">
             <h2 class="font-serif font-medium text-[18px] mx-auto text-white w-[70%] ">{{ $title }}</h2>
-            <a href="{{ $link }}" class="hover:border-none text-[23px] font-bold font-serif text-white ">{{ $label }}</a>
+            <a href="{{ $link }}" class="hover:border-none text-[23px] hover:scale-105 transition-all ease-in-out duration-500 font-bold font-serif text-white ">{{ $label }}</a>
           </div>
         </div>
       </div>
