@@ -23,41 +23,7 @@ $vr_cta = get_sub_field('vr_cta');
       </div>
     </a>
   @endif
-  @php
-          $primary_offer = get_sub_field('primary_offer');
-        @endphp
-        <div class="w-full lg:w-[15%] h-fit absolute z-30 right-0 bottom-0 top-0">
-          <div class="{{ count($primary_offer) > 1 ? 'slick-offer' :'' }} w-full absolute z-30 right-[3rem] bottom-0 top-[10rem]">
-            @if (have_rows('primary_offer'))
-              @while (have_rows('primary_offer')) 
-              @php 
-              the_row(); 
-              $button_label = get_sub_field('button_label');
-              $button_link = get_sub_field('button_link');
-              @endphp
-                <div class="flex items-start flex-col">
-                  <div class="relative w-[90%] mx-auto h-fit z-30 ">
-                    @include('partials.components.ribbon',['primary_colour' => '#9F0A15'])
-                    <p class="text-white absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-100%] max-w-[20rem] font-bold m-0 p-0 whitespace-nowrap "> SECURITY GUARANTEE </p>
-                  </div>
-                  <div class="blue-bg-gradient rounded-lg w-[70%] translate-y-[-12%] shadow-md mx-auto">
-                    <div class="child-p:text-white child-p:text-center child-p:text-3xl child-p:leading-relaxed child-p:font-semibold pt-12 pb-12 child-p:m-0 ">@sub('offer')</div>
-                    @if ($button_label)
-                        
-                    <a href="{{ $button_link }}" class="px-12 py-2 rounded-lg mb-2 mx-2 bg-primary hover:scale-105 transition-all ease-in-out duration-500 text-white border-0 text-center flex justify-center items-center">{!! $button_label !!}</a>
-                    @endif
-                    {{-- <div class="h-4 w-full bg-white mt-10"></div>
-                    <div class="h-1 w-full bg-white mt-1"></div>
-                    <div class="h-full w-full flex items-center justify-center py-8 px-4 xs:px-0">
-                      <p class=" text-white font-bold text-lg uppercase text-center">@sub('subtitle')</p>
-                    </div> --}}
-                  </div>
-
-                </div>
-              @endwhile
-            @endif
-          </div>
-        </div>
+  
   @if( $banner_type )
   <div class="full-width sm:flex sm:items-center relative lg:!min-h-[90vh] sm:!min-h-[60vh] !min-h-[100vh]">
     <div class="leftBannerBox"></div>
