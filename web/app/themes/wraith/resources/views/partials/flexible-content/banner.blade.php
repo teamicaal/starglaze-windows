@@ -37,8 +37,8 @@ $vr_cta = get_sub_field('vr_cta');
                     <p class="text-white absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-100%] max-w-[20rem] font-bold m-0 p-0 whitespace-nowrap "> SECURITY GUARANTEE </p>
                   </div>
                   <div class="blue-bg-gradient rounded-lg w-[70%] translate-y-[-12%] shadow-md mx-auto">
-                    <div class="child-p:text-white child-p:text-center child-p:text-3xl mb-2 child-p:leading-relaxed child-p:font-semibold pt-12 pb-12 child-p:m-0 ">@sub('offer')</div>
-                    <a href="{{ $button_link }}" class=" bg-primary hover:scale-105 transition-all ease-in-out duration-500 text-white border-0 text-center block md:inline-block">{!! $button_label !!}</a>
+                    <div class="child-p:text-white child-p:text-center child-p:text-3xl child-p:leading-relaxed child-p:font-semibold pt-12 pb-12 child-p:m-0 ">@sub('offer')</div>
+                    <a href="{{ $button_link }}" class="mb-2 bg-primary hover:scale-105 transition-all ease-in-out duration-500 text-white border-0 text-center block md:inline-block">{!! $button_label !!}</a>
                     {{-- <div class="h-4 w-full bg-white mt-10"></div>
                     <div class="h-1 w-full bg-white mt-1"></div>
                     <div class="h-full w-full flex items-center justify-center py-8 px-4 xs:px-0">
