@@ -24,6 +24,8 @@ $vr_cta = get_sub_field('vr_cta');
   @endif
         @php
           $primary_offer = get_sub_field('primary_offer');
+          $button_label = get_sub_field('button_label');
+          $button_link = get_sub_field('button_link');
         @endphp
         <div class="w-full lg:w-[15%] h-fit absolute z-30 right-0 bottom-0 top-0">
           <div class="{{ count($primary_offer) > 1 ? 'slick-offer' :'' }} w-full absolute z-30 right-[3rem] bottom-0 top-[10rem]">
@@ -36,6 +38,7 @@ $vr_cta = get_sub_field('vr_cta');
                   </div>
                   <div class="blue-bg-gradient rounded-lg w-[70%] translate-y-[-12%] shadow-md mx-auto">
                     <div class="child-p:text-white child-p:text-center child-p:text-3xl child-p:leading-relaxed child-p:font-semibold pt-12 pb-12 child-p:m-0 ">@sub('offer')</div>
+                    <a href="{{ $button_link }}" class="btn bg-primary hover:scale-105 transition-all ease-in-out duration-500 text-white border-0 text-center block md:inline-block">{!! $button_label !!}</a>
                     {{-- <div class="h-4 w-full bg-white mt-10"></div>
                     <div class="h-1 w-full bg-white mt-1"></div>
                     <div class="h-full w-full flex items-center justify-center py-8 px-4 xs:px-0">
