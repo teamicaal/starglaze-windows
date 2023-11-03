@@ -201,7 +201,6 @@
               @endwhile
             @endif
            </div>
-
        </div>
 
     </div>
