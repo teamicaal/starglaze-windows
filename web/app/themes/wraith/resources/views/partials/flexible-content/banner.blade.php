@@ -24,13 +24,16 @@ $vr_cta = get_sub_field('vr_cta');
   @endif
         @php
           $primary_offer = get_sub_field('primary_offer');
-          $button_label = get_sub_field('button_label');
-          $button_link = get_sub_field('button_link');
         @endphp
         <div class="w-full lg:w-[15%] h-fit absolute z-30 right-0 bottom-0 top-0">
           <div class="{{ count($primary_offer) > 1 ? 'slick-offer' :'' }} w-full absolute z-30 right-[3rem] bottom-0 top-[10rem]">
             @if (have_rows('primary_offer'))
-              @while (have_rows('primary_offer')) @php the_row(); @endphp
+              @while (have_rows('primary_offer')) 
+              @php 
+              the_row(); 
+              $button_label = get_sub_field('button_label');
+              $button_link = get_sub_field('button_link');
+              @endphp
                 <div class="flex items-start flex-col">
                   <div class="relative w-[90%] mx-auto h-fit z-30 ">
                     @include('partials.components.ribbon',['primary_colour' => '#9F0A15'])
