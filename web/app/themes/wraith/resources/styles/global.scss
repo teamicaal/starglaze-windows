@@ -922,7 +922,7 @@ a {
 }
 
 .main-banner__product-types-vr {
-  @apply absolute bottom-16 right-12 z-20 cursor-pointer hidden xl:block;
+  @apply absolute bottom-32 right-12 z-20 cursor-pointer hidden xl:block;
   .main-banner__product-types-vr-image {
     @apply h-[200px] ease-in-out duration-500;
   }
