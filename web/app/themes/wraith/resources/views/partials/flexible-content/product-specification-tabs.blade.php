@@ -165,7 +165,7 @@
                                             class="w-full h-0 absolute bottom-0 bg-primary group-hover:h-full ease-in-out duration-500 mix-blend-multiply">
                                         </div>
                                     </div>
-                                    <div class="text-center">{{ $swatch_name }}</div>
+                                    <div class="text-center text-[#3A3A3A]">{{ $swatch_name }}</div>
                                 </div>
                             @endwhile
                         </div>
@@ -202,7 +202,7 @@
                                                     class="fa-solid  text-[32px] text-white fa-arrows-rotate ease-in-out duration-500 group-hover:rotate-[360deg]"></i>
 
                                             </div>
-                                            <div class="font-semibold text-center">
+                                            <div class="font-semibold text-center mt-3">
                                                 TURN AROUND
                                             </div>
                                         @endif
