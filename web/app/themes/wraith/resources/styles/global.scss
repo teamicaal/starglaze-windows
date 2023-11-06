@@ -1064,17 +1064,17 @@ a {
   }
 }
 
-@keyframes offer-text-effect {
+.offer-text-effect {
+  animation: zoom-in-zoom-out 2s ease-out infinite;
+}
+@keyframes zoom-in-zoom-out {
   0% {
     transform: scale(1, 1);
   }
   50% {
-    transform: scale(1.5, 1.5);
+    transform: scale(1.2, 1.2);
   }
   100% {
     transform: scale(1, 1);
   }
-}
-.offer-text-effect {
-  animation: zoom-in-zoom-out 2s ease-out infinite;
 }
