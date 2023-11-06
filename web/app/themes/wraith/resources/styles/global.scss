@@ -1064,7 +1064,7 @@ a {
   }
 }
 
-.offer-text-effect {
+.c {
   animation: zoom-in-zoom-out 2s ease-out infinite;
 }
 @keyframes zoom-in-zoom-out {
@@ -1072,7 +1072,7 @@ a {
     transform: scale(1, 1);
   }
   50% {
-    transform: scale(1.2, 1.2);
+    transform: scale(1.15, 1.15);
   }
   100% {
     transform: scale(1, 1);
