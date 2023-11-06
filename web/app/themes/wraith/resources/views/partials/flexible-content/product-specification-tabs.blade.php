@@ -42,7 +42,7 @@
             @endphp
             <div class="{{ $i !== 1 ? 'hidden' : null }}" data-product-spec-tab="{{ $tab_name_clean }}">
 
-                <div class="container mx-auto flex flex-col lg:flex-row lg:items-center justify-between lg:my-16">
+                <div class="container mx-auto flex flex-col lg:flex-row lg:items-center justify-between lg:mt-12 mb-8">
                     <div class="w-full lg:w-1/3">
                         <h2 class="mb-4 lg:mb-8 text-primary font-serif font-medium lg:text-4xl text-2xl lg:leading-[3.5rem] text-balance">
                             {{ $title }}</h2>
