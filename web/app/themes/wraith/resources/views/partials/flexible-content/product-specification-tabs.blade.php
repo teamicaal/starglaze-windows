@@ -39,6 +39,7 @@
                 $tab_name_clean = strtolower(str_replace(' ', '_', $tab_name));
                 $paragraph = get_sub_field('paragraph');
                 $content_type = get_sub_field('content_type');
+                $swatches_static_content = get_sub_field('swatches_static_content');
             @endphp
             <div class="{{ $i !== 1 ? 'hidden' : null }}" data-product-spec-tab="{{ $tab_name_clean }}">
 
@@ -184,7 +185,7 @@
                                     <div data-image-featured="{{ $swatch_name_clean }}"
                                         class="{{ $j != 1 ? 'hidden' : 'block' }}">
                                         <div class="featured_front">
-                                            <img class="w-full h-[300px] lg:h-[500px] object-contain"
+                                            <img class="w-full h-[300px] lg:h-[400px] object-contain"
                                                 src="{{ $featured_image['url'] }}" alt="{{ $featured_image['alt'] }}">
                                             <div class="text-center">{{ $swatch_name }}</div>
                                         </div>
@@ -197,9 +198,9 @@
                                             </div>
 
                                             <div
-                                                class="cursor-pointer p-4 bg-primary group flex max-w-max mx-auto mt-8 turn-around">
+                                                class="cursor-pointer p-4 bg-primary group flex max-w-max mx-auto mt-4 turn-around">
                                                 <i
-                                                    class="fa-solid  text-[32px] text-white fa-arrows-rotate ease-in-out duration-500 group-hover:rotate-[360deg]"></i>
+                                                    class="fa-solid  text-[30px] text-white fa-arrows-rotate ease-in-out duration-500 group-hover:rotate-[360deg]"></i>
 
                                             </div>
                                             <div class="font-semibold text-center mt-3">
@@ -219,6 +220,60 @@
                         </div>
                     </div>
                 @endif
+                    @if ($swatches_static_content)
+                    <div class="container mx-auto relative mt-4">
+                        <div class="product-specification-tabs-slider ">
+                            @while (have_rows('swatches_static_content'))
+                                @php
+                                    the_row();
+                                    $image = get_sub_field('image');
+                                @endphp
+                                @if ($image)
+                                    <div class="mx-2">
+                                        <img class="mx-auto rounded-[20px] w-[14rem] h-auto shadow-lg" src="{{ $image['url'] }}" alt="">
+                                        {{-- @if ($product_name)
+                                            <div class="text-center mt-8">{{ $product_name }}</div>
+                                        @endif --}}
+                                    </div>
+                                @endif
+                            @endwhile
+                        </div>
+                        <button
+                            class="hidden lg:flex slick-n absolute group justify-center items-center right-0 top-1/2 -translate-y-1/2 translate-x-full px-6 py-4 bg-primary p-">
+                            <i
+                                class="group-hover:rotate-[360deg] text-[26px] fa-solid fa-chevron-right text-white transition-all ease-in-out duration-500"></i>
+                        </button>
+                        <button
+                            class="hidden lg:flex slick-p absolute group justify-center items-center left-0 top-1/2 -translate-y-1/2 -translate-x-full  px-6 py-4 bg-primary p-">
+                            <i
+                                class="group-hover:rotate-[360deg] text-[26px] fa-solid fa-chevron-left text-white transition-all ease-in-out duration-500"></i>
+                        </button>
+                    </div>
+                    @endif
+                
+
+                {{-- <div class="flex items-center justify-end">
+                    <button class="static-swatch-p flex items-center justify-center">
+                        <i class="fa fa-chevron-left bg-primary text-white border border-white text-sm py-4 px-6 rounded-tl-full rounded-bl-full"></i>
+                    </button>
+                    <button class="static-swatch-n flex items-center justify-center">
+                        <i class="fa fa-chevron-right bg-primary text-white border border-white text-sm py-4 px-6 rounded-tr-full rounded-br-full"></i>
+                    </button>
+                </div>
+                <div class="flex flex-wrap container mx-auto static-swatch">
+                    @while (have_rows('swatches_static_content'))
+                        @php
+                            the_row();
+                            $image = get_sub_field('image');
+                            
+                        @endphp
+                        <div class="flex items-center justify-center cursor-pointer">
+                            <div class="w-[160px] h-[120px] mx-auto mb-2 rounded-[25px] bg-white overflow-hidden shadow-md ">
+                                <img class="w-full h-full object-cover relative" src="{{ $image['url'] }}" alt="{{ $image['alt'] }}">
+                            </div>
+                        </div>
+                    @endwhile
+                </div> --}}
             </div>
         @endwhile
     @endif

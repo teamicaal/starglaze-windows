@@ -157,6 +157,17 @@ import mixitup from 'mixitup';
     ]
   });
 
+  // Static Swatch
+  $('.static-swatch').slick({
+    slidesToShow: 6,
+    infinite:true,
+    swipeToSlide: true,
+    arrows: true,
+    centerMode:false,
+    autoplay: true,
+    autoplaySpeed: 5000,
+  });
+
   // latest news Slider
   $('.slick-news').slick({
     slidesToShow: 1,
