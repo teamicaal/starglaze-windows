@@ -1,12 +1,12 @@
 @php
 $banner_type = get_sub_field('banner_type');
 $images = get_sub_field('images');
-$video = get_sub_field('video');
 $images_webp = get_sub_field('images_webp');
 $title = get_sub_field('title');
 $subtitle = get_sub_field('subtitle');
 $paragraph = get_sub_field('paragraph');
 $vr_cta = get_sub_field('vr_cta');
+$offer_badge = get_sub_field('offer_badge');
 @endphp
 @if( get_sub_field('title_h1') )
   @php $h = 'h1' @endphp
@@ -14,7 +14,7 @@ $vr_cta = get_sub_field('vr_cta');
   @php $h = 'h2' @endphp
 @endif
 
-<section id="hero-banner" class="section_page-banner">
+<section id="hero-banner" class="section_page-banner relative">
   @if ($vr_cta)
     <a href="/our-products/">
       <div class="main-banner__product-types-vr">
@@ -23,57 +23,77 @@ $vr_cta = get_sub_field('vr_cta');
       </div>
     </a>
   @endif
-  
+  @if ($offer_badge)
+    @php
+      $primary_offer = get_sub_field('primary_offer');
+    @endphp
+    <div class="w-full lg:w-[15%] h-fit absolute z-30 right-0 bottom-0 top-0">
+      <div class="{{ count($primary_offer) > 1 ? 'slick-offer' :'' }} w-full absolute z-30 right-[3rem] bottom-0 top-[10rem]">
+        @if (have_rows('primary_offer'))
+          @while (have_rows('primary_offer')) 
+          @php 
+          the_row(); 
+          $offer = get_sub_field('offer');
+          $button_label = get_sub_field('button_label');
+          $button_link = get_sub_field('button_link');
+          @endphp
+            <div class="flex items-start flex-col">
+              <div class="relative w-[90%] mx-auto h-fit z-30 ">
+                @include('partials.components.ribbon',['primary_colour' => '#9F0A15'])
+                <p class="text-white absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-100%] max-w-[20rem] font-bold m-0 p-0 whitespace-nowrap "> SECURITY GUARANTEE </p>
+              </div>
+              <div class="bg-[#df5e24] rounded-lg w-[70%] translate-y-[-12%] shadow-md mx-auto">
+                <div class="child-p:text-white child-p:text-center child-p:text-2xl child-p:leading-relaxed pt-8 pb-4 child-p:m-0 ">{!! $offer !!}</div>
+                <div class="h-4 w-full bg-white"></div>
+                <div class="h-1 w-full bg-white mt-1"></div>
+                <a href="{{ $button_link }}" class="px-12 py-2 rounded-lg m-2 bg-white hover:scale-105 transition-all ease-in-out duration-500 text-secondary border-0 text-center flex justify-center items-center">{!! $button_label !!}</a>
+              </div>
+            </div>
+          @endwhile
+        @endif
+      </div>
+    </div>
+  @endif
   @if( $banner_type )
-  <div class="full-width sm:flex sm:items-center relative lg:!min-h-[90vh] sm:!min-h-[60vh] !min-h-[100vh]">
+  <div class="full-width sm:flex sm:items-center relative lg:!min-h-[89vh] sm:!min-h-[60vh] !min-h-[100vh]">
     <div class="leftBannerBox"></div>
     @if( $images )
       <div class="sm:absolute relative sm:top-0 sm:left-0 h-[40vh] w-full sm:h-full z-10">
-            @if ($video)
-            <div class="hero relative  lg:!min-h-[90vh] sm:!min-h-[60vh] !min-h-[100vh]">
-              <video class="w-full h-full object-cover absolute" autoplay muted loop>
-                  <source data-src="{!! $video['url'] !!}" src="{!! $video['url'] !!}" type="video/mp4">
-              </video>
-            </div>
-            @else
-            @if( count($images) > 1 )
-            <div class="slick-banner">
-            @endif
-            @foreach($images as $key=>$image )
-              <div class="relative {!! $key != 0 ? 'hidden' : null !!} lg:!min-h-[90vh] sm:!min-h-[60vh] !min-h-[100vh]">
-                <picture data-iesrc="{!! $image['url'] !!}">
-                  @if( $images_webp )
-                    @php
-                      $img_webp = get_bloginfo('url') . str_replace(array('jpg', 'jpeg', 'png'), 'webp', $image['url']);
-                      $img_webp_sm = str_replace('.webp', '-sm.webp', $img_webp);
-                    @endphp
-                    <source media="(max-width: 767px)" srcset="{!! $img_webp_sm !!}" type="image/webp" />
-                    <source media="(min-width: 768px)" srcset="{!! $img_webp !!}" type="image/webp" />
-                    @endif
-                    <source media="(min-width: 768px)" srcset="{!! wp_get_attachment_image_srcset($image['id']) !!}" type="image/jpg" />
-                  <img src="{{ $image['sizes']['lozad'] }}" data-src="{{ $image['sizes']['4by3-xl'] }}" class="lozad object-fit-cover w-full h-full inset-0" alt="{!! $image['alt'] !!}" width="100%" height="100%">
-                </picture>
-              </div>
-            @endforeach
-            @if( count($images) > 1 ) 
-            </div>
-            <div class="absolute sm:hidden z-20 bottom-0 right-0 flex">
-              <button type="button" class="slick-p block w-12 h-12 text-center rounded-l-sm bg-white border-r border-grey-lighter text-grey hover:bg-grey-lightest hover:text-primary focus:bg-grey-lighter focus:text-black focus:outline-none transition inline-block"><i class="fa fa-caret-left align-middle"></i></button>
-              <button type="button" class="slick-n block w-12 h-12 text-center rounded-tr-sm bg-white text-grey hover:bg-grey-lightest hover:text-primary focus:bg-grey-lighter focus:text-black focus:outline-none transition inline-block"><i class="fa fa-caret-right align-middle"></i></button>
-            </div>
-            @endif
-            @endif
-
-        
+        @if( count($images) > 1 )
+        <div class="slick-banner">
+        @endif
+        @foreach($images as $key=>$image )
+          <div class="relative {!! $key != 0 ? 'hidden' : null !!} lg:!min-h-[89vh] sm:!min-h-[60vh] !min-h-[100vh]">
+            <picture data-iesrc="{!! $image['url'] !!}">
+              @if( $images_webp )
+                @php
+                  $img_webp = get_bloginfo('url') . str_replace(array('jpg', 'jpeg', 'png'), 'webp', $image['url']);
+                  $img_webp_sm = str_replace('.webp', '-sm.webp', $img_webp);
+                @endphp
+                <source media="(max-width: 767px)" srcset="{!! $img_webp_sm !!}" type="image/webp" />
+                <source media="(min-width: 768px)" srcset="{!! $img_webp !!}" type="image/webp" />
+                @endif
+                <source media="(min-width: 768px)" srcset="{!! wp_get_attachment_image_srcset($image['id']) !!}" type="image/jpg" />
+              <img src="{{ $image['sizes']['lozad'] }}" data-src="{{ $image['sizes']['4by3-xl'] }}" class="lozad object-fit-cover w-full h-full inset-0" alt="{!! $image['alt'] !!}" width="100%" height="100%">
+            </picture>
+          </div>
+        @endforeach
+        @if( count($images) > 1 ) 
+        </div>
+        <div class="absolute sm:hidden z-20 bottom-0 right-0 flex">
+          <button type="button" class="slick-p block w-12 h-12 text-center rounded-l-sm bg-white border-r border-grey-lighter text-grey hover:bg-grey-lightest hover:text-primary focus:bg-grey-lighter focus:text-black focus:outline-none transition inline-block"><i class="fa fa-caret-left align-middle"></i></button>
+          <button type="button" class="slick-n block w-12 h-12 text-center rounded-tr-sm bg-white text-grey hover:bg-grey-lightest hover:text-primary focus:bg-grey-lighter focus:text-black focus:outline-none transition inline-block"><i class="fa fa-caret-right align-middle"></i></button>
+        </div>
+        @endif
       </div>
     @endif
     <div class="container banner-content mx-auto border-b sm:border-none border-primary pt-[147px]">
-      <div class="sm:w-[650px] lg:w-[800px] w-full relative z-20 mx-auto lg:ml-0 lg:mr-auto">
+      <div class="sm:w-[650px] w-full relative z-20 mx-auto lg:ml-0 lg:mr-auto">
         {!! $subtitle ? '<h4 class=" text-white lg:text-2xl text-lg uppercase tracking-wider lg:mb-4 mb-2">' . $subtitle . '</h4>' : null !!}
         {!! $title ? '<' . $h . ' class="text-3xl text-white title-shadow md:text-4xl lg:text-[66px] banner-title lg:mb-8 mb-4 font-serif font-bold">' . $title . '</' . $h . '>' : null !!}
-        {!! $paragraph ? '<div class="child-p:mb-4 child-p:text-white child-p:leading-loose sm:block hidden">' . $paragraph . '</div>' : null !!}
+        {!! $paragraph ? '<div class="child-p:mb-12 child-p:text-white child-p:leading-loose sm:block hidden">' . $paragraph . '</div>' : null !!}
         @if( have_rows('buttons') )
-          <div class="lg:flex block ">
+          <div class="block mt-8">
             @php $i = 0; @endphp
             @while( have_rows('buttons') )
               @php
@@ -83,7 +103,7 @@ $vr_cta = get_sub_field('vr_cta');
               $label = get_sub_field('label');
               $anchor = get_sub_field('anchor');
               @endphp
-              <a href="{{ $link }}" class="btn block md:inline-block {{ $i == 1 ? 'bg-primary text-white hover:bg-secondary font-bold hover:border-none lg:mb-0 mb-4 lg:mr-4 mr-0' : 'bg-white text-[#343338] font-bold border border-primary hover:bg-primary hover:text-white' }}{{ $anchor ? ' btn-scroll' : null }}">{!! $label !!}</a>
+              <a href="{{ $link }}" class="btn block md:inline-block md:mr-4 mb-4 {{ $i == 1 ? 'bg-primary text-white hover:bg-secondary font-bold hover:border-none' : 'bg-white text-[#343338] font-bold border border-primary hover:bg-primary hover:text-white' }}{{ $anchor ? ' btn-scroll' : null }}">{!! $label !!}</a>
             @endwhile
           </div>
         @endif
@@ -153,10 +173,12 @@ $vr_cta = get_sub_field('vr_cta');
     </div>
   </div>
   @endif
+
+  
 </section>
 
 <style>
-  body main#primary {
-   margin-top: 0px !important;
- }
+   body main#primary {
+    margin-top: 0px !important;
+  }
 </style>
