@@ -11,9 +11,9 @@ $i = 0;
     <div class="container mx-auto">
         <div class="flex">
             {!! $title ? '<h2 class="text-2xl md:text-4xl mb-10 text-[#3F7E57] md:w-2/3 w-full tracking-wide font-bold font-serif">' . $title . '</h2>' : null !!}
-            <a href="{!! $button_link !!}" class="btn bg-primary">{!! $button_label !!}</a>
             <img src="{{ $logo_image['url'] }}" alt="{{ $logo_image['alt'] }}" class="absolute right-[22rem] top-[-2rem]">
         </div>
+        <a href="{!! $button_link !!}" class="btn bg-primary text-white">{!! $button_label !!}</a>
         
         <div class="flex flex-wrap justify-center">
 
