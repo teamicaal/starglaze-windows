@@ -16,7 +16,7 @@
   <div class="container mx-auto flex flex-wrap px-0 mb-4">
     <div class="w-full md:w-2/3 lg:w-1/3 px-4 md:pr-8 mb-8 md:mb-0">
       @php dynamic_sidebar('sidebar-footer-1') @endphp
-      <h3 class="text-primary font-bold font-serif text-2xl ">Join Our Newsletter</h3>
+      <h3 class="text-primary font-bold font-serif text-2xl pt-12">Join Our Newsletter</h3>
         <div class="mb-4">
           <div id="mc_embed_shell" class=" ">
             <style type="text/css">
@@ -74,7 +74,7 @@
             </div>
         </div> --}}
       </div>
-      <ul class="list-reset text-sm flex flex-wrap py-8">
+      <ul class="list-reset text-sm flex flex-wrap pt-20">
         @include('partials.components.social_icons' , ['location'=>'footer'])
       </ul>
     </div>
