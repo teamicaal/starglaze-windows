@@ -7,7 +7,7 @@ $logo_image = get_sub_field('logo_image');
 $i = 0;
 @endphp
 
-<section id="sustainability-info" class="relative {!! $custom_class ? ' ' . $custom_class : 'lg:py-12 py-8' !!}">
+<section id="sustainability-info" class="relative {!! $custom_class ? ' ' . $custom_class : 'lg:pt-12 pt-8' !!}">
     <div class="container mx-auto">
         <div class="flex relative">
             {!! $title ? '<h2 class="text-2xl text-center md:text-4xl mb-10 text-[#3F7E57] md:w-2/3 w-full tracking-wide font-bold font-serif">' . $title . '</h2>' : null !!}
