@@ -3,7 +3,7 @@
     $j = 0;
     $grip_core_page = get_sub_field('grip_core_page');
 @endphp
-<section id="product-specification-tabs" class="lg:mb-16 md:mb-10 mb-4">
+<section id="product-specification-tabs" class="lg:my-16 md:my-10 my-4">
     <div class="relative px-4 mb-4">
         @if (have_rows('tab'))
             <div class="absolute w-full h-1 bg-secondary left-0 right-0 top-1/2 -translate-y1/2"></div>
