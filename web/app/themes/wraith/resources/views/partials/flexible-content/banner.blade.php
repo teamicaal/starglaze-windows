@@ -63,7 +63,7 @@ $offer_badge = get_sub_field('offer_badge');
         <div class="slick-banner">
         @endif
         @foreach($images as $key=>$image )
-          <div class="relative {!! $key != 0 ? 'hidden' : null !!} lg:!min-h-[89vh] sm:!min-h-[60vh] !min-h-[100vh]">
+          <div class="relative {!! $key != 0 ? 'hidden' : null !!} h-full lg:!min-h-[89vh] sm:!min-h-[60vh] !min-h-[100vh]">
             <picture data-iesrc="{!! $image['url'] !!}">
               @if( $images_webp )
                 @php
