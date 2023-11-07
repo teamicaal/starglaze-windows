@@ -1085,7 +1085,8 @@ a {
   }
 }
 
-#product-specification-tabs {
+#product-specification-tabs,
+#index {
   @apply overflow-hidden;
 
   ::-webkit-scrollbar {
