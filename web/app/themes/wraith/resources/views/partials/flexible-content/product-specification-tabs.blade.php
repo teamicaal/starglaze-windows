@@ -211,7 +211,7 @@
                                 @else
                                     <div data-image-featured="{{ $swatch_name_clean }}"
                                         class="{{ $j != 1 ? 'hidden' : 'block' }}">
-                                        <img class="w-full h-[300px] lg:h-[500px] object-contain"
+                                        <img class="w-full h-[300px] lg:h-[400px] object-contain"
                                             src="{{ $swatch_image['url'] }}" alt="{{ $swatch_image['alt'] }}">
                                         <div class="text-center">{{ $swatch_name }}</div>
                                     </div>
