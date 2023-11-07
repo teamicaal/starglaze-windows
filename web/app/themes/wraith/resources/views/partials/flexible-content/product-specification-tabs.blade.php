@@ -39,6 +39,7 @@
                 $tab_name_clean = strtolower(str_replace(' ', '_', $tab_name));
                 $paragraph = get_sub_field('paragraph');
                 $content_type = get_sub_field('content_type');
+                $static_swatches_title = get_sub_field('static_swatches_title');
                 $swatches_static_content = get_sub_field('swatches_static_content');
             @endphp
             <div class="{{ $i !== 1 ? 'hidden' : null }}" data-product-spec-tab="{{ $tab_name_clean }}">
@@ -220,6 +221,7 @@
                         </div>
                     </div>
                 @endif
+                <h3 class="mb-4 lg:mb-8 text-primary font-serif font-medium lg:text-4xl text-2xl lg:leading-[3.5rem] text-balance"> {{ $static_swatches_title }}</h3>
                     @if ($swatches_static_content)
                     <div class="container mx-auto relative mt-4">
                         <div class="product-specification-tabs-slider ">
@@ -246,30 +248,6 @@
                         </button>
                     </div>
                     @endif
-                
-
-                {{-- <div class="flex items-center justify-end">
-                    <button class="static-swatch-p flex items-center justify-center">
-                        <i class="fa fa-chevron-left bg-primary text-white border border-white text-sm py-4 px-6 rounded-tl-full rounded-bl-full"></i>
-                    </button>
-                    <button class="static-swatch-n flex items-center justify-center">
-                        <i class="fa fa-chevron-right bg-primary text-white border border-white text-sm py-4 px-6 rounded-tr-full rounded-br-full"></i>
-                    </button>
-                </div>
-                <div class="flex flex-wrap container mx-auto static-swatch">
-                    @while (have_rows('swatches_static_content'))
-                        @php
-                            the_row();
-                            $image = get_sub_field('image');
-                            
-                        @endphp
-                        <div class="flex items-center justify-center cursor-pointer">
-                            <div class="w-[160px] h-[120px] mx-auto mb-2 rounded-[25px] bg-white overflow-hidden shadow-md ">
-                                <img class="w-full h-full object-cover relative" src="{{ $image['url'] }}" alt="{{ $image['alt'] }}">
-                            </div>
-                        </div>
-                    @endwhile
-                </div> --}}
             </div>
         @endwhile
     @endif
