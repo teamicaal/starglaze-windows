@@ -191,7 +191,7 @@
                                         </div>
                                         @if ($featured_image_2)
                                             <div class="featured_back hidden">
-                                                <img class="w-full h-[300px] lg:h-[500px] object-contain"
+                                                <img class="w-full h-[300px] lg:h-[400px] object-contain"
                                                     src="{{ $featured_image_2['url'] }}"
                                                     alt="{{ $featured_image_2['alt'] }}">
                                                 <div class="text-center">{{ $swatch_name }}</div>
