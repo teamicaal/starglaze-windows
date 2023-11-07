@@ -1,4 +1,11 @@
+@php
+$title = get_sub_field('title');
+@endphp
+
 <section>
+    @if ($title)
+    <h2 class="text-center text-3xl font-bold font-serif text-primary lg:text-4xl mb-8 uppercase">{!! $title !!}</h2>
+    @endif
     @if (have_rows('comparisons'))
         <div class="comparison">
             <div class="container mx-auto flex justify-around flex-wrap">
