@@ -15,7 +15,7 @@ $i = 0;
             <a href="{!! $button_link !!}" class="btn bg-primary hover:scale-105 transition-all ease-in-out duration-500 text-white absolute md:inline-block block right-0 bottom-0">{!! $button_label !!}</a>
         </div>
         
-        <div class="flex flex-wrap justify-center">
+        <div class="flex flex-wrap justify-center lg:mt-16 mt-12">
 
             @if (have_rows('cards'))
             @while (have_rows('cards'))
