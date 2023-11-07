@@ -232,10 +232,7 @@
                                 @endphp
                                 @if ($image)
                                     <div class="mx-2">
-                                        <img class="mx-auto rounded-[20px] w-[6rem] h-[6rem] cursor-pointer shadow-lg" src="{{ $image['url'] }}" alt="">
-                                        {{-- @if ($product_name)
-                                            <div class="text-center mt-8">{{ $product_name }}</div>
-                                        @endif --}}
+                                        <img class="mx-auto rounded-[20px] w-[100px] h-[100px] cursor-pointer shadow-lg" src="{{ $image['url'] }}" alt="{{ $image['alt'] }}">
                                     </div>
                                 @endif
                             @endwhile
