@@ -231,7 +231,7 @@
                                     $image = get_sub_field('image');
                                 @endphp
                                 @if ($image)
-                                    <div class="mx-2">
+                                    <div class="mx-2 pb-4">
                                         <img class="mx-auto rounded-[20px] w-[100px] h-[100px] cursor-pointer shadow-lg" src="{{ $image['url'] }}" alt="{{ $image['alt'] }}">
                                     </div>
                                 @endif
