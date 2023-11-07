@@ -164,7 +164,7 @@ import mixitup from 'mixitup';
     swipeToSlide: true,
     arrows: true,
     centerMode:false,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 5000,
 
     responsive: [
