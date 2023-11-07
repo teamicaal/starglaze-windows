@@ -430,13 +430,31 @@ $('.accordion-item-header').on("click", function() {
   $(this).find('svg').toggleClass('rotateChevron');
 });
 
-// $('.accordion-item-header').on('click', function(){
-//   $('.accordion-item').removeClass('active');
-//   $('.accordion-item-content').slideUp();
+function checkOverflow() {
+  var scroll_containers = $(".scroll-container");
 
-//   $(this).parent().toggleClass('active');
-//   $(this).next().slideToggle();
-// });
+  scroll_containers.each(function () {
+    var scroll_container = $(this);
+
+    if (scroll_container[0].scrollWidth > scroll_container[0].clientWidth) {
+      scroll_container
+        .removeClass("overflow-x-hidden")
+        .addClass("overflow-x-scroll");
+    } else {
+      scroll_container
+        .removeClass("overflow-x-scroll")
+        .addClass("overflow-x-hidden");
+    }
+  });
+}
+
+$(document).ready(function () {
+  checkOverflow(); // Initial check
+
+  $(window).on("resize", function () {
+    checkOverflow(); // Check on window resize
+  });
+});
 
   // smooth scroll
    
