@@ -523,6 +523,37 @@ header{
     }
   }
 
+  header{
+    @apply h-[80px] transition-all duration-700 ease-in-out;
+    &.is-scrolled {
+      @apply h-[112px] transition-all duration-700 ease-in-out ;
+      #toolbar{
+        display: none;
+      }
+      .header-padding{
+        @apply lg:py-2 py-0;
+      }
+      // .logo-scroll{
+      //   height: 6rem;
+      // }
+      ul > li:not(.btn-navigation) > a, ul , .navigation-mobile {
+        @apply text-secondary hover:text-primary transition-all;
+      }
+  
+      li:not(.btn-navigation) > a > svg {
+        @apply text-primary transition-all;
+      }
+      li:not(.btn-navigation){
+        >.navigation-mobile {
+          @apply text-white transition-all;
+           >svg {
+            @apply text-white transition-all;
+          }
+        }
+      }
+    }
+  }
+
   .btn-toolbar {
 
     @apply mx-4 mt-4;
