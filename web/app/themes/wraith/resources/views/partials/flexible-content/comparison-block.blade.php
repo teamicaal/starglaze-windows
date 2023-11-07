@@ -4,7 +4,7 @@ $title = get_sub_field('title');
 
 <section>
     @if ($title)
-    <h2 class="text-center text-3xl font-bold font-serif text-primary lg:text-4xl mb-8 uppercase">{!! $title !!}</h2>
+    <h2 class="text-center text-3xl font-bold font-serif text-primary lg:text-4xl mt-12 uppercase">{!! $title !!}</h2>
     @endif
     @if (have_rows('comparisons'))
         <div class="comparison">
