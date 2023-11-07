@@ -224,7 +224,7 @@
                 <h3 class="mb-4 lg:mb-8 container mx-auto text-primary font-serif font-medium lg:text-4xl text-2xl lg:leading-[3.5rem] text-balance"> {{ $static_swatches_title }}</h3>
                     @if ($swatches_static_content)
                     <div class="container mx-auto relative mt-4">
-                        <div class="product-specification-tabs-slider ">
+                        <div class="static-swatch ">
                             @while (have_rows('swatches_static_content'))
                                 @php
                                     the_row();
@@ -232,7 +232,7 @@
                                 @endphp
                                 @if ($image)
                                     <div class="mx-2">
-                                        <img class="mx-auto rounded-[20px] w-[14rem] h-auto cursor-pointer shadow-lg" src="{{ $image['url'] }}" alt="">
+                                        <img class="mx-auto rounded-[20px] w-[6rem] h-[6rem] cursor-pointer shadow-lg" src="{{ $image['url'] }}" alt="">
                                         {{-- @if ($product_name)
                                             <div class="text-center mt-8">{{ $product_name }}</div>
                                         @endif --}}
