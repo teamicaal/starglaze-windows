@@ -807,4 +807,28 @@ $(".product-specification-tabs-brochure-slider").slick(
     thisParent.find(".featured_back").toggle();
   });
 
+  var countdownDate = new Date("2023-12-31T23:59:59").getTime(); // Example: New Year's Eve
+
+  // Update the countdown every second
+  var countdown = setInterval(function() {
+
+      var now = new Date().getTime();
+      var distance = countdownDate - now;
+
+      // Calculate time units
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the countdown in the HTML element with id "countdown"
+      $("#countdown").html(days + "d " + hours + "h " + minutes + "m " + seconds + "s " + " Left");
+
+      // If the countdown is over, clear the interval
+      if (distance < 0) {
+          clearInterval(countdown);
+          $("#countdown").html("EXPIRED");
+      }
+  }, 1000); // Update every second (1000 milliseconds)
+
 })(jQuery);
