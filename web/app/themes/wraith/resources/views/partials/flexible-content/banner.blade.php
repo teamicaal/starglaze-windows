@@ -17,7 +17,7 @@ $offer_badge = get_sub_field('offer_badge');
 <section id="hero-banner" class="section_page-banner relative">
   @if ($vr_cta)
     <a href="/our-products/">
-      <div class="main-banner__product-types-vr">
+      <div class="main-banner__product-types-vr offer-text-effect">
         <img class="main-banner__product-types-vr-image" src="/app/uploads/2023/10/vr_image.png" alt="">
         <div class="main-banner__product-types-vr-title">EXPLORE VIRTUALLY</div>
       </div>

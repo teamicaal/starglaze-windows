@@ -929,14 +929,14 @@ a {
   .main-banner__product-types-vr-title {
     @apply text-white text-center border-b border-white max-w-max mx-auto font-semibold ease-in-out duration-500;
   }
-  &:hover {
-    .main-banner__product-types-vr-title {
-      @apply mt-6;
-    }
-    .main-banner__product-types-vr-image {
-      @apply scale-125;
-    }
-  }
+  // &:hover {
+  //   .main-banner__product-types-vr-title {
+  //     @apply mt-6;
+  //   }
+  //   .main-banner__product-types-vr-image {
+  //     @apply scale-125;
+  //   }
+  // }
 }
 
 // Comparison Slider
