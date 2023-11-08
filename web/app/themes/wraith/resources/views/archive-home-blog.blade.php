@@ -9,6 +9,36 @@
     <h1 class="py-3">
       {{ $title ? $title : 'Star Home Blog' }}
     </h1>
+  @php
+  $newsargs = [
+    'post_type' =>'post',
+    'posts_per_page' => 10,
+    'tax_query' => array( 
+        array(
+            'taxonomy' => 'category',
+            'field'    => 'slug',
+            'terms'    => 'blog',
+        ),
+      ) 
+  ];
+  $news = new WP_Query($newsargs);
+  $blogargs = [
+      'post_type' =>'home-blog',
+      'posts_per_page' => 10,
+  ];
+  $blogs = new WP_Query($blogargs);
+  $all = array_merge($news->posts,$blogs->posts);
+  foreach($all as $p){
+    $ids[] = $p->ID;
+  }
+  $args = [
+    'post__in' => $ids,  
+    'post_type' => array('home-blog','post'), 
+    'orderby' => 'post__in'
+  ];
+
+  $query = new WP_Query($args);
+  @endphp
   @noposts
     <div class="alert alert-warning">
       {{ __('Sorry, no results were found.', 'sage') }}
@@ -18,7 +48,7 @@
 </div>
   <div class="container mx-auto">
     <div class="flex flex-wrap md:-mx-4">
-      @posts
+      @posts($query)
       <article class="w-full lg:w-1/3 p-4">
         <a href="@permalink">
           <div class="w-full md:mr-4 relative overflow-hidden" style="min-height: 251px;">
