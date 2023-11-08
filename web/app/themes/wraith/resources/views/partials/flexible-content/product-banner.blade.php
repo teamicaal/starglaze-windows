@@ -37,7 +37,7 @@ $offer_badge = get_sub_field('offer_badge');
           $button_label = get_sub_field('button_label');
           $button_link = get_sub_field('button_link');
           @endphp
-            <div class="flex items-start flex-col">
+            <div class="flex items-center justify-center flex-col">
               <div class="relative w-full mx-auto h-fit z-30 top-8">
                 @include('partials.components.ribbon',['primary_colour' => '#9F0A15'])
                 <p class="text-white absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-100%] max-w-[20rem] font-bold m-0 p-0 whitespace-nowrap font-serif text-[19px]"> SECURITY GUARANTEE </p>
