@@ -48,7 +48,7 @@ $offer_badge = get_sub_field('offer_badge');
                 <div class="h-1 w-full bg-white mt-1"></div>
                 <a href="{{ $button_link }}" class="px-12 py-2 rounded-lg m-2 bg-white hover:scale-105 transition-all ease-in-out duration-500 text-secondary border-0 text-center flex justify-center items-center">{!! $button_label !!}</a>
               </div>
-              <div id="countdown" class="text-white bg-red-500 py-2 px-4 rounded-b-lg"></div>
+              <div id="countdown" class="text-white font-bold bg-red-500 py-2 px-4 rounded-b-lg"></div>
             </div>
           @endwhile
         @endif
