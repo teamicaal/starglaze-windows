@@ -924,7 +924,7 @@ a {
 .main-banner__product-types-vr {
   @apply absolute bottom-12 right-12 z-20 cursor-pointer hidden xl:block;
   .main-banner__product-types-vr-image {
-    @apply h-[200px] ease-in-out duration-500;
+    @apply h-[160px] ease-in-out duration-500;
   }
   .main-banner__product-types-vr-title {
     @apply text-white text-center border-b border-white max-w-max mx-auto font-semibold ease-in-out duration-500;
