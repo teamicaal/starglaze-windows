@@ -148,7 +148,7 @@
                     @endphp
                     <div class="container mx-auto flex flex-col-reverse lg:flex-row items-center">
                         <div
-                            class="flex w-full lg:w-1/2 flex-nowrap lg:flex-wrap gap-4 max-h-max scroll-container overflow-x-hidden items-start">
+                            class="flex w-full lg:w-1/2 flex-nowrap lg:flex-wrap gap-4 h-[500px] scroll-container overflow-x-hidden items-start">
                             @while (have_rows('swatches_content'))
                                 @php
                                     the_row();
