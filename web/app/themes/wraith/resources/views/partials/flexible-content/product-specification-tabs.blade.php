@@ -223,7 +223,7 @@
                 @endif
                 <h3 class="mb-4 lg:mb-8 container mx-auto text-primary font-serif font-medium lg:text-4xl text-2xl lg:leading-[3.5rem] text-balance"> {{ $static_swatches_title }}</h3>
                     @if ($swatches_static_content)
-                    <div class="container mx-auto relative mt-4">
+                    <div class="container mx-auto relative mt-4 md:px-[6rem]">
                         <div class="static-swatch ">
                             @while (have_rows('swatches_static_content'))
                                 @php
@@ -237,10 +237,10 @@
                                 @endif
                             @endwhile
                         </div>
-                        <button class="hidden lg:flex slick-n absolute group justify-center items-center right-0 top-1/2 -translate-y-1/2 translate-x-full px-6 py-4 bg-primary p-">
+                        <button class="hidden lg:flex slick-n absolute group justify-center items-center right-[50px] top-1/2 -translate-y-1/2 translate-x-full px-6 py-4 bg-primary p-">
                             <i class="group-hover:rotate-[360deg] text-[26px] fa-solid fa-chevron-right text-white transition-all ease-in-out duration-500"></i>
                         </button>
-                        <button class="hidden lg:flex slick-p absolute group justify-center items-center left-0 top-1/2 -translate-y-1/2 -translate-x-full  px-6 py-4 bg-primary p-">
+                        <button class="hidden lg:flex slick-p absolute group justify-center items-center left-[50px] top-1/2 -translate-y-1/2 -translate-x-full  px-6 py-4 bg-primary p-">
                             <i class="group-hover:rotate-[360deg] text-[26px] fa-solid fa-chevron-left text-white transition-all ease-in-out duration-500"></i>
                         </button>
                     </div>
