@@ -92,7 +92,7 @@ $offer_badge = get_sub_field('offer_badge');
       <div class="sm:w-[650px] w-full relative z-20 mx-auto lg:ml-0 lg:mr-auto">
         {!! $subtitle ? '<h4 class=" text-white lg:text-2xl text-lg uppercase tracking-wider lg:mb-4 mb-2">' . $subtitle . '</h4>' : null !!}
         {!! $title ? '<' . $h . ' class="text-3xl text-white title-shadow md:text-4xl lg:text-[66px] banner-title lg:mb-8 mb-4 font-serif font-bold">' . $title . '</' . $h . '>' : null !!}
-        {!! $paragraph ? '<div class="child-p:mb-12 child-p:text-white child-p:leading-loose sm:block hidden">' . $paragraph . '</div>' : null !!}
+        {!! $paragraph ? '<div class="child-p:mb-12 child-p:max-w-[450px] child-p:text-white child-p:leading-loose sm:block hidden">' . $paragraph . '</div>' : null !!}
         @if( have_rows('buttons') )
           <div class="block mt-8">
             @php $i = 0; @endphp
