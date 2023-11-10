@@ -23,12 +23,12 @@
         </div>
         @endforeach
       </div>
-      <button class="hidden lg:flex slick-n absolute group justify-center items-center right-0 top-1/2 -translate-y-1/2 translate-x-full px-6 py-4 bg-primary p-">
+      {{-- <button class="hidden lg:flex slick-n absolute group justify-center items-center right-0 top-1/2 -translate-y-1/2 translate-x-full px-6 py-4 bg-primary p-">
         <i class="group-hover:rotate-[360deg] text-[26px] fa-solid fa-chevron-right text-white transition-all ease-in-out duration-500"></i>
       </button>
       <button class="hidden lg:flex slick-p absolute group justify-center items-center left-0 top-1/2 -translate-y-1/2 -translate-x-full  px-6 py-4 bg-primary p-">
           <i class="group-hover:rotate-[360deg] text-[26px] fa-solid fa-chevron-left text-white transition-all ease-in-out duration-500"></i>
-      </button>
+      </button> --}}
       <div class="container mx-auto relative">
         <div class="image_slider_thmb">
           @php
