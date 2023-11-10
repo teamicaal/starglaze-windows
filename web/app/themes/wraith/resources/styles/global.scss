@@ -565,7 +565,7 @@ a {
   z-index: 20;
   background: #34333873;
 
-  @screen md {
+  @screen lg {
     width: 42%;
     background: #343338ad;
   }
@@ -1111,6 +1111,33 @@ a {
   #hero-banner{
     p{
       text-shadow: 2px 2px 13px #000;
+    }
+  }
+}
+
+#hero-banner{
+  .para-text{
+    p{
+      max-width: 450px;
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  #hero-banner{
+    .para-text{
+      p{
+        max-width: 380px;
+      }
+    }
+  }
+}
+@media (max-width: 1023px) {
+  #hero-banner{
+    .para-text{
+      p{
+        max-width: 600px;
+      }
     }
   }
 }
