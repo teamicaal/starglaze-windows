@@ -12,6 +12,7 @@
   @endphp
 @endif
 
+<div id="feefo-service-review-floating-widgetId"></div>
 <footer class="content-info blue-bg-gradient py-8 lg:pt-20">
   <div class="container mx-auto flex flex-wrap px-0 mb-4">
     <div class="w-full md:w-2/3 lg:w-1/3 px-4 md:pr-8 mb-8 md:mb-0">
