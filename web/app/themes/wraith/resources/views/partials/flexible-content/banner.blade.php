@@ -27,7 +27,7 @@ $offer_badge = get_sub_field('offer_badge');
     @php
       $primary_offer = get_sub_field('primary_offer');
     @endphp
-    <div class="w-full lg:w-[15%] h-fit absolute z-30 right-0 bottom-0 top-0 lg:block hidden">
+    <div class="w-full lg:w-[300px] h-fit absolute z-30 right-0 bottom-0 top-0 lg:block hidden">
       <div class="{{ count($primary_offer) > 1 ? 'slick-offer' :'' }} w-full absolute z-30 right-[3rem] bottom-0 top-[9rem]">
         @if (have_rows('primary_offer'))
           @while (have_rows('primary_offer')) 
@@ -40,9 +40,9 @@ $offer_badge = get_sub_field('offer_badge');
             <div class="flex items-center justify-center flex-col">
               <div class="relative w-full mx-auto h-fit z-30 top-8">
                 @include('partials.components.ribbon',['primary_colour' => '#9F0A15'])
-                <p class="text-white absolute font-serif text-[19px] top-1/2 left-1/2 translate-x-[-50%] translate-y-[-100%] max-w-[20rem] font-bold m-0 p-0 whitespace-nowrap "> SECURITY GUARANTEE </p>
+                <p class="text-white absolute font-serif text-[19px] top-[53%] left-1/2 translate-x-[-50%] translate-y-[-100%] max-w-[20rem] font-bold m-0 p-0 whitespace-nowrap "> SECURITY GUARANTEE </p>
               </div>
-              <div class="blue-bg-gradient rounded-lg w-[70%] shadow-md mx-auto">
+              <div class="blue-bg-gradient rounded-lg w-[225px] shadow-md mx-auto">
                 <div class="child-p:text-white offer-text-effect child-p:text-center child-p:text-2xl child-p:leading-relaxed pt-8 pb-4 child-p:font-serif child-p:m-0 ">{!! $offer !!}</div>
                 <div class="h-4 w-full bg-white"></div>
                 <div class="h-1 w-full bg-white mt-1"></div>
