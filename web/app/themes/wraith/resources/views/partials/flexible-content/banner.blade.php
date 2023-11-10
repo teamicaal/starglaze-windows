@@ -28,7 +28,7 @@ $offer_badge = get_sub_field('offer_badge');
       $primary_offer = get_sub_field('primary_offer');
     @endphp
     <div class="w-full lg:w-[300px] h-fit absolute z-30 right-0 bottom-0 top-0 lg:block hidden">
-      <div class="{{ count($primary_offer) > 1 ? 'slick-offer' :'' }} w-full absolute z-30 right-[3rem] bottom-0 top-[9rem]">
+      <div class="{{ count($primary_offer) > 1 ? 'slick-offer' :'' }} w-full absolute z-30 right-[3rem] bottom-0 2xl:top-[9rem] top-[8rem]">
         @if (have_rows('primary_offer'))
           @while (have_rows('primary_offer')) 
           @php 
