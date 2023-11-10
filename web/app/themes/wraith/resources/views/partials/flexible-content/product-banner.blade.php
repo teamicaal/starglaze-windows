@@ -43,7 +43,7 @@ $offer_badge = get_sub_field('offer_badge');
                 <p class="text-white absolute top-[53%] left-1/2 translate-x-[-50%] translate-y-[-100%] max-w-[20rem] font-bold m-0 p-0 whitespace-nowrap font-serif text-[19px]"> SECURITY GUARANTEE </p>
               </div>
               <div class="blue-bg-gradient rounded-lg w-[220px] shadow-md mx-auto">
-                <div class="child-p:text-white child-p:text-center offer-text-effect child-p:text-2xl child-p:leading-relaxed pt-8 pb-4 child-p:font-serif  child-p:m-0 ">{!! $offer !!}</div>
+                <div class="child-p:text-white child-p:text-center offer-text-effect child-p:text-2xl child-p:leading-relaxed pt-4 pb-4 child-p:font-serif  child-p:m-0 ">{!! $offer !!}</div>
                 <div class="h-4 w-full bg-white"></div>
                 <div class="h-1 w-full bg-white mt-1"></div>
                 <a href="{{ $button_link }}" class="px-12 py-2 rounded-lg m-2 bg-white hover:scale-105 transition-all ease-in-out duration-500 text-secondary border-0 text-center flex justify-center items-center">{!! $button_label !!}</a>
