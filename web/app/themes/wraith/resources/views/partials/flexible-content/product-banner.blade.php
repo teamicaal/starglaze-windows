@@ -39,7 +39,7 @@ $offer_badge = get_sub_field('offer_badge');
           @endphp
             <div class="flex items-center justify-center flex-col">
               <div class="relative w-full mx-auto h-fit z-30 top-8">
-                @include('partials.components.ribbon',['primary_colour' => '#9F0A15'])
+                @include('partials.components.ribbon-rounded',['primary_colour' => '#9F0A15'])
                 <p class="text-white absolute top-[53%] left-1/2 translate-x-[-50%] translate-y-[-100%] max-w-[20rem] font-bold m-0 p-0 whitespace-nowrap font-serif text-[19px]"> SECURITY GUARANTEE </p>
               </div>
               <div class="blue-bg-gradient rounded-lg w-[220px] shadow-md mx-auto">
