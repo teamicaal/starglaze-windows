@@ -11,7 +11,7 @@
   $social_pinterest = get_field('social_pinterest', 'option');
   @endphp
 @endif
-
+<script type="text/javascript" defer src="https://api.feefo.com/api/javascript/starglaze-windows"></script>
 <div id="feefo-service-review-floating-widgetId"></div>
 <footer class="content-info blue-bg-gradient py-8 lg:pt-20">
   <div class="container mx-auto flex flex-wrap px-0 mb-4">
