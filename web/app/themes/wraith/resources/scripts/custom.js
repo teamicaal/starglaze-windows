@@ -314,7 +314,7 @@ import mixitup from 'mixitup';
   $('.image_slider_main').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: false,
     centerMode: true,
     fade: true,
     asNavFor: '.image_slider_thmb'
