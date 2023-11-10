@@ -44,7 +44,7 @@ $offer_badge = get_sub_field('offer_badge');
               </div>
               <div class="blue-bg-gradient rounded-lg w-[225px] shadow-md mx-auto">
                 <div class="child-p:text-white offer-text-effect child-p:text-center child-p:text-2xl child-p:leading-relaxed pt-4 pb-4 child-p:font-serif child-p:m-0 ">{!! $offer !!}</div>
-                <div class="h-4 w-full bg-white"></div>
+                <div class="h-4 w-full bg-white 2xl:block hidden"></div>
                 <div class="h-1 w-full bg-white mt-1"></div>
                 <a href="{{ $button_link }}" class="px-12 py-2 rounded-lg m-2 bg-white hover:scale-105 transition-all ease-in-out duration-500 text-secondary border-0 text-center flex justify-center items-center">{!! $button_label !!}</a>
               </div>
