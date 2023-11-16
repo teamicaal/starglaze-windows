@@ -7,12 +7,12 @@ $paragraph = get_sub_field('paragraph');
 <section id="blue-online-quote-cta" class="blue-bg-gradient {!! $custom_class ? ' ' . $custom_class : 'lg:py-20 py-16' !!}">
     <div class="container mx-auto">
         <div class="flex flex-wrap justify-between items-center">
-            <div data-aos="flip-right" data-aos-duration="1000" data-aos-delay="100">
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
                 <h2 class="text-white font-bold font-serif md:text-4xl text-3xl">{{ $title }}</h2>
                 {!! $paragraph ? '<div class="mb-6 child-p:mx-auto child-p:tracking-wider child-p:text-white">' . $paragraph . '</div>' : null !!}
             </div>
             @if( have_rows('buttons') )
-                <div data-aos="flip-left" data-aos-duration="1000" data-aos-delay="100" class="flex flex-wrap gap-4">
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" class="flex flex-wrap gap-4">
                     @php $i = 0; @endphp
                     @while( have_rows('buttons') )
                     @php
