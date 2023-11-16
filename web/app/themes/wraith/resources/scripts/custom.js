@@ -91,7 +91,7 @@ import mixitup from 'mixitup';
     infinite:true,
     swipeToSlide: true,
     arrows: false,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 3000,
 
     responsive: [
