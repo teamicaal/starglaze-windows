@@ -162,7 +162,7 @@
                                         <img class="w-full h-full object-cover relative" src="{{ $swatch_image['url'] }}" alt="{{ $swatch_image['alt'] }}">
                                         {{-- <div class="w-full h-0 absolute bottom-0 bg-primary group-hover:h-full ease-in-out duration-500 mix-blend-multiply">
                                         </div> --}}
-                                        <div class="text-center relative group-hover:bottom-6 blue-bg-gradient text-[#3A3A3A]">{{ $swatch_name }}</div>
+                                        <div class="text-center relative group-hover:bottom-6 blue-bg-gradient text-white">{{ $swatch_name }}</div>
                                     </div>
                                 </div>
                             @endwhile
