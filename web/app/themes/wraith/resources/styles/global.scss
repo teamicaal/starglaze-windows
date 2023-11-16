@@ -566,6 +566,10 @@ a {
   background: #34333873;
 
   @screen lg {
+    width: 50%;
+    background: #343338ad;
+  }
+  @screen xl {
     width: 42%;
     background: #343338ad;
   }

@@ -58,7 +58,30 @@ $offer_badge = get_sub_field('offer_badge');
   @endif
   @if( $banner_type )
   <div class="full-width sm:flex sm:items-center relative lg:!min-h-[89vh] sm:!min-h-[60vh] !min-h-[100vh]">
-    <div class="leftBannerBox"></div>
+    <div class="leftBannerBox flex justify-center items-center">
+      <div class="xl:container banner-content xl:mx-auto  mx-[40px] border-b sm:border-none border-primary pt-[147px]">
+        <div class="sm:w-[540px] w-full relative z-20 mx-auto lg:mr-0">
+          <h4 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" class="text-white lg:text-2xl text-lg font-serif uppercase tracking-wider lg:mb-4 mb-2">{!! $subtitle !!}</h4>
+          <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" class="text-3xl text-white title-shadow md:text-4xl lg:text-[55px] banner-title lg:mb-8 mb-4 font-serif font-bold"> {!! $title !!}</h1>
+          <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" class="child-p:mb-12 para-text child-p:text-white child-p:leading-loose sm:block hidden"> {!! $paragraph !!} </div>
+          @if( have_rows('buttons') )
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" class="block mt-8">
+              @php $i = 0; @endphp
+              @while( have_rows('buttons') )
+                @php
+                the_row();
+                $i++;
+                $link = get_sub_field('link');
+                $label = get_sub_field('label');
+                $anchor = get_sub_field('anchor');
+                @endphp
+                <a href="{{ $link }}" class="btn block md:inline-block md:mr-4 mb-4 {{ $i == 1 ? 'bg-primary text-white hover:bg-secondary font-bold hover:border-none' : 'bg-white text-[#343338] font-bold border border-primary hover:bg-primary hover:text-white' }}{{ $anchor ? ' btn-scroll' : null }}">{!! $label !!}</a>
+              @endwhile
+            </div>
+          @endif
+        </div>
+      </div>
+    </div>
     @if( $images )
       <div class="sm:absolute relative sm:top-0 sm:left-0 h-[40vh] w-full sm:h-full z-10">
         @if( count($images) > 1 )
@@ -89,28 +112,7 @@ $offer_badge = get_sub_field('offer_badge');
         @endif
       </div>
     @endif
-    <div class="xl:container banner-content xl:mx-auto  mx-[40px] border-b sm:border-none border-primary pt-[147px]">
-      <div class="sm:w-[540px] w-full relative z-20 mx-auto lg:ml-0 lg:mr-auto">
-        <h4 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" class="text-white lg:text-2xl text-lg font-serif uppercase tracking-wider lg:mb-4 mb-2">{!! $subtitle !!}</h4>
-        <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" class="text-3xl text-white title-shadow md:text-4xl lg:text-[55px] banner-title lg:mb-8 mb-4 font-serif font-bold"> {!! $title !!}</h1>
-        <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" class="child-p:mb-12 para-text child-p:text-white child-p:leading-loose sm:block hidden"> {!! $paragraph !!} </div>
-        @if( have_rows('buttons') )
-          <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" class="block mt-8">
-            @php $i = 0; @endphp
-            @while( have_rows('buttons') )
-              @php
-              the_row();
-              $i++;
-              $link = get_sub_field('link');
-              $label = get_sub_field('label');
-              $anchor = get_sub_field('anchor');
-              @endphp
-              <a href="{{ $link }}" class="btn block md:inline-block md:mr-4 mb-4 {{ $i == 1 ? 'bg-primary text-white hover:bg-secondary font-bold hover:border-none' : 'bg-white text-[#343338] font-bold border border-primary hover:bg-primary hover:text-white' }}{{ $anchor ? ' btn-scroll' : null }}">{!! $label !!}</a>
-            @endwhile
-          </div>
-        @endif
-      </div>
-    </div>
+    
     @if( count($images) > 1 )
     <div class="hidden sm:flex absolute z-20 bottom-0 right-0">
       <button type="button" class="slick-p block w-12 h-12 text-center rounded-l-sm bg-white border-r border-grey-lighter text-grey hover:bg-grey-lightest hover:text-primary focus:bg-grey-lighter focus:text-black focus:outline-none transition inline-block"><i class="fa fa-caret-left align-middle"></i></button>
