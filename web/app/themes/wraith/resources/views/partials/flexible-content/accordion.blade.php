@@ -10,7 +10,7 @@
     'posts_per_page' => '4',
 ])
 
-<section id="accordion" class="container mx-auto {!! $custom_class ? $custom_class : ' lg:py-8 py-4 ' !!} ">
+<section id="accordion" class="container mx-auto {!! $custom_class ? $custom_class : ' lg:py-8 py-4 ' !!} overflow-hidden">
     
     <div class="relative flex flex-wrap justify-between {{ $faq_schema ? 'block' : null }}">
         <div data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="100" class="lg:w-[45%] w-full lg:mx-0 md:mx-4 items-start relative z-10">
