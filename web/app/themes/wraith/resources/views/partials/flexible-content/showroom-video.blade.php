@@ -6,19 +6,19 @@ $video = get_sub_field('video');
 
 <section id="videosPage" class=" py-12">
   @if (is_page( array( '1070' ) ) )
-  <h1 class="text-[#3F7E57] lg:text-4xl text-3xl font-bold text-center font-serif mb-6">{{ $title ? $title : null }}</h1>
+  <h1 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" class="text-[#3F7E57] lg:text-4xl text-3xl font-bold text-center font-serif mb-6">{{ $title ? $title : null }}</h1>
 	@else
   <h1 class="text-primary lg:text-4xl text-3xl font-bold text-center font-serif mb-6">{{ $title ? $title : null }}</h1>
 	@endif
   <div class="container mx-auto">
-    <div class="w-full px-4 mb-4">
+    <div data-aos="flip-right" data-aos-duration="1000" data-aos-delay="100" class="w-full px-4 mb-4">
       @if($iframe)
         <div class="embed embed-21by9 rounded-xl">
           <iframe src="{!! $iframe !!}" class="object-cover-absolute w-full h-full"></iframe>
         </div>
       @endif
       @if ($video)
-          <div class="hero relative h-full w-full">
+          <div data-aos="flip-right" data-aos-duration="1000" data-aos-delay="100" class="hero relative h-full w-full">
             <video class="embed embed-21by9 rounded-xl" controls muted loop>
                 <source src="{!! $video['url'] !!}" type="video/mp4">
             </video>
