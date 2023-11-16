@@ -156,18 +156,14 @@
                                     $swatch_name = get_sub_field('swatch_name');
                                     $swatch_name_clean = strtolower(str_replace(' ', '_', $swatch_name));
                                 @endphp
-                                <div data-image-swatch="{{ $swatch_name_clean }}"
-                                    class="flex flex-col items-center justify-center cursor-pointer">
-                                    <div
-                                        class="w-[150px] h-[80px] hardware-height mb-2 rounded-[5px] bg-white group shadow-lg overflow-hidden relative">
+                                <div data-image-swatch="{{ $swatch_name_clean }}" class="flex flex-col group items-center justify-center cursor-pointer">
+                                    <div class="w-[150px] h-[80px] hardware-height mb-2 rounded-[5px] bg-white group shadow-lg overflow-hidden relative">
 
-                                        <img class="w-full h-full object-cover relative"
-                                            src="{{ $swatch_image['url'] }}" alt="{{ $swatch_image['alt'] }}">
-                                        <div
-                                            class="w-full h-0 absolute bottom-0 bg-primary group-hover:h-full ease-in-out duration-500 mix-blend-multiply">
-                                        </div>
+                                        <img class="w-full h-full object-cover relative" src="{{ $swatch_image['url'] }}" alt="{{ $swatch_image['alt'] }}">
+                                        {{-- <div class="w-full h-0 absolute bottom-0 bg-primary group-hover:h-full ease-in-out duration-500 mix-blend-multiply">
+                                        </div> --}}
+                                        <div class="text-center relative group-hover:bottom-6 blue-bg-gradient text-[#3A3A3A]">{{ $swatch_name }}</div>
                                     </div>
-                                    <div class="text-center text-[#3A3A3A]">{{ $swatch_name }}</div>
                                 </div>
                             @endwhile
                         </div>
