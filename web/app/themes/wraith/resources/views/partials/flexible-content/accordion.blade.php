@@ -13,7 +13,7 @@
 <section id="accordion" class="container mx-auto {!! $custom_class ? $custom_class : ' lg:py-8 py-4 ' !!} ">
     
     <div class="relative flex flex-wrap justify-between {{ $faq_schema ? 'block' : null }}">
-        <div class="lg:w-[45%] w-full lg:mx-0 md:mx-4 items-start relative z-10">
+        <div data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="100" class="lg:w-[45%] w-full lg:mx-0 md:mx-4 items-start relative z-10">
             <div class="flex items-center justify-end">
                 <button class="case-study-arrow-p flex items-center justify-center">
                     <i class="fa fa-chevron-left bg-primary text-white border border-white text-sm py-4 px-6 rounded-tl-full rounded-bl-full"></i>
@@ -50,7 +50,7 @@
                 @endwhile
             </div>
         </div>
-        <div class="lg:w-1/2 w-full lg:mt-0 mt-4">
+        <div data-aos="zoom-in-left" data-aos-duration="1000" data-aos-delay="100" class="lg:w-1/2 w-full lg:mt-0 mt-4">
             @hasposts($query)
           <div class="lg:flex  justify-center items-center relative accordion-case-study-slick">
             @posts($query)

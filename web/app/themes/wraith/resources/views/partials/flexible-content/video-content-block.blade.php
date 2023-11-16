@@ -10,9 +10,9 @@ $image_alt = get_sub_field('image_alt');
 	<div class="">
 			<div class="flex flex-wrap relative items-center">
 				<div class="w-full lg:w-1/3 ml-auto lg:mt-0 mt-8 px-4 lg:px-0 relative">
-					<h2 class="lg:text-4xl text-3xl text-primary capitalize font-bold font-serif mb-12">{{ $title ? $title : ' ' }}</h2>
+					<h2 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" class="lg:text-4xl text-3xl text-primary capitalize font-bold font-serif mb-12">{{ $title ? $title : ' ' }}</h2>
 					@if( have_rows('usp_list') )
-						<ul class="list-none py-0 px-0 mt-8">
+						<ul data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" class="list-none py-0 px-0 mt-8">
 							@while( have_rows('usp_list') )
 							@php
 							the_row();
@@ -33,13 +33,13 @@ $image_alt = get_sub_field('image_alt');
 				</div>
 
 				@if( $image )
-					<div class="w-full lg:w-3/5">
+					<div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" class="w-full lg:w-3/5">
 						<div class="embed-16by9  overflow-hidden">
 							<img data-src="{{ $image['url'] }}" alt="{{ $image_alt ? $image_alt : $image['alt'] }}" class="lozad object-fit-cover w-full h-full inset-0 rounded-tl-xl rounded-bl-xl">
 						</div>
 					</div>
 				@else
-				<div class="w-full lg:w-3/5">
+				<div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" class="w-full lg:w-3/5">
 					<div class="embed embed-16by9 ">
 						<iframe src="{!! $video_iframe_url !!}" class="object-cover-absolute w-full h-full rounded-tl-xl rounded-bl-xl"></iframe>
 					</div>

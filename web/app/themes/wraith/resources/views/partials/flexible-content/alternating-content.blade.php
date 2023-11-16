@@ -18,19 +18,19 @@ $custom_class = get_sub_field('custom_class');
 		@endphp
 			<div class="flex flex-col relative {{ $i % 2 == 0 ? 'lg:flex-row-reverse flex-col mb-8' : 'lg:flex-row flex-col mb-8' }}">
 				@if( $image )
-				<div class="w-full lg:w-[45%]">
+				<div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" class="w-full lg:w-[45%]">
 					<div class="embed-16by9  overflow-hidden">
 						<img data-src="{{ $image['url'] }}" alt="{{ $image_alt ? $image_alt : $image['alt'] }}" class="lozad object-fit-cover w-full h-full inset-0 {{ $i % 2 == 0 ? 'rounded-tl-xl rounded-bl-xl' : 'rounded-tr-xl rounded-br-xl' }}">
 					</div>
 				</div>
 				@else
-				<div class="w-full lg:w-3/5">
+				<div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" class="w-full lg:w-3/5">
 					<div class="embed embed-16by9 ">
 						<iframe src="{!! $video_iframe_url !!}" class="object-cover-absolute w-full h-full rounded-tr-xl rounded-br-xl"></iframe>
 					</div>
 				</div>
 				@endif
-				<div class="w-full lg:w-1/2 mx-auto lg:mt-0 mt-8 px-4 lg:px-0 relative">
+				<div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" class="w-full lg:w-1/2 mx-auto lg:mt-0 mt-8 px-4 lg:px-0 relative">
 					<div class="flex flex-col items-start justify-center h-full  lg:w-[70%] w-full mx-auto {{ $i % 2 == 0 ? 'ml-auto' : ' ' }}">
 						@if (is_page( array( '1070' ) ) )
 						{!! $title ? '<h2 class="mb-4 lg:mb-8 text-[#3F7E57] font-serif font-medium text-4xl">' . $title . '</h2>' : null !!}

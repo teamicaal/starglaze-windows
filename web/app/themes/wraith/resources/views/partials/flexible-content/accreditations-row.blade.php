@@ -9,7 +9,7 @@ $custom_class = get_sub_field('custom_class');
   </div>
   <div class="container mx-auto relative px-0 lg:px-4">
     @if( have_rows('accreditations') )
-    <div class="flex lg:flex-wrap lg:justify-center items-center snap-x overflow-x-scroll lg:overflow-hidden lg:-mx-1 acc-slick">
+    <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" class="flex lg:flex-wrap lg:justify-center items-center snap-x overflow-x-scroll lg:overflow-hidden lg:-mx-1 acc-slick">
       @while( have_rows('accreditations') )
       @php
       the_row();
@@ -26,7 +26,7 @@ $custom_class = get_sub_field('custom_class');
     </div>
       
     @elseif( have_rows('accreditations', 'option') )
-      <div class="flex lg:flex-wrap lg:justify-center items-center snap-x overflow-x-scroll lg:overflow-hidden lg:-mx-1 acc-slick">
+      <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" class="flex lg:flex-wrap lg:justify-center items-center snap-x overflow-x-scroll lg:overflow-hidden lg:-mx-1 acc-slick">
         @while( have_rows('accreditations', 'option') )
           @php
           the_row();

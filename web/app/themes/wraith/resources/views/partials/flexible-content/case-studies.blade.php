@@ -9,7 +9,7 @@ $paragraph = get_sub_field('paragraph');
 ])
 
 <section class="relative lg:pt-20 pt-12">
-    <div class="relative">
+    <div data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" class="relative">
    
       <h2 class="text-center px-2 lg:text-4xl font-serif font-bold text-3xl lg:mb-6 mb-4 text-primary relative capitalize">{{ $title }}</h2>
       {!! $paragraph ? '<div class="latest-news child-p:relative child-p:mx-auto child-p:text-[#3A3A3A] child-p:font-normal child-p:max-w-screen-md child-p:leading-7 child-p:text-center child-p:mb-10">' . $paragraph . '</div>' : null !!}

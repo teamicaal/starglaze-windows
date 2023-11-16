@@ -4,7 +4,7 @@ $title = get_sub_field('title');
 $paragraph = get_sub_field('paragraph');
 @endphp
 
-<section id="online-quote-cta" class="gold-gradient {!! $custom_class ? ' ' . $custom_class : 'py-12' !!} mt-10 mb-8">
+<section data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" id="online-quote-cta" class="gold-gradient {!! $custom_class ? ' ' . $custom_class : 'py-12' !!} mt-10 mb-8">
     <div class="container mx-auto">
         <div class="flex flex-wrap justify-between items-center">
             <div>

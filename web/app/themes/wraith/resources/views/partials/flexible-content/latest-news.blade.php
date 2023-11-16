@@ -12,7 +12,7 @@ $i = 0;
 ])
 <div id="latest-news" class="overflow-hidden {!! $custom_class ? ' ' . $custom_class : ' lg:pt-20 pt-12' !!}">
   <div class="container mx-auto lg:flex">
-    <div class="lg:w-1/2 w-full lg:mr-8 mr-0">
+    <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" class="lg:w-1/2 w-full lg:mr-8 mr-0">
       <h2 class="text-primary md:text-4xl text-3xl font-serif font-bold max-w-[350px] mb-8 ">{{ $title }}</h2>
       {!! $paragraph ? '<div class="child-p:mb-4 child-p:font-normal child-p:text-[#7C7C7C]">' . $paragraph . '</div>' : null !!}
       @hasposts($query)
@@ -38,7 +38,7 @@ $i = 0;
         </p>
       @endnoposts
     </div>
-    <div class="lg:w-1/2 w-full relative slick-news lg:mt-[110px] aspect-video lg:aspect-square h-full">
+    <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" class="lg:w-1/2 w-full relative slick-news lg:mt-[110px] aspect-video lg:aspect-square h-full">
       @if (have_rows('right_side_image'))
         @while (have_rows('right_side_image'))
           @php

@@ -46,6 +46,9 @@ import lozad from 'lozad';
 const observer = lozad();
 observer.observe();
 
+import AOS from 'aos/dist/aos';
+AOS.init();
+
 import 'slick-carousel/slick/slick.min';
 import { Fancybox } from "@fancyapps/ui";
 Fancybox.bind()

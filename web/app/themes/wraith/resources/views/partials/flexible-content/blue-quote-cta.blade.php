@@ -19,7 +19,7 @@
                 $button_link = get_sub_field('button_link');
                 $youtube_video_link = get_sub_field('youtube_video_link');
                 @endphp
-                <div class=" flex justify-center items-center relative md:m-4 {{ $i == 1 ? 'md:mr-2 mb-12 lg:mb-0' : 'md:ml-2'}} rounded-lg overflow-hidden py-8 2xl:py-24 lg:py-8 lg:px-6 px-3 2xl:px-16 inner-wrapper">
+                <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="100" class=" flex justify-center items-center relative md:m-4 {{ $i == 1 ? 'md:mr-2 mb-12 lg:mb-0' : 'md:ml-2'}} rounded-lg overflow-hidden py-8 2xl:py-24 lg:py-8 lg:px-6 px-3 2xl:px-16 inner-wrapper">
                     <img src="{{ $image['url'] }}" alt="{{ $image_alt ? $image_alt : $image['alt'] }}" class=" w-full h-full bg-no-repeat bg-center bg-cover object-cover absolute">
                     <div class="absolute darkTint w-full h-full"></div>
                     <div class="relative p-4 md:p-8 flex flex-col justify-center items-center max-w-[1000px] rounded-lg border border-white h-auto">

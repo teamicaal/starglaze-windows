@@ -8,7 +8,7 @@ $bottom_content = get_sub_field('bottom_content');
 $i = 0;
 @endphp
 
-<section id="energy-calculator-content" class="relative {!! $custom_class ? ' ' . $custom_class : '' !!}">
+<section data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" id="energy-calculator-content" class="relative {!! $custom_class ? ' ' . $custom_class : '' !!}">
     @if ($title)
         <h2 class="text-center font-bold font-serif text-[#3F7E57] text-3xl lg:text-4xl mt-8">{!! $title !!}</h2>
         @endif

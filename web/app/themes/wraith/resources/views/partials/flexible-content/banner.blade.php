@@ -88,8 +88,8 @@ $offer_badge = get_sub_field('offer_badge');
         @endif
       </div>
     @endif
-    <div class="xl:container banner-content xl:mx-auto mx-[40px] border-b sm:border-none border-primary pt-[147px]">
-      <div class="sm:w-[540px] w-full relative z-20 mx-auto lg:ml-0 lg:mr-auto">
+    <div class="xl:container banner-content xl:mx-auto  mx-[40px] border-b sm:border-none border-primary pt-[147px]">
+      <div data-aos="fade" data-aos-duration="1000" data-aos-delay="100" class="sm:w-[540px] w-full relative z-20 mx-auto lg:ml-0 lg:mr-auto">
         {!! $subtitle ? '<h4 class=" text-white lg:text-2xl text-lg font-serif uppercase tracking-wider lg:mb-4 mb-2 ">' . $subtitle . '</h4>' : null !!}
         {!! $title ? '<' . $h . ' class="text-3xl text-white title-shadow md:text-4xl lg:text-[55px] banner-title lg:mb-8 mb-4 font-serif font-bold">' . $title . '</' . $h . '>' : null !!}
         {!! $paragraph ? '<div class="child-p:mb-12 para-text child-p:text-white child-p:leading-loose sm:block hidden">' . $paragraph . '</div>' : null !!}

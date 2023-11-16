@@ -2,7 +2,7 @@
     $i = 0;
 @endphp
 
-<section class="">
+<section id="two-image-cta" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="100" class="">
     @if (have_rows('cta_cards' , 'option'))
         <div class="flex flex-wrap md:flex-nowrap mx-4 md:mx-0 gap-4">
             @while (have_rows('cta_cards' , 'option'))
