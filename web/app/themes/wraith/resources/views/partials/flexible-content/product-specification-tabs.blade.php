@@ -162,7 +162,9 @@
                                         <img class="w-full h-full object-cover relative" src="{{ $swatch_image['url'] }}" alt="{{ $swatch_image['alt'] }}">
                                         {{-- <div class="w-full h-0 absolute bottom-0 bg-primary group-hover:h-full ease-in-out duration-500 mix-blend-multiply">
                                         </div> --}}
+                                        @if ($swatch_name)
                                         <div class="text-center relative group-hover:bottom-10 blue-bg-gradient capitalize py-2 text-white">{{ $swatch_name }}</div>
+                                        @endif
                                     </div>
                                 </div>
                             @endwhile
