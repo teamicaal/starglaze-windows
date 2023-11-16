@@ -5,7 +5,7 @@ $subtitle = get_sub_field('subtitle');
 $details = get_sub_field('details');
 @endphp
 <section id="visit-shoroom-form" class="{!! $custom_class ? ' ' . $custom_class : 'md:my-8' !!}">
-  <div class="bg-[#eeeeee] lg:py-24 py-12">
+  <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" class="bg-[#eeeeee] lg:py-24 py-12">
     <div class="container mx-auto">
       <div class="lg:w-3/4 xl:w-2/3 mx-auto">
         @if( $subtitle )
