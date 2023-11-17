@@ -202,3 +202,33 @@ add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
 add_filter( 'excerpt_length', function($length) {
   return 20;
 } );
+
+function set_posts_per_page_for_home_blog( $query ) {
+    if ( !is_admin() && $query->is_main_query() && is_post_type_archive( 'home-blog' ) ) {
+        $query->set( 'posts_per_page', '10' );
+    }
+}
+add_action( 'pre_get_posts', 'App\\set_posts_per_page_for_home_blog' );
+
+// function add_posts_to_home_blog($query) {
+//     // Check if on the main query for the main loop and is an archive page
+//     if ($query->is_main_query() && is_archive()) {
+//         // Replace 'your_custom_post_type' with the name of your custom post type
+//         if ($query->get('post_type') == 'home-blog') {
+//             // Replace 'your_category_slug' with the slug of your specific category
+//             $query->set('post_type', array('home-blog', 'post'));
+//             $query->set('posts_per_page', -1);
+//             $query->set('tax_query', array(
+//                 array(
+//                     'taxonomy' => 'category',
+//                     'field'    => 'slug',
+//                     'terms'    => 'blog',
+//                 ),
+//             ));
+//         }
+//     }
+
+//     return $query;
+// }
+
+// add_action('pre_get_posts', 'App\\add_posts_to_home_blog');
