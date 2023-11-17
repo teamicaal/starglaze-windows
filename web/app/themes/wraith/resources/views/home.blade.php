@@ -1,84 +1,37 @@
 @extends('layouts.app')
 
 @section('content')
-@php
-    $title = get_field('news_title', 'option');
-    $body = get_field('news_body', 'option');
-    $args = array(
-             'post_type' => array('home-blog', 'post'), 
-               'posts_per_page' => -1, 
-            );
-
-              $query = new WP_Query($args);
-@endphp
-<div class="container mx-auto py-8 sm:py-12 lg:pt-20 mt-16 lg:mt-32">
-  @if( $title )
-    <h1 class="py-3">
-      {{ $title }}
-    </h1>
-  @else
-    @include('partials.page-header')
-  @endif 
-  @noposts
+<div class="container mx-auto  py-8 sm:py-12 lg:pt-20 mt-16 lg:mt-32">
+  @include('partials.page-header')
+  @if (!have_posts())
     <div class="alert alert-warning">
       {{ __('Sorry, no results were found.', 'sage') }}
     </div>
-    {!! get_search_form(false) !!}
-  @endnoposts
+  @endif
 </div>
-  <div class="container mx-auto">
-  <div class="flex">
-
-    @php
-        $types = array();
-    @endphp 
-
-    @posts($query)
-      @php
-        $type = get_post_type();
-        foreach (explode(', ',$type) as $type){
-          if( !in_array($type, $types) && $type != '' ) {
-            array_push($types, $type);
-          }
-        }
-      @endphp
-    @endposts
-  </div>
-  <div>
-    <div class="flex lg:flex-wrap scroll-x-proximity overflow-x-scroll lg:overflow-hidden -mx-4 md:mx-0 pl-4 md:pl-0 mb-4">
-      <button type="button" data-filter=".post" class="mixitup-control mixitup-control-active whitespace-nowrap bg-[#E8EeE8] text-[#303947] scroll-align-start mb-4 capitalize font-medium mr-3 px-4 py-3 focus:outline-none">News</button>
-      <button type="button" data-filter=".home-blog" class="mixitup-control whitespace-nowrap bg-[#E8EeE8] text-[#303947] scroll-align-start mb-4 capitalize font-medium mr-3 px-4 py-3 focus:outline-none">Home Star Blog</button>
-    {{-- @foreach($types as $type)
-     <button type="button" data-filter=".{{ str_replace(',-', ' ', str_replace(' ', '-', $type)) }}" class="mixitup-control whitespace-nowrap bg-[#E8EeE8] text-[#303947] scroll-align-start mb-4 capitalize font-medium mr-3 px-4 py-3 focus:outline-none">{{ $type }}</button>
-   @endforeach --}}
-  </div>
-    <div class="flex flex-wrap md:-mx-4 mix-container">
-      @posts($query)
-      @php
-        $type = get_post_type();
-      @endphp
-        <article class="w-full lg:w-1/3 p-4 mix {{ str_replace(' ', '-', strtolower($type)) }}">
-            <a href="@permalink">
-              <div class="w-full md:mr-4 relative overflow-hidden" style="min-height: 251px;">
-                <img data-src="@thumbnail('4by3-md', false)" src="@thumbnail('lozad', false)" width="100%" height="auto" alt="@title" class="lozad object-cover inset-0 w-full h-full absolute">
-              </div>
-            </a>
-            <div class="bg-primary p-4">
-              <div class="relative">
-                <a href="@permalink"><h2 class="entry-title font-medium  text-white font-serif text-lg mb-4">@title</h2></a>
-              </div>
-              <div class="w-full flex flex-wrap justify-between">
-                <div class="text-white font-serif relative  z-30 tracking-wide	mb-2"> {!! get_the_date() !!}</div>
-                <a href="@permalink" class=" text-secondary font-bold tracking-wide border-b-2 border-secondary hover:border-white inline-block max-w-full md:w-auto sec-inverted">READ POST</a>
-              </div>
+  <div class="container mx-auto pt-2 pb-4">
+    <div class="flex flex-wrap -mx-1">
+      @while (have_posts()) @php the_post() @endphp
+        <article class="w-full lg:w-1/3 p-4">
+          <a href="@permalink">
+            <div class="w-full md:mr-4 relative overflow-hidden" style="min-height: 251px;">
+              <img data-src="@thumbnail('4by3-md', false)" src="@thumbnail('lozad', false)" width="100%" height="auto" alt="@title" class="lozad object-cover inset-0 w-full h-full absolute">
             </div>
-          </article>
-      @endposts
+          </a>
+          <div class="bg-primary p-4">
+            <div class="relative">
+              <a href="@permalink"><h2 class="entry-title font-medium  text-white font-serif text-lg mb-4">@title</h2></a>
+            </div>
+            <div class="w-full flex flex-wrap justify-between">
+              <div class="text-white font-serif relative  z-30 tracking-wide	mb-2"> {!! get_the_date() !!}</div>
+              <a href="@permalink" class=" text-secondary font-bold tracking-wide border-b-2 border-secondary hover:border-white inline-block max-w-full md:w-auto sec-inverted">READ POST</a>
+            </div>
+          </div>
+        </article>
+      @endwhile
+      @php wp_reset_query() @endphp
     </div>
   </div>
-  
-  {!! get_the_posts_navigation() !!}
-
   <div class="w-full home-blog-pagination py-1 bg-grey-lightest">
     <div class="container mx-auto text-center">
       <div class="pagination flex items-center justify-center px-1 py-1">
@@ -93,5 +46,4 @@
       </div>
     </div>
   </div>
-
 @endsection
