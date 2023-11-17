@@ -1,6 +1,7 @@
 @php
 $title = get_sub_field('title');
 $paragraph = get_sub_field('paragraph');
+$custom_class = get_sub_field('custom_class');
 @endphp
 
 @query([
@@ -8,7 +9,7 @@ $paragraph = get_sub_field('paragraph');
     'posts_per_page' => '4',
 ])
 
-<section class="relative lg:pt-20 pt-12">
+<section class="relative {!! $custom_class ? ' lg:pt-20 pt-12 ' . $custom_class : '' !!}">
     <div data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" class="relative">
    
       <h2 class="text-center px-2 lg:text-4xl font-serif font-bold text-3xl lg:mb-6 mb-4 text-primary relative capitalize">{{ $title }}</h2>

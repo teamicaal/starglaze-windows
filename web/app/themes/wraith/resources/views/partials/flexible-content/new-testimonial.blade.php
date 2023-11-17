@@ -4,7 +4,7 @@ $custom_class = get_sub_field('custom_class');
 @endphp
 <section class="{{ $custom_class }} lg:pt-20 pt-12 pb-12">
   <div class="container mx-auto mb-8 lg:w-[70%] w-full">
-    <h2 class="text-primary uppercase font-bold font-serif tracking-wide text-3xl lg:text-4xl mb-12 ">{!! $title !!}</h2>
+    <h2 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" class="text-primary uppercase font-bold font-serif tracking-wide text-3xl lg:text-4xl mb-12 ">{!! $title !!}</h2>
     <div class="relative flex flex-wrap justify-between">
       @if( have_rows('testimonial_repeater' , 'option') )
           @php 
@@ -17,7 +17,7 @@ $custom_class = get_sub_field('custom_class');
               $testimonial_platform = get_sub_field('testimonial_platform');
               $testimonial_rating = get_sub_field('testimonial_rating');
             @endphp
-            <div class="lg:w-[32%] md:w-[48%] w-full bg-[#f9fafb] shadow-lg rounded-md mb-8">
+            <div data-aos="flip-up" data-aos-duration="1000" data-aos-delay="100" class="lg:w-[32%] md:w-[48%] w-full bg-[#f9fafb] shadow-lg rounded-md mb-8">
               <div class="py-8 px-8">
                 <span class="max-w-[40px] flex items-center 
                   <?php if($testimonial_platform == 'facebook'): ?> facebook"> <img class="w-full mr-2" src="/app/uploads/2023/09/faebook-icon.png" alt="">Facebook
