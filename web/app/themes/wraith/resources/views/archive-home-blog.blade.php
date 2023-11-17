@@ -44,16 +44,16 @@
   @endnoposts
 </div>
   <div class="container mx-auto">
-    <div class="flex flex-wrap md:-mx-4">
-      @php
-      $i = 0;
-      @endphp
+      <div class="flex flex-wrap md:-mx-4">
+        @php
+        $i = 0;
+        @endphp
         @if (is_array($ids))
           @foreach( $ids as $id )
-          @php
-              $image_id = get_post_thumbnail_id( $id );
-              $image_thumbnail = wp_get_attachment_image_src( $image_id , 'thumbnail-lg' );
-          @endphp
+            @php
+                $image_id = get_post_thumbnail_id( $id );
+                $image_thumbnail = wp_get_attachment_image_src( $image_id , 'thumbnail-lg' );
+            @endphp
             <article class="w-full lg:w-1/3 p-4">
               <a href="{{ get_the_permalink($id) }}">
                 <div class="w-full md:mr-4 relative overflow-hidden" style="min-height: 251px;">
@@ -72,7 +72,7 @@
             </article>
           @endforeach
         @endif
-    </div>
+      </div>
   </div>
   {{-- {!! get_the_posts_navigation() !!} --}}
 
