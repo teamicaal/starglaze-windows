@@ -6,7 +6,7 @@
     $body = get_field('news_body', 'option');
 @endphp
 <div class="container mx-auto py-8 sm:py-12 lg:pt-20 mt-16 lg:mt-32">
-    <h1 class="py-3">
+    <h1 class="text-primary capitalize font-bold font-serif tracking-wide text-3xl lg:text-5xl">
       {{ $title ? $title : 'Star Home Blog' }}
     </h1>
     @php
