@@ -12,7 +12,7 @@
   <div class="container mx-auto pt-2 pb-4">
     <div class="flex flex-wrap -mx-1">
       @while (have_posts()) @php the_post() @endphp
-        <article class="w-full lg:w-1/3 p-4">
+        <article data-aos="flip-up" data-aos-duration="1000" data-aos-delay="100" class="w-full lg:w-1/3 p-4">
           <a href="@permalink">
             <div class="w-full md:mr-4 relative overflow-hidden" style="min-height: 251px;">
               <img data-src="@thumbnail('url', false)" src="@thumbnail('url', false)" width="100%" height="auto" alt="@title" class="lozad object-cover inset-0 w-full h-full absolute">

@@ -6,8 +6,8 @@
     $title = get_field('downloads_title', 'option');
     $body = get_field('downloads_body', 'option');
 @endphp
-<div class="container mx-auto py-8 sm:py-12 lg:pt-20 mt-16 lg:mt-32">
-  <h1 class="py-3">
+<div class="container mx-auto lg:pt-20 pt-12">
+  <h1 class=" text-primary capitalize font-bold font-serif tracking-wide text-3xl lg:text-5xl pb-4">
     {{ $title ? $title : 'Downloads' }}
   </h1>
   <div class="">{!! $body ? $body : null !!}</div>

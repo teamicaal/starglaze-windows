@@ -4,7 +4,7 @@ $title = get_sub_field('title');
 
 <section id="videosPage" class="lg:pt-20 pt-12">
   <div class="container mx-auto">
-    <h1 class="text-primary uppercase font-bold font-serif tracking-wide text-3xl lg:text-4xl mb-12">{{ $title ? $title : null }}</h1>
+    <h1 class="text-primary capitalize font-bold font-serif tracking-wide text-3xl lg:text-5xl pb-4">{{ $title ? $title : null }}</h1>
   </div>
   <div class="bg-gray-100 py-12">
     <div class="container mx-auto">

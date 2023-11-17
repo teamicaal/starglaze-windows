@@ -6,7 +6,7 @@
     $body = get_field('news_body', 'option');
 @endphp
 <div class="container mx-auto py-8 sm:py-12 lg:pt-20 mt-16 lg:mt-32">
-    <h1 class="py-3">
+    <h1 class="text-primary capitalize font-bold font-serif tracking-wide text-3xl lg:text-5xl">
       {{ $title ? $title : 'Star Home Blog' }}
     </h1>
   @php
@@ -54,7 +54,7 @@
                 $image_id = get_post_thumbnail_id( $id );
                 $image_thumbnail = wp_get_attachment_image_src( $image_id , 'thumbnail-lg' );
             @endphp
-            <article class="w-full lg:w-1/3 p-4">
+            <article data-aos="flip-up" data-aos-duration="1000" data-aos-delay="100" class="w-full lg:w-1/3 p-4">
               <a href="{{ get_the_permalink($id) }}">
                 <div class="w-full md:mr-4 relative overflow-hidden" style="min-height: 251px;">
                   <img data-src="{{ $image_thumbnail[0] }}" src="{{ $image_thumbnail[0] }}" width="100%" height="auto" alt="{{ get_the_title($id)}}" class="lozad object-cover inset-0 w-full h-full absolute">
