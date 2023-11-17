@@ -68,7 +68,7 @@
       @endposts
     </div>
   </div>
-  {!! get_the_posts_navigation() !!}
+  {{-- {!! get_the_posts_navigation() !!} --}}
 
   <div class="w-full home-blog-pagination py-1 bg-grey-lightest">
     <div class="container mx-auto text-center">
@@ -79,7 +79,7 @@
             'next_text'          => __('<span class="page-link">»</span>'),
             'before_page_number' => '<span class="page-link">',
             'after_page_number'  => '</span>'
-          ) );
+          ) );  
         @endphp
       </div>
     </div>
