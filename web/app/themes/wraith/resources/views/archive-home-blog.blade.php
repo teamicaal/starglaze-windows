@@ -40,7 +40,7 @@
     $query = new WP_Query([
       'post_type' => ['home-blog', 'post'],
       'post__in' => $ids,
-      'posts_per_page' => 10,
+      'posts_per_page' => 12,
       'paged' => $pageNumber
   ]);
     @endphp
