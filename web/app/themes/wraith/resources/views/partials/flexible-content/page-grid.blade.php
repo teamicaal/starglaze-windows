@@ -34,7 +34,7 @@ $button_label = get_sub_field('button_label');
             $excerpt = get_sub_field('excerpt');
             $permalink = get_the_permalink( $page_id );
             @endphp
-            <div class="xl:w-1/4 sm:w-1/2 w-full">
+            <div data-aos="flip-down" data-aos-duration="1000" data-aos-delay="100" class="xl:w-1/4 sm:w-1/2 w-full">
                 <a href="{{ $permalink }}" class="border-0">
                     <div class="product-grid-card shadow-lg mx-3 rounded-lg mb-6">
                         <div class="embed embed-3by2 rounded-lg">
