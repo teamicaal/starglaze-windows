@@ -59,7 +59,7 @@ $offer_badge = get_sub_field('offer_badge');
   @if( $banner_type )
   <div class="full-width sm:flex sm:items-center relative lg:!min-h-[89vh] sm:!min-h-[60vh] !min-h-[100vh]">
     <div class="leftBannerBox flex justify-center items-center">
-      <div class="xl:container banner-content xl:mx-auto mx-[40px] border-b sm:border-none border-primary pt-[147px]">
+      <div class="xl:container banner-content xl:mx-auto mx-[40px] border-none pt-[147px]">
         <div class="sm:w-[540px] w-full relative z-20 mx-auto lg:mr-0">
           <h4 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" class="text-white lg:text-2xl text-lg font-serif uppercase tracking-wider lg:mb-4 mb-2">{!! $subtitle !!}</h4>
           <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" class="text-3xl text-white title-shadow md:text-4xl lg:text-[57px] banner-title lg:mb-8 mb-4 font-serif font-bold">{!! $title !!}</h1>
