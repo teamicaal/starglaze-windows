@@ -52,7 +52,7 @@
       <article class="w-full lg:w-1/3 p-4">
         <a href="@permalink">
           <div class="w-full md:mr-4 relative overflow-hidden" style="min-height: 251px;">
-            <img data-src="@thumbnail('4by3-md', false)" src="@thumbnail('lozad', false)" width="100%" height="auto" alt="@title" class="lozad object-cover inset-0 w-full h-full absolute">
+            <img data-src="@thumbnail('url', false)" src="@thumbnail('url', false)" width="100%" height="auto" alt="@title" class="lozad object-cover inset-0 w-full h-full absolute">
           </div>
         </a>
         <div class="bg-primary p-4">
