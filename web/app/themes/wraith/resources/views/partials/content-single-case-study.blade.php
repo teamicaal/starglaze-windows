@@ -2,7 +2,7 @@
 
   <article @php post_class() @endphp>
       <div class="flex flex-col items-center justify-center mb-12 shadow-none">
-          <div class="w-full lg:w-2/5 py-8 lg:mr-4 mr-0">
+          <div class="w-full lg:w-2/5 py-8 flex flex-col items-center lg:mr-4 mr-0">
               <h1 class="text-3xl md:text-4xl font-bold font-serif text-secondary mb-8">{!! get_the_title() !!}</h1>
               <div class="flex flex-wrap">
                   <a class=" btn bg-secondary text-white hover:bg-primary hover:border-none block md:inline-block text-center  mb-4 mr-4 md:mb-0"
