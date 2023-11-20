@@ -1,8 +1,8 @@
 <div class="container mx-auto">
 
   <article @php post_class() @endphp>
-      <div class="flex flex-col lg:flex-row justify-center mb-12 shadow-none">
-          <div class="w-full lg:w-2/5 lg:my-auto mb-2">
+      <div class="flex flex-col items-center justify-center mb-12 shadow-none">
+          <div class="w-full lg:w-2/5 py-8">
               <h1 class="text-3xl md:text-4xl text-secondary font-bold font-serif mb-8">{!! get_the_title() !!}</h1>
               <div class="flex flex-wrap">
                   <a class="btn block md:inline-block bg-primary text-white hover:bg-secondary hover:border-none mb-4 md:mr-4 md:mb-0"
