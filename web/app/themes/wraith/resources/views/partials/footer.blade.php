@@ -52,15 +52,15 @@
       <div class="widget">
         <h3>Your Star Home Blog</h3>
           <div>
-              <a href="/news/case-studies/project-name-3/" class="flex items-center border-none mb-4">
+              <a href="/blog/what-to-expect-during-your-window-installation/" class="flex items-center border-none mb-4">
                 <img src="/app/uploads/2016/11/DSC0896-1-1-e1592393007778.jpg" alt="" class="w-[80px] h-[60px] object-cover">
                 <span class="text-[16px] text-white pl-4 font-semibold tracking-wide">What to Expect During Your Window Installation </span>
               </a>
-              <a href="/news/case-studies/project-name-2/" class="flex items-center border-none mb-4">
+              <a href="/blog/what-is-secured-by-design/" class="flex items-center border-none mb-4">
                 <img src="/app/uploads/2015/11/YO4G8105.jpg" alt="" class="w-[80px] h-[60px] object-cover">
                 <span class="text-[16px] text-white pl-4 font-semibold tracking-wide">What is Secured by Design? </span>
               </a>
-              <a href="/news/case-studies/project-name-1/" class="flex items-center border-none mb-4 lg:mb-0">
+              <a href="/blog/get-the-cottage-look-with-windows-and-doors/" class="flex items-center border-none mb-4 lg:mb-0">
                 <img src="/app/uploads/2019/11/upvc-windows-and-doors-e1582887664664.jpg" alt="" class="w-[80px] h-[60px] object-cover">
                 <span class="text-[16px] text-white pl-4 font-semibold tracking-wide">Get the Cottage Look with Windows and Doors </span>
               </a>
