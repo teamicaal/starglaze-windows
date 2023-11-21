@@ -75,7 +75,7 @@
             </div>
         </div> --}}
       </div>
-      <ul class="list-reset text-sm flex flex-wrap pt-20">
+      <ul class="list-reset text-sm flex flex-wrap pt-[7.5rem]">
         @include('partials.components.social_icons' , ['location'=>'footer'])
       </ul>
     </div>
