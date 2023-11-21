@@ -53,26 +53,23 @@
         @php
         $i++;
         @endphp
-        <a href="@permalink">
-          <article class="w-full lg:w-1/3 p-4 flex flex-col">
+          <a href="@permalink">
+            <article class="w-full lg:w-1/3 p-4">
             <a href="@permalink">
               <div class="w-full md:mr-4 relative overflow-hidden" style="min-height: 251px;">
-                
-                <img data-src="@thumbnail('4by3-md', false)" src="@thumbnail('lozad', false)" width="100%" height="auto" alt="@title" class="lozad object-cover inset-0 w-full h-full absolute">
+                <img data-src="@thumbnail('url', false)" src="@thumbnail('url', false)" width="100%" height="auto" alt="@title" class="lozad object-cover inset-0 w-full h-full absolute">
               </div>
             </a>
-              <div class="py-4 bg-white shadow-lg grow">
-                <div class="w-full pr-4 h-full items-start justify-between flex-col flex">
-                  <div class="relative px-6">
-                    <a href="@permalink"><h2 class="entry-title font-medium  text-secondary text-lg mb-4">@title</h2></a>
-                    <div class="text-[#7C7C7C] text-sm font-normal tracking-wide	mb-4"> {!! get_the_date() !!}</div>
-                    <div class="child-p:text-sm child-p:font-normal child-p:max-w-[26rem] child-p:text-[#7C7C7C] post-copy">{!! the_excerpt() !!}</div>
-                  </div>
-                  {{-- <a href="@permalink" class=" text-primary font-normal tracking-wide border-b-2 border-primary inline-block max-w-full md:w-auto sec-inverted">READ POST</a> --}}
-                </div>
-                
+            <div class="bg-primary p-4">
+              <div class="relative">
+                <a href="@permalink"><h2 class="entry-title font-medium  text-white font-serif text-lg mb-4">@title</h2></a>
               </div>
-            </article>
+              <div class="w-full flex flex-wrap justify-between">
+                <div class="text-white font-serif relative  z-30 tracking-wide	mb-2"> {!! get_the_date() !!}</div>
+                <a href="@permalink" class=" text-secondary font-bold tracking-wide border-b-2 border-secondary hover:border-white inline-block max-w-full md:w-auto sec-inverted">READ POST</a>
+              </div>
+            </div>
+          </article>
         </a>
         @endwhile
       </div>
