@@ -20,23 +20,22 @@
       the_post() 
       @endphp
       <a href="@permalink">
-        <article class="w-full lg:w-1/3 p-4">
-          <div class="w-full md:mr-4 relative overflow-hidden" style="min-height: 300px;">
-            <img data-src="@thumbnail('4by3-md', false)" src="@thumbnail('lozad', false)" width="100%" height="auto" alt="@title" class="lozad object-cover-absolute w-full h-full absolute">
+      <article class="w-full lg:w-1/3 p-4">
+        <a href="@permalink">
+          <div class="w-full md:mr-4 relative overflow-hidden" style="min-height: 251px;">
+            <img data-src="@thumbnail('url', false)" src="@thumbnail('url', false)" width="100%" height="auto" alt="@title" class="lozad object-cover inset-0 w-full h-full absolute">
           </div>
-          
-          <div class="w-full flex flex-col sm:flex-row p-4 relative border border-primary">
-            
-            <div class="w-full h-full items-start flex-col flex">                
-              <div class="relative">
-                <a href="@permalink"><h2 class="entry-title text-primary-dark text-xl">@title</h2></a>
-                <div class="text-secondary text-sm	mb-2 relative">{!! get_the_date() !!}</div>
-                <div class="child-p:text-sm child-p:font-normal child-p:max-w-[17rem] post-copy">{!! the_excerpt() !!}</div>
-              </div>
-              <a href="@permalink" class="inline-block w-full text-center uppercase font-bold text-xs tracking-wider text-secondary underline hover:border-none hover:text-primary-dark">Learn More</a>
-            </div>              
+        </a>
+        <div class="bg-primary p-4">
+          <div class="relative">
+            <a href="@permalink"><h2 class="entry-title font-medium  text-white font-serif text-lg mb-4">@title</h2></a>
           </div>
-        </article>
+          <div class="w-full flex flex-wrap justify-between">
+            <div class="text-white font-serif relative  z-30 tracking-wide	mb-2"> {!! get_the_date() !!}</div>
+            <a href="@permalink" class=" text-secondary font-bold tracking-wide border-b-2 border-secondary hover:border-white inline-block max-w-full md:w-auto sec-inverted">READ POST</a>
+          </div>
+        </div>
+      </article>
       </a>
         
       @endwhile
