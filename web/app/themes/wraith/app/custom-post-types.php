@@ -74,7 +74,7 @@ $labels = array(
 );
 $rewrite = array(
 	'slug'       => 'case-studies',
-	'with_front' => true,
+	'with_front' => false,
 	'pages'      => true,
 	'feeds'      => true,
 );
