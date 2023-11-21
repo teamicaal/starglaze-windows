@@ -120,7 +120,7 @@
           </div>
           <div id="header" class="lg:py-4 py-0">
             <div class="">
-              <div class="container lg:ml-auto mx-auto flex items-center justify-between lg:justify-end py-2 lg:py-0">
+              <div class="container ml-auto flex items-center justify-between lg:justify-end py-2 lg:py-0">
                 {!! $brand_phone_link ? '<a href="tel:' . $brand_phone_link . '" class="lg:hidden px-4 text-white py-2 -ml-2"><i class="fa fa-phone"></i></a>' : null; !!}
 
                 <a class="brand border-0 lg:hidden block" href="{{ home_url('/') }}">
