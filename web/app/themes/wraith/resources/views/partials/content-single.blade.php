@@ -3,20 +3,20 @@
   <article @php post_class() @endphp>
       <div class="flex flex-col items-center justify-center mb-12 shadow-none">
           <div class="w-full lg:w-2/5 py-8 flex flex-col items-center">
-              <h1 class="text-3xl md:text-4xl text-center text-secondary font-bold font-serif mb-8">{!! get_the_title() !!}</h1>
-              <div class="flex flex-wrap">
+              <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" class="text-3xl md:text-4xl text-center text-secondary font-bold font-serif mb-8">{!! get_the_title() !!}</h1>
+              <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" class="flex flex-wrap">
                   <a class="btn block md:inline-block bg-primary text-white hover:bg-secondary hover:border-none mb-4 md:mr-4 md:mb-0"
                       href="#article">Learn More</a>
                   <a class="btn block md:inline-block bg-transparent border border-secondary text-secondary hover:bg-secondary hover:text-white hover:border-secondary"
                       href="/contact/">Contact Us</a>
               </div>
           </div>
-          <div class="w-full lg:w-3/5">
+          <div data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" class="w-full lg:w-3/5">
               <img src="{!! get_the_post_thumbnail_url() !!}" alt="{!! the_title(); !!}"
                   class="object-cover">
           </div>
         </div> <!-- end of top section -->
-      <div id="article" class=" article w-full md:w-4/5 mx-auto text-center order-1 lg:order-2">
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" id="article" class=" article w-full md:w-4/5 mx-auto text-center order-1 lg:order-2">
         {{-- <h2 class="lg:text-4xl text-3xl text-secondary font-semibold py-6">{!! get_the_title() !!}</h2> --}}
         @php the_content() @endphp
       </div>
