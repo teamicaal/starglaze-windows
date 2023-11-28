@@ -69,7 +69,7 @@
                 @if ($content_type == 'hardware')
                     <div class="container mx-auto lg:flex">
                         <div
-                            class="w-full lg:w-1/2 flex flex-nowrap lg:flex-wrap gap-4 max-h-max scroll-container items-start active overflow-x-scroll ">
+                            class="w-full lg:w-1/2 flex flex-nowrap lg:flex-wrap gap-4 max-h-max scroll-container items-start active overflow-x-scroll">
                             @while (have_rows('hardware'))
                                 @php
                                     the_row();
