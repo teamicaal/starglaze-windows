@@ -3,7 +3,7 @@
     $j = 0;
     $grip_core_page = get_sub_field('grip_core_page');
 @endphp
-<div  data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" id="product-specification-tabs" class="{{ !$grip_core_page ? 'mb-4 lg:mb-16 md:mb-10' : null }} overflow-hidden">
+<div  data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" id="product-specification-tabs" class="lg:my-16 md:my-10 my-4 overflow-hidden">
     <div class="relative px-4 mb-4">
         @if (have_rows('tab'))
             <div class="absolute w-full h-1 bg-secondary left-0 right-0 top-1/2 -translate-y1/2"></div>
@@ -127,8 +127,7 @@
                 @if ($content_type == 'slider')
                     <div class="relative">
                         @if ($grip_core_page)
-                            <div class="absolute w-full h-1/2 bottom-0 bg-[#172128]"></div>
-                            <div class="absolute w-full h-1/2 bottom-0 bg-strokes opacity-10"></div>
+                            {{-- <div class="absolute w-full h-1/2 bottom-0 bg-[#172128]"></div> --}}
                         @endif
                         <div class="container mx-auto relative bg-white pb-8 !px-[100px]">
                             <div class="product-specification-tabs-slider ">
