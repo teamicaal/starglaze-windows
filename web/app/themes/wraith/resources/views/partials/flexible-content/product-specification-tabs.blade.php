@@ -211,7 +211,7 @@
                                     <div class="accordion_family_name group flex cursor-pointer items-center justify-between border-b border-primary border-muted mb-4 pb-3 {{ $j === 1 ? 'active' : '' }}">
                                         <h2 class=" group-hover:text-primary ease-in-out duration-300 uppercase font-serif text-2xl mb-0">
                                             {{ $family_name }}</h2>
-                                        <i class="fa-solid fa-chevron-down ease-in-out text-xl duration-500"></i>
+                                        <i class="fa-solid fa-chevron-down text-primary ease-in-out text-xl duration-500"></i>
                                     </div>
                                     <div
                                         class="flex flex-nowrap lg:flex-wrap gap-4 accordion_family_swatches max-h-[240px] scroll-container overflow-x-hidden items-start  {{ $j != 1 ? 'hidden' : 'active' }} ">
