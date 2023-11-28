@@ -126,9 +126,7 @@
                 @endif
                 @if ($content_type == 'slider')
                     <div class="relative">
-                        @if ($grip_core_page)
-                            {{-- <div class="absolute w-full h-1/2 bottom-0 bg-[#172128]"></div> --}}
-                        @endif
+                        
                         <div class="container mx-auto relative bg-white pb-8 !px-[100px]">
                             <div class="product-specification-tabs-slider ">
                                 @while (have_rows('slider_content'))
@@ -139,7 +137,7 @@
                                     @endphp
                                     @if ($product_image)
                                         <div class="mx-2">
-                                            <img class="mx-auto" src="{{ $product_image }}" alt="">
+                                            <img class="mx-auto" src="{{ $product_image['url'] }}" alt="">
                                             @if ($product_name)
                                                 <div class="text-center mt-8">{{ $product_name }}</div>
                                             @endif
