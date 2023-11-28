@@ -43,11 +43,9 @@
 
                 <div class="container mx-auto flex flex-col lg:flex-row lg:items-center justify-between lg:my-20">
                     <div class="w-full xl:w-1/3">
-                        <h2 class="font-semibold text-2xl lg:text-[46px] lg:leading-[3.5rem] text-balance">
+                        <h2 class="mb-4 lg:mb-8 text-primary font-serif font-medium lg:text-4xl text-2xl lg:leading-[3.5rem] text-balance">
                             {{ $title }}</h2>
-                    </div>
-                    <div class="separator md:py-8">{!! $paragraph !!}
-                        @if (have_rows('buttons'))
+                            @if (have_rows('buttons'))
                             <div class="flex gap-4 flex-col xl:flex-row mb-8">
                                 @while (have_rows('buttons'))
                                     @php
@@ -56,7 +54,7 @@
                                         $label = get_sub_field('label');
                                         $j++;
                                     @endphp
-                                    <a class="btn {{ $j % 2 === 0 ? 'transparent-border-primary' : 'primary' }}"
+                                    <a class="btn block md:inline-block bg-primary text-white hover:bg-secondary"
                                         href="{{ $link }}">{{ $label }}</a>
                                 @endwhile
                             </div>
@@ -64,6 +62,8 @@
                         @php
                             $j = 0;
                         @endphp
+                    </div>
+                    <div class="separator md:py-8 child-p:font-normal child-p:text-[#3A3A3A]">{!! $paragraph !!}
                     </div>
                 </div>
                 @if ($content_type == 'hardware')
