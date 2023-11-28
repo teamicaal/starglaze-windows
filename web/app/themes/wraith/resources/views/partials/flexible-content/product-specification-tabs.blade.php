@@ -214,7 +214,7 @@
                                         <i class="fa-solid fa-chevron-down ease-in-out text-xl duration-500"></i>
                                     </div>
                                     <div
-                                        class="flex flex-nowrap lg:flex-wrap gap-4 accordion_family_swatches max-h-[400px] scroll-container overflow-x-hidden items-start  {{ $j != 1 ? 'hidden' : 'active' }} ">
+                                        class="flex flex-nowrap lg:flex-wrap gap-4 accordion_family_swatches max-h-[240px] scroll-container overflow-x-hidden items-start  {{ $j != 1 ? 'hidden' : 'active' }} ">
                                         @while (have_rows('swatches_content'))
                                             @php
                                                 the_row();
