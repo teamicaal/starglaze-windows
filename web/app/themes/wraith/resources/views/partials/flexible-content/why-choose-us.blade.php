@@ -8,13 +8,13 @@ $i = 0;
 <section id="why-choose-us" class="blue-bg-gradient px-2 relative mt-[-8rem] pt-[12rem] overflow-hidden {!! $custom_class ? ' ' . $custom_class : 'lg:pb-16 pb-12' !!}">
     <img src="/app/uploads/2023/09/Dots-Left.png" alt="dot background" class="h-auto md:block hidden left-0 opacity-[0.02] absolute">
     <img src="/app/uploads/2023/09/Dots-right.png" alt="dot background" class="h-auto md:block hidden right-0 opacity-[0.02] absolute">
-    <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" class="container mx-auto">
+    <div class="container mx-auto">
         <div class="why-choose-us">
-            {!! $title ? '<h2 class="text-3xl md:text-4xl mb-6 text-white tracking-wide text-center font-bold font-serif">' . $title . '</h2>' : null !!}
-            {!! $paragraph ? '<div class="mb-6 text-center child-p:mx-auto child-p:tracking-wider child-p:text-white">' . $paragraph . '</div>' : null !!}
+            {!! $title ? '<h2  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" class="text-3xl md:text-4xl mb-6 text-white tracking-wide text-center font-bold font-serif">' . $title . '</h2>' : null !!}
+            {!! $paragraph ? '<div  data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" class="mb-6 text-center child-p:mx-auto child-p:tracking-wider child-p:text-white">' . $paragraph . '</div>' : null !!}
         </div>
        
-        <div class="flex flex-wrap justify-center mt-6 why-choose-us-slick">
+        <div  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" class="flex flex-wrap justify-center mt-6 why-choose-us-slick">
 
             @if (have_rows('cards'))
             @while (have_rows('cards'))
