@@ -110,7 +110,7 @@
                                             <img class="w-full h-[300px] lg:h-[500px] object-contain"
                                                 src="{{ $featured_image['url'] }}" alt="{{ $featured_image['alt'] }}">
                                             <div class="text-center">
-                                                <p class="mb-0 uppercase text-sm text-primary mx-auto">
+                                                <p class="mb-0 uppercase font-serif text-primary mx-auto">
                                                     {{ $swatch_name }}
                                                 </p>
                                             </div>
