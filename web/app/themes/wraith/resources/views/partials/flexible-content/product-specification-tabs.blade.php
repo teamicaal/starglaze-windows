@@ -270,7 +270,6 @@
                                                     src="{{ $featured_image['url'] }}"
                                                     alt="{{ $featured_image['alt'] }}">
                                                 <div class="text-right">
-                                                    <p class="mb-0 uppercase ml-auto mr-0 text-xs">Colour Option:</p>
                                                     <p class="mb-0 uppercase ml-auto mr-0 text-sm text-primary">
                                                         {{ $swatch_name }}
                                                     </p>
