@@ -41,7 +41,7 @@
             @endphp
             <div class="{{ $i !== 1 ? 'hidden' : null }}" data-product-spec-tab="{{ $tab_name_clean }}">
 
-                <div class="container mx-auto flex flex-col lg:flex-row lg:items-center justify-between lg:my-20">
+                <div class="container mx-auto flex flex-col lg:flex-row lg:items-center justify-between lg:mt-20 lg:mb-10">
                     <div class="w-full xl:w-1/3">
                         <h2 class="mb-4 lg:mb-8 text-primary font-serif font-medium lg:text-4xl text-2xl lg:leading-[3.5rem] text-balance">
                             {{ $title }}</h2>
@@ -67,7 +67,7 @@
                     </div>
                 </div>
                 @if ($content_type == 'hardware')
-                    <div class="container mx-auto flex">
+                    <div class="container mx-auto lg:flex">
                         <div
                             class="w-full lg:w-1/2 flex flex-nowrap lg:flex-wrap gap-4 max-h-max scroll-container overflow-x-hidden items-center ">
                             @while (have_rows('hardware'))
