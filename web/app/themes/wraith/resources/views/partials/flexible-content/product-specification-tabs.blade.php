@@ -207,13 +207,11 @@
                                     $j++;
                                 @endphp
 
-                                <div>
-                                    <div
-                                        class="accordion_family_name group flex cursor-pointer items-center justify-between border-b border-muted mb-4 {{ $j === 1 ? 'active' : '' }}">
-                                        <h2
-                                            class=" group-hover:text-primary ease-in-out duration-300 uppercase text-xl mb-0">
+                                <div class="mb-6">
+                                    <div class="accordion_family_name group flex cursor-pointer items-center justify-between border-b border-primary border-muted mb-4 {{ $j === 1 ? 'active' : '' }}">
+                                        <h2 class=" group-hover:text-primary ease-in-out duration-300 uppercase font-serif text-2xl mb-0">
                                             {{ $family_name }}</h2>
-                                        <i class="fa-solid fa-chevron-down ease-in-out duration-500"></i>
+                                        <i class="fa-solid fa-chevron-down ease-in-out text-xl duration-500"></i>
                                     </div>
                                     <div
                                         class="flex flex-nowrap lg:flex-wrap gap-4 accordion_family_swatches max-h-max scroll-container overflow-x-hidden items-start  {{ $j != 1 ? 'hidden' : 'active' }} ">
@@ -236,7 +234,7 @@
                                                         class="w-full h-0 absolute bottom-0 bg-primary group-hover:h-full ease-in-out duration-500 mix-blend-multiply">
                                                     </div>
                                                 </div>
-                                                <div class="text-center">{{ $swatch_name }}</div>
+                                                <div class="text-center capitalize">{{ $swatch_name }}</div>
                                             </div>
                                         @endwhile
                                     </div>
@@ -270,7 +268,7 @@
                                                     src="{{ $featured_image['url'] }}"
                                                     alt="{{ $featured_image['alt'] }}">
                                                 <div class="text-right">
-                                                    <p class="mb-0 uppercase ml-auto mr-0 text-sm text-primary">
+                                                    <p class="mb-0 uppercase text-center font-serif text-primary">
                                                         {{ $swatch_name }}
                                                     </p>
                                                 </div>
