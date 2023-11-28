@@ -160,10 +160,6 @@
                 @endif
                 @if ($content_type == 'brochures')
                     <div class="relative">
-                        @if ($grip_core_page)
-                            <div class="absolute w-full h-1/2 bottom-0 bg-[#172128]"></div>
-                            <div class="absolute w-full h-1/2 bottom-0 bg-strokes opacity-10"></div>
-                        @endif
 
                         <div class="container mx-auto relative bg-white pb-8 !px-[100px]">
                             <div class="product-specification-tabs-brochure-slider">
