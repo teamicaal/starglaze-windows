@@ -767,6 +767,13 @@ $(".product-specification-tabs-brochure-slider").slick(
 
 
   //Product Spec Tabb Content
+  var colorContainerConfigurator = $('[data-container-configurator="color"]');
+  var colorConfigurator = $('[data-configurator="color"]');
+  var glazingConfigurator = $('[data-container-configurator="glazing"]');
+  var glazingImage = $("[data-image-glazing");
+
+  colorConfigurator.append(glazingImage);
+
   $("[data-product-spec-btn]").on("click", function () {
     var thisParent = $(this).parent().parent().parent();
     var thisBtnData = $(this).data("product-spec-btn");
@@ -784,8 +791,11 @@ $(".product-specification-tabs-brochure-slider").slick(
       thisParent
         .find(".product-specification-tabs-brochure-slider")
         .slick(productSpecificationTabsBrochureSliderOption);
+    } else if (contentType == "glazing") {
+      glazingConfigurator.append(colorConfigurator);
+    } else if (contentType == "color_family") {
+      colorContainerConfigurator.append(colorConfigurator);
     }
-
     thisParent.find("[data-product-spec-btn]").removeClass("active");
     $(this).addClass("active");
 
@@ -793,19 +803,108 @@ $(".product-specification-tabs-brochure-slider").slick(
     thisParent.find('[data-product-spec-tab="' + thisBtnData + '"]').show();
   });
 
-  //Product Spec Tabb - Swatches Tabb
+  $("[data-image-swatch-glazing]").on("click", function () {
+    var thisBlock = $(this).parent().parent();
+    var thisFeaturedGlazingImage = $(this).data("image-swatch-glazing");
+    thisBlock.find("[data-image-glazing]").hide();
+    thisBlock.find("[data-image-glazing]").removeClass("active");
+    thisBlock
+      .find("[data-image-glazing=" + thisFeaturedGlazingImage + "]")
+      .show();
+    thisBlock
+      .find("[data-image-glazing=" + thisFeaturedGlazingImage + "]")
+      .addClass("active");
+    var activeFeaturedImage = thisBlock.find("[data-image-featured].active");
+    activeFeaturedImage.find(".featured_front").show();
+    activeFeaturedImage.find(".featured_back").hide();
+    var activeGlazingContainer = thisBlock.find("[data-image-glazing].active");
+    activeGlazingContainer.find(".glazing_front").show();
+    activeGlazingContainer.find(".glazing_back").hide();
+  });
+
   $("[data-image-swatch]").on("click", function () {
-    var thisParent = $(this).parent().parent();
+    var thisParent = $(this).closest(".container");
     var thisFeaturedImage = $(this).data("image-swatch");
-    thisParent.find("[data-image-featured]", this).hide();
-    thisParent.find('[data-image-featured="' + thisFeaturedImage + '"]').show();
+    var activeGlazingContainer = thisParent.find(
+      $("[data-image-glazing].active")
+    );
+    thisParent.find("[data-image-featured]", this).hide().removeClass("active");
+    thisParent
+      .find('[data-image-featured="' + thisFeaturedImage + '"]')
+      .show()
+      .addClass("active");
+    thisParent
+      .find('[data-image-featured="' + thisFeaturedImage + '"]')
+      .find(".featured_front")
+      .show();
+    thisParent
+      .find('[data-image-featured="' + thisFeaturedImage + '"]')
+      .find(".featured_back")
+      .hide();
+    activeGlazingContainer.find(".glazing_front").show();
+    activeGlazingContainer.find(".glazing_back").hide();
   });
 
   $(".turn-around").on("click", function () {
     var thisParent = $(this).parent();
+    var colorConfigurator = $(this).closest("[data-configurator]");
     thisParent.find(".featured_front").toggle();
     thisParent.find(".featured_back").toggle();
+    var activeGlazingContainer = colorConfigurator.find(
+      $("[data-image-glazing].active")
+    );
+    activeGlazingContainer.find(".glazing_front").toggle();
+    activeGlazingContainer.find(".glazing_back").toggle();
   });
+
+  $(".accordion_family_name").on("click", function () {
+    $(".accordion_family_name").removeClass("active");
+    $(this).addClass("active");
+    var thisContainer = $(this).parent();
+    var thisTab = $(this).closest("[data-product-spec-tab]");
+    // Find and reset the rotation for all elements with the class "fa-chevron-down" in the parent
+    thisContainer
+      .parent()
+      .find(".fa-chevron-down")
+      .css("transform", "rotate(0deg)");
+
+    // Set the rotation for the current clicked element with the class "fa-chevron-down"
+    $(this).find(".fa-chevron-down").css("transform", "rotate(180deg)");
+    thisContainer.parent().find(".accordion_family_swatches").slideUp();
+    thisContainer.find(".accordion_family_swatches").slideDown({
+      start: function () {
+        $(this).css({
+          display: "flex",
+        });
+      },
+    });
+
+    // Update frame to first from selected list
+    var firstDataImageSwatchValue = $(this)
+      .parent()
+      .find("[data-image-swatch]")
+      .eq(0)
+      .attr("data-image-swatch");
+    thisTab.find("[data-image-featured]").hide().removeClass("active");
+    thisTab
+      .find('[data-image-featured="' + firstDataImageSwatchValue + '"]')
+      .show()
+      .addClass("active");
+    thisTab
+      .find('[data-image-featured="' + firstDataImageSwatchValue + '"]')
+      .find(".featured_front")
+      .show();
+    thisTab
+      .find('[data-image-featured="' + firstDataImageSwatchValue + '"]')
+      .find(".featured_back")
+      .hide();
+    // Update glazing to front
+    var activeGlazingContainer = thisTab.find($("[data-image-glazing].active"));
+    activeGlazingContainer.find(".glazing_front").show();
+    activeGlazingContainer.find(".glazing_back").hide();
+  });
+
+
 
   var countdownDate = new Date("2023-12-31T23:59:59").getTime(); // Example: New Year's Eve
 

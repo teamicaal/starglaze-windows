@@ -237,10 +237,10 @@
                   <h6>Star Home Blog</h6>
                 </div>
               </a>
-              <a href="/contact/">
+              <a href="/downloads/">
                 <div class="embed embed-21by9 mega-menu-cta-card rounded-xl shadow-xl">
                   <img class="object-cover-absolute z-0" src="/app/uploads/2020/10/stock-05.jpg" alt="Contact">
-                  <h6>Contact Us</h6>
+                  <h6>Download Brochures</h6>
                 </div>
               </a>
               
