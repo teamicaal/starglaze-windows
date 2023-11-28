@@ -214,7 +214,7 @@
                                         <i class="fa-solid fa-chevron-down ease-in-out text-xl duration-500"></i>
                                     </div>
                                     <div
-                                        class="flex flex-nowrap lg:flex-wrap gap-4 accordion_family_swatches max-h-max scroll-container overflow-x-hidden items-start  {{ $j != 1 ? 'hidden' : 'active' }} ">
+                                        class="flex flex-nowrap lg:flex-wrap gap-4 accordion_family_swatches max-h-[400px] scroll-container overflow-x-hidden items-start  {{ $j != 1 ? 'hidden' : 'active' }} ">
                                         @while (have_rows('swatches_content'))
                                             @php
                                                 the_row();
@@ -222,19 +222,23 @@
                                                 $swatch_name = get_sub_field('swatch_name');
                                                 $swatch_name_clean = strtolower(str_replace(' ', '_', $swatch_name));
                                             @endphp
-                                            <div data-image-swatch="{{ $swatch_name_clean }}"
-                                                class="flex flex-col items-center justify-center cursor-pointer">
-                                                <div
-                                                    class="w-[75px] h-[75px] md:w-[120px] md:h-[120px] mb-2 rounded-[12px] md:rounded-[25px] bg-white group shadow-lg overflow-hidden relative">
+                                            <div data-image-swatch="{{ $swatch_name_clean }}" class="flex flex-col items-center justify-center cursor-pointer">
+                                            <div class="w-[150px] h-[100px] hardware-height mb-2 rounded-[5px] bg-white group shadow-lg overflow-hidden relative">
 
-                                                    <img class="w-full h-full object-cover relative"
-                                                        src="{{ $swatch_image['url'] }}"
-                                                        alt="{{ $swatch_image['alt'] }}">
-                                                    <div
-                                                        class="w-full h-0 absolute bottom-0 bg-primary group-hover:h-full ease-in-out duration-500 mix-blend-multiply">
+                                                <img class="w-full h-full object-cover relative" src="{{ $swatch_image['url'] }}" alt="{{ $swatch_image['alt'] }}">
+                                                {{-- <div class="w-full h-0 absolute bottom-0 bg-primary group-hover:h-full ease-in-out duration-500 mix-blend-multiply">
+                                                                    </div> --}}
+                                                @if ($swatch_name)
+                                                <div class="text-center relative group-hover:bottom-10 blue-bg-gradient capitalize py-2 text-white">{{ $swatch_name }}</div>
+                                                @endif
+                                            </div>
+
+                                                <!-- <div class="w-[75px] h-[75px] md:w-[120px] md:h-[120px] mb-2 rounded-[12px] md:rounded-[25px] bg-white group shadow-lg overflow-hidden relative">
+                                                    <img class="w-full h-full object-cover relative" src="{{ $swatch_image['url'] }}" alt="{{ $swatch_image['alt'] }}">
+                                                    <div class="w-full h-0 absolute bottom-0 bg-primary group-hover:h-full ease-in-out duration-500 mix-blend-multiply">
                                                     </div>
                                                 </div>
-                                                <div class="text-center capitalize">{{ $swatch_name }}</div>
+                                                <div class="text-center capitalize">{{ $swatch_name }}</div> -->
                                             </div>
                                         @endwhile
                                     </div>
