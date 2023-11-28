@@ -279,9 +279,7 @@
                                                         src="{{ $featured_image_2['url'] }}"
                                                         alt="{{ $featured_image_2['alt'] }}">
                                                     <div class="text-right">
-                                                        <p class="mb-0 uppercase ml-auto mr-0 text-xs">Colour Option:
-                                                        </p>
-                                                        <p class="mb-0 uppercase ml-auto mr-0 text-sm text-primary">
+                                                        <p class="mb-0 uppercase text-center font-serif text-primary">
                                                             {{ $swatch_name }}</p>
                                                     </div>
                                                 </div>
@@ -353,8 +351,7 @@
                                         src="{{ $image_back['url'] }}" alt="{{ $image_back['alt'] }}">
                                 </div>
                                 <div class="text-left">
-                                    <p class="mb-0 uppercase ml-0 mr-auto text-xs">Glazing Option:</p>
-                                    <p class="mb-0 uppercase ml-0 mr-auto text-sm text-primary">{{ $glazing_name }}
+                                    <p class="mb-0 uppercase text-center font-serif text-primary">{{ $glazing_name }}
                                     </p>
                                 </div>
                             </div>
