@@ -7,7 +7,7 @@ $details = get_sub_field('details');
 <section class="{!! $custom_class ? ' ' . $custom_class : 'md:my-8' !!}">
   <div class="bg-[#eeeeee] lg:py-24 py-12">
     <div class="container mx-auto">
-      <div class="lg:w-3/4 xl:w-2/3 mx-auto">
+      <div class="">
         @if( $subtitle )
         <h4 class="title-display{{ $details ? null : ' text-center title-display-center' }} text-primary mb-4">{{ $subtitle }}</h4>
         @endif @if( $title )
