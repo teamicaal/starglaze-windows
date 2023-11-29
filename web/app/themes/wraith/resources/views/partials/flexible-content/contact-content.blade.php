@@ -5,9 +5,9 @@
 @endphp
 
 
-<section class="py-12">
+<section id="contact-content" class="py-12">
   <div class="container mx-auto">
-    {!! $title ? '<h2 class="mb-4 font-bold font-serif lg:text-4xl text-3xl">' . $title . '</h2>' : null !!}
-    <div class="md:py-8 child-p:mx-auto child-p:font-normal child-p:text-[#3A3A3A]">{!! $paragraph !!} </div>
+    {!! $title ? '<h2 class="mb-4 font-bold font-serif text-primary lg:text-4xl text-3xl">' . $title . '</h2>' : null !!}
+    <div class="md:py-8 child-p:mx-auto child-p:font-normal child-p:text-center child-p:text-[#3A3A3A]">{!! $paragraph !!} </div>
   </div>
 </section>
