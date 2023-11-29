@@ -14,7 +14,7 @@ $social_youtube = get_field('social_youtube', 'option');
 $social_linkedin = get_field('social_linkedin', 'option');
 $social_pinterest = get_field('social_pinterest', 'option');
 @endphp
-<div class="{!! $colour == 'dark' ? ' bg-white border border-[#D0D0D0] py-5 px-7' : null !!}">
+<div class="{!! $colour == 'dark' ? ' bg-white border border-[#D0D0D0] py-5 px-7 ' : null !!}">
   <ul class="list-reset">
     @if( $brand_phone_link )
     <li class="text-lg mb-4 group">
