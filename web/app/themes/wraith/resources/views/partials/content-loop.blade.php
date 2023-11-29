@@ -107,6 +107,9 @@
         @if (get_row_layout() == 'form_contact')
             @include('partials.flexible-content.form-contact')
         @endif
+        @if (get_row_layout() == 'book_appointment_form')
+            @include('partials.flexible-content.book-appointment-form')
+        @endif
         @if (get_row_layout() == 'all_forms')
             @include('partials.flexible-content.all-forms')
         @endif
