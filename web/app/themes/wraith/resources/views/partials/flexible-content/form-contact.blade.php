@@ -47,9 +47,9 @@ $details = get_sub_field('details');
                   <textarea name="message" placeholder="" rows="4"></textarea>
                 </div>
                 <div class="w-full text-center">
-                  <p class="mb-2">
+                  <!-- <p class="mb-2">
                     * indicates required fields
-                  </p>
+                  </p> -->
                   <input class="submit is-valid btn bg-primary hover:bg-secondary text-white cursor-pointer text-center block lg:inline-block w-full lg:w-auto mb-4" type="submit" value="Send Message"><br />
                   <a href="/privacy-policy/" target="_blank">Privacy Policy</a>
                 </div>
