@@ -223,13 +223,13 @@
                                                 $swatch_name_clean = strtolower(str_replace(' ', '_', $swatch_name));
                                             @endphp
                                             <div data-image-swatch="{{ $swatch_name_clean }}" class="flex flex-col items-center justify-center cursor-pointer">
-                                            <div class="w-[150px] h-[100px] hardware-height mb-2 rounded-[5px] bg-white group shadow-lg overflow-hidden relative">
+                                            <div class="w-[150px] h-[120px] hardware-height mb-2 rounded-[5px] bg-white group shadow-lg overflow-hidden relative">
 
                                                 <img class="w-full h-full object-cover relative" src="{{ $swatch_image['url'] }}" alt="{{ $swatch_image['alt'] }}">
                                                 {{-- <div class="w-full h-0 absolute bottom-0 bg-primary group-hover:h-full ease-in-out duration-500 mix-blend-multiply">
                                                                     </div> --}}
                                                 @if ($swatch_name)
-                                                <div class="text-center relative group-hover:bottom-10 blue-bg-gradient capitalize py-2 text-white">{{ $swatch_name }}</div>
+                                                <div class="text-center text-sm relative group-hover:bottom-[3.5rem] blue-bg-gradient capitalize p-2 text-white">{{ $swatch_name }}</div>
                                                 @endif
                                             </div>
 
