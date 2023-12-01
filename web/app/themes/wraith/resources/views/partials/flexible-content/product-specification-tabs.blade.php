@@ -310,7 +310,7 @@
                     <div data-container-configurator="glazing"
                         class="container mx-auto flex flex-col-reverse lg:flex-row">
                         <div
-                            class="w-full lg:w-1/2 flex flex-nowrap lg:flex-wrap gap-4 max-h-max scroll-container overflow-x-hidden items-center ">
+                            class="w-full lg:w-1/2 flex flex-nowrap lg:flex-wrap gap-4 max-h-[468px] scroll-container overflow-x-hidden items-center ">
                             @while (have_rows('glazing'))
                                 @php
                                     the_row();
