@@ -15,15 +15,15 @@ $offer_badge = get_sub_field('offer_badge');
 @endif
 
 <section id="hero-banner" class="section_page-banner relative">
-  @if ($vr_cta)
+  {{-- @if ($vr_cta)
     <a href="/our-products/">
       <div class="main-banner__product-types-vr offer-text-effect">
         <img class="main-banner__product-types-vr-image" src="/app/uploads/2023/10/vr_image.png" alt="">
         <div class="main-banner__product-types-vr-title">EXPLORE VIRTUALLY</div>
       </div>
     </a>
-  @endif
-  @if ($offer_badge)
+  @endif --}}
+  {{-- @if ($offer_badge)
     @php
       $primary_offer = get_sub_field('primary_offer');
     @endphp
@@ -55,7 +55,7 @@ $offer_badge = get_sub_field('offer_badge');
         @endif
       </div>
     </div>
-  @endif
+  @endif --}}
   @if( $banner_type )
   <div class="full-width sm:flex sm:items-center relative lg:!min-h-[89vh] sm:!min-h-[60vh] !min-h-[100vh]">
     <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" class="leftBannerBox flex justify-center items-center">
