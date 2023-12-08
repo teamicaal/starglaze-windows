@@ -28,7 +28,7 @@ $offer_badge = get_sub_field('offer_badge');
       $primary_offer = get_sub_field('primary_offer');
     @endphp
    
-      <div id="flippableContainer" class="w-[320px] offer-container absolute z-30 inset-y-0 right-[4rem]">
+      <div id="flippableContainer" class="w-[320px] cursor-pointer offer-container absolute z-30 inset-y-0 right-[4rem]">
         @if (have_rows('primary_offer'))
             @php
             $i = 0;
