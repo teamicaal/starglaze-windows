@@ -48,16 +48,16 @@ $offer_badge = get_sub_field('offer_badge');
 
               <div class="relative w-[20rem]">
                   <img class="absolute w-full h-full" src="{{ $image['url'] }}" alt="">
-                  <div class="relative p-4 pt-[5rem] ">
-                      <h2 class="text-white font-serif text-[45px] text-center max-w-[20rem] tracking-wide top-[5rem] {{ $i == 1 ? 'border-b border-white pb-4' : null }} uppercase">{!! $offer_title !!}</h2>
+                  <div class="relative p-4 pt-[4.5rem] ">
+                      <h2 class="text-white font-serif text-center max-w-[20rem] tracking-wide top-[5rem] {{ $i == 1 ? ' text-[35px] border-b border-white pb-3' : 'text-[30px]' }} uppercase">{!! $offer_title !!}</h2>
                       @if ($virtual_showroom_image)
-                          <img class="" src="{{ $virtual_showroom_image['url'] }}" alt="">
+                          <img class="w-[12rem] mx-auto h-auto" src="{{ $virtual_showroom_image['url'] }}" alt="">
                       @endif
-                      <div class="child-p:text-white child-p:text-center child-p:text-[45px] child-p:uppercase child-p:font-serif">{!! $offer !!}</div>
+                      <div class="child-p:text-white child-p:text-center child-p:text-[35px] {{ $i == 1 ? ' child-p:text-[35px]' : 'child-p:text-[30px]' }} child-p:uppercase child-p:font-serif">{!! $offer !!}</div>
                       @if ($i == 1) 
-                        <div id="countdown" class="text-red-500 bg-white py-2 font-serif text-2xl text-center font-bold mb-4 mx-4"></div>
+                        <div id="countdown" class="text-red-500 bg-white py-1 font-serif text-lg text-center font-bold mb-4 mx-4"></div>
                       @endif
-                      <a href="{{ $button_link }}" class="{{ $i == 1 ? 'bg-secondary text-white font-serif p-3 tracking-wide text-center text-xl uppercase block mb-4 mx-8 whitespace-nowrap ' : 'bg-primary whitespace-nowrap text-white font-serif p-3 tracking-wide text-center text-xl uppercase block mb-4 mx-8' }} ">{!! $button_label !!}</a>
+                      <a href="{{ $button_link }}" class="{{ $i == 1 ? 'bg-secondary text-white font-serif p-3 tracking-wide text-center text-xl uppercase block mb-2 mx-8 whitespace-nowrap ' : 'bg-primary whitespace-nowrap text-white font-serif p-3 tracking-wide text-center text-xl uppercase block mb-2 mx-8' }} ">{!! $button_label !!}</a>
                   </div>
               </div>
             </div>
