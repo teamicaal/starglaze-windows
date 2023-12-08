@@ -28,7 +28,7 @@ $offer_badge = get_sub_field('offer_badge');
       $primary_offer = get_sub_field('primary_offer');
     @endphp
    
-      <div id="flippableContainer" class="w-[320px] offer-container absolute z-30 bottom-[4rem] right-[4rem]">
+      <div id="flippableContainer" class="w-[320px] offer-container absolute z-30 inset-y-0 right-[4rem]">
         @if (have_rows('primary_offer'))
             @php
             $i = 0;
@@ -44,7 +44,7 @@ $offer_badge = get_sub_field('offer_badge');
               $button_label = get_sub_field('button_label');
               $button_link = get_sub_field('button_link');
             @endphp
-            <div class="absolute {{ $i != 1 ? 'hidden back' : 'front' }} z-20 max-w-md">
+            <div class="absolute {{ $i != 1 ? 'hidden back' : 'front' }} z-20 max-w-md h-full">
 
               <div class="relative w-[20rem]">
                   <img class="absolute w-full h-full" src="{{ $image['url'] }}" alt="">
