@@ -229,7 +229,7 @@
                                                 {{-- <div class="w-full h-0 absolute bottom-0 bg-primary group-hover:h-full ease-in-out duration-500 mix-blend-multiply">
                                                                     </div> --}}
                                                 @if ($swatch_name)
-                                                <div class="text-center relative group-hover:bottom-10 blue-bg-gradient capitalize py-2 text-white">{{ $swatch_name }}</div>
+                                                <div class="text-center absolute w-full group-hover:bottom-0 blue-bg-gradient capitalize p-2 text-white">{{ $swatch_name }}</div>
                                                 @endif
                                             </div>
 
@@ -265,39 +265,42 @@
                                         $j++;
                                     @endphp
                                     @if ($featured_image || $featured_image_2)
-                                        <div data-image-featured="{{ $swatch_name_clean }}"
-                                            class="{{ $j != 1 ? 'hidden' : 'block active' }}">
-                                            <div class="featured_front">
+                                    <div data-image-featured="{{ $swatch_name_clean }}"
+                                        class="{{ $j != 1 ? 'hidden' : 'block active' }}">
+                                        <div class="featured_front">
+                                            <img class="w-full h-[300px] lg:h-[500px] object-contain"
+                                                src="{{ $featured_image['url'] }}"
+                                                alt="{{ $featured_image['alt'] }}">
+                                            <div class="text-right">
+                                                <p class="mb-0 uppercase ml-auto mr-0 text-sm">Frame Colour Option:</p>
+                                                <p class="mb-0 uppercase max-w-[50%] ml-auto mr-0 text-primary">
+                                                    {{ $swatch_name }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        @if ($featured_image_2)
+                                            <div class="featured_back hidden">
                                                 <img class="w-full h-[300px] lg:h-[500px] object-contain"
-                                                    src="{{ $featured_image['url'] }}"
-                                                    alt="{{ $featured_image['alt'] }}">
+                                                    src="{{ $featured_image_2['url'] }}"
+                                                    alt="{{ $featured_image_2['alt'] }}">
                                                 <div class="text-right">
-                                                    <p class="mb-0 uppercase text-center font-serif text-primary">
-                                                        {{ $swatch_name }}
+                                                    <p class="mb-0 uppercase ml-auto mr-0 text-sm">Frame Colour Option:
                                                     </p>
+                                                    <p class="mb-0 uppercase ml-auto mr-0 text-primary">
+                                                        {{ $swatch_name }}</p>
                                                 </div>
                                             </div>
-                                            @if ($featured_image_2)
-                                                <div class="featured_back hidden">
-                                                    <img class="w-full h-[300px] lg:h-[500px] object-contain"
-                                                        src="{{ $featured_image_2['url'] }}"
-                                                        alt="{{ $featured_image_2['alt'] }}">
-                                                    <div class="text-right">
-                                                        <p class="mb-0 uppercase text-center font-serif text-primary">
-                                                            {{ $swatch_name }}</p>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="cursor-pointer p-4 bg-primary group flex max-w-max mx-auto mt-8 turn-around">
-                                                    <i
-                                                        class="fa-solid  text-[32px] text-white fa-arrows-rotate ease-in-out duration-500 group-hover:rotate-[360deg]"></i>
-                                                </div>
-                                                <div class="font-semibold text-center">
-                                                    TURN AROUND
-                                                </div>
-                                            @endif
-                                        </div>
-                                    @endif
+                                            <div
+                                                class="cursor-pointer p-4 bg-primary group flex max-w-max mx-auto mt-8 turn-around">
+                                                <i
+                                                    class="fa-solid  text-[32px] text-white fa-arrows-rotate ease-in-out duration-500 group-hover:rotate-[360deg]"></i>
+                                            </div>
+                                            <div class="font-semibold text-center">
+                                                TURN AROUND
+                                            </div>
+                                        @endif
+                                    </div>
+                                @endif
                                 @endwhile
                             @endwhile
                             @php
@@ -355,7 +358,8 @@
                                         src="{{ $image_back['url'] }}" alt="{{ $image_back['alt'] }}">
                                 </div>
                                 <div class="text-left">
-                                    <p class="mb-0 uppercase text-center font-serif text-primary">{{ $glazing_name }}
+                                    <p class="mb-0 uppercase ml-0 mr-auto text-sm">Glass Selection:</p>
+                                    <p class="mb-0 uppercase ml-0 mr-auto max-w-[50%] text-primary">{{ $glazing_name }}
                                     </p>
                                 </div>
                             </div>
