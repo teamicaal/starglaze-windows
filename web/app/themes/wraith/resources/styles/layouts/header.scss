@@ -177,7 +177,7 @@ header{
       > li {
         &:not(.btn-toolbar) {
           a {
-            @apply px-4 py-4 text-white font-semibold text-sm border-none;
+            @apply px-4 py-4 text-white font-semibold border-none;
 
             &:hover {
               @apply text-primary border-none;
