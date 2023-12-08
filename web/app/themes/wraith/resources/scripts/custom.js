@@ -921,7 +921,7 @@ $(".product-specification-tabs-brochure-slider").slick(
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       // Display the countdown in the HTML element with id "countdown"
-      $("#countdown").html(days + "d " + hours + "h " + minutes + "m " + seconds + "s " + " Left");
+      $("#countdown").html(days + "D " + hours + "H " + minutes + "M " + seconds + "S " + " LEFT");
 
       // If the countdown is over, clear the interval
       if (distance < 0) {
@@ -929,5 +929,20 @@ $(".product-specification-tabs-brochure-slider").slick(
           $("#countdown").html("EXPIRED");
       }
   }, 1000); // Update every second (1000 milliseconds)
+
+  $(document).ready(function() {
+    const container = $('#flippableContainer');
+    let isFlipped = false;
+  
+    setInterval(function() {
+      if (isFlipped) {
+        container.css('transform', 'rotateY(0deg)');
+      } else {
+        container.css('transform', 'rotateY(180deg)');
+      }
+      
+      isFlipped = !isFlipped;
+    }, 9000); // 15 seconds in milliseconds
+  });
 
 })(jQuery);

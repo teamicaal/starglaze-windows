@@ -582,13 +582,13 @@ a {
   }
 }
 
-#hero-banner{
-  .banner-content{
-    .title-shadow{
-      text-shadow: 2px 2px 4px #000000;
-    }
-  }
-}
+// #hero-banner{
+//   .banner-content{
+//     .title-shadow{
+//       text-shadow: 2px 2px 4px #000000;
+//     }
+//   }
+// }
 
 #offer-strip{
   @screen lg {
@@ -1111,11 +1111,11 @@ a {
     @apply bg-gray-100;
   }
 }
-#hero-banner{
-  p{
-    text-shadow: 2px 2px 13px #000;
-  }
-}
+// #hero-banner{
+//   p{
+//     text-shadow: 2px 2px 13px #000;
+//   }
+// }
 
 #hero-banner{
   .para-text{
@@ -1153,4 +1153,25 @@ a {
   p{
     max-width: 100ch;
   }
+}
+
+.offer-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 1s ease;
+}
+
+.front,
+.back {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back {
+  transform: rotateY(180deg);
 }

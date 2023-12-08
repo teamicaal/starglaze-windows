@@ -15,45 +15,54 @@ $offer_badge = get_sub_field('offer_badge');
 @endif
 
 <section id="hero-banner" class="section_page-banner relative">
-  @if ($vr_cta)
+  {{-- @if ($vr_cta)
     <a href="/our-products/">
       <div class="main-banner__product-types-vr offer-text-effect">
         <img class="main-banner__product-types-vr-image" src="/app/uploads/2023/10/vr_image.png" alt="">
         <div class="main-banner__product-types-vr-title">EXPLORE VIRTUALLY</div>
       </div>
     </a>
-  @endif
+  @endif --}}
   @if ($offer_badge)
     @php
       $primary_offer = get_sub_field('primary_offer');
     @endphp
-    <div class="w-full lg:w-[300px] h-fit absolute z-30 right-0 bottom-0 top-0 lg:block hidden">
-      <div class="{{ count($primary_offer) > 1 ? 'slick-offer' :'' }} w-full absolute z-30 right-[3rem] bottom-0 2xl:top-[9rem] top-[8.5rem]">
+   
+      <div id="flippableContainer" class="w-[320px] offer-container absolute z-30 bottom-[4rem] right-[4rem]">
         @if (have_rows('primary_offer'))
+            @php
+            $i = 0;
+            @endphp
           @while (have_rows('primary_offer')) 
-          @php 
-          the_row(); 
-          $offer = get_sub_field('offer');
-          $button_label = get_sub_field('button_label');
-          $button_link = get_sub_field('button_link');
-          @endphp
-            <div class="flex items-center justify-center flex-col">
-              <div class="relative w-full mx-auto h-fit z-30 top-8">
-                @include('partials.components.ribbon-rounded',['primary_colour' => '#9F0A15'])
-                <p class="text-white absolute font-serif text-[19px] top-[53%] left-1/2 translate-x-[-50%] translate-y-[-100%] max-w-[20rem] font-bold m-0 p-0 whitespace-nowrap "> SECURITY GUARANTEE </p>
-              </div>
-              <div class="blue-bg-gradient rounded-lg w-[225px] shadow-md mx-auto">
-                <div class="child-p:text-white offer-text-effect child-p:text-center child-p:text-2xl child-p:leading-relaxed pt-4 pb-4 child-p:font-serif child-p:m-0 ">{!! $offer !!}</div>
-                <div class="w-full bg-white 2xl:block hidden">
-                  <div id="countdown" class="text-red-500 pt-[0.25rem] text-center font-bold px-4 rounded-b-lg"></div>
-                </div>
-                <div class="h-1 w-full bg-white mt-1"></div>
-                <a href="{{ $button_link }}" class="px-12 py-2 rounded-lg m-2 bg-white hover:scale-105 transition-all ease-in-out duration-500 text-secondary border-0 text-center flex justify-center items-center">{!! $button_label !!}</a>
+            @php 
+              the_row(); 
+              $i++;
+              $image = get_sub_field('image');
+              $virtual_showroom_image = get_sub_field('virtual_showroom_image');
+              $offer_title = get_sub_field('offer_title');
+              $offer = get_sub_field('offer');
+              $button_label = get_sub_field('button_label');
+              $button_link = get_sub_field('button_link');
+            @endphp
+            <div class="absolute {{ $i != 1 ? 'hidden back' : 'front' }} z-20 max-w-md">
+
+              <div class="relative w-[20rem]">
+                  <img class="absolute w-full h-full" src="{{ $image['url'] }}" alt="">
+                  <div class="relative p-4 pt-[5rem] ">
+                      <h2 class="text-white font-serif text-[45px] text-center max-w-[20rem] tracking-wide top-[5rem] {{ $i == 1 ? 'border-b border-white pb-4' : null }} uppercase">{!! $offer_title !!}</h2>
+                      @if ($virtual_showroom_image)
+                          <img class="" src="{{ $virtual_showroom_image['url'] }}" alt="">
+                      @endif
+                      <div class="child-p:text-white child-p:text-center child-p:text-[45px] child-p:uppercase child-p:font-serif">{!! $offer !!}</div>
+                      @if ($i == 1) 
+                        <div id="countdown" class="text-red-500 bg-white py-2 font-serif text-2xl text-center font-bold mb-4 mx-4"></div>
+                      @endif
+                      <a href="{{ $button_link }}" class="{{ $i == 1 ? 'bg-secondary text-white font-serif p-3 tracking-wide text-center text-xl uppercase block mb-4 mx-8 whitespace-nowrap ' : 'bg-primary whitespace-nowrap text-white font-serif p-3 tracking-wide text-center text-xl uppercase block mb-4 mx-8' }} ">{!! $button_label !!}</a>
+                  </div>
               </div>
             </div>
           @endwhile
         @endif
-      </div>
     </div>
   @endif
   @if( $banner_type )
