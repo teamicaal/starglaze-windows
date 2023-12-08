@@ -55,7 +55,7 @@ $offer_badge = get_sub_field('offer_badge');
                       @endif
                       <div class="child-p:text-white child-p:text-center child-p:text-[35px] {{ $i == 1 ? ' child-p:text-[35px]' : 'child-p:text-[30px]' }} child-p:uppercase child-p:font-serif">{!! $offer !!}</div>
                       @if ($i == 1) 
-                        <div id="countdown" class="text-red-500 bg-white py-2 font-serif text-lg text-center font-bold mb-4 mx-4"></div>
+                        <div id="countdown" class="text-red-500 bg-white py-3 font-serif text-xl text-center font-bold mb-4 mx-4"></div>
                       @endif
                       <a href="{{ $button_link }}" class="{{ $i == 1 ? 'bg-secondary text-white font-serif p-3 tracking-wide text-center text-xl uppercase block mb-2 mx-8 whitespace-nowrap ' : 'bg-primary whitespace-nowrap text-white font-serif p-3 tracking-wide text-center text-xl uppercase block mb-2 mx-8' }} ">{!! $button_label !!}</a>
                   </div>
