@@ -177,7 +177,7 @@ header{
       > li {
         &:not(.btn-toolbar) {
           a {
-            @apply px-4 py-4 text-white font-semibold border-none;
+            @apply px-4 py-4 text-white font-semibold text-sm border-none;
 
             &:hover {
               @apply text-primary border-none;
@@ -225,7 +225,7 @@ header{
           @apply relative;
 
           a {
-            @apply block text-xs text-gray-800 font-normal px-4 py-3;
+            @apply block text-sm text-gray-800 font-normal px-4 py-3;
 
             &:hover {
               @apply text-primary;
