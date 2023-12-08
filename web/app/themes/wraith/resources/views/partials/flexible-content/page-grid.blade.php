@@ -39,9 +39,9 @@ $button_label = get_sub_field('button_label');
                     <div class="product-grid-card shadow-lg mx-3 rounded-lg mb-6">
                         <div class="embed embed-3by2 rounded-lg">
                             @if ($custom_title)
-                            <h6>{!! $custom_title !!}</h6>
+                            <h6 class="text-lg">{!! $custom_title !!}</h6>
                             @else
-                            <h6>{!! get_the_title( $page_id ) !!}</h6>
+                            <h6 class="text-lg">{!! get_the_title( $page_id ) !!}</h6>
                             @endif
                             <img class="mx-auto transform lozad object-cover-absolute" data-src="{{ $img_url }}"
                                 alt="{{ $img_alt }}">
