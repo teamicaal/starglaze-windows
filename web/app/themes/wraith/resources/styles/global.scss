@@ -1175,3 +1175,9 @@ a {
 .back {
   transform: rotateY(180deg);
 }
+
+.virtual-showroom{
+  p{
+    max-width: 101ch;
+  }
+}
