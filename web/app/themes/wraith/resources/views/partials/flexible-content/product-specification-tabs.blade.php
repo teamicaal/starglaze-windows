@@ -171,7 +171,7 @@
                                     @if ($brochure_link)
                                         <div class="mx-2">
                                             <div class="text-center mt-8 h-[470px]">
-                                                <iframe src="{{ $brochure_link }}" frameborder="0" width="100%"
+                                                <iframe allowfullscreen src="{{ $brochure_link }}" frameborder="0" width="100%"
                                                     height="100%"></iframe>
                                             </div>
                                         </div>
