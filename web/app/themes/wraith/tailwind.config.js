@@ -7,6 +7,7 @@ module.exports = {
     'text-gray-400',
     'nav-primary',
     'nav-backdrop',
+    'virtual-showroom',
     {
       pattern: /^py-/,
       pattern: /^px-/,
