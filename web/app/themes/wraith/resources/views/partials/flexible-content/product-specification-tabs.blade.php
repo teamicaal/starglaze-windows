@@ -263,7 +263,7 @@
                                                 src="{{ $featured_image['url'] }}"
                                                 alt="{{ $featured_image['alt'] }}">
                                             <div class="text-right">
-                                                <p class="mb-0 uppercase font-semibold ml-auto mr-0 text-sm">Frame Colour Option:</p>
+                                                <p class="mb-0 uppercase font-semibold ml-auto mr-0 text-sm">Colour Selected:</p>
                                                 <p class="mb-0 uppercase max-w-[50%] ml-auto mr-0 text-primary">
                                                     {{ $swatch_name }}
                                                 </p>
@@ -275,7 +275,7 @@
                                                     src="{{ $featured_image_2['url'] }}"
                                                     alt="{{ $featured_image_2['alt'] }}">
                                                 <div class="text-right">
-                                                    <p class="mb-0 uppercase font-semibold ml-auto mr-0 text-sm">Frame Colour Option:
+                                                    <p class="mb-0 uppercase font-semibold ml-auto mr-0 text-sm">Colour Selected:
                                                     </p>
                                                     <p class="mb-0 uppercase ml-auto mr-0 text-primary">
                                                         {{ $swatch_name }}</p>
@@ -349,7 +349,7 @@
                                         src="{{ $image_back['url'] }}" alt="{{ $image_back['alt'] }}">
                                 </div>
                                 <div class="text-left">
-                                    <p class="mb-0 uppercase font-semibold ml-0 mr-auto text-sm">Glass Selection:</p>
+                                    <p class="mb-0 uppercase font-semibold ml-0 mr-auto text-sm">Glass Selected:</p>
                                     <p class="mb-0 uppercase ml-0 mr-auto max-w-[50%] text-primary">{{ $glazing_name }}
                                     </p>
                                 </div>
