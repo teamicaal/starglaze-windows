@@ -259,6 +259,7 @@
                                     <div data-image-featured="{{ $swatch_name_clean }}"
                                         class="{{ $j != 1 ? 'hidden' : 'block active' }}">
                                         <div class="featured_front">
+                                            <h4 class="absolute left-1/2 top-0 -translate-x-1/2 uppercase leading-[5px] font-semibold text-lg font-serif text-primary">Outside View</h4>
                                             <img class="w-full h-[300px] lg:h-[500px] object-contain"
                                                 src="{{ $featured_image['url'] }}"
                                                 alt="{{ $featured_image['alt'] }}">
@@ -271,6 +272,7 @@
                                         </div>
                                         @if ($featured_image_2)
                                             <div class="featured_back hidden">
+                                                <h4 class="absolute left-1/2 top-0 -translate-x-1/2 uppercase leading-[5px] font-semibold text-lg font-serif text-primary">Inside View</h4>
                                                 <img class="w-full h-[300px] lg:h-[500px] object-contain"
                                                     src="{{ $featured_image_2['url'] }}"
                                                     alt="{{ $featured_image_2['alt'] }}">
