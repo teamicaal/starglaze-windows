@@ -955,6 +955,13 @@ $(".product-specification-tabs-brochure-slider").slick(
   $(".close-tooltip").on("click", function () {
     closeConfiguratorTooltip();
   });
+
+  checkAndAddActiveClass();
+  // Check on scroll
+  $(window).on("scroll", function () {
+    checkAndAddActiveClass();
+  });
+
   function checkAndAddActiveClass() {
     var configuratorClosed = sessionStorage.getItem("configuratorClosed");
     if (!configuratorClosed) {
@@ -986,6 +993,16 @@ $(".product-specification-tabs-brochure-slider").slick(
         }
       });
     }
+  }
+
+  function isScrolledIntoView(elem) {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return elemBottom <= docViewBottom && elemTop >= docViewTop;
   }
 
 })(jQuery);
