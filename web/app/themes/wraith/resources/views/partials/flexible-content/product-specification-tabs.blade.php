@@ -4,7 +4,7 @@
     $grip_core_page = get_sub_field('grip_core_page');
 @endphp
 <div  data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" id="product-specification-tabs" class="lg:my-16 md:my-10 my-4 overflow-hidden">
-    <div class="relative px-4 mb-4">
+    <div class="relative px-4 mb-16">
         @if (have_rows('tab'))
             <div class="absolute w-full h-1 bg-secondary left-0 right-0 top-1/2 -translate-y1/2"></div>
             <div class="container relative mx-auto scroll-container overflow-x-hidden snap-x flex gap-[10px] rounded-full blue-bg-gradient p-[10px] z-10">
@@ -333,7 +333,7 @@
                         @endwhile
                     </div>
                 @endif
-                <div class="container mx-auto flex flex-col lg:flex-row lg:items-center justify-between lg:mt-20 lg:mb-10">
+                <div class="container mx-auto flex flex-col lg:flex-row lg:items-center justify-between lg:my-10">
                     <div class="w-full xl:w-1/3">
                         <h2 class="mb-4 lg:mb-8 text-primary font-serif font-medium lg:text-4xl text-2xl lg:leading-[3.5rem] text-balance">
                             {{ $title }}</h2>
