@@ -1181,3 +1181,24 @@ a {
     max-width: 101ch;
   }
 }
+
+.backdrop {
+  @apply inset-0 fixed bg-black/60 w-full h-full z-10 hidden duration-300 ease-in-out;
+  &.active {
+    @apply block;
+  }
+}
+.configurator-tooltip {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  @apply bg-white absolute w-5/6 p-4 z-10 top-[160px] left-1/2 -translate-x-1/2 rounded-lg max-w-lg text-center text-lg font-semibold hidden;
+  &.active {
+    @apply block;
+  }
+}
+
+.configurator-bar {
+  &.active {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    @apply scale-110;
+  }
+}
