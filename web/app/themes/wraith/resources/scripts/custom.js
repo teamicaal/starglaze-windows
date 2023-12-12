@@ -968,7 +968,7 @@ $(".product-specification-tabs-brochure-slider").slick(
       $(".configurator-bar").each(function () {
         var currentConfiguratorBar = $(this);
         var closestSectorElement = currentConfiguratorBar.closest(
-          '[class*="__sector"]'
+          '#product-specification-tabs'
         );
 
         if (
