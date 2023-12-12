@@ -184,6 +184,7 @@
                                 @php
                                     the_row();
                                     $family_name = get_sub_field('family_name');
+                                    $family_description = get_sub_field('family_description');
                                     $j++;
                                 @endphp
 
@@ -195,6 +196,7 @@
                                     </div>
                                     <div
                                         class="flex flex-nowrap lg:flex-wrap gap-4 accordion_family_swatches max-h-[240px] scroll-container overflow-x-hidden items-start  {{ $j != 1 ? 'hidden' : 'active' }} ">
+                                        <div class="child-p:max-w-none w-full">{!! $family_description !!}</div>
                                         @while (have_rows('swatches_content'))
                                             @php
                                                 the_row();
