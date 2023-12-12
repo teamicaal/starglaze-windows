@@ -29,11 +29,11 @@ $offer_badge = get_sub_field('offer_badge');
     @endphp
    
       <div id="flippableContainer" class="w-[320px] cursor-pointer offer-container absolute z-30 inset-y-0 right-[0rem]">
-        @if (have_rows('primary_offer'))
+        @if (have_rows('primary_offer' , 'option'))
             @php
             $i = 0;
             @endphp
-          @while (have_rows('primary_offer')) 
+          @while (have_rows('primary_offer' , 'option')) 
             @php 
               the_row(); 
               $i++;
