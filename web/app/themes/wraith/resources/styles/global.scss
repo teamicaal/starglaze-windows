@@ -836,6 +836,19 @@ a {
   }
 }
 
+.post-5704{
+  #article{
+    p{
+      @apply font-normal mx-auto text-[#7c7c7c];
+      max-width: 1024px;
+      img{
+        @apply w-[50%] mx-auto;
+      }
+    }
+
+  }
+}
+
 .home-blog-pagination{
   // .pagination {
   //   display: inline-block;
