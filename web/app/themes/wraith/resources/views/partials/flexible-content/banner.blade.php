@@ -44,7 +44,7 @@ $offer_badge = get_sub_field('offer_badge');
               $button_label = get_sub_field('button_label');
               $button_link = get_sub_field('button_link');
             @endphp
-            <div class="absolute {{ $i != 1 ? 'hidden back' : 'front' }} z-20 max-w-md h-full">
+            <div class="absolute {{ $i != 1 ? 'hidden back' : 'front' }} z-20 max-w-md h-full duration-700 ease-in-out">
 
               <div class="relative w-[20rem]">
                   <img class="absolute w-full h-full" src="{{ $image['url'] }}" alt="">

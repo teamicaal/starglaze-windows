@@ -932,13 +932,16 @@ $(".product-specification-tabs-brochure-slider").slick(
 
   $(document).ready(function() {
     const container = $('#flippableContainer');
+    const front = $('.front');
     let isFlipped = false;
   
     setInterval(function() {
       if (isFlipped) {
         container.css('transform', 'rotateY(0deg)');
+        front.css('opacity' ,'100');
       } else {
         container.css('transform', 'rotateY(180deg)');
+        front.css('opacity' ,'0');
       }
       
       isFlipped = !isFlipped;
