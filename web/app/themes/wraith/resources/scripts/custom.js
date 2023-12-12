@@ -955,5 +955,37 @@ $(".product-specification-tabs-brochure-slider").slick(
   $(".close-tooltip").on("click", function () {
     closeConfiguratorTooltip();
   });
+  function checkAndAddActiveClass() {
+    var configuratorClosed = sessionStorage.getItem("configuratorClosed");
+    if (!configuratorClosed) {
+      $(".configurator-bar").each(function () {
+        var currentConfiguratorBar = $(this);
+        var closestSectorElement = currentConfiguratorBar.closest(
+          '[class*="__sector"]'
+        );
+
+        if (
+          closestSectorElement.length &&
+          !closestSectorElement.is('[style*="none"]') &&
+          isScrolledIntoView(currentConfiguratorBar) &&
+          currentConfiguratorBar.has("[data-product-spec-btn='glazing']")
+            .length &&
+          currentConfiguratorBar.has("[data-product-spec-btn='colours']").length
+        ) {
+          currentConfiguratorBar.siblings(".backdrop").addClass("active");
+          currentConfiguratorBar
+            .siblings(".configurator-tooltip")
+            .addClass("active");
+          currentConfiguratorBar.addClass("active");
+        } else {
+          currentConfiguratorBar.siblings(".backdrop").removeClass("active");
+          currentConfiguratorBar
+            .siblings(".configurator-tooltip")
+            .removeClass("active");
+          currentConfiguratorBar.removeClass("active");
+        }
+      });
+    }
+  }
 
 })(jQuery);
