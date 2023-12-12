@@ -23,39 +23,48 @@ $offer_badge = get_sub_field('offer_badge');
       </div>
     </a>
   @endif --}}
-  {{-- @if ($offer_badge)
+  @if ($offer_badge)
     @php
       $primary_offer = get_sub_field('primary_offer');
     @endphp
-    <div class="w-full lg:w-[300px] h-fit absolute z-30 right-0 bottom-0 top-0 lg:block hidden">
-      <div class="{{ count($primary_offer) > 1 ? 'slick-offer' :'' }} w-full absolute z-30 right-[3rem] bottom-0 2xl:top-[9rem] top-[8.5rem]">
-        @if (have_rows('primary_offer'))
-          @while (have_rows('primary_offer')) 
-          @php 
-          the_row(); 
-          $offer = get_sub_field('offer');
-          $button_label = get_sub_field('button_label');
-          $button_link = get_sub_field('button_link');
-          @endphp
-            <div class="flex items-center justify-center flex-col">
-              <div class="relative w-full mx-auto h-fit z-30 top-8">
-                @include('partials.components.ribbon-rounded',['primary_colour' => '#9F0A15'])
-                <p class="text-white absolute top-[53%] left-1/2 translate-x-[-50%] translate-y-[-100%] max-w-[20rem] font-bold m-0 p-0 whitespace-nowrap font-serif text-[19px]"> SECURITY GUARANTEE </p>
-              </div>
-              <div class="blue-bg-gradient rounded-lg w-[220px] shadow-md mx-auto">
-                <div class="child-p:text-white child-p:text-center offer-text-effect child-p:text-2xl child-p:leading-relaxed pt-4 pb-4 child-p:font-serif  child-p:m-0 ">{!! $offer !!}</div>
-                <div class="w-full bg-white 2xl:block hidden">
-                  <div id="countdown" class="text-red-500 pt-[0.25rem] text-center font-bold px-4 rounded-b-lg"></div>
-                </div>
-                <div class="h-1 w-full bg-white mt-1"></div>
-                <a href="{{ $button_link }}" class="px-12 py-2 rounded-lg m-2 bg-white hover:scale-105 transition-all ease-in-out duration-500 text-secondary border-0 text-center flex justify-center items-center">{!! $button_label !!}</a>
+   
+      <div id="flippableContainer" class="w-[320px] cursor-pointer offer-container absolute z-30 inset-y-0 right-[0rem]">
+        @if (have_rows('primary_offer' , 'option'))
+            @php
+            $i = 0;
+            @endphp
+          @while (have_rows('primary_offer' , 'option')) 
+            @php 
+              the_row(); 
+              $i++;
+              $image = get_sub_field('image');
+              $virtual_showroom_image = get_sub_field('virtual_showroom_image');
+              $offer_title = get_sub_field('offer_title');
+              $offer = get_sub_field('offer');
+              $button_label = get_sub_field('button_label');
+              $button_link = get_sub_field('button_link');
+            @endphp
+            <div class="absolute {{ $i != 1 ? 'hidden back' : 'front' }} z-20 max-w-md h-full">
+
+              <div class="relative w-[20rem]">
+                  <img class="absolute w-full h-full" src="{{ $image['url'] }}" alt="">
+                  <div class="relative p-4 pt-[4.5rem] ">
+                      <h2 class="text-white font-serif text-center max-w-[20rem] tracking-wide top-[5rem] {{ $i == 1 ? ' text-[35px] border-b border-white pb-3' : 'text-[30px]' }} uppercase">{!! $offer_title !!}</h2>
+                      @if ($virtual_showroom_image)
+                          <img class="w-[12rem] mx-auto h-auto" src="{{ $virtual_showroom_image['url'] }}" alt="">
+                      @endif
+                      <div class="child-p:text-white child-p:text-center child-p:text-[35px] {{ $i == 1 ? ' child-p:text-[35px]' : 'child-p:text-[30px]' }} child-p:uppercase child-p:font-serif">{!! $offer !!}</div>
+                      @if ($i == 1) 
+                        <div id="countdown" class="text-red-500 bg-white py-3 font-serif text-xl text-center font-bold mb-4 mx-4"></div>
+                      @endif
+                      <a href="{{ $button_link }}" class="{{ $i == 1 ? 'bg-secondary text-white font-serif p-3 tracking-wide text-center text-xl uppercase block mb-2 mx-8 whitespace-nowrap ' : 'bg-primary whitespace-nowrap text-white font-serif p-3 tracking-wide text-center text-xl uppercase block mb-2 mx-8' }} ">{!! $button_label !!}</a>
+                  </div>
               </div>
             </div>
           @endwhile
         @endif
-      </div>
     </div>
-  @endif --}}
+  @endif
   @if( $banner_type )
   <div class="full-width sm:flex sm:items-center relative lg:!min-h-[89vh] sm:!min-h-[60vh] !min-h-[100vh]">
     <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" class="leftBannerBox flex justify-center items-center">
