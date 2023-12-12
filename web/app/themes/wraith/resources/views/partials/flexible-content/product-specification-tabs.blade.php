@@ -40,32 +40,6 @@
                 $content_type = get_sub_field('content_type');
             @endphp
             <div class="{{ $i !== 1 ? 'hidden' : null }}" data-product-spec-tab="{{ $tab_name_clean }}">
-
-                <div class="container mx-auto flex flex-col lg:flex-row lg:items-center justify-between lg:mt-20 lg:mb-10">
-                    <div class="w-full xl:w-1/3">
-                        <h2 class="mb-4 lg:mb-8 text-primary font-serif font-medium lg:text-4xl text-2xl lg:leading-[3.5rem] text-balance">
-                            {{ $title }}</h2>
-                            @if (have_rows('buttons'))
-                            <div class="flex gap-4 flex-col xl:flex-row mb-8">
-                                @while (have_rows('buttons'))
-                                    @php
-                                        the_row();
-                                        $link = get_sub_field('link');
-                                        $label = get_sub_field('label');
-                                        $j++;
-                                    @endphp
-                                    <a class="btn block md:inline-block bg-primary text-white hover:bg-secondary"
-                                        href="{{ $link }}">{{ $label }}</a>
-                                @endwhile
-                            </div>
-                        @endif
-                        @php
-                            $j = 0;
-                        @endphp
-                    </div>
-                    <div class="separator md:py-8 child-p:font-normal child-p:text-[#3A3A3A]">{!! $paragraph !!}
-                    </div>
-                </div>
                 @if ($content_type == 'hardware')
                     <div class="container mx-auto lg:flex">
                         <div
@@ -359,6 +333,31 @@
                         @endwhile
                     </div>
                 @endif
+                <div class="container mx-auto flex flex-col lg:flex-row lg:items-center justify-between lg:mt-20 lg:mb-10">
+                    <div class="w-full xl:w-1/3">
+                        <h2 class="mb-4 lg:mb-8 text-primary font-serif font-medium lg:text-4xl text-2xl lg:leading-[3.5rem] text-balance">
+                            {{ $title }}</h2>
+                            @if (have_rows('buttons'))
+                            <div class="flex gap-4 flex-col xl:flex-row mb-8">
+                                @while (have_rows('buttons'))
+                                    @php
+                                        the_row();
+                                        $link = get_sub_field('link');
+                                        $label = get_sub_field('label');
+                                        $j++;
+                                    @endphp
+                                    <a class="btn block md:inline-block bg-primary text-white hover:bg-secondary"
+                                        href="{{ $link }}">{{ $label }}</a>
+                                @endwhile
+                            </div>
+                        @endif
+                        @php
+                            $j = 0;
+                        @endphp
+                    </div>
+                    <div class="separator md:py-8 child-p:font-normal child-p:text-[#3A3A3A]">{!! $paragraph !!}
+                    </div>
+                </div>
             </div>
         @endwhile
     @endif
