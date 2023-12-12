@@ -5,9 +5,15 @@
 @endphp
 <div  data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" id="product-specification-tabs" class="lg:my-16 md:my-10 my-4 overflow-hidden">
     <div class="relative px-4 mb-16">
+            <div class="absolute w-full h-1 bg-[#F0F3F4] left-0 right-0 top-1/2 -translate-y1/2"></div>
+            <div class="backdrop"></div>
+            <div class="configurator-tooltip">Transform Your Home's Look: Explore Our Window Colour Selector - Preview
+                Our Extensive Range of Exterior and Interior Shades.
+                <button class="btn bg-primary block mx-auto !text-white mt-4 close-tooltip">CUSTOMISE NOW</button>
+            </div>
         @if (have_rows('tab'))
             <div class="absolute w-full h-1 bg-secondary left-0 right-0 top-1/2 -translate-y1/2"></div>
-            <div class="container relative mx-auto scroll-container overflow-x-hidden snap-x flex gap-[10px] rounded-full blue-bg-gradient p-[10px] z-10">
+            <div class="container relative configurator-bar mx-auto scroll-container overflow-x-hidden snap-x flex gap-[10px] rounded-full blue-bg-gradient p-[10px] z-10">
                 @while (have_rows('tab'))
                     @php
                         the_row();

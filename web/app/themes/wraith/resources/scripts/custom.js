@@ -945,4 +945,15 @@ $(".product-specification-tabs-brochure-slider").slick(
     }, 9000); // 15 seconds in milliseconds
   });
 
+  function closeConfiguratorTooltip() {
+    $(".backdrop").removeClass("active");
+    $(".configurator-tooltip ").removeClass("active");
+    $(".configurator-bar ").removeClass("active");
+    sessionStorage.setItem("configuratorClosed", "true");
+  }
+
+  $(".close-tooltip").on("click", function () {
+    closeConfiguratorTooltip();
+  });
+
 })(jQuery);
