@@ -3,7 +3,7 @@
     $j = 0;
     $grip_core_page = get_sub_field('grip_core_page');
 @endphp
-<div  data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" id="product-specification-tabs" class="lg:my-16 md:my-10 my-4 overflow-hidden">
+<div id="product-specification-tabs" class="lg:my-16 md:my-10 my-4 overflow-hidden">
     <div class="relative px-4 mb-16">
             <div class="absolute w-full h-1 bg-[#F0F3F4] left-0 right-0 top-1/2 -translate-y1/2"></div>
             <div class="backdrop"></div>
