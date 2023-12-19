@@ -188,7 +188,7 @@
                                     $j++;
                                 @endphp
 
-                                <div class="mb-6">
+                                <div class="mb-4">
                                     <div class="accordion_family_name group flex cursor-pointer items-center justify-between border-b border-primary border-muted mb-4 pb-3 {{ $j === 1 ? 'active' : '' }}">
                                         <h2 class=" group-hover:text-primary ease-in-out duration-300 uppercase font-serif text-2xl mb-0">
                                             {{ $family_name }}</h2>
