@@ -10,7 +10,7 @@ $i = 0;
   'post_type'      => 'post',
   'posts_per_page' => '4'
 ])
-<div id="latest-news" class="overflow-hidden {!! $custom_class ? ' ' . $custom_class : ' lg:pt-20 pt-12' !!}">
+<div id="latest-news" class="overflow-hidden {!! $custom_class ? ' ' . $custom_class : ' lg:pt-20 py-12' !!}">
   <div class="container mx-auto lg:flex">
     <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" class="lg:w-1/2 w-full lg:mr-8 mr-0">
       <h2 class="text-primary md:text-4xl text-3xl font-serif font-bold max-w-[350px] mb-8 ">{{ $title }}</h2>
