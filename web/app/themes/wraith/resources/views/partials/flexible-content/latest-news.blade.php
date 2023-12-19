@@ -58,8 +58,8 @@ $i = 0;
                 </button>
                 <div class="flex flex-col w-4/5">
                   <a href="{{ $button_link }}" class="border-none">
-                    <h2 class="text-white md:text-6xl text-5xl font-bold tracking-wide">{{ $top_text_line }}</h2>
-                    <h3 class="text-white md:text-3xl text-3xl font-bold tracking-wide">{{ $bottom_text_line }}</h3>
+                    <h2 class="text-white md:text-6xl text-3xl font-bold tracking-wide">{{ $top_text_line }}</h2>
+                    <h3 class="text-white md:text-3xl text-xl font-bold tracking-wide">{{ $bottom_text_line }}</h3>
                   </a>
                 </div>
                
