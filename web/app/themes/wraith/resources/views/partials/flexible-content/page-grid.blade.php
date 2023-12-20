@@ -6,7 +6,7 @@ $button_link = get_sub_field('button_link');
 $button_label = get_sub_field('button_label');
 @endphp
 
-<section id="page-grid" class="lg:py-12 py-8{{ $custom_class ? $custom_class : '' }}">
+<section id="page-grid" class="overflow-hidden lg:py-12 py-8{{ $custom_class ? $custom_class : '' }}">
     <div class="">
         <div class="px-1">
             @if ($title)
