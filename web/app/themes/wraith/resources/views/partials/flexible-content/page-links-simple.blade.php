@@ -4,9 +4,9 @@ $title = get_sub_field('title');
 $subtitle = get_sub_field('subtitle');
 @endphp
 
-<section class="relative z-10 {!! $custom_class ? ' ' . $custom_class : '' !!} ">
+<section class="relative z-10 {!! $custom_class ? ' ' . $custom_class : '' !!} overflow-hidden">
 
-    <div class="!px-0 text-center text-primary">
+    <div class="!px-0 text-center text-primar overflow-hidden">
         {!! $title ? '<h2 class="text-4xl mb-8 ">' . $title . '</h2>' : null !!}
         @if (have_rows('pages'))
             <div class="flex-wrap flex lg:justify-center lg:overflow-hidden">
