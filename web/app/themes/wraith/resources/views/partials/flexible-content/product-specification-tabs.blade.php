@@ -23,7 +23,7 @@
                         $i++;
                     @endphp
                     <button
-                        class="uppercase grow font-bold font-serif rounded-full snap-center py-2 px-16 text-lg lg:px-28 lg:text-lg {{ $i == 1 ? 'active' : null }}"
+                        class="uppercase grow whitespace-nowrap font-bold font-serif rounded-full snap-center py-2 px-16 text-lg lg:px-28 lg:text-lg {{ $i == 1 ? 'active' : null }}"
                         data-product-spec-btn="{{ $tab_name_clean }}" data-content-type={{ $content_type }}>
                         {{ $tab_name }}
                     </button>
