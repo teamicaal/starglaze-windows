@@ -906,7 +906,7 @@ $(".product-specification-tabs-brochure-slider").slick(
 
 
 
-  var countdownDate = new Date("2023-12-31T23:59:59").getTime(); // Example: New Year's Eve
+  var countdownDate = new Date("2024-03-08T23:59:59").getTime(); // Example: New Year's Eve
 
   // Update the countdown every second
   var countdown = setInterval(function() {
