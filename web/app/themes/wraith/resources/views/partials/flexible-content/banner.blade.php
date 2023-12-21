@@ -24,7 +24,9 @@ $logo = get_sub_field('logo');
       </div>
     </a>
   @endif --}}
-  <img src="{{ $logo['url'] }}" alt="" class="badge h-auto z-20 right-0 mr-16 mt-20 absolute hidden sm:block ">
+  @if ($logo)
+    <img src="{{ $logo['url'] }}" alt="" class="badge h-auto z-20 right-0 mr-16 mt-20 absolute hidden sm:block ">
+  @endif
   @if ($offer_badge)
     @php
       $primary_offer = get_sub_field('primary_offer');
