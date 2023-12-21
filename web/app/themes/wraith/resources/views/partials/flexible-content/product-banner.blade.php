@@ -7,6 +7,7 @@ $subtitle = get_sub_field('subtitle');
 $paragraph = get_sub_field('paragraph');
 $vr_cta = get_sub_field('vr_cta');
 $offer_badge = get_sub_field('offer_badge');
+$logo = get_sub_field('logo');
 @endphp
 @if( get_sub_field('title_h1') )
   @php $h = 'h1' @endphp
@@ -23,6 +24,9 @@ $offer_badge = get_sub_field('offer_badge');
       </div>
     </a>
   @endif --}}
+  @if ($logo)
+    <img src="{{ $logo['url'] }}" alt="" class="badge h-auto z-20 right-0 mr-16 mt-20 absolute hidden sm:block ">
+  @endif
   @if ($offer_badge)
     @php
       $primary_offer = get_sub_field('primary_offer');
