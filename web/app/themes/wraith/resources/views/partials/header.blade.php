@@ -225,7 +225,7 @@
             </div>
 
             <div class="xl:w-1/4 hidden xl:block ">
-              <a href="/double-glazing-prices-bradford-yorkshire/">
+              <a href="/double-glazing-quote-lincoln/">
                 <div class="embed embed-21by9 mb-4 mega-menu-cta-card rounded-xl shadow-xl">
                   <img class="object-cover-absolute z-0" src="/app/uploads/2023/09/quote-mockup-starglaze.jpg" alt="Free Online Quotations">
                   <h6>Free Online Quote</h6>
