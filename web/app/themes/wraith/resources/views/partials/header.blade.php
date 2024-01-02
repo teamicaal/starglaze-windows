@@ -27,7 +27,7 @@
       <div class="hidden lg:block">
         <a class="brand border-0" href="{{ home_url('/') }}">
           @if( $logo )
-          <img src="{!! $logo['url'] !!}" alt="{!! get_bloginfo('name', 'display') !!} Logo"{!! $logo_retina ? ' srcset="' . $logo['url'] . ' 1x, ' . $logo_retina['url'] . ' 2x"' : null !!} width="auto" height="50" class="hidden logo-scroll lg:inline-block xl:w-[250px] xl:h-[110px] lg:w-[210px] lg:h-[90px] w-[100px] h-[50px]">
+          <img src="{!! $logo['url'] !!}" alt="{!! get_bloginfo('name', 'display') !!} Logo"{!! $logo_retina ? ' srcset="' . $logo['url'] . ' 1x, ' . $logo_retina['url'] . ' 2x"' : null !!} width="auto" height="50" class="hidden logo-scroll o-contain lg:inline-block xl:w-[250px] xl:h-[110px] lg:w-[210px] lg:h-[90px] w-[100px] h-[50px]">
           @else
           {{ get_bloginfo('name', 'display') }}
           @endif
@@ -125,7 +125,7 @@
 
                 <a class="brand border-0 lg:hidden block" href="{{ home_url('/') }}">
                   @if( $logo )
-                  <img src="{!! $logo['url'] !!}" alt="{!! get_bloginfo('name', 'display') !!} Logo"{!! $logo_retina ? ' srcset="' . $logo['url'] . ' 1x, ' . $logo_retina['url'] . ' 2x"' : null !!} width="auto" height="50" class="hidden logo-scroll lg:inline-block w-auto h-[7rem]">
+                  <img src="{!! $logo['url'] !!}" alt="{!! get_bloginfo('name', 'display') !!} Logo"{!! $logo_retina ? ' srcset="' . $logo['url'] . ' 1x, ' . $logo_retina['url'] . ' 2x"' : null !!} width="auto" height="50" class="hidden logo-scroll o-contain lg:inline-block w-auto h-[7rem]">
                   @else
                   {{ get_bloginfo('name', 'display') }}
                   @endif
