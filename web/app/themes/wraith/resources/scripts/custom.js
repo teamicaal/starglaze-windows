@@ -302,12 +302,21 @@ import mixitup from 'mixitup';
     dots: false,
     arrows: false,
     infinite: false,
-    slidesToShow: 2,
+    slidesToShow: 1,
     autoplay: true,
     slidesToScroll: 1,
     swipeToSlide: true,
     draggable: true,
     centerMode: false,
+  });
+
+  $('.slick-landing-image-slider').slick({
+    slidesToShow: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    dots: true,
+    infinite: true,
+    arrows: false,
   });
 
   //gallery slider with thumbnail
@@ -1007,5 +1016,19 @@ $(".product-specification-tabs-brochure-slider").slick(
 
     return elemBottom <= docViewBottom && elemTop >= docViewTop;
   }
+
+  var $slider = $(".slick-gallery-slider");
+  var $progressBar = $(".progress");
+  var $progressBarLabel = $(".slider__label");
+
+  $slider.on("beforeChange", function (event, slick, currentSlide, nextSlide) {
+    var calc = (nextSlide / (slick.slideCount - 1)) * 100;
+
+    $progressBar
+      .css("background-size", calc + "% 100%")
+      .attr("aria-valuenow", calc);
+
+    $progressBarLabel.text(calc + "% completed");
+  });
 
 })(jQuery);

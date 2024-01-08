@@ -2,6 +2,12 @@
     @while (have_rows('blocks'))
         @php the_row(); @endphp
 
+        @if (get_row_layout() == 'landing_banner')
+            @include('partials.flexible-content.landing-banner')
+        @endif
+        @if (get_row_layout() == 'landing_image_slider')
+            @include('partials.flexible-content.landing-image-slider')
+        @endif
         @if (get_row_layout() == 'accreditations_row')
             @include('partials.flexible-content.accreditations-row')
         @endif
