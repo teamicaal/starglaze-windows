@@ -241,7 +241,7 @@
                                     <div data-image-featured="{{ $swatch_name_clean }}"
                                         class="{{ $j != 1 ? 'hidden' : 'block active' }}">
                                         <div class="featured_front">
-                                            <h4 class="absolute left-1/2 top-0 mb-1 -translate-x-1/2 uppercase leading-[5px] font-semibold text-lg font-serif text-primary">Outside View</h4>
+                                            <h4 class="absolute left-1/2 top-[-14px] mb-1 -translate-x-1/2 uppercase leading-[5px] font-semibold text-lg font-serif text-primary">Outside View</h4>
                                             <p class="text-xs w-full text-center absolute left-1/2 -translate-x-1/2 mt-3">*Colour configurations are for illustration purposes only. For detailed colours, contact us today to receive swatches from one of our approved dealers.</p>
                                             <img class="w-full h-[300px] lg:h-[500px] object-contain"
                                                 src="{{ $featured_image['url'] }}"
